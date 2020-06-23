@@ -7,13 +7,13 @@ const Comentarios = require("./comentarios");
 
 // faltan relaciones
 
-// Product.belongsToMany(Categories);
-
-// Categories.belongsToMany(Product);
+Product.belongsToMany(Categories ,{ through: "producto_categoria" });
+Categories.belongsToMany(Product , { through: "producto_categoria" });
 
 Carrito.belongsTo(Users);
 
-// Carrito.belongsToMany(Product);
+Carrito.belongsToMany(Product ,{ through: "producto_carrito"});
+Product.belongsToMany(Carrito ,{ through: "producto_carrito"});
 
 Comentarios.belongsTo(Product);
 
