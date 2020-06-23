@@ -33,7 +33,7 @@ const producto1 = Producto.create({
 
 })
 
-const producto2 = Producto.create({
+const producto2 = Product.create({
     nombre: "eFootball PES 2020",
     price: 1332,
     cantidad: 0,
@@ -45,7 +45,7 @@ const producto2 = Producto.create({
 
 })
 
-const producto3 = Producto.create({
+const producto3 = Product.create({
     nombre: "Resident Evil",
     price: 1807,
     cantidad: 0,
@@ -57,7 +57,7 @@ const producto3 = Producto.create({
 
 })
 
-const producto4= Producto.create({
+const producto4= Product.create({
     nombre: "WWE 2K18",
     price: 1522,
     cantidad: 0,
@@ -69,7 +69,7 @@ const producto4= Producto.create({
 
 })
 
-const producto5= Producto.create({
+const producto5= Product.create({
     nombre: "God of War",
     price: 1141,
     cantidad: 0,
@@ -81,7 +81,7 @@ const producto5= Producto.create({
 
 })
 
-const producto6= Producto.create({
+const producto6= Product.create({
     nombre: "Need for Speed Payback",
     price: 1046,
     cantidad: 0,
@@ -93,7 +93,7 @@ const producto6= Producto.create({
 
 })
 
-const producto7= Producto.create({
+const producto7= Product.create({
     nombre: "Call of Duty WW2",
     price: 2100,
     cantidad: 0,
@@ -105,7 +105,7 @@ const producto7= Producto.create({
 
 })
 
-const producto8= Producto.create({
+const producto8= Product.create({
     nombre: "The Sims 4",
     price: 666,
     cantidad: 0,
@@ -117,7 +117,7 @@ const producto8= Producto.create({
 
 })
 
-const producto9= Producto.create({
+const producto9= Product.create({
     nombre: "Mortal Kombat X",
     price: 1000,
     cantidad: 0,
@@ -129,7 +129,7 @@ const producto9= Producto.create({
 
 })
 
-const producto10= Producto.create({
+const producto10= Product.create({
     nombre: "NBA 2K20",
     price: 1920,
     cantidad: 0,
@@ -141,7 +141,7 @@ const producto10= Producto.create({
 
 })
 
-const producto11= Producto.create({
+const producto11= Product.create({
     nombre: "GTA V",
     price: 754,
     cantidad: 0,
@@ -153,7 +153,7 @@ const producto11= Producto.create({
 
 })
 
-const producto11= Producto.create({
+const producto11= Product.create({
     nombre: "Assassins Creed 4 Black Flag",
     price: 1721,
     cantidad: 0,
