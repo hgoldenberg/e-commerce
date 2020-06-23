@@ -8,7 +8,6 @@ const Comentarios = require("./comentarios");
 // faltan relaciones
 
 Product.belongsToMany(Categories ,{ through: "producto_categoria" });
-
 Categories.belongsToMany(Product , { through: "producto_categoria" });
 
 Carrito.belongsTo(Users);
