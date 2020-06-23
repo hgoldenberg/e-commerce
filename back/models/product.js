@@ -15,7 +15,6 @@ Product.init(
     },
     image_1: {
       type: S.STRING,
-      allowNull: false,
     },
     image_2: {
       type: S.STRING,
