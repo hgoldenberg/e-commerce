@@ -13,10 +13,10 @@ Product.init(
       type: S.FLOAT,
       allowNull: false,
     },
-    image_1: {
+    imageUno: {
       type: S.STRING,
     },
-    image_2: {
+    imageDos: {
       type: S.STRING,
     },
     description: {
@@ -30,7 +30,7 @@ Product.init(
     stock: {
       type: S.INTEGER,
       allowNull: false,
-    },
+    }
   },
   {
     sequelize: db,

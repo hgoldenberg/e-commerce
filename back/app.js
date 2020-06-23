@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 // middlewere
 app.use(volleyball);
+app.use(express.static('public'))
 
 //router
 app.use('/api', router);
