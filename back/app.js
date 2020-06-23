@@ -5,6 +5,7 @@ require('dotenv').config()
 const app = express()
 const db = require('./config/db')
 const port = process.env.PORT
+const router = require('./routes')
 
 // req.body
 app.use(express.urlencoded({extended:false}));
@@ -12,9 +13,8 @@ app.use(express.json());
 // middlewere
 app.use(volleyball);
 
-
-
-
+//router
+app.use('/api', router);
 
 // conectando con la base de datos 
 db.sync({force:false})
