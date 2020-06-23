@@ -21,7 +21,7 @@ const categoria4 = Categoria.create({
 
 //-----------------------------PRODUCTOS-------------------------
 
-const producto1 = Producto.create({
+const producto1 = Product.create({
     nombre: "Ghost Of Tsushima",
     price: 1050,
     cantidad: 0,
