@@ -1,5 +1,6 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
+import { fetchProduct } from "../../redux/actions/singleProduct";
 
 import { connect } from "react-redux";
 
@@ -17,7 +18,9 @@ const mapStateToProps = (state) => {
   return {};
 };
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    fetchProduct: (id) => dispatch(fetchProduct(id)),
+  };
 };
 
-export default connect(null, null)(SingleProductContainer);
+export default connect(null, mapDispatchToProps)(SingleProductContainer);
