@@ -1,13 +1,11 @@
 const obj = {};
 const { Product } = require("../models/index");
 
-console.log(Product);
 
 // busco todos los productos
 obj.allProductos = (req, res, next) => {
   Product.findAll()
     .then((data) => {
-      console.log(data);
       res.status(200).send(data);
     })
     .catch(next);
@@ -22,7 +20,6 @@ obj.productoId = (req, res, next) => {
 
 //creo un nuevo producto
 obj.createProducto = (req, res, next) => {
-  console.log("HOLA");
   Product.create(req.body)
     .then((productoCreado) => res.status(200).json(productoCreado))
     .catch(next);
