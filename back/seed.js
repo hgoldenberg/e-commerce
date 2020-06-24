@@ -85,7 +85,7 @@ const needForSpeed = Product.create({
   stock: 100,
   description: "Carrera de Mundo",
   imageUno:
-    "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2017/06/NeedForSpeedPayback_caratula.jpg?itok=3Q-CfGNk",
+    "https://dixgamer.com/wp-content/uploads/2018/01/need-for-speed-payback-2.png",
   imageDos:
     "https://microsofters.com/wp-content/uploads/2018/06/need-for-speed-payback-e3-2017-043.jpg"
 });
@@ -131,7 +131,7 @@ const NBA = Product.create({
   cantidad: 0,
   stock: 100,
   description: "Simulación de Baloncesto",
-  imageUno: "",
+  imageUno: "https://mlee6yi4u4gb.i.optimole.com/wl0pJw-rS8hYIvz/w:auto/h:auto/q:55/https://juegosdigitales.org/wp-content/uploads/2019/07/comprar-nba-2k20-ps4-digital-argentina.jpg",
   imageDos:
     "https://store-images.s-microsoft.com/image/apps.39370.13893532245614132.349b81ac-84df-4a0f-90fc-4faeba0f6369.c43c8d93-7eab-430c-83e8-a629450d4806?w=672&h=378&q=80&mode=letterbox&background=%23FFE4E4E4&format=jpg"
 });
