@@ -40363,8 +40363,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_HomeContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/HomeContainer */ "./src/react/home/HomeContainer.jsx");
 /* harmony import */ var _login_LoginContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/LoginContainer */ "./src/react/login/LoginContainer.jsx");
 /* harmony import */ var _register_RegisterContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./register/RegisterContainer */ "./src/react/register/RegisterContainer.jsx");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _carrito_CarritoContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./carrito/CarritoContainer */ "./src/react/carrito/CarritoContainer.jsx");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9__);
+
 
 
 
@@ -40391,6 +40393,10 @@ __webpack_require__.r(__webpack_exports__);
     exact: true,
     path: "/registro",
     component: _register_RegisterContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/carrito",
+    component: _carrito_CarritoContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/productos/:id",
@@ -40715,6 +40721,260 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(AllProductsContainer));
+
+/***/ }),
+
+/***/ "./src/react/carrito/Carrito.jsx":
+/*!***************************************!*\
+  !*** ./src/react/carrito/Carrito.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject14() {
+  var data = _taggedTemplateLiteral(["\n        background-color: #1d232d;\n        padding: 10px 20px;\n        border-radius: 5px;\n        border: none;\n        cursor: pointer;\n        color: #ffffff;\n        font-size: 20px;\n        border: 1px solid #1d232d;\n    "]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["\n        text-align: end;\n        width: 95%;\n        margin: 50px 0px;\n    "]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n        font-weight: 700;\n    "]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["\n        text-align: end;\n        width: 100%;\n        font-size: 25px;\n        margin-top: 70px;\n    "]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n        font-size: 28px;\n        margin: 26px 0px 0px 150px;\n    "]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n        width: 70px;\n        font-size: 18px;\n        padding: 10px;\n    "]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n        margin: 22px;\n    "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n        padding: 30px 50px;\n        text-decoration: none;\n        color: #000000;\n        font-size: 22px;\n        width: 500px;\n    "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n        width: 80px;\n        height: 110px;\n    "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n        display: flex;\n        flex-direction: row;\n        width: 90%;\n        padding: 30px 0px;\n        height: 170px;\n        border-bottom: 1px solid #aaaaaa;\n        margin: 0px 50px;\n    "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n        padding: 38px 170px 14px 100px;\n        font-size: 22px;\n        font-weight: 400;\n        width: 80px;\n        border-bottom: 3px solid #000000;\n    "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n        border-bottom: 1px solid #aaaaaa;\n        height: 80px;\n        width: 90%;\n        margin: 0px 50px;\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n        margin: 25px 0px;\n        background-color: #fcfcfc;\n        box-shadow: 0px 4px 5px 2px rgba(189,189,189,1);\n        display: flex;\n        flex-direction: column;\n        padding-bottom: 30px;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n        padding: 20px 100px;\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
+  var ArticleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
+  var TitleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
+  var H3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templateObject4());
+  var ContentCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject5());
+  var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject6());
+  var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject7());
+  var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject8());
+  var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject9());
+  var PriceCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject10());
+  var TotalCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject11());
+  var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject12());
+  var BuyCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13());
+  var ButtonBuy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject14());
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Carrito")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    src: "https://i11b.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765181.jpg",
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
+    href: ""
+  }, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "number"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ 1.700")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    src: "https://i11b.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765181.jpg",
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
+    href: ""
+  }, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "number"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ 1.700")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ 3.400"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonBuy, null, "Comprar"))));
+});
+
+/***/ }),
+
+/***/ "./src/react/carrito/CarritoContainer.jsx":
+/*!************************************************!*\
+  !*** ./src/react/carrito/CarritoContainer.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Carrito__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carrito */ "./src/react/carrito/Carrito.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+var CarritoContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(CarritoContainer, _React$Component);
+
+  var _super = _createSuper(CarritoContainer);
+
+  function CarritoContainer() {
+    _classCallCheck(this, CarritoContainer);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(CarritoContainer, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Carrito__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+    }
+  }]);
+
+  return CarritoContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, null)(CarritoContainer));
 
 /***/ }),
 
@@ -41181,7 +41441,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n      background-color: #fff;\n      color: #000000;\n      padding: 4px 8px;\n      border: none;\n      height: 30px;\n      font-size: 14px;\n      width: 600px;\n      border-radius: 5px 0px 0px 5px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n      background-color: #fff;\n      color: #000000;\n      padding: 4px 8px;\n      border: none;\n      height: 30px;\n      font-size: 14px;\n      width: 550px;\n      border-radius: 5px 0px 0px 5px;\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -41211,7 +41471,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n      font-size: 28px;\n      text-decoration: none;\n      color: #ffffff;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100px;\n    height: 50px;\n    border-radius: 10px;\n    opacity: 0.8;\n    margin-top: 4px;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -41251,17 +41511,19 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   console.log("este es el componente tonto ");
   var Nav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject());
   var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
-  var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject3());
+  var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject3());
   var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject4());
   var DivSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5());
   var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
   var ButtonSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(_templateObject7());
-  var LinksNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject8());
-  var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject9());
+  var LinksNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject8());
+  var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
   var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject10());
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoImg, {
-    href: "#"
-  }, "Logo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSearch, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoImg, {
+    src: "./p5games.jpg"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSearch, {
     type: "text",
     placeholder: "Buscar productos"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -41277,22 +41539,11 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     d: "M0 0h24v24H0V0z"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinksNav, {
-    href: ""
-  }, "Categor\xEDas", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    width: "12",
-    height: "12",
-    viewBox: "4 4 14 14",
-    fill: "currentColor",
-    role: "presentation"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    fill: "none",
-    d: "M0 0h24v24H0V0z"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoNav, {
-    href: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/productos"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinksNav, null, "Categor\xEDas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/carrito"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
     y: "0px",
@@ -41326,9 +41577,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     fill: "#cccccc"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M35.3125,49.4375c-3.88989,0 -7.0625,3.17261 -7.0625,7.0625c0,3.88989 3.17261,7.0625 7.0625,7.0625h15.66992l18.53906,74.15625c1.57251,6.29004 7.20044,10.59375 13.68359,10.59375h80.99805c6.3728,0 11.78003,-4.22095 13.46289,-10.37305l18.31836,-67.31445h-118.29687l3.53125,14.125h96.44727l-13.46289,49.4375h-80.99805l-18.53906,-74.15625c-1.57251,-6.29004 -7.20044,-10.59375 -13.68359,-10.59375zM155.375,148.3125c-11.6145,0 -21.1875,9.573 -21.1875,21.1875c0,11.6145 9.573,21.1875 21.1875,21.1875c11.6145,0 21.1875,-9.573 21.1875,-21.1875c0,-11.6145 -9.573,-21.1875 -21.1875,-21.1875zM91.8125,148.3125c-11.6145,0 -21.1875,9.573 -21.1875,21.1875c0,11.6145 9.573,21.1875 21.1875,21.1875c11.6145,0 21.1875,-9.573 21.1875,-21.1875c0,-11.6145 -9.573,-21.1875 -21.1875,-21.1875zM91.8125,162.4375c3.97266,0 7.0625,3.08984 7.0625,7.0625c0,3.97266 -3.08984,7.0625 -7.0625,7.0625c-3.97266,0 -7.0625,-3.08984 -7.0625,-7.0625c0,-3.97266 3.08984,-7.0625 7.0625,-7.0625zM155.375,162.4375c3.97266,0 7.0625,3.08984 7.0625,7.0625c0,3.97266 -3.08984,7.0625 -7.0625,7.0625c-3.97266,0 -7.0625,-3.08984 -7.0625,-7.0625c0,-3.97266 3.08984,-7.0625 7.0625,-7.0625z"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoName, null, "Carrito")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinksNav, {
-    href: "#"
-  }, "Acceder"));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoName, null, "Carrito"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/acceder"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LinksNav, null, "Acceder")));
 });
 
 /***/ }),
@@ -41728,7 +41979,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     src: "https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleProduct, null, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, rerum. Rerum perferendis sapiente ducimus, vel vero molestiae earum fugit quia, natus reprehenderit hic mollitia. Incidunt distinctio eveniet exercitationem blanditiis dignissimos."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cantidad:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
     type: "number"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyProduct, null, "Comprar ahora"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartProduct, null, "Agregar al carrito"))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyProduct, null, "Comprar"))));
 });
 
 /***/ }),
