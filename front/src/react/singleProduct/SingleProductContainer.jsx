@@ -17,6 +17,7 @@ class SingleProductContainer extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps.match.params.id);
   return {
     product: state.productsReducers.one,
     id: ownProps.match.params.id,

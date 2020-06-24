@@ -1,10 +1,10 @@
 import React from "react";
-import AllProducts from "./AllProducts";
+import Home from "./Home";
 import { fetchAllProducts } from "../../redux/actions/products";
 
 import { connect } from "react-redux";
 
-class AllProductsContainer extends React.Component {
+class HomeContainer extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -12,28 +12,23 @@ class AllProductsContainer extends React.Component {
   componentDidMount() {
     this.props.fetchAllProducts();
   }
+
   render() {
-    return (
-      <div>
-        <AllProducts product={this.props.product} />
-      </div>
-    );
+    return <Home juegos={this.props.juegos} />;
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.productsReducers);
+  console.log(state);
   return {
-    product: state.productsReducers.allProducts,
+    juegos: state.productsReducers.allProducts,
   };
 };
+
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AllProductsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

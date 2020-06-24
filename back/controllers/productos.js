@@ -1,6 +1,23 @@
 const obj = {};
 const { Product } = require("../models/index");
+const sequelize = require("sequelize");
+const Op = sequelize.Op;
 
+// filtra por un nombre
+obj.search = (req, res, next) => {
+  console.log(req.params.name);
+  Product.findAll({
+    where: {
+      name: {
+        [Op.like]: `%${req.params.name}%`,
+      },
+    },
+  })
+    .then((producto) => {
+      res.send(producto);
+    })
+    .catch(next);
+};
 
 // busco todos los productos
 obj.allProductos = (req, res, next) => {

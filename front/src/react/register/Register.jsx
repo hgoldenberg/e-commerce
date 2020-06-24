@@ -1,16 +1,74 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import styled from 'styled-components';
 
-export default ({ handleInputEmail, handleInputPass, handleSubmit, handleInputName, handleInputLastName, handleInputDirection, name,lastname,email,password,direccion}) => {
-  return (
-    <form onSubmit={handleSubmit}>
-      NOMBRE: <input onChange={handleInputName} value={name} type="text" />
-      APELLIDO: <input onChange={handleInputLastName} value={lastname} type="text" />
-      DIRECCION: <input onChange={handleInputDirection} value={direccion} type="text" />
-      EMAIL: <input onChange={handleInputEmail} value={email} type="email" />
-      PASSWORD: <input onChange={handleInputPass} value={password} type="password" />
-      <button type="submit" >
-        Register
-      </button>
-    </form>
-  );
+export default () => {
+
+    const FormContainer = styled.div`
+        background-color: #fff;
+        margin: 100px 450px;
+        padding-bottom: 30px;
+        padding: 30px 20px 30px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    `;
+
+    const FormTitle = styled.h2`
+        padding-bottom: 20px;
+        font-weight: 100;
+        font-size: 26px;
+        text-align: center;
+    `;
+
+    const Form = styled.form`
+        display: flex;
+        flex-direction: column;
+    `;
+
+    const Label = styled.label`
+        font-size: 18px;
+        color: #777;
+    `;
+
+    const Input = styled.input`
+        margin-bottom: 20px;
+        height: 25px;
+        font-size: 18px;
+        color: #474747;
+        padding: 15px 5px
+    `;
+
+    const InputSubmit = styled.input`
+        background-color: #1d232d;
+        border: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 8px 0px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+    `;
+
+    const Span = styled.span`
+        display: block;
+        margin: 20px 0px;
+    `;
+    
+    return(
+        <FormContainer>
+            <FormTitle>Registrar</FormTitle>
+            <Form >
+                <Label>Name:</Label>
+                <Input type="text"/>
+                <Label>Email:</Label>
+                <Input type="email"/>
+                <Label>Password:</Label>
+                <Input type="password"/>
+                
+                <InputSubmit type="submit" value="Registrar"/>
+            </Form>
+            <Span>Si tienes una cuenta <Link to="/acceder">Acceder</Link></Span>
+        </FormContainer>
+    )
 };
