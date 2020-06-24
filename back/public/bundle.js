@@ -37225,7 +37225,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _AllProducts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AllProducts */ "./src/react/allProducts/AllProducts.jsx");
-/* harmony import */ var _redux_actions_singleProduct__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/singleProduct */ "./src/redux/actions/singleProduct.js");
+/* harmony import */ var _redux_actions_products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/products */ "./src/redux/actions/products.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -37292,7 +37292,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchAllProducts: function fetchAllProducts() {
-      return dispatch(Object(_redux_actions_singleProduct__WEBPACK_IMPORTED_MODULE_2__["fetchAllProducts"])());
+      return dispatch(Object(_redux_actions_products__WEBPACK_IMPORTED_MODULE_2__["fetchAllProducts"])());
     }
   };
 };
@@ -37453,17 +37453,6 @@ var fetchAllProducts = function fetchAllProducts() {
     });
   };
 };
-
-/***/ }),
-
-/***/ "./src/redux/actions/singleProduct.js":
-/*!********************************************!*\
-  !*** ./src/redux/actions/singleProduct.js ***!
-  \********************************************/
-/*! exports provided: fetchProduct, fetchAllProducts */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/BebiGordyn/Desktop/Ecommerce/e-commerce/front/src/redux/actions/singleProduct.js'");
 
 /***/ }),
 
