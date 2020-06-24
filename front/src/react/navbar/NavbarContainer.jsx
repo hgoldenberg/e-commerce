@@ -14,7 +14,7 @@ class NavbarContainer extends React.Component {
       inputValue: "",
     };
     this.handlerChange = this.handlerChange.bind(this);
-    this.handlerSubmit = this.handlerSubmit.bind(this);
+    //this.handlerSubmit = this.handlerSubmit.bind(this);
     
   }
 
@@ -34,7 +34,6 @@ class NavbarContainer extends React.Component {
     return (
       <Navbar
         handlerChange={this.handlerChange}
-        handlerSubmit={this.handlerSubmit}
         
       />
     );
