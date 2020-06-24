@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case SINGLEPRODUCT:
       return { ...state, one: action.id };
     case ALLPRODUCTS:
-        return { ...state, one: action.product };  
+        return { ...state, allProducts: action.product };  
     
 
     default:
