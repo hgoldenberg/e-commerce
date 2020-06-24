@@ -1,18 +1,34 @@
 import React from "react";
 import Home from "./Home";
+import { fetchAllProducts } from "../../redux/actions/products";
 
 import { connect } from "react-redux";
 
 class HomeContainer extends React.Component {
-  
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchAllProducts();
+  }
+
   render() {
-    return (
-      <Home/>
-    );
+    return <Home juegos={this.props.juegos} />;
   }
 }
 
-export default connect(
-  null,
-  null
-)(HomeContainer);
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
+    juegos: state.productsReducers.allProducts,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchAllProducts: () => dispatch(fetchAllProducts()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

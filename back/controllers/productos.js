@@ -1,6 +1,10 @@
 const obj = {};
 const { Product } = require("../models/index");
 
+// filtra por un nombre
+/* obj.search = (req, res, next) => {
+  Product.findAll({ where: req.params.product }).then(() => {});
+}; */
 
 // busco todos los productos
 obj.allProductos = (req, res, next) => {
