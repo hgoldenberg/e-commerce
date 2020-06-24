@@ -22,8 +22,9 @@ Carrito.init(
       allowNull: false,
     },
     estado: {
+      // estado pendiente || completado 
       type: S.STRING,
-      allowNull: false,
+      defaultValue:'pendiente'
     },
   },
   {
