@@ -37279,21 +37279,29 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /*!********************************************!*\
   !*** ./src/redux/actions/singleProduct.js ***!
   \********************************************/
-/*! exports provided: fetchProduct */
+/*! exports provided: fetchProduct, fetchAllProducts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProduct", function() { return fetchProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllProducts", function() { return fetchAllProducts; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
 
 
 
-var oneProduct = function oneProduct(product) {
+var oneProduct = function oneProduct(id) {
   return {
     type: _constanst__WEBPACK_IMPORTED_MODULE_1__["SINGLEPRODUCT"],
+    id: id
+  };
+};
+
+var allProduct = function allProduct(product) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["ALLPRODUCTS"],
     product: product
   };
 };
@@ -37305,6 +37313,13 @@ var fetchProduct = function fetchProduct(id) {
     });
   };
 };
+var fetchAllProducts = function fetchAllProducts() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/productos").then(function (res) {
+      return dispatch(allProduct(res.data));
+    });
+  };
+};
 
 /***/ }),
 
@@ -37312,13 +37327,21 @@ var fetchProduct = function fetchProduct(id) {
 /*!********************************!*\
   !*** ./src/redux/constanst.js ***!
   \********************************/
-/*! exports provided: SINGLEPRODUCT */
+/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SINGLEPRODUCT", function() { return SINGLEPRODUCT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALLPRODUCTS", function() { return ALLPRODUCTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_IN", function() { return LOG_IN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_OUT", function() { return LOG_OUT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PERSIST_SESSION", function() { return PERSIST_SESSION; });
 var SINGLEPRODUCT = "SINGLEPRODUCT";
+var ALLPRODUCTS = "ALLPRODUCTS";
+var LOG_IN = "LOG_IN";
+var LOG_OUT = "LOG_OUT";
+var PERSIST_SESSION = "PERSIST_SESSION";
 
 /***/ }),
 
@@ -37333,11 +37356,57 @@ var SINGLEPRODUCT = "SINGLEPRODUCT";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _products_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./products-reducer */ "./src/redux/reducers/products-reducer.js");
+/* harmony import */ var _registerReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./registerReducer */ "./src/redux/reducers/registerReducer.js");
+/* harmony import */ var _logUserReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logUserReducer */ "./src/redux/reducers/logUserReducer.js");
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  productsReducers: _products_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  productsReducers: _products_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  registerReducer: _registerReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  logUserReducer: _logUserReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 }));
+
+/***/ }),
+
+/***/ "./src/redux/reducers/logUserReducer.js":
+/*!**********************************************!*\
+  !*** ./src/redux/reducers/logUserReducer.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../constant'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
+var initialState = {
+  isLogged: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case !(function webpackMissingModule() { var e = new Error("Cannot find module '../constant'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return Object.assign({}, state, {
+        isLogged: action.isLogged
+      });
+
+    case !(function webpackMissingModule() { var e = new Error("Cannot find module '../constant'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return Object.assign({}, state, {
+        isLogged: false
+      });
+
+    case !(function webpackMissingModule() { var e = new Error("Cannot find module '../constant'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return Object.assign({}, state, {
+        isLogged: action.isLogged
+      });
+  }
+
+  return state;
+});
 
 /***/ }),
 
@@ -37359,7 +37428,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
-  one: {}
+  one: {},
+  allProducts: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -37368,12 +37438,47 @@ var initialState = {
   switch (action.type) {
     case _constanst__WEBPACK_IMPORTED_MODULE_0__["SINGLEPRODUCT"]:
       return _objectSpread(_objectSpread({}, state), {}, {
+        one: action.id
+      });
+
+    case _constanst__WEBPACK_IMPORTED_MODULE_0__["ALLPRODUCTS"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
         one: action.product
       });
 
     default:
       return state;
   }
+});
+
+/***/ }),
+
+/***/ "./src/redux/reducers/registerReducer.js":
+/*!***********************************************!*\
+  !*** ./src/redux/reducers/registerReducer.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '../constant'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
+var initialState = {
+  user: {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case !(function webpackMissingModule() { var e = new Error("Cannot find module '../constant'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return Object.assign({}, state, {
+        user: action.user
+      });
+  }
+
+  return state;
 });
 
 /***/ }),
