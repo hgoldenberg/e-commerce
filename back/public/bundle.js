@@ -40412,8 +40412,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n      color: #777777;\n      text-decoration: none;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    color: #777777;\n    text-decoration: none;\n  "]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -40423,7 +40424,7 @@ function _templateObject14() {
 }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n      list-style: none;\n      margin: 5px 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    list-style: none;\n    margin: 5px 0px;\n  "]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -40433,7 +40434,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n      margin: 0px;\n      padding: 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0px;\n    padding: 0px;\n  "]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -40443,7 +40444,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n      color: #212832;\n      font-size: 20px;\n      margin-bottom: 10px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    color: #212832;\n    font-size: 20px;\n    margin-bottom: 10px;\n  "]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -40453,7 +40454,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n      padding: 0px 30px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 0px 30px;\n  "]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -40463,7 +40464,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n      font-size: 25px;\n      padding: 30px;\n      text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 25px;\n    padding: 30px;\n    text-align: center;\n  "]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -40473,7 +40474,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n      height: 300px;\n      width: 300px;\n      margin-top: 50px;\n      margin-left: 20px;\n      float: left;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    height: 300px;\n    width: 300px;\n    margin-top: 50px;\n    margin-left: 20px;\n    float: left;\n  "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -40483,7 +40484,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n        display: flex;\n        flex-direction: row;\n        flex-wrap: wrap;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n  "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -40493,7 +40494,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        padding: 20px 100px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 20px 100px;\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -40503,7 +40504,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n        font-weight: 700;\n        display: block;\n        text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    font-weight: 700;\n    display: block;\n    text-align: center;\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -40513,7 +40514,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n        color: #000000;\n        text-decoration: none;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    color: #000000;\n    text-decoration: none;\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -40523,7 +40524,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n        padding: 10px;\n        text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 10px;\n    text-align: center;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -40533,7 +40534,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        width: 200px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    height: 280px;\n    width: 200px;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -40543,7 +40544,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        width: 200px;\n        padding-bottom: 10px;\n        box-shadow: 0px 4px 5px 2px rgba(189,189,189,1);\n        margin-top: 30px;\n        margin-right: 20px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    width: 200px;\n    padding-bottom: 10px;\n    box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n    margin-top: 30px;\n    margin-right: 20px;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -40553,6 +40554,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -40579,24 +40581,31 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     href: ""
   }, "Terror")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
     href: ""
-  }, "Aventura"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
-    src: "https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "cardContent"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, "Resident Evil 2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, "1700 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
-    src: "https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "cardContent"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, "Resident Evil 2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, "1700 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars"))))))));
+  }, "Aventura"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, product.length ? product.map(function (product) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/productos/".concat(product.id)
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
+      src: product.imageUno
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "cardContent"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, " ", product.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, product.price, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars")))));
+  }) : null)));
 });
+{
+  /* <CardGame>
+            <CardLink href="">
+              <CardGameImg src="https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg" />
+              <div className="cardContent">
+                <CardContentP>
+                  <CardLink href="">Resident Evil 2</CardLink>
+                </CardContentP>
+                <PriceGame>
+                  1700 <span>Ars</span>
+                </PriceGame>
+              </div>
+            </CardLink>
+          </CardGame> */
+}
 /*
 <div>
       <h1>Bienvenido a todos los Productos</h1>
@@ -40609,7 +40618,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
             <li key={product.name}> 
               
              
-              
+  
             </li>
           )
       })): (<li>Bienvenido!</li>) }
@@ -40723,7 +40732,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n        font-weight: 700;\n        display: block;\n        text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    font-weight: 700;\n    display: block;\n    text-align: center;\n  "]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -40733,7 +40742,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n        color: #000000;\n        text-decoration: none;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    color: #000000;\n    text-decoration: none;\n  "]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -40743,7 +40752,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n        padding: 10px;\n        text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 10px;\n    text-align: center;\n  "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -40753,7 +40762,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n        width: 200px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    height: 280px;\n    width: 200px;\n  "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -40763,7 +40772,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        width: 200px;\n        padding-bottom: 10px;\n        box-shadow: 0px 4px 5px 2px rgba(189,189,189,1);\n        margin-top: 30px;\n        margin-right: 20px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    width: 200px;\n    padding-bottom: 10px;\n    box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n    margin-top: 30px;\n    margin-right: 20px;\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -40773,7 +40782,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n        display: flex;\n        flex-direction: row;\n        flex-wrap: wrap;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -40783,7 +40792,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n        font-size: 45px;\n        padding: 50px 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 45px;\n    padding: 50px 0px;\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -40793,7 +40802,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n        padding: 20px 100px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 20px 100px;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -40803,7 +40812,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        width: 100%;\n        height: 500px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 500px;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -40813,7 +40822,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        padding: 20px 50px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 20px 50px;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -40827,7 +40836,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var juegos = _ref.juegos;
+  console.log(juegos);
   var Slider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
   var SliderImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject2());
   var Section = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject3());
@@ -40838,25 +40849,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   var CardContentP = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].p(_templateObject8());
   var CardLink = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject9());
   var PriceGame = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject10());
+  var a = juegos.slice(0, 6);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SliderImg, {
     src: "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fgrand-theft-auto-v%2Fhome%2FGTAV_EGS_Artwork_1920x1080_Hero-Carousel_V06-1920x1080-1503e4b1320d5652dd4f57466c8bcb79424b3fc0.jpg?h=1080&resize=1&w=1920"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleSection, null, "Nuevos videojuegos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
-    src: "https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "cardContent"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, "Resident Evil 2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, "1700 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
-    src: "https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "cardContent"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, {
-    href: ""
-  }, "Resident Evil 2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, "1700 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars"))))))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleSection, null, "Nuevos videojuegos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, juegos.length ? a.map(function (juego) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/productos/".concat(juego.id)
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
+      src: juego.imageUno
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "cardContent"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, juego.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, juego.price, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars")))));
+  }) : null)));
 });
 
 /***/ }),
@@ -40873,7 +40877,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ "./src/react/home/Home.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/products */ "./src/redux/actions/products.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40900,28 +40905,51 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var HomeContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(HomeContainer, _React$Component);
 
   var _super = _createSuper(HomeContainer);
 
-  function HomeContainer() {
+  function HomeContainer(props) {
     _classCallCheck(this, HomeContainer);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, props);
   }
 
   _createClass(HomeContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchAllProducts();
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        juegos: this.props.juegos
+      });
     }
   }]);
 
   return HomeContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, null)(HomeContainer));
+var mapStateToProps = function mapStateToProps(state) {
+  console.log(state);
+  return {
+    juegos: state.productsReducers.allProducts
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchAllProducts: function fetchAllProducts() {
+      return dispatch(Object(_redux_actions_products__WEBPACK_IMPORTED_MODULE_2__["fetchAllProducts"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(HomeContainer));
 
 /***/ }),
 
