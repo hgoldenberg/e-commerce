@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router";
+import LoginContainer from "./login/LoginContainer"
+import RegisterContainer from "./register/RegisterContainer"
 
 import SingleProductContainer from "./singleProduct/SingleProductContainer";
 import AllProductsContainer from "./allProducts/AllProductsContainer";
@@ -16,6 +18,11 @@ export default () => {
     <div>
       <NavbarContainer />
       <Switch>
+        
+        
+        <Route exact path="/login" component={LoginContainer}/>
+        <Route exact path="/register" component={RegisterContainer}/>
+
         {/* <Route path="/" render={() => console.log("hola")} /> */}
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/productos" component={AllProductsContainer} />

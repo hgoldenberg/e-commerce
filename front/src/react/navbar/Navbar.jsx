@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export default ({ handlerChange, handlerSubmit }) => {
+export default ({ handlerChange, handlerSubmit, valor }) => {
   console.log("este es el componente tonto ");
   const Nav = styled.nav`
-      background: #1d232d;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      padding: 0px 60px;
+    background: #1d232d;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0px 60px;
   `;
   const Logo = styled.div`
-      margin: 0px 20px;
+    margin: 0px 20px;
   `;
   const LogoImg = styled.img`
     width: 100px;
@@ -22,11 +22,11 @@ export default ({ handlerChange, handlerSubmit }) => {
     margin-top: 4px;
   `;
   const FormSearch = styled.form`
-      margin: 0px 50px;
+    margin: 0px 50px;
   `;
   const DivSearch = styled.div`
-      display: flex;
-      flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
   `;
   const InputSearch = styled.input`
       background-color: #fff;
@@ -39,13 +39,13 @@ export default ({ handlerChange, handlerSubmit }) => {
       border-radius: 5px 0px 0px 5px;
   `;
   const ButtonSearch = styled.button`
-      background-color: #fff;
-      padding: 4px 8px;
-      border: none;
-      height: 30px;
-      border-radius: 0px 5px 5px 0px;
-      cursor: pointer;
-      color: #777777;
+    background-color: #fff;
+    padding: 4px 8px;
+    border: none;
+    height: 30px;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    color: #777777;
   `;
   const LinksNav = styled.div`
       color: #ffffff;
@@ -61,7 +61,7 @@ export default ({ handlerChange, handlerSubmit }) => {
   `;
 
   const CarritoName = styled.div`
-      margin: 0px 5px;
+    margin: 0px 5px;
   `;
 
   return(
