@@ -7,8 +7,6 @@ import SingleProductContainer from "./singleProduct/SingleProductContainer";
 import AllProductsContainer from "./allProducts/AllProductsContainer";
 import NavbarContainer from './navbar/NavbarContainer';
 import HomeContainer from './home/HomeContainer';
-import LoginContainer from './login/LoginContainer'
-import RegisterContainer from './register/RegisterContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
