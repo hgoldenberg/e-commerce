@@ -5,8 +5,9 @@ import SingleProductContainer from "./singleProduct/SingleProductContainer";
 import AllProductsContainer from "./allProducts/AllProductsContainer";
 import NavbarContainer from './navbar/NavbarContainer';
 import HomeContainer from './home/HomeContainer';
-import LoginContainer from './login/LoginContainer'
-import RegisterContainer from './register/RegisterContainer'
+import LoginContainer from './login/LoginContainer';
+import RegisterContainer from './register/RegisterContainer';
+import CarritoContainer from './carrito/CarritoContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,6 +21,7 @@ export default () => {
         <Route exact path="/productos" component={AllProductsContainer} />
         <Route exact path="/acceder" component={LoginContainer} />
         <Route exact path="/registro" component={RegisterContainer} />
+        <Route exact path="/carrito" component={CarritoContainer} />
         {/*  <Route exact path="/search" component={AllProductsContainer} /> */}
         <Route exact path="/productos/:id" component={SingleProductContainer} />
       </Switch>

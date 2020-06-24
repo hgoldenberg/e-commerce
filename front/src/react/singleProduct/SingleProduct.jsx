@@ -67,8 +67,7 @@ export default ({ product }) => {
                 <label>Cantidad:</label>
                 <Input type="number"/>
             </Form>
-            <BuyProduct>Comprar ahora</BuyProduct>
-            <CartProduct>Agregar al carrito</CartProduct>
+            <BuyProduct>Comprar</BuyProduct>
        </ContentProduct>
     </ArticleProduct>
   </Section>
