@@ -1,5 +1,6 @@
 const S = require('sequelize');
 const db = require('../config/db');
+const Crypto = require('crypto');
 
 class Users extends S.Model{};
 
