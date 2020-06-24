@@ -5,6 +5,8 @@ import SingleProductContainer from "./singleProduct/SingleProductContainer";
 import AllProductsContainer from "./allProducts/AllProductsContainer";
 import NavbarContainer from './navbar/NavbarContainer';
 import HomeContainer from './home/HomeContainer';
+import LoginContainer from './login/LoginContainer'
+import RegisterContainer from './register/RegisterContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default () => {
@@ -15,7 +17,9 @@ export default () => {
         {/* <Route path="/" render={() => console.log("hola")} /> */}
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/productos" component={AllProductsContainer} />
-        <Route exact path="/product/:id" component={SingleProductContainer} />
+        <Route exact path="/acceder" component={LoginContainer} />
+        <Route exact path="/registro" component={RegisterContainer} />
+        <Route exact path="/productos/:id" component={SingleProductContainer} />
       </Switch>
     </div>
   );
