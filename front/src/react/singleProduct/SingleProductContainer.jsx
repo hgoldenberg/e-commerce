@@ -12,7 +12,7 @@ class SingleProductContainer extends React.Component {
     this.props.fetchProduct(this.props.id);
   }
   render() {
-    return <SingleProduct product={this.props.product} />;
+    return <SingleProduct product={this.props.product} />
   }
 }
 
