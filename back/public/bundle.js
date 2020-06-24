@@ -41618,7 +41618,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n      background-color: #ffffff;\n      padding: 15px 25px;\n      border-radius: 5px;\n      border: none;\n      cursor: pointer;\n      color: #1d232d;\n      font-size: 15px;\n      border: 1px solid #1d232d;\n      margin-top: 40px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    background-color: #ffffff;\n    padding: 15px 25px;\n    border-radius: 5px;\n    border: none;\n    cursor: pointer;\n    color: #1d232d;\n    font-size: 15px;\n    border: 1px solid #1d232d;\n    margin-top: 40px;\n  "]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -41628,7 +41628,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n      background-color: #1d232d;\n      padding: 15px 25px;\n      border-radius: 5px;\n      border: none;\n      cursor: pointer;\n      color: #ffffff;\n      font-size: 15px;\n      border: 1px solid #1d232d;\n      margin-top: 40px;\n      margin-right: 40px\n    "]);
+  var data = _taggedTemplateLiteral(["\n    background-color: #1d232d;\n    padding: 15px 25px;\n    border-radius: 5px;\n    border: none;\n    cursor: pointer;\n    color: #ffffff;\n    font-size: 15px;\n    border: 1px solid #1d232d;\n    margin-top: 40px;\n    margin-right: 40px;\n  "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -41638,7 +41638,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n      width: 60px;\n      font-size: 18px;\n      padding: 10px;\n      margin: 0px 10px\n    "]);
+  var data = _taggedTemplateLiteral(["\n    width: 60px;\n    font-size: 18px;\n    padding: 10px;\n    margin: 0px 10px;\n  "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -41648,7 +41648,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n      margin-top: 50px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin-top: 50px;\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -41658,7 +41658,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n      padding: 20px 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 20px 0px;\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -41668,7 +41668,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n      margin: 0px 50px;\n      width: 400px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0px 50px;\n    width: 400px;\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -41678,7 +41678,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n      width: 350px;\n      height: 420px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    width: 350px;\n    height: 420px;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -41688,7 +41688,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n      margin: 40px 50px;\n      display: flex;\n      flex-direction: row;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 40px 50px;\n    display: flex;\n    flex-direction: row;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -41698,7 +41698,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n      padding: 20px 100px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 20px 100px;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -41713,6 +41713,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product;
+  console.log(product);
   var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
   var ArticleProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
   var ImageProductImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject3());
@@ -41725,10 +41726,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "imageProduct"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImageProductImg, {
-    src: "https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleProduct, null, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, rerum. Rerum perferendis sapiente ducimus, vel vero molestiae earum fugit quia, natus reprehenderit hic mollitia. Incidunt distinctio eveniet exercitationem blanditiis dignissimos."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Cantidad:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "number"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyProduct, null, "Comprar ahora"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartProduct, null, "Agregar al carrito"))));
+    src: product.imageUno
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleProduct, null, product.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"", product.description, "\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " $ ", product.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyProduct, null, "Comprar ahora"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartProduct, null, "Agregar al carrito"))));
 });
 
 /***/ }),
@@ -41803,6 +41802,7 @@ var SingleProductContainer = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
+  console.log(ownProps.match.params.id);
   return {
     product: state.productsReducers.one,
     id: ownProps.match.params.id
