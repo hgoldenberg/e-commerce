@@ -23,10 +23,18 @@ export const fetchProduct = (id) => {
   };
 };
 
-export const fetchAllProducts = ()=> {
-return (dispatch) => {
-  return axios.get (`/api/productos`).then((res)=>{
-    return dispatch (allProduct(res.data));
-  });
+export const fetchAllProducts = () => {
+  return (dispatch) => {
+    return axios.get(`/api/productos`).then((res) => {
+      return dispatch(allProduct(res.data));
+    });
+  };
 };
+
+export const searchProduct = (busqueda) => {
+  return (dispatch) => {
+    return axios.get(`/api/productos/search/${busqueda}`).then((res) => {
+      return dispatch(allProduct(res.data));
+    });
+  };
 };

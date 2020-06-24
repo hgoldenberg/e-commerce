@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 //import { withRouter} from "react-router-dom"
 
+import { searchProduct } from "../../redux/actions/products";
 
 //import { fetchAllProducts } from "../../redux/actions/singleProduct";
 
@@ -14,8 +15,7 @@ class NavbarContainer extends React.Component {
       inputValue: "",
     };
     this.handlerChange = this.handlerChange.bind(this);
-    //this.handlerSubmit = this.handlerSubmit.bind(this);
-    
+    this.handlerSubmit = this.handlerSubmit.bind(this);
   }
 
   handlerChange(evt) {
@@ -24,35 +24,41 @@ class NavbarContainer extends React.Component {
     this.setState({ inputValue: value });
   }
 
+<<<<<<< HEAD
 //   handlerSubmit(event) {
       
 //   }
 
   
+=======
+  handlerSubmit(event) {
+    event.preventDefault();
+    this.props.searchProduct(this.state.inputValue);
+    this.setState({ inputValue: "" });
+  }
+>>>>>>> 586f01ae3a091ebc51d1aadabaa7b7d2d191455a
 
   render() {
     return (
       <Navbar
         handlerChange={this.handlerChange}
-        
+        handlerSubmit={this.handlerSubmit}
+        valor={this.state.inputValue}
       />
     );
   }
 }
 
-// const mapStateToProps = (state, ownProps) => {
-//   return {
-//     history: ownProps.history,
-//   };
-// };
+/* const mapStateToProps = (state, ownProps) => {
+  return {
+    history: ownProps.history,
+  };
+}; */
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-    
-//     }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    searchProduct: (busqueda) => dispatch(searchProduct(busqueda)),
+  };
+};
 
-  
-//   };
-
-
-export default connect(null, null)(NavbarContainer);
+export default connect(null, mapDispatchToProps)(NavbarContainer);
