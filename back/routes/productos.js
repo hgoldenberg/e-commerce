@@ -4,7 +4,7 @@ const productos = require("../controllers/productos");
 
 // ruta = /api/productos
 
-/* Router.get("/search/:product", productos.search); */
+Router.get("/search/:name", productos.search);
 
 Router.post("/", productos.createProducto);
 

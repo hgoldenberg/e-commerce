@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
 });
 
 // conectando con la base de datos
-db.sync({ force:false})
+db.sync({ force: false })
   .then(() => {
     app.listen(port, () => {
       console.log(`Escuchando en el puerto ${port}`);
