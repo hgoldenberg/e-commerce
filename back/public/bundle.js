@@ -37182,7 +37182,7 @@ __webpack_require__.r(__webpack_exports__);
     component: _allProducts_AllProductsContainer__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/product/:id",
+    path: "/producto/:id",
     component: _singleProduct_SingleProductContainer__WEBPACK_IMPORTED_MODULE_2__["default"]
   })));
 });
@@ -37203,7 +37203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product;
-  console.log(product);
+  console.log("producto es" + product);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Bienvenido a todos los Productos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, product.length > 1 ? product.map(function (product) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: product.name
@@ -37283,7 +37283,7 @@ var AllProductsContainer = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 var mapStateToProps = function mapStateToProps(state) {
-  console.log(state.productsReducers);
+  console.log("todossssss" + state.productsReducers);
   return {
     product: state.productsReducers.allProducts
   };

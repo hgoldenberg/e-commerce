@@ -12,7 +12,7 @@ export default () => {
         {/* <Route path="/" render={() => console.log("hola")} /> */}
         <Route exact path="/" component={SingleProductContainer} />
         <Route exact path="/productos" component={AllProductsContainer} />
-        <Route exact path="/product/:id" component={SingleProductContainer} />
+        <Route exact path="/producto/:id" component={SingleProductContainer} />
       </Switch>
     </div>
   );

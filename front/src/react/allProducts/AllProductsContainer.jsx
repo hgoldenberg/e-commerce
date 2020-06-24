@@ -22,7 +22,7 @@ class AllProductsContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.productsReducers);
+  console.log("todossssss" + state.productsReducers);
   return {
     product: state.productsReducers.allProducts,
   };

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default ({product}) => {
-    console.log(product)
+    console.log("producto es" + product)
   return (
     <div>
       <h1>Bienvenido a todos los Productos</h1>
