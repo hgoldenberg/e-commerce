@@ -1,26 +1,35 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
-import { fetchProduct } from "../../redux/actions/singleProduct";
+import { fetchProduct } from "../../redux/actions/products";
 
 import { connect } from "react-redux";
 
 class SingleProductContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount() {
+    this.props.fetchProduct(this.props.id);
+  }
   render() {
-    return (
-      <div>
-        <SingleProduct />
-      </div>
-    );
+    return <SingleProduct product={this.props.product} />;
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
+const mapStateToProps = (state, ownProps) => {
+  return {
+    product: state.productsReducers.one,
+    id: ownProps.match.params.id,
+  };
 };
+
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProduct: (id) => dispatch(fetchProduct(id)),
   };
 };
 
-export default connect(null, mapDispatchToProps)(SingleProductContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleProductContainer);
