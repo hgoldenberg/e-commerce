@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
 const db = require("./config/db");
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const router = require("./routes");
 
 app.use(volleyball);
@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
 });
 
 // conectando con la base de datos
-db.sync({ force: false })
+db.sync({ force:false})
   .then(() => {
     app.listen(port, () => {
       console.log(`Escuchando en el puerto ${port}`);
