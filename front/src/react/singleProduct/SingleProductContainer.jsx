@@ -12,11 +12,12 @@ class SingleProductContainer extends React.Component {
     this.props.fetchProduct(this.props.id);
   }
   render() {
-    return <SingleProduct product={this.props.product} />
+    return <SingleProduct product={this.props.product} />;
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps.match.params.id);
   return {
     product: state.productsReducers.one,
     id: ownProps.match.params.id,
