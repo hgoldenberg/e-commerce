@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import LoginContainer from "./login/LoginContainer"
-import RegisterContainer from "./register/RegisterContainer"
 
 import SingleProductContainer from "./singleProduct/SingleProductContainer";
 import AllProductsContainer from "./allProducts/AllProductsContainer";
