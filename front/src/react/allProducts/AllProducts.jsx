@@ -105,7 +105,7 @@ export default ({ product }) => {
                           <CardLink> {product.name}</CardLink>
                         </CardContentP>
                         <PriceGame>
-                          {product.price}
+                          $ {product.price}
                           <span>Ars</span>
                         </PriceGame>
                       </div>
