@@ -5,28 +5,26 @@ import { fetchAllProducts } from "../../redux/actions/products";
 import { connect } from "react-redux";
 
 class AllProductsContainer extends React.Component {
-    constructor(props){  
+  constructor(props) {
     super(props);
-    }
+  }
 
   componentDidMount() {
-      this.props.fetchAllProducts();
-  }   
-    render() {
+    this.props.fetchAllProducts();
+  }
+  render() {
     return (
       <div>
-        <AllProducts 
-        product= {this.props.product}
-        />
+        <AllProducts product={this.props.product} />
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.productsReducers)
+  console.log(state.productsReducers);
   return {
-      product: state.productsReducers.allProducts
+    product: state.productsReducers.allProducts,
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -35,4 +33,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllProductsContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllProductsContainer);

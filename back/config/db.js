@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize(process.env.DB_URL,{
+const db = new Sequelize('postgres://localhost:5432/e-commerce',{
     logging:false,
-    dialect:process.env.DB_DIALECT
+    dialect:'postgres'
 })
 
 module.exports = db
