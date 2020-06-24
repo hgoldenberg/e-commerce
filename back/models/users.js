@@ -1,5 +1,6 @@
 const S = require('sequelize');
 const db = require('../config/db');
+const Crypto = require("crypto");
 
 class Users extends S.Model{};
 
@@ -14,7 +15,8 @@ Users.init({
         allowNull:false
     },
     avatar:{
-        type:S.STRING,
+       type:S.STRING,
+       defaultValue:null
     },
     // agregamos validacion de email
     email:{
@@ -56,6 +58,7 @@ Users.prototype.hashFunction = function(password){
 // Valida si el pass ingresado en texto plano por el usuario ya registrado tiene su correspondiente hasheado en la BD
 
 Users.prototype.validatePassword= function(password){
+    console.log(password)
     return this.hashFunction(password) === this.password;
 };
 

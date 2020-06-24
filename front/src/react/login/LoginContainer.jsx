@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import { doLogIn } from "../redux/actions/logUser";
-import Login from "../login";
+import { doLogIn } from "../../redux/actions/logUser";
+import Login from "./login";
 
 class LoginContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      
     };
     this.handleEmailInput = this.handleEmailInput.bind(this);
     this.handlePassInput = this.handlePassInput.bind(this);
@@ -20,6 +21,7 @@ class LoginContainer extends React.Component {
   handlePassInput(event) {
     this.setState({ password: event.target.value });
   }
+  
   handleSubmit(event) {
     event.preventDefault();
     this.props.doLogIn({

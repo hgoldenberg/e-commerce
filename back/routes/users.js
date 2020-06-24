@@ -6,7 +6,7 @@ const { Users } = require("../models/index");
 
 // ruta = /api/users
 
-// esta ruta de registro hay que descomponerla en la carpeta controllers
+
 Router.post("/register", users.register);
 
 Router.get("/", (req, res, next) => {
@@ -16,7 +16,7 @@ Router.get("/", (req, res, next) => {
 });
 
 // ruta de login
-Router.post("/login", passport.authenticate("local"), users.register);
+Router.post("/login", passport.authenticate("local"), users.loggin);
 
 //ruta de logout
 Router.get("/logout", users.logout);

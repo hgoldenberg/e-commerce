@@ -1,4 +1,4 @@
-import { REGISTER } from "../constant";
+import { REGISTER } from "../constanst";
 
 const initialState = {
   user: {}

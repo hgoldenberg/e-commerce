@@ -1,7 +1,15 @@
 import axios from "axios";
-import { LOG_IN } from "../constant";
-import { LOG_OUT } from "../constant";
-import { PERSIST_SESSION } from "../constant";
+import { LOG_IN } from "../constanst";
+import { LOG_OUT } from "../constanst";
+import { PERSIST_SESSION } from "../constanst";
+
+
+export function logIn(isLogged) {
+  return {
+    type: LOG_IN,
+    isLogged
+  };
+}
 
 export const persistS = function(user) {
   return {
@@ -11,21 +19,22 @@ export const persistS = function(user) {
 };
 
 export const persistSession = user => dispatch => {
+  
   axios
     .get("/api/me", user)
     .then(res => res.data)
     .then(user => dispatch(persistS(user)));
 };
 
-export function logIn(isLogged) {
-  return {
-    type: LOG_IN,
-    isLogged
-  };
-}
+
 
 export const doLogIn = logInUser => dispatch => {
-  axios.post("/api/login", logInUser).then(user => dispatch(logIn(user.data)));
+  console.log("estoy aca",logInUser)
+  return axios.post("/api/users/login", logInUser).then(user => {
+    console.log(user.data)
+    return dispatch(logIn(user.data))
+  });
+  
 };
 
 
@@ -38,7 +47,7 @@ export function logOut(isLogged) {
 
 export const doLogOut = logOutUser => dispatch => {
   axios
-    .get("/api/logout")
+    .get("/api/users/logout")
     .then(user => {
       dispatch(logOut(user.data));
     })

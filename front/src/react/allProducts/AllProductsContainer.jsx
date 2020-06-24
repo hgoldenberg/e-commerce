@@ -1,6 +1,6 @@
 import React from "react";
 import AllProducts from "./AllProducts";
-import { fetchAllProducts } from "../../redux/actions/singleProduct";
+import { fetchAllProducts } from "../../redux/actions/products";
 
 import { connect } from "react-redux";
 
