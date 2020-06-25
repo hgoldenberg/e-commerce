@@ -4,8 +4,7 @@ import styled from "styled-components";
 import {Carousel} from "react-bootstrap";
 
 const Slider = styled.div`
-    padding: 20px 50px;
-    margin-top: 75px;
+    
   `;
   const SliderImg = styled.img`
     width: 100%;

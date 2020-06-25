@@ -8,6 +8,7 @@ import {
   Slide,
   Slider,
   ImageWithZoom,
+  Image
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -21,7 +22,7 @@ width: 1000px;
 display: flex;
 flex-direction: row;
 display: block;
-height: 600px;
+overflow: hidden;
 `;
 
 const ImageProduct = styled.div`
@@ -98,12 +99,12 @@ export default ({ product }) => {
           >
           <Slider>
 
-            <Slide index={0}>
-              <ImageWithZoom className={p.Img} src={product.imageUno} />
+            <Slide index={0} className={p.ImgProduct}>
+              <ImageWithZoom className={p.ImgZoom} src={product.imageUno} />
             </Slide>
 
-            <Slide index={1}>
-              <ImageWithZoom src={product.imageDos} />
+            <Slide index={1} className={p.ImgDosProduct}>
+              <ImageWithZoom className={p.ImgDosZoom} src={product.imageDos} />
             </Slide>
 
           </Slider>
