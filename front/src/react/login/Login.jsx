@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const FormContainer = styled.div`
         background-color: #fff;
-        margin: 100px 450px;
         padding-bottom: 30px;
         padding: 30px 20px 30px;
         border-radius: 10px;
         border: 1px solid #ccc;
+        width: 500px;
     `;
 
     const FormTitle = styled.h2`
