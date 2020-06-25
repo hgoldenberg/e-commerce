@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-export default () => {
-
-    const FormContainer = styled.div`
+const FormContainer = styled.div`
+        margin: 0 auto;
+        margin-top: 50px;
         background-color: #fff;
-        margin: 100px 450px;
         padding-bottom: 30px;
         padding: 30px 20px 30px;
         border-radius: 10px;
         border: 1px solid #ccc;
+        width: 500px;
     `;
 
     const FormTitle = styled.h2`
@@ -55,6 +55,9 @@ export default () => {
         margin: 20px 0px;
     `;
     
+
+export default () => {
+
     return(
         <FormContainer>
             <FormTitle>Registrar</FormTitle>

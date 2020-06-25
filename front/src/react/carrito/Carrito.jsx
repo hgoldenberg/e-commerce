@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default () => {
-
-    const Section = styled.section`
+const Section = styled.section`
         padding: 20px 100px;
     `;
     const ArticleCart = styled.article`
@@ -91,6 +89,8 @@ export default () => {
         font-size: 20px;
         border: 1px solid #1d232d;
     `;
+
+export default () => {
 
     return (
         <Section>
