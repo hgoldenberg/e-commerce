@@ -8,6 +8,7 @@ obj.register = (req, res, next) =>{
 };
 
 obj.loggin = (req, res, next) =>{
+    console.log('me loggie')
     console.log(req.user)
     res.status(200).json(req.user)
 };
