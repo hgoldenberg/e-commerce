@@ -23,4 +23,13 @@ obj.users = (req, res, next) =>{
     .then (data=>(res.json(data)))
 };
 
+obj.loggedUser = (req, res, next) => {
+    console.log(req.user)
+    if (req.isAuthenticated()) {
+        res.json(req.user)
+    } else {
+        res.json("")
+    }
+};
+
 module.exports= obj

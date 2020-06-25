@@ -17,11 +17,11 @@ export const persistS = function(user) {
   };
 };
 
-export const persistSession = user => dispatch => {
+export const persistSession = () => dispatch => {
   axios
-    .get("/api/me", user)
+    .get("/api/users/persistencia")
     .then(res => res.data)
-    .then(user => dispatch(persistS(user)));
+    .then(user => dispatch(logIn(user)));
 };
 
 // loggerte
