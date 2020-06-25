@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-
 import SingleProductContainer from "./singleProduct/SingleProductContainer";
 import AllProductsContainer from "./allProducts/AllProductsContainer";
 import NavbarContainer from './navbar/NavbarContainer';

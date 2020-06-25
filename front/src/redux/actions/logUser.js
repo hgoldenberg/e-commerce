@@ -29,7 +29,6 @@ export const persistSession = user => dispatch => {
 
 
 export const doLogIn = logInUser => dispatch => {
-  console.log("estoy aca",logInUser)
   return axios.post("/api/users/login", logInUser).then(user => {
     console.log(user.data)
     return dispatch(logIn(user.data))

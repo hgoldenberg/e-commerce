@@ -31463,6 +31463,7 @@ function strictEqual(a, b) {
   return a === b;
 } // createConnect with default args builds the 'official' connect behavior. Calling it with
 // different options opens up some testing and extensibility scenarios
+<<<<<<< HEAD
 
 
 function createConnect(_temp) {
@@ -31540,6 +31541,85 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
 
 
+=======
+
+
+function createConnect(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$connectHOC = _ref.connectHOC,
+      connectHOC = _ref$connectHOC === void 0 ? _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_2__["default"] : _ref$connectHOC,
+      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
+      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToProps__WEBPACK_IMPORTED_MODULE_5__["default"] : _ref$mapStateToPropsF,
+      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
+      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToProps__WEBPACK_IMPORTED_MODULE_4__["default"] : _ref$mapDispatchToPro,
+      _ref$mergePropsFactor = _ref.mergePropsFactories,
+      mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergeProps__WEBPACK_IMPORTED_MODULE_6__["default"] : _ref$mergePropsFactor,
+      _ref$selectorFactory = _ref.selectorFactory,
+      selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactory__WEBPACK_IMPORTED_MODULE_7__["default"] : _ref$selectorFactory;
+
+  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
+    if (_ref2 === void 0) {
+      _ref2 = {};
+    }
+
+    var _ref3 = _ref2,
+        _ref3$pure = _ref3.pure,
+        pure = _ref3$pure === void 0 ? true : _ref3$pure,
+        _ref3$areStatesEqual = _ref3.areStatesEqual,
+        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
+        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
+        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areOwnPropsEqua,
+        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
+        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areStatePropsEq,
+        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
+        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areMergedPropsE,
+        extraOptions = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
+
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+    return connectHOC(selectorFactory, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      // used in error messages
+      methodName: 'connect',
+      // used to compute Connect's displayName from the wrapped component's displayName.
+      getDisplayName: function getDisplayName(name) {
+        return "Connect(" + name + ")";
+      },
+      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      // passed through to selectorFactory
+      initMapStateToProps: initMapStateToProps,
+      initMapDispatchToProps: initMapDispatchToProps,
+      initMergeProps: initMergeProps,
+      pure: pure,
+      areStatesEqual: areStatesEqual,
+      areOwnPropsEqual: areOwnPropsEqual,
+      areStatePropsEqual: areStatePropsEqual,
+      areMergedPropsEqual: areMergedPropsEqual
+    }, extraOptions));
+  };
+}
+/* harmony default export */ __webpack_exports__["default"] = (/*#__PURE__*/createConnect());
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mapDispatchToProps.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapDispatchToProps.js ***!
+  \*******************************************************************/
+/*! exports provided: whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapDispatchToPropsIsFunction", function() { return whenMapDispatchToPropsIsFunction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapDispatchToPropsIsMissing", function() { return whenMapDispatchToPropsIsMissing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapDispatchToPropsIsObject", function() { return whenMapDispatchToPropsIsObject; });
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
+
+
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
 function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
   return typeof mapDispatchToProps === 'function' ? Object(_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__["wrapMapToPropsFunc"])(mapDispatchToProps, 'mapDispatchToProps') : undefined;
 }
@@ -31790,6 +31870,7 @@ __webpack_require__.r(__webpack_exports__);
 function wrapMapToPropsConstant(getConstant) {
   return function initConstantSelector(dispatch, options) {
     var constant = getConstant(dispatch, options);
+<<<<<<< HEAD
 
     function constantSelector() {
       return constant;
@@ -31847,6 +31928,65 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
       return props;
     };
 
+=======
+
+    function constantSelector() {
+      return constant;
+    }
+
+    constantSelector.dependsOnOwnProps = false;
+    return constantSelector;
+  };
+} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+
+function getDependsOnOwnProps(mapToProps) {
+  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+
+function wrapMapToPropsFunc(mapToProps, methodName) {
+  return function initProxySelector(dispatch, _ref) {
+    var displayName = _ref.displayName;
+
+    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+    }; // allow detectFactoryAndVerify to get ownProps
+
+
+    proxy.dependsOnOwnProps = true;
+
+    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+      proxy.mapToProps = mapToProps;
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+      var props = proxy(stateOrDispatch, ownProps);
+
+      if (typeof props === 'function') {
+        proxy.mapToProps = props;
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+        props = proxy(stateOrDispatch, ownProps);
+      }
+
+      if (true) Object(_utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_0__["default"])(props, displayName, methodName);
+      return props;
+    };
+
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
     return proxy;
   };
 }
@@ -32012,6 +32152,7 @@ function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contex
 
     throw err;
   }
+<<<<<<< HEAD
 
   Object(_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__["useIsomorphicLayoutEffect"])(function () {
     latestSelector.current = selector;
@@ -32102,6 +32243,173 @@ function createSelectorHook(context) {
  *   const counter = useSelector(state => state.counter)
  *   return <div>{counter}</div>
  * }
+=======
+
+  Object(_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__["useIsomorphicLayoutEffect"])(function () {
+    latestSelector.current = selector;
+    latestSelectedState.current = selectedState;
+    latestSubscriptionCallbackError.current = undefined;
+  });
+  Object(_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__["useIsomorphicLayoutEffect"])(function () {
+    function checkForUpdates() {
+      try {
+        var newSelectedState = latestSelector.current(store.getState());
+
+        if (equalityFn(newSelectedState, latestSelectedState.current)) {
+          return;
+        }
+
+        latestSelectedState.current = newSelectedState;
+      } catch (err) {
+        // we ignore all errors here, since when the component
+        // is re-rendered, the selectors are called again, and
+        // will throw again, if neither props nor store state
+        // changed
+        latestSubscriptionCallbackError.current = err;
+      }
+
+      forceRender({});
+    }
+
+    subscription.onStateChange = checkForUpdates;
+    subscription.trySubscribe();
+    checkForUpdates();
+    return function () {
+      return subscription.tryUnsubscribe();
+    };
+  }, [store, subscription]);
+  return selectedState;
+}
+/**
+ * Hook factory, which creates a `useSelector` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useSelector` hook bound to the specified context.
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
+ */
+
+var useSelector =
+/*#__PURE__*/
+createSelectorHook();
+
+<<<<<<< HEAD
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useStore.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useStore.js ***!
+  \*******************************************************/
+/*! exports provided: createStoreHook, useStore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return createStoreHook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return useStore; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _useReduxContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useReduxContext */ "./node_modules/react-redux/es/hooks/useReduxContext.js");
+=======
+function createSelectorHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_4__["ReactReduxContext"];
+  }
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
+
+  var useReduxContext = context === _components_Context__WEBPACK_IMPORTED_MODULE_4__["ReactReduxContext"] ? _useReduxContext__WEBPACK_IMPORTED_MODULE_1__["useReduxContext"] : function () {
+    return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(context);
+  };
+  return function useSelector(selector, equalityFn) {
+    if (equalityFn === void 0) {
+      equalityFn = refEquality;
+    }
+
+<<<<<<< HEAD
+
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+
+function createStoreHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_1__["ReactReduxContext"];
+  }
+
+  var useReduxContext = context === _components_Context__WEBPACK_IMPORTED_MODULE_1__["ReactReduxContext"] ? _useReduxContext__WEBPACK_IMPORTED_MODULE_2__["useReduxContext"] : function () {
+    return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(context);
+  };
+  return function useStore() {
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store;
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+var useStore =
+/*#__PURE__*/
+createStoreHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/react-redux/es/index.js ***!
+  \**********************************************/
+/*! exports provided: Provider, connectAdvanced, ReactReduxContext, connect, batch, useDispatch, createDispatchHook, useSelector, createSelectorHook, useStore, createStoreHook, shallowEqual */
+=======
+    if ( true && !selector) {
+      throw new Error("You must pass a selector to useSelectors");
+    }
+
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store,
+        contextSub = _useReduxContext.subscription;
+
+    return useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
+  };
+}
+/**
+ * A hook to access the redux store's state. This hook takes a selector function
+ * as an argument. The selector is called with the store state.
+ *
+ * This hook takes an optional equality comparison function as the second parameter
+ * that allows you to customize the way the selected state is compared to determine
+ * whether the component needs to be re-rendered.
+ *
+ * @param {Function} selector the selector function
+ * @param {Function=} equalityFn the function that will be used to determine equality
+ *
+ * @returns {any} the selected state
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useSelector } from 'react-redux'
+ *
+ * export const CounterComponent = () => {
+ *   const counter = useSelector(state => state.counter)
+ *   return <div>{counter}</div>
+ * }
  */
 
 var useSelector =
@@ -32115,10 +32423,13 @@ createSelectorHook();
   !*** ./node_modules/react-redux/es/hooks/useStore.js ***!
   \*******************************************************/
 /*! exports provided: createStoreHook, useStore */
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
+=======
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return createStoreHook; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return useStore; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -32181,6 +32492,7 @@ createStoreHook();
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
 /* harmony import */ var _components_Provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Provider */ "./node_modules/react-redux/es/components/Provider.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return _components_Provider__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
@@ -32566,6 +32878,7 @@ function warning(message) {
 }
 
 /***/ }),
+<<<<<<< HEAD
 
 /***/ "./node_modules/react-router-dom/esm/react-router-dom.js":
 /*!***************************************************************!*\
@@ -32609,6 +32922,51 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["withRouter"]; });
 
+=======
+
+/***/ "./node_modules/react-router-dom/esm/react-router-dom.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
+  \***************************************************************/
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return BrowserRouter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return HashRouter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return Link; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return NavLink; });
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["MemoryRouter"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["Prompt"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["Redirect"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["Route"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["Router"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["StaticRouter"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["Switch"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["generatePath"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["matchPath"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useHistory", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["useHistory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useLocation", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["useLocation"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useParams", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["useParams"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useRouteMatch", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["useRouteMatch"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return react_router__WEBPACK_IMPORTED_MODULE_0__["withRouter"]; });
+
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
@@ -35436,6 +35794,7 @@ function validateChildKeys(node, parentType) {
       if (iteratorFn !== node.entries) {
         var iterator = iteratorFn.call(node);
         var step;
+<<<<<<< HEAD
 
         while (!(step = iterator.next()).done) {
           if (isValidElement(step.value)) {
@@ -35465,6 +35824,37 @@ function validatePropTypes(element) {
     var name = getComponentName(type);
     var propTypes;
 
+=======
+
+        while (!(step = iterator.next()).done) {
+          if (isValidElement(step.value)) {
+            validateExplicitKey(step.value, parentType);
+          }
+        }
+      }
+    }
+  }
+}
+/**
+ * Given an element, validate that its props follow the propTypes definition,
+ * provided by the type.
+ *
+ * @param {ReactElement} element
+ */
+
+
+function validatePropTypes(element) {
+  {
+    var type = element.type;
+
+    if (type === null || type === undefined || typeof type === 'string') {
+      return;
+    }
+
+    var name = getComponentName(type);
+    var propTypes;
+
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
     if (typeof type === 'function') {
       propTypes = type.propTypes;
     } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
@@ -37480,6 +37870,7 @@ function workLoop(hasTimeRemaining, initialTime) {
       markTaskRun(currentTask, currentTime);
       var continuationCallback = callback(didUserCallbackTimeout);
       currentTime = exports.unstable_now();
+<<<<<<< HEAD
 
       if (typeof continuationCallback === 'function') {
         currentTask.callback = continuationCallback;
@@ -37495,6 +37886,23 @@ function workLoop(hasTimeRemaining, initialTime) {
         }
       }
 
+=======
+
+      if (typeof continuationCallback === 'function') {
+        currentTask.callback = continuationCallback;
+        markTaskYield(currentTask, currentTime);
+      } else {
+        {
+          markTaskCompleted(currentTask, currentTime);
+          currentTask.isQueued = false;
+        }
+
+        if (currentTask === peek(taskQueue)) {
+          pop(taskQueue);
+        }
+      }
+
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
       advanceTimers(currentTime);
     } else {
       pop(taskQueue);
@@ -37974,8 +38382,13 @@ function removeStyleElement(style) {
   style.parentNode.removeChild(style);
 }
 /* istanbul ignore next  */
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
 var replaceText = function replaceText() {
   var textStore = [];
   return function replace(index, replacement) {
@@ -41309,7 +41722,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var handleInputEmail = _ref.handleInputEmail,
+      handleInputPass = _ref.handleInputPass;
   var FormContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
   var FormTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject2());
   var Form = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject3());
@@ -41317,10 +41732,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   var Input = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject5());
   var InputSubmit = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
   var Span = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject7());
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormTitle, null, "Acceder"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "email"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormTitle, null, "Acceder"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "email",
+    onChange: handleInputEmail
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "password"
+    type: "password",
+    onChange: handleInputPass
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
     type: "submit",
     value: "Acceder"
@@ -41771,7 +42190,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n        display: block;\n        margin: 20px 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\ndisplay: block;\nmargin: 20px 0px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -41781,7 +42200,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        background-color: #1d232d;\n        border: none;\n        border: 1px solid #ccc;\n        border-radius: 5px;\n        padding: 8px 0px;\n        cursor: pointer;\n        color: #fff;\n        font-size: 22px;\n        font-weight: 700;\n    "]);
+  var data = _taggedTemplateLiteral(["\nbackground-color: #1d232d;\nborder: none;\nborder: 1px solid #ccc;\nborder-radius: 5px;\npadding: 8px 0px;\ncursor: pointer;\ncolor: #fff;\nfont-size: 22px;\nfont-weight: 700;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -41791,7 +42210,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n        margin-bottom: 20px;\n        height: 25px;\n        font-size: 18px;\n        color: #474747;\n        padding: 15px 5px\n    "]);
+  var data = _taggedTemplateLiteral(["\nmargin-bottom: 20px;\nheight: 25px;\nfont-size: 18px;\ncolor: #474747;\npadding: 15px 5px\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -41801,7 +42220,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n        font-size: 18px;\n        color: #777;\n    "]);
+  var data = _taggedTemplateLiteral(["\nfont-size: 18px;\ncolor: #777;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -41811,7 +42230,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n        display: flex;\n        flex-direction: column;\n    "]);
+  var data = _taggedTemplateLiteral(["\ndisplay: flex;\nflex-direction: column;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -41821,7 +42240,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        padding-bottom: 20px;\n        font-weight: 100;\n        font-size: 26px;\n        text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\npadding-bottom: 20px;\nfont-weight: 100;\nfont-size: 26px;\ntext-align: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -41831,7 +42250,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        background-color: #fff;\n        margin: 100px 450px;\n        padding-bottom: 30px;\n        padding: 30px 20px 30px;\n        border-radius: 10px;\n        border: 1px solid #ccc;\n    "]);
+  var data = _taggedTemplateLiteral(["\nbackground-color: #fff;\nmargin: 100px 450px;\npadding-bottom: 30px;\npadding: 30px 20px 30px;\nborder-radius: 10px;\nborder: 1px solid #ccc;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -41845,6 +42264,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+<<<<<<< HEAD
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var FormContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
   var FormTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject2());
@@ -41855,15 +42275,44 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   var Span = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject7());
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormTitle, null, "Registrar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
     type: "text"
+=======
+var FormContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var FormTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject2());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject3());
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].label(_templateObject4());
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject5());
+var InputSubmit = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
+var Span = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject7());
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var handleInputEmail = _ref.handleInputEmail,
+      handleInputPass = _ref.handleInputPass,
+      handleSubmit = _ref.handleSubmit,
+      handleInputName = _ref.handleInputName,
+      handleInputLastName = _ref.handleInputLastName,
+      handleInputDirection = _ref.handleInputDirection;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormTitle, null, "Registrar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "text",
+    onChange: handleInputName
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Last Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "text",
+    onChange: handleInputLastName
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Direction:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "text",
+    onChange: handleInputDirection
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "email"
+    type: "email",
+    onChange: handleInputEmail
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "password"
+    type: "password",
+    onChange: handleInputPass
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
     type: "submit",
     value: "Registrar"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, null, "Si tienes una cuenta ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/acceder"
+    to: "/login"
   }, "Acceder")));
 });
 
@@ -42193,11 +42642,15 @@ var SingleProductContainer = /*#__PURE__*/function (_React$Component) {
   function SingleProductContainer(props) {
     var _this;
 
+<<<<<<< HEAD
     _classCallCheck(this, SingleProductContainer);
 
     _this = _super.call(this, props);
     _this.agregarProducto = _this.agregarProducto.bind(_assertThisInitialized(_this));
     return _this;
+=======
+    return _super.call(this, props);
+>>>>>>> e8504c6800018dd555a6762d39e101b8c57b0a8a
   }
 
   _createClass(SingleProductContainer, [{
@@ -42295,7 +42748,6 @@ var persistSession = function persistSession(user) {
 };
 var doLogIn = function doLogIn(logInUser) {
   return function (dispatch) {
-    console.log("estoy aca", logInUser);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/users/login", logInUser).then(function (user) {
       console.log(user.data);
       return dispatch(logIn(user.data));
@@ -42397,7 +42849,7 @@ var register = function register(user) {
 };
 var doRegister = function doRegister(registerUser) {
   return function (dispatch) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/users/register", registerUser).then(function (user) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/users/register", registerUser).then(function (user) {
       return dispatch(register(user.data));
     });
   };
