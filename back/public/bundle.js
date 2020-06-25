@@ -40366,6 +40366,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _carrito_CarritoContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./carrito/CarritoContainer */ "./src/react/carrito/CarritoContainer.jsx");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_logUser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../redux/actions/logUser */ "./src/redux/actions/logUser.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -40376,33 +40399,69 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_NavbarContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/",
-    component: _home_HomeContainer__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/productos",
-    component: _allProducts_AllProductsContainer__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/carrito",
-    component: _carrito_CarritoContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/login",
-    component: _login_LoginContainer__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/register",
-    component: _register_RegisterContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/productos/:id",
-    component: _singleProduct_SingleProductContainer__WEBPACK_IMPORTED_MODULE_2__["default"]
-  })));
-});
+
+
+
+
+var Main = /*#__PURE__*/function (_React$Component) {
+  _inherits(Main, _React$Component);
+
+  var _super = _createSuper(Main);
+
+  function Main(props) {
+    _classCallCheck(this, Main);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Main, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.persistSession();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_NavbarContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/",
+        component: _home_HomeContainer__WEBPACK_IMPORTED_MODULE_5__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/productos",
+        component: _allProducts_AllProductsContainer__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/carrito",
+        component: _carrito_CarritoContainer__WEBPACK_IMPORTED_MODULE_8__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/login",
+        component: _login_LoginContainer__WEBPACK_IMPORTED_MODULE_6__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/register",
+        component: _register_RegisterContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/productos/:id",
+        component: _singleProduct_SingleProductContainer__WEBPACK_IMPORTED_MODULE_2__["default"]
+      })));
+    }
+  }]);
+
+  return Main;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    persistSession: function persistSession() {
+      return dispatch(Object(_redux_actions_logUser__WEBPACK_IMPORTED_MODULE_11__["persistSession"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_10__["connect"])(null, mapDispatchToProps)(Main));
 
 /***/ }),
 
@@ -40737,7 +40796,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n        background-color: #1d232d;\n        padding: 10px 20px;\n        border-radius: 5px;\n        border: none;\n        cursor: pointer;\n        color: #ffffff;\n        font-size: 20px;\n        border: 1px solid #1d232d;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #1d232d;\n  padding: 10px 20px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #ffffff;\n  font-size: 20px;\n  border: 1px solid #1d232d;\n"]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -40747,7 +40806,7 @@ function _templateObject14() {
 }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n        text-align: end;\n        width: 95%;\n        margin: 50px 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  text-align: end;\n  width: 95%;\n  margin: 50px 0px;\n"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -40757,7 +40816,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n        font-weight: 700;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 700;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -40767,7 +40826,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n        text-align: end;\n        width: 100%;\n        font-size: 25px;\n        margin-top: 70px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  text-align: end;\n  width: 100%;\n  font-size: 25px;\n  margin-top: 70px;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -40777,7 +40836,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n        font-size: 28px;\n        margin: 26px 0px 0px 150px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 28px;\n  margin: 26px 0px 0px 150px;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -40787,7 +40846,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n        width: 70px;\n        font-size: 18px;\n        padding: 10px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  width: 70px;\n  font-size: 18px;\n  padding: 10px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -40797,7 +40856,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n        margin: 22px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 22px;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -40807,7 +40866,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n        padding: 30px 50px;\n        text-decoration: none;\n        color: #000000;\n        font-size: 22px;\n        width: 500px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 30px 50px;\n  text-decoration: none;\n  color: #000000;\n  font-size: 22px;\n  width: 500px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -40817,7 +40876,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        width: 80px;\n        height: 110px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  width: 80px;\n  height: 110px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -40827,7 +40886,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n        display: flex;\n        flex-direction: row;\n        width: 90%;\n        padding: 30px 0px;\n        height: 170px;\n        border-bottom: 1px solid #aaaaaa;\n        margin: 0px 50px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  width: 90%;\n  padding: 30px 0px;\n  height: 170px;\n  border-bottom: 1px solid #aaaaaa;\n  margin: 0px 50px;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -40837,7 +40896,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n        padding: 38px 170px 14px 100px;\n        font-size: 22px;\n        font-weight: 400;\n        width: 80px;\n        border-bottom: 3px solid #000000;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 38px 170px 14px 100px;\n  font-size: 22px;\n  font-weight: 400;\n  width: 80px;\n  border-bottom: 3px solid #000000;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -40847,7 +40906,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n        border-bottom: 1px solid #aaaaaa;\n        height: 80px;\n        width: 90%;\n        margin: 0px 50px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid #aaaaaa;\n  height: 80px;\n  width: 90%;\n  margin: 0px 50px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -40857,7 +40916,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        margin: 25px 0px;\n        background-color: #fcfcfc;\n        box-shadow: 0px 4px 5px 2px rgba(189,189,189,1);\n        display: flex;\n        flex-direction: column;\n        padding-bottom: 30px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 25px 0px;\n  background-color: #fcfcfc;\n  box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n  display: flex;\n  flex-direction: column;\n  padding-bottom: 30px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -40867,7 +40926,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        padding: 20px 100px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 20px 100px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -40880,36 +40939,31 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
-  var ArticleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
-  var TitleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
-  var H3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templateObject4());
-  var ContentCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject5());
-  var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject6());
-  var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject7());
-  var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject8());
-  var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject9());
-  var PriceCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject10());
-  var TotalCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject11());
-  var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject12());
-  var BuyCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13());
-  var ButtonBuy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject14());
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Carrito")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
-    src: "https://i11b.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765181.jpg",
-    alt: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
-    href: ""
-  }, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "number"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ 1.700")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
-    src: "https://i11b.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765181.jpg",
-    alt: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
-    href: ""
-  }, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "number"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ 1.700")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ 3.400"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonBuy, null, "Comprar"))));
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
+var ArticleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
+var TitleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
+var H3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templateObject4());
+var ContentCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject5());
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject6());
+var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject7());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject8());
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject9());
+var PriceCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject10());
+var TotalCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject11());
+var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject12());
+var BuyCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13());
+var ButtonBuy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject14());
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var cart = _ref.cart;
+  console.log(cart);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Carrito")), cart.id ? cart.products.map(function (producto) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+      src: producto.imageUno,
+      alt: ""
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, producto.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+      type: "number"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ ", producto.price));
+  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ 3.400"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonBuy, null, "Comprar"))));
 });
 
 /***/ }),
@@ -40927,6 +40981,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Carrito__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carrito */ "./src/react/carrito/Carrito.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/carrito */ "./src/redux/actions/carrito.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40953,28 +41008,59 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var CarritoContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CarritoContainer, _React$Component);
 
   var _super = _createSuper(CarritoContainer);
 
-  function CarritoContainer() {
+  function CarritoContainer(props) {
+    var _this;
+
     _classCallCheck(this, CarritoContainer);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {};
+    return _this;
   }
 
   _createClass(CarritoContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this$props = this.props,
+          buscarCarrito = _this$props.buscarCarrito,
+          user = _this$props.user;
+      buscarCarrito(user.id);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Carrito__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+      var cart = this.props.cart;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Carrito__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        cart: cart
+      });
     }
   }]);
 
   return CarritoContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, null)(CarritoContainer));
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    user: state.logUserReducer.isLogged,
+    cart: state.carritoUser.cart
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    buscarCarrito: function buscarCarrito(userid) {
+      return dispatch(Object(_redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__["buscarCarrito"])(userid));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(CarritoContainer));
 
 /***/ }),
 
@@ -42145,25 +42231,27 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
+var ArticleProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
+var ImageProductImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject3());
+var ContentProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4());
+var TitleProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(_templateObject5());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject6());
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject7());
+var BuyProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject8());
+var CartProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject9());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product,
       agregarProducto = _ref.agregarProducto;
-  console.log(product);
-  var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
-  var ArticleProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
-  var ImageProductImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject3());
-  var ContentProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4());
-  var TitleProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(_templateObject5());
-  var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject6());
-  var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject7());
-  var BuyProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject8());
-  var CartProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject9());
+  console.log(agregarProducto);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "imageProduct"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImageProductImg, {
     src: product.imageUno
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleProduct, null, product.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\"", product.description, "\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " $ ", product.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartProduct, {
-    onClick: agregarProducto
+    onClick: function onClick() {
+      return agregarProducto();
+    }
   }, "Agregar al carrito"))));
 });
 
@@ -42182,7 +42270,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SingleProduct__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SingleProduct */ "./src/react/singleProduct/SingleProduct.jsx");
 /* harmony import */ var _redux_actions_products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/products */ "./src/redux/actions/products.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/carrito */ "./src/redux/actions/carrito.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42229,6 +42318,7 @@ var SingleProductContainer = /*#__PURE__*/function (_React$Component) {
   _createClass(SingleProductContainer, [{
     key: "agregarProducto",
     value: function agregarProducto() {
+      console.log('entro');
       var cart = {
         userId: this.props.user.id,
         product: this.props.id
@@ -42267,12 +42357,51 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       return dispatch(Object(_redux_actions_products__WEBPACK_IMPORTED_MODULE_2__["fetchProduct"])(id));
     },
     agregarCarrito: function agregarCarrito(carrito) {
-      return dispatch(Object(_redux_actions_products__WEBPACK_IMPORTED_MODULE_2__["agregarCarrito"])(carrito));
+      return dispatch(Object(_redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__["agregarCarrito"])(carrito));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(SingleProductContainer));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(SingleProductContainer));
+
+/***/ }),
+
+/***/ "./src/redux/actions/carrito.js":
+/*!**************************************!*\
+  !*** ./src/redux/actions/carrito.js ***!
+  \**************************************/
+/*! exports provided: agregarCarrito, buscarCarrito */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "agregarCarrito", function() { return agregarCarrito; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buscarCarrito", function() { return buscarCarrito; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+
+
+
+var carritoDeUser = function carritoDeUser(cart) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["USERCART"],
+    cart: cart
+  };
+};
+
+var agregarCarrito = function agregarCarrito(carrito) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/carrito/agregarProducto', carrito);
+  };
+};
+var buscarCarrito = function buscarCarrito(userid) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/carrito/".concat(userid)).then(function (res) {
+      return dispatch(carritoDeUser(res.data));
+    });
+  };
+};
 
 /***/ }),
 
@@ -42310,12 +42439,12 @@ var persistS = function persistS(user) {
     isLogged: user
   };
 };
-var persistSession = function persistSession(user) {
+var persistSession = function persistSession() {
   return function (dispatch) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/me", user).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/persistencia").then(function (res) {
       return res.data;
     }).then(function (user) {
-      return dispatch(persistS(user));
+      return dispatch(logIn(user));
     });
   };
 }; // loggerte
@@ -42438,7 +42567,7 @@ var doRegister = function doRegister(registerUser) {
 /*!********************************!*\
   !*** ./src/redux/constanst.js ***!
   \********************************/
-/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION, REGISTER */
+/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION, REGISTER, USERCART */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42449,12 +42578,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_OUT", function() { return LOG_OUT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PERSIST_SESSION", function() { return PERSIST_SESSION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REGISTER", function() { return REGISTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USERCART", function() { return USERCART; });
 var SINGLEPRODUCT = "SINGLEPRODUCT";
 var ALLPRODUCTS = "ALLPRODUCTS";
 var LOG_IN = "LOG_IN";
 var LOG_OUT = "LOG_OUT";
 var PERSIST_SESSION = "PERSIST_SESSION";
 var REGISTER = "REGISTER";
+var USERCART = "USERCART";
+
+/***/ }),
+
+/***/ "./src/redux/reducers/carrito-reducers.js":
+/*!************************************************!*\
+  !*** ./src/redux/reducers/carrito-reducers.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  cart: {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _constanst__WEBPACK_IMPORTED_MODULE_0__["USERCART"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        cart: action.cart
+      });
+
+    default:
+      return state;
+  }
+});
 
 /***/ }),
 
@@ -42471,6 +42639,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _products_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./products-reducer */ "./src/redux/reducers/products-reducer.js");
 /* harmony import */ var _registerReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./registerReducer */ "./src/redux/reducers/registerReducer.js");
 /* harmony import */ var _logUserReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logUserReducer */ "./src/redux/reducers/logUserReducer.js");
+/* harmony import */ var _carrito_reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./carrito-reducers */ "./src/redux/reducers/carrito-reducers.js");
+
 
 
 
@@ -42478,7 +42648,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   productsReducers: _products_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   registerReducer: _registerReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  logUserReducer: _logUserReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  logUserReducer: _logUserReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  carritoUser: _carrito_reducers__WEBPACK_IMPORTED_MODULE_4__["default"]
 }));
 
 /***/ }),

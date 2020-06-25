@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default ({ product , agregarProducto }) => {
-  console.log(product);
-
-  const Section = styled.section`
+const Section = styled.section`
     padding: 20px 100px;
   `;
   const ArticleProduct = styled.article`
@@ -56,6 +53,8 @@ export default ({ product , agregarProducto }) => {
     margin-top: 40px;
   `;
 
+export default ({ product , agregarProducto }) => {
+  console.log(agregarProducto);
   return (
     <Section>
       <ArticleProduct>
@@ -66,7 +65,7 @@ export default ({ product , agregarProducto }) => {
           <TitleProduct>{product.name}</TitleProduct>
           <p>"{product.description}"</p>
           <h3> $ {product.price}</h3>
-          <CartProduct onClick={agregarProducto}>Agregar al carrito</CartProduct>
+          <CartProduct onClick={()=> agregarProducto()}>Agregar al carrito</CartProduct>
         </ContentProduct>
       </ArticleProduct>
     </Section>
