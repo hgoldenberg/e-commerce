@@ -12,6 +12,21 @@ export function logIn(user) {
   };
 }
 
+export const persistS = function(user) {
+  return {
+    type: PERSIST_SESSION,
+    isLogged: user
+  };
+};
+
+export const persistSession = () => dispatch => {
+  axios
+    .get("/api/users/persistencia")
+    .then(res => res.data)
+    .then(user => dispatch(logIn(user)));
+};
+
+// loggerte
 export const doLogIn = (email, password) => dispatch => {
   return axios
     .post("/api/users/login", {

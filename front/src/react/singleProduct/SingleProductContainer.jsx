@@ -1,7 +1,7 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
 import { fetchProduct } from "../../redux/actions/products";
-import { agregarCarrito } from "../../redux/actions/products";
+import { agregarCarrito } from "../../redux/actions/carrito";
 
 import { connect } from "react-redux";
 
@@ -12,6 +12,7 @@ class SingleProductContainer extends React.Component {
   }
 
   agregarProducto (){
+    console.log('entro')
     const cart = {
       userId: this.props.user.id,
       product: this.props.id

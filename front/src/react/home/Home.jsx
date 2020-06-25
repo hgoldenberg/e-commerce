@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import {Carousel} from "react-bootstrap";
 
-export default ({ juegos }) => {
-  console.log(juegos);
-
-  const Slider = styled.div`
+const Slider = styled.div`
     padding: 20px 50px;
+    margin-top: 75px;
   `;
   const SliderImg = styled.img`
     width: 100%;
-    height: 500px;
+    height: 600px;
   `;
   const Section = styled.section`
-    padding: 20px 100px;
+    padding: 5px 80px;
   `;
   const TitleSection = styled.h2`
     font-size: 45px;
     padding: 50px 0px;
+    text-align: center;
+    margin-top: 150px;
   `;
   const Article = styled.article`
     display: flex;
@@ -50,16 +51,44 @@ export default ({ juegos }) => {
     text-align: center;
   `;
 
-  const a = juegos.slice(0, 6);
+export default ({ juegos }) => {
+  console.log(juegos);
+
+  const a = juegos.slice(0, 7);
 
   return (
     <div>
       <Slider>
-        <SliderImg src="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fgrand-theft-auto-v%2Fhome%2FGTAV_EGS_Artwork_1920x1080_Hero-Carousel_V06-1920x1080-1503e4b1320d5652dd4f57466c8bcb79424b3fc0.jpg?h=1080&resize=1&w=1920" />
+              <Carousel>
+          <Carousel.Item>
+            <SliderImg
+              className="d-block w-100"
+              src="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fgrand-theft-auto-v%2Fhome%2FGTAV_EGS_Artwork_1920x1080_Hero-Carousel_V06-1920x1080-1503e4b1320d5652dd4f57466c8bcb79424b3fc0.jpg?h=1080&resize=1&w=1920"
+              alt="First slide"
+            />
+            
+          </Carousel.Item>
+          <Carousel.Item>
+            <SliderImg
+              className="d-block w-100"
+              src="https://news.xbox.com/es-latam/wp-content/uploads/sites/4/2020/04/RE3_wallpaper_1920x1080_A.jpg?fit=1200%2C675"
+              alt="Third slide"
+            />
+
+          </Carousel.Item>
+          <Carousel.Item>
+            <SliderImg
+              className="d-block w-100"
+              src="https://i0.wp.com/culturageek.com.ar/wp-content/uploads/2018/04/Culturageek.com_.ar-Review-God-of-War-1.jpg?fit=1200%2C630&ssl="
+              alt="Third slide"
+            />
+
+          </Carousel.Item>
+        </Carousel>
       </Slider>
 
       <Section>
-        <TitleSection>Nuevos videojuegos</TitleSection>
+        <TitleSection>TOP VIDEOJUEGOS</TitleSection>
         <Article>
           {juegos.length
             ? a.map((juego) => {
@@ -71,7 +100,12 @@ export default ({ juegos }) => {
                       </Link>
                       <div className="cardContent">
                         <CardContentP>
-                          <CardLink>{juego.name}</CardLink>
+                          <CardLink>
+                            {juego.name
+                              .split(" ")
+                              .map((x) => x[0].toUpperCase() + x.slice(1))
+                              .join(" ")}
+                          </CardLink>
                         </CardContentP>
                         <PriceGame>
                           {juego.price} <span>Ars</span>
