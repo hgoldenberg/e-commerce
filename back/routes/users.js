@@ -21,4 +21,6 @@ Router.post("/login", passport.authenticate("local"), users.loggin);
 //ruta de logout
 Router.get("/logout", users.logout);
 
+Router.get('/persistencia' , users.loggedUser)
+
 module.exports = Router;
