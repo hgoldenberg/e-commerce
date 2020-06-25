@@ -28,7 +28,7 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-  User.findByPk(id).then(function(user) {
+  Users.findByPk(id).then(function(user) {
     done(null, user);
   });
 });
