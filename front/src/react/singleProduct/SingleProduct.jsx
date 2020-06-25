@@ -66,7 +66,6 @@ export default ({ product }) => {
           <TitleProduct>{product.name}</TitleProduct>
           <p>"{product.description}"</p>
           <h3> $ {product.price}</h3>
-          <BuyProduct>Comprar ahora</BuyProduct>
           <CartProduct>Agregar al carrito</CartProduct>
         </ContentProduct>
       </ArticleProduct>
