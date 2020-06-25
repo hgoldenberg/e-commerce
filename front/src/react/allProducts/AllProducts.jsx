@@ -69,7 +69,7 @@ const CardGame = styled.div`
   `;
 
 
-export default ({ product }) => {
+export default ({ product, categories }) => {
   console.log(product);
   
   return (
@@ -79,15 +79,15 @@ export default ({ product }) => {
         <CategoriaAside>
           <CategoriaAsideH>Categorías:</CategoriaAsideH>
           <Ul>
-            <Li>
-              <A href="">Acción</A>
-            </Li>
-            <Li>
-              <A href="">Terror</A>
-            </Li>
-            <Li>
-              <A href="">Aventura</A>
-            </Li>
+            {categories.length
+              ? categories.map((categories) => {
+                  return (
+                    <Li>
+                      <A href="">{categories.tipo}</A>
+                    </Li>
+                  );
+                })
+              : null}
           </Ul>
         </CategoriaAside>
       </Aside>
@@ -104,7 +104,12 @@ export default ({ product }) => {
                       </Link>
                       <div className="cardContent">
                         <CardContentP>
-                          <CardLink> {product.name}</CardLink>
+                          <CardLink>
+                            {product.name
+                              .split(" ")
+                              .map((x) => x[0].toUpperCase() + x.slice(1))
+                              .join(" ")}
+                          </CardLink>
                         </CardContentP>
                         <PriceGame>
                           $ {product.price}
@@ -121,40 +126,3 @@ export default ({ product }) => {
     </div>
   );
 };
-
-{
-  /* <CardGame>
-            <CardLink href="">
-              <CardGameImg src="https://i11c.3djuegos.com/juegos/12333/resident_evil_2__2015_/fotos/ficha/resident_evil_2__2015_-4765182.jpg" />
-              <div className="cardContent">
-                <CardContentP>
-                  <CardLink href="">Resident Evil 2</CardLink>
-                </CardContentP>
-                <PriceGame>
-                  1700 <span>Ars</span>
-                </PriceGame>
-              </div>
-            </CardLink>
-          </CardGame> */
-}
-/*
-<div>
-      <h1>Bienvenido a todos los Productos</h1>
-
-      <div>
-    <ul>
-      {product.length >1 ? (product.map(product=>{
-          
-          return (
-            <li key={product.name}> 
-              
-             
-  
-            </li>
-          )
-      })): (<li>Bienvenido!</li>) }
-    </ul>
-    </div>
-
-    </div>
-*/

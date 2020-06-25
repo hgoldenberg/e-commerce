@@ -115,10 +115,19 @@ export default ({ product }) => {
         </Div>
         
         <ContentProduct>
-          <TitleProduct>{product.name}</TitleProduct>
+          {product.id ? (
+            <TitleProduct>
+              {product.name
+                .split(" ")
+                .map((x) => x[0].toUpperCase() + x.slice(1))
+                .join(" ")}
+            </TitleProduct>
+          ) : null}
           <p>"{product.description}"</p>
           <h3> $ {product.price}</h3>
-          <CartProduct>Agregar al carrito</CartProduct>
+          <CartProduct onClick={() => agregarProducto()}>
+            Agregar al carrito
+          </CartProduct>
         </ContentProduct>
       </ArticleProduct>
     </Section>

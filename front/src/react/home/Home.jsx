@@ -5,17 +5,20 @@ import {Carousel} from "react-bootstrap";
 
 const Slider = styled.div`
     padding: 20px 50px;
+    margin-top: 75px;
   `;
   const SliderImg = styled.img`
     width: 100%;
     height: 600px;
   `;
   const Section = styled.section`
-    padding: 20px 100px;
+    padding: 5px 80px;
   `;
   const TitleSection = styled.h2`
     font-size: 45px;
     padding: 50px 0px;
+    text-align: center;
+    margin-top: 150px;
   `;
   const Article = styled.article`
     display: flex;
@@ -51,7 +54,7 @@ const Slider = styled.div`
 export default ({ juegos }) => {
   console.log(juegos);
 
-  const a = juegos.slice(0, 6);
+  const a = juegos.slice(0, 7);
 
   return (
     <div>
@@ -85,7 +88,7 @@ export default ({ juegos }) => {
       </Slider>
 
       <Section>
-        <TitleSection>Nuevos videojuegos</TitleSection>
+        <TitleSection>TOP VIDEOJUEGOS</TitleSection>
         <Article>
           {juegos.length
             ? a.map((juego) => {
@@ -97,7 +100,12 @@ export default ({ juegos }) => {
                       </Link>
                       <div className="cardContent">
                         <CardContentP>
-                          <CardLink>{juego.name}</CardLink>
+                          <CardLink>
+                            {juego.name
+                              .split(" ")
+                              .map((x) => x[0].toUpperCase() + x.slice(1))
+                              .join(" ")}
+                          </CardLink>
                         </CardContentP>
                         <PriceGame>
                           {juego.price} <span>Ars</span>
