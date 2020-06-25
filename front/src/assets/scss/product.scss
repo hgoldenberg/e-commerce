@@ -1,7 +1,7 @@
 .next{
     background-color: #ffffff;
     position: absolute;
-    bottom: 200px;
+    bottom: 290px;
     border: none;
     left: 440px;
     width: 50px;
@@ -13,7 +13,7 @@
 .back{
     background-color: #ffffff;
     position: absolute;
-    bottom: 200px;
+    bottom: 290px;
     left: 10px;
     border: none;
     width: 50px;
@@ -34,4 +34,27 @@
     font-size: 30px;
     font-weight: 900;
     color: #777;
+}
+
+.ImgProduct{
+    padding: 100px;
+    height: 500px;
+    display: block;
+    width: 120%;
+    height: 120%;
+}
+
+.ImgDosProduct{
+    height: 100px;
+    width: 200%;
+}
+
+.ImgZoom{
+    margin: 0px;
+    width: 120%;
+}
+
+.ImgDosZoom{
+    height: 60% !important;
+    margin-top: 125px;
 }

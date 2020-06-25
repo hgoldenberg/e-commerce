@@ -7,21 +7,22 @@ import {
   CarouselProvider,
   Slide,
   Slider,
-  ImageWithZoom
-} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
+  ImageWithZoom,
+  Image
+} from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const Section = styled.section`
   margin: 20px 100px;
 `;
 const ArticleProduct = styled.article`
-  margin: 0 auto;
-  padding: 50px 0px;
-  width: 1000px;
-  display: flex;
-  flex-direction: row;
-  display: block;
-  height: 600px;
+margin: 0 auto;
+padding: 50px 0px;
+width: 1000px;
+display: flex;
+flex-direction: row;
+display: block;
+overflow: hidden;
 `;
 
 const ImageProduct = styled.div`
@@ -94,19 +95,21 @@ export default ({ product, agregarProducto }) => {
             naturalSlideHeight={500}
             infinite
           >
-            <Slider>
-              <Slide index={0}>
-                <ImageWithZoom className={p.Img} src={product.imageUno} />
-              </Slide>
+          <Slider>
 
-              <Slide index={1}>
-                <ImageWithZoom src={product.imageDos} />
-              </Slide>
-            </Slider>
-            <Button>
-              <ButtonBack className={p.back}></ButtonBack>
-              <ButtonNext className={p.next}></ButtonNext>
-            </Button>
+            <Slide index={0} className={p.ImgProduct}>
+              <ImageWithZoom className={p.ImgZoom} src={product.imageUno} />
+            </Slide>
+
+            <Slide index={1} className={p.ImgDosProduct}>
+              <ImageWithZoom className={p.ImgDosZoom} src={product.imageDos} />
+            </Slide>
+
+          </Slider>
+          <Button>
+            <ButtonBack className={p.back}></ButtonBack>
+            <ButtonNext className={p.next}></ButtonNext>
+          </Button>
           </CarouselProvider>
         </Div>
 
