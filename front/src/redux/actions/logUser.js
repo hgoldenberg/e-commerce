@@ -3,11 +3,10 @@ import { LOG_IN } from "../constanst";
 import { LOG_OUT } from "../constanst";
 import { PERSIST_SESSION } from "../constanst";
 
-
-export function logIn(isLogged) {
+export function logIn(user) {
   return {
     type: LOG_IN,
-    isLogged
+    user
   };
 }
 
@@ -19,34 +18,33 @@ export const persistS = function(user) {
 };
 
 export const persistSession = user => dispatch => {
-  
   axios
     .get("/api/me", user)
     .then(res => res.data)
     .then(user => dispatch(persistS(user)));
 };
 
-
-
-export const doLogIn = logInUser => dispatch => {
-  console.log("estoy aca",logInUser)
-  return axios.post("/api/users/login", logInUser).then(user => {
-    console.log(user.data)
-    return dispatch(logIn(user.data))
-  });
-  
+// loggerte
+export const doLogIn = (email, password) => dispatch => {
+  return axios
+    .post("/api/users/login", {
+      email: email,
+      password: password
+    })
+    .then(user => {
+      return dispatch(logIn(user.data));
+    });
 };
 
-
-
-export function logOut(isLogged) {
+// para deslogearme
+export function logOut() {
   return {
     type: LOG_OUT
   };
 }
 
-export const doLogOut = logOutUser => dispatch => {
-  axios
+export const doLogOut = () => dispatch => {
+  return axios
     .get("/api/users/logout")
     .then(user => {
       dispatch(logOut(user.data));

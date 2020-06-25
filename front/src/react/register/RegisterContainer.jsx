@@ -1,7 +1,8 @@
 import React from "react";
-import Register from "./register";
+import Register from "./Register";
 import { connect } from "react-redux";
 import { doRegister } from "../../redux/actions/register";
+
 
 class RegisterContainer extends React.Component {
   constructor(props) {
