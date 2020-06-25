@@ -15,18 +15,11 @@ export default () => {
     <div>
       <NavbarContainer />
       <Switch>
-        
-        
-        <Route exact path="/login" component={LoginContainer}/>
-        <Route exact path="/register" component={RegisterContainer}/>
-
-        {/* <Route path="/" render={() => console.log("hola")} /> */}
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/productos" component={AllProductsContainer} />
-        <Route exact path="/acceder" component={LoginContainer} />
-        <Route exact path="/registro" component={RegisterContainer} />
         <Route exact path="/carrito" component={CarritoContainer} />
-        {/*  <Route exact path="/search" component={AllProductsContainer} /> */}
+        <Route exact path="/login" component={LoginContainer}/>
+        <Route exact path="/register" component={RegisterContainer}/>
         <Route exact path="/productos/:id" component={SingleProductContainer} />
       </Switch>
     </div>
