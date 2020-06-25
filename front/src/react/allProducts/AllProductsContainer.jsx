@@ -16,7 +16,10 @@ class AllProductsContainer extends React.Component {
   render() {
     return (
       <div>
-        <AllProducts product={this.props.product} />
+        <AllProducts
+          product={this.props.product}
+          categories={this.props.categories}
+        />
       </div>
     );
   }
@@ -26,6 +29,7 @@ const mapStateToProps = (state) => {
   console.log(state);
   return {
     product: state.productsReducers.allProducts,
+    categories: state.categoriesReducer.categorias,
   };
 };
 const mapDispatchToProps = (dispatch) => {

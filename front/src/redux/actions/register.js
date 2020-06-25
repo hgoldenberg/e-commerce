@@ -11,7 +11,7 @@ export const register = function(user) {
 
 export const doRegister = registerUser => dispatch => {
   
-  axios
+  return axios
     .post("/api/users/register", registerUser)
     .then(user => dispatch(register(user.data)));
 };

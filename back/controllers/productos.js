@@ -3,6 +3,8 @@ const { Product } = require("../models/index");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
+
+
 // filtra por un nombre
 obj.search = (req, res, next) => {
   console.log(req.params.name);

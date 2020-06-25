@@ -24,10 +24,12 @@ class LoginContainer extends React.Component {
   
   handleSubmit(event) {
     event.preventDefault();
-    this.props.doLogIn({
-      email: this.state.email,
-      password: this.state.password
-    });
+    const { email , password } = this.state
+    this.props.doLogIn(email , password);
+    this.setState({
+      email:'',
+      password:''
+    })
     this.props.history.push("/");
   }
   render() {
@@ -36,6 +38,8 @@ class LoginContainer extends React.Component {
         handleEmailInput={this.handleEmailInput}
         handlePassInput={this.handlePassInput}
         handleSubmit={this.handleSubmit}
+        email={this.state.email}
+        password={this.state.password}
       />
     );
   }
@@ -43,7 +47,7 @@ class LoginContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    doLogIn: input => dispatch(doLogIn(input))
+    doLogIn: (email , password ) => dispatch(doLogIn(email ,password))
   };
 };
 

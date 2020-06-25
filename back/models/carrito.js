@@ -7,19 +7,19 @@ Carrito.init(
   {
     valor_compra: {
       type: S.FLOAT,
-      allowNull: false,
+      defaultValue:null
     },
     dir_entrega: {
       type: S.STRING,
-      allowNull: false,
+      defaultValue:null
     },
     ciudad_entrega: {
       type: S.STRING,
-      allowNull: false,
+      defaultValue:null,
     },
     CP_entrega: {
       type: S.INTEGER,
-      allowNull: false,
+      defaultValue:null
     },
     estado: {
       // estado pendiente || completado 

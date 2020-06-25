@@ -110,7 +110,7 @@ export default ({ handlerChange, handlerSubmit, valor }) => {
                     <CarritoName>Carrito</CarritoName>
               </CarritoNav>
       </Link>
-      <Link to="/acceder">
+      <Link to="/register">
         <LinksNav>
             Acceder     
         </LinksNav>

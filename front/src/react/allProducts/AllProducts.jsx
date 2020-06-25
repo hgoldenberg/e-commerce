@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export default ({ product }) => {
+export default ({ product, categories }) => {
   const CardGame = styled.div`
     width: 200px;
     padding-bottom: 10px;
@@ -76,15 +76,15 @@ export default ({ product }) => {
         <CategoriaAside>
           <CategoriaAsideH>Categorías:</CategoriaAsideH>
           <Ul>
-            <Li>
-              <A href="">Acción</A>
-            </Li>
-            <Li>
-              <A href="">Terror</A>
-            </Li>
-            <Li>
-              <A href="">Aventura</A>
-            </Li>
+            {categories.length
+              ? categories.map((categories) => {
+                  return (
+                    <Li>
+                      <A href="">{categories.tipo}</A>
+                    </Li>
+                  );
+                })
+              : null}
           </Ul>
         </CategoriaAside>
       </Aside>

@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-export default () => {
-
-    const FormContainer = styled.div`
+const FormContainer = styled.div`
         background-color: #fff;
         margin: 100px 450px;
         padding-bottom: 30px;
@@ -54,19 +52,19 @@ export default () => {
         display: block;
         margin: 20px 0px;
     `;
-    
+
+export default ({handleEmailInput, handlePassInput , handleSubmit , email , password}) => {    
     return(
         <FormContainer>
             <FormTitle>Acceder</FormTitle>
-            <Form >
+            <Form onSubmit={handleSubmit}>
             <Label>Email:</Label>
-            <Input type="email"/>
+            <Input type="email" onChange={handleEmailInput} value={email}/>
             <Label>Password:</Label>
-            <Input type="password"/>
-            
+            <Input type="password" onChange={handlePassInput} value={password}/>
             <InputSubmit type="submit" value="Acceder"/>
             </Form>
-            <Span>Si no tienes una cuenta <Link to="/registro">Registrarse</Link></Span>
+            <Span>Si no tienes una cuenta <Link to="/register">Registrarse</Link></Span>
         </FormContainer>
     )
 };
