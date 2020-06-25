@@ -60,9 +60,6 @@ const Nav = styled.nav`
   `;
 
 export default ({ handlerChange, handlerSubmit, valor }) => {
-  console.log("este es el componente tonto ");
-  
-
   return(
       <Nav>
     <Link to="/">

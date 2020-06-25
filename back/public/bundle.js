@@ -55799,13 +55799,16 @@ var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObj
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product,
       categories = _ref.categories;
-  console.log(product);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Aside, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AsideSearch, null, "Busqueda: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoriaAside, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoriaAsideH, null, "Categor\xEDas:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, categories.length ? categories.map(function (categories) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, {
+      key: categories.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
       href: ""
     }, categories.tipo));
   }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, product.length ? product.map(function (product) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, {
+      key: product.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/productos/".concat(product.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
       src: product.imageUno
@@ -56087,9 +56090,10 @@ var BuyCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_tem
 var ButtonBuy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject14());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var cart = _ref.cart;
-  console.log(cart);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Carrito")), cart.id ? cart.products.map(function (producto) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, {
+      key: producto.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
       src: producto.imageUno,
       alt: ""
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, producto.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -56211,7 +56215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    font-weight: 700;\n    display: block;\n    text-align: center;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 700;\n  display: block;\n  text-align: center;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -56221,7 +56225,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    color: #000000;\n    text-decoration: none;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  color: #000000;\n  text-decoration: none;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -56231,7 +56235,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 10px;\n    text-align: center;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 10px;\n  text-align: center;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -56241,7 +56245,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    height: 280px;\n    width: 200px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  height: 280px;\n  width: 200px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -56251,7 +56255,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    width: 200px;\n    padding-bottom: 10px;\n    box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n    margin-top: 30px;\n    margin-right: 20px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  padding-bottom: 10px;\n  box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n  margin-top: 30px;\n  margin-right: 20px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -56261,7 +56265,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -56271,7 +56275,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 45px;\n    padding: 50px 0px;\n    text-align: center;\n    margin-top: 150px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 45px;\n  padding: 50px 0px;\n  text-align: center;\n  margin-top: 150px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -56281,7 +56285,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    padding: 5px 80px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 5px 80px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56291,7 +56295,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 600px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 890px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -56301,7 +56305,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 20px 50px;\n    margin-top: 75px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margintop: 10px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56328,7 +56332,6 @@ var CardLink = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_temp
 var PriceGame = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject10());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var juegos = _ref.juegos;
-  console.log(juegos);
   var a = juegos.slice(0, 7);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SliderImg, {
     className: "d-block w-100",
@@ -56343,7 +56346,9 @@ var PriceGame = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_
     src: "https://i0.wp.com/culturageek.com.ar/wp-content/uploads/2018/04/Culturageek.com_.ar-Review-God-of-War-1.jpg?fit=1200%2C630&ssl=",
     alt: "Third slide"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleSection, null, "TOP VIDEOJUEGOS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, juegos.length ? a.map(function (juego) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, {
+      key: juego.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/productos/".concat(juego.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
       src: juego.imageUno
@@ -56808,7 +56813,6 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
   var handlerChange = _ref.handlerChange,
       handlerSubmit = _ref.handlerSubmit,
       valor = _ref.valor;
-  console.log("este es el componente tonto ");
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoImg, {
@@ -57284,7 +57288,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! pure-react-carousel/dist/react-carousel.es.css */ "./node_modules/pure-react-carousel/dist/react-carousel.es.css");
 /* harmony import */ var pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4__);
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\nposition: absolute;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -57294,7 +57298,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\nwidth: 500px;\nfloat: left;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 500px;\n  float: left;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -57304,7 +57308,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\nbackground-color: #ffffff;\npadding: 15px 25px;\nborder-radius: 5px;\nborder: none;\ncursor: pointer;\ncolor: #1d232d;\nfont-size: 15px;\nborder: 1px solid #1d232d;\nmargin-top: 40px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 15px 25px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #1d232d;\n  font-size: 15px;\n  border: 1px solid #1d232d;\n  margin-top: 40px;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -57314,7 +57318,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\nbackground-color: #1d232d;\npadding: 15px 25px;\nborder-radius: 5px;\nborder: none;\ncursor: pointer;\ncolor: #ffffff;\nfont-size: 15px;\nborder: 1px solid #1d232d;\nmargin-top: 40px;\nmargin-right: 40px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #1d232d;\n  padding: 15px 25px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #ffffff;\n  font-size: 15px;\n  border: 1px solid #1d232d;\n  margin-top: 40px;\n  margin-right: 40px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -57324,7 +57328,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\nwidth: 60px;\nfont-size: 18px;\npadding: 10px;\nmargin: 0px 10px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 60px;\n  font-size: 18px;\n  padding: 10px;\n  margin: 0px 10px;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -57334,7 +57338,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\nmargin-top: 50px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 50px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -57344,7 +57348,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\npadding: 20px 0px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 20px 0px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -57354,7 +57358,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\nmargin: 0px 50px;\nwidth: 400px;\nfloat: left;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 50px;\n  width: 400px;\n  float: left;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -57364,7 +57368,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\nwidth: 110px;\nheight: 300px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 110px;\n  height: 300px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -57384,7 +57388,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nmargin: 0 auto;\npadding: 50px 0px;\nwidth: 1000px;\ndisplay: flex;\nflex-direction: row;\ndisplay: block;\nheight: 600px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  padding: 50px 0px;\n  width: 1000px;\n  display: flex;\n  flex-direction: row;\n  display: block;\n  height: 600px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -57394,7 +57398,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nmargin: 20px 100px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 20px 100px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -57423,8 +57427,8 @@ var CartProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].butt
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject11());
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject12());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var product = _ref.product;
-  console.log(product);
+  var product = _ref.product,
+      agregarProducto = _ref.agregarProducto;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["CarouselProvider"], {
     visibleSlides: 1,
     totalSlides: 2,

@@ -10,8 +10,8 @@ obj.agregarProductoLogeado = (req , res, next) =>{
     }).then(data => {
         data[0].addProduct([req.body.product])
         res.sendStatus(200)
-    })
-}
+    });
+};
 
 obj.buscarPoductos = (req, res, next) =>{
     Carrito.findOne({
@@ -23,18 +23,17 @@ obj.buscarPoductos = (req, res, next) =>{
     })
     .then(productoscarrito => {
         res.status(200).json(productoscarrito)
-    })
+    });
 };
 
 obj.eliminarProducto = (req, res, next) =>{
-    Carrito.destroy({
+    Carrito.findOne({
         where:{
             id:req.params.carritoId,
             estado:'pendiente'
         }
     })
     .then(productdelete => {
-        console.log(productdelete)
         productdelete.removeProduct([req.params.productId])
         res.sendStatus(200)
     })

@@ -91,7 +91,6 @@ const ButtonBuy = styled.button`
 `;
 
 export default ({ cart }) => {
-  console.log(cart)
   return (
     <Section>
       <ArticleCart>
@@ -101,7 +100,7 @@ export default ({ cart }) => {
         {cart.id
           ? cart.products.map(producto => {
               return (
-                <ContentCart>
+                <ContentCart key={producto.id}>
                   <Img
                     src={producto.imageUno}
                     alt=""
