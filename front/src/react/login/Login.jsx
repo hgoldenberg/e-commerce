@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-export default () => {
+export default ({handleInputEmail, handleInputPass}) => {
 
     const FormContainer = styled.div`
         background-color: #fff;
@@ -58,11 +58,11 @@ export default () => {
     return(
         <FormContainer>
             <FormTitle>Acceder</FormTitle>
-            <Form >
+            <Form onSubmit={handleSubmit}>
             <Label>Email:</Label>
-            <Input type="email"/>
+            <Input type="email" onChange={handleInputEmail}/>
             <Label>Password:</Label>
-            <Input type="password"/>
+            <Input type="password" onChange={handleInputPass}/>
             
             <InputSubmit type="submit" value="Acceder"/>
             </Form>
