@@ -38,7 +38,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProduct: (id) => dispatch(fetchProduct(id)),
-    agregarCarrito: (carrito) => dispatch(agregarCarrito(carrito))
+    //agregarCarrito: (carrito) => dispatch(agregarCarrito(carrito))
   };
 };
 

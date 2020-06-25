@@ -55,6 +55,7 @@ export default ({ product , agregarProducto }) => {
     border: 1px solid #1d232d;
     margin-top: 40px;
   `;
+  //const mayus = split(" ").map((x)=> x[0].toUpperCase() + x.slice(1)).join(" ")
 
   return (
     <Section>

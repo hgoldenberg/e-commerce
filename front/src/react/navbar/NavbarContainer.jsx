@@ -24,19 +24,11 @@ class NavbarContainer extends React.Component {
     this.setState({ inputValue: value });
   }
 
-<<<<<<< HEAD
-//   handlerSubmit(event) {
-      
-//   }
-
-  
-=======
   handlerSubmit(event) {
     event.preventDefault();
     this.props.searchProduct(this.state.inputValue);
     this.setState({ inputValue: "" });
   }
->>>>>>> 586f01ae3a091ebc51d1aadabaa7b7d2d191455a
 
   render() {
     return (
