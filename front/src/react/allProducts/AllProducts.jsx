@@ -70,6 +70,8 @@ export default ({ product }) => {
     text-decoration: none;
   `;
 
+
+
   return (
     <div>
       <Aside>
@@ -102,7 +104,7 @@ export default ({ product }) => {
                       </Link>
                       <div className="cardContent">
                         <CardContentP>
-                          <CardLink> {product.name}</CardLink>
+                          <CardLink> {(product.name).toUpperCase()}</CardLink>
                         </CardContentP>
                         <PriceGame>
                           $ {product.price}
