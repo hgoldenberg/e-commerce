@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default ({ product }) => {
+export default ({ product , agregarProducto }) => {
   console.log(product);
 
   const Section = styled.section`
@@ -66,7 +66,7 @@ export default ({ product }) => {
           <TitleProduct>{product.name}</TitleProduct>
           <p>"{product.description}"</p>
           <h3> $ {product.price}</h3>
-          <CartProduct>Agregar al carrito</CartProduct>
+          <CartProduct onClick={agregarProducto}>Agregar al carrito</CartProduct>
         </ContentProduct>
       </ArticleProduct>
     </Section>

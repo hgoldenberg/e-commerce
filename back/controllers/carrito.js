@@ -4,11 +4,12 @@ const { Carrito , Product} = require('../models/index');
 obj.agregarProductoLogeado = (req , res, next) =>{
     Carrito.findOrCreate({
         where:{
-            userId:req.params.userid,
+            userId:req.body.userId,
             estado:'pendiente'
         }
     }).then(data => {
-        
+        data[0].addProduct([req.body.product])
+        res.sendStatus(200)
     })
 };
 
