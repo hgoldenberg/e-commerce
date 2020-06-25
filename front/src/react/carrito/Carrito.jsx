@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import n from "../../assets/scss/navbar.scss";
 
 const Section = styled.section`
   padding: 20px 100px;
@@ -90,7 +91,7 @@ const ButtonBuy = styled.button`
   border: 1px solid #1d232d;
 `;
 
-export default ({ cart }) => {
+export default ({ cart , handleDelete}) => {
   return (
     <Section>
       <ArticleCart>
@@ -111,7 +112,7 @@ export default ({ cart }) => {
                       <Input type="number" />
                     </label>
                   </Form>
-                  <PriceCart>$ {producto.price}</PriceCart>
+                  <PriceCart>$ {producto.price}  <button className='btn btn-primary' style={{marginLeft:'20px'}} onClick={()=>handleDelete(cart.id,producto.id)}>eliminar</button></PriceCart> 
                 </ContentCart>
               );
             })
@@ -119,7 +120,7 @@ export default ({ cart }) => {
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ 3.400</Price>
+            Total: <Price>$ 3.400</Price> 
           </TotalCart>
         </ContentCart>
         <BuyCart>

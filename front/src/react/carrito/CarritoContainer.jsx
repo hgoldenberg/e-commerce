@@ -2,7 +2,7 @@ import React from "react";
 import Carrito from "./Carrito";
 
 import { connect } from "react-redux";
-import { buscarCarrito } from '../../redux/actions/carrito'
+import { buscarCarrito , deleteProductCarrito } from '../../redux/actions/carrito'
 
 class CarritoContainer extends React.Component {
   
@@ -11,6 +11,7 @@ class CarritoContainer extends React.Component {
     this.state = {
       
     }
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount(){
@@ -18,10 +19,15 @@ class CarritoContainer extends React.Component {
       buscarCarrito(user.id)
   }
 
+  handleDelete(carritoId , productId){
+    const {deleteProductCarrito} = this.props
+    deleteProductCarrito(carritoId , productId)
+  };
+
   render() {
     const { cart } = this.props
     return (
-      <Carrito cart={cart}/>
+      <Carrito cart={cart} handleDelete={this.handleDelete}/>
     );
   }
 }
@@ -35,7 +41,8 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) =>{
   return {
-    buscarCarrito: (userid) => dispatch(buscarCarrito(userid))
+    buscarCarrito: (userid) => dispatch(buscarCarrito(userid)),
+    deleteProductCarrito: (carritoId , productId) => dispatch(deleteProductCarrito(carritoId, productId))
   };
 };
 

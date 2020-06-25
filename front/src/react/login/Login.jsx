@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const FormContainer = styled.div`
+        margin: 0 auto;
+        margin-top: 50px;
         background-color: #fff;
         padding-bottom: 30px;
         padding: 30px 20px 30px;
