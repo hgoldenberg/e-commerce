@@ -1,7 +1,7 @@
 import React from "react";
 import AllProducts from "./AllProducts";
 import { fetchAllProducts } from "../../redux/actions/products";
-
+import { setAllCategories } from "../../redux/actions/categories";
 import { connect } from "react-redux";
 
 class AllProductsContainer extends React.Component {
@@ -11,6 +11,7 @@ class AllProductsContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllProducts();
+    this.props.setAllCategories();
   }
   render() {
     return (
@@ -22,7 +23,7 @@ class AllProductsContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.productsReducers);
+  console.log(state);
   return {
     product: state.productsReducers.allProducts,
   };
@@ -30,6 +31,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
+    setAllCategories: () => dispatch(setAllCategories()),
   };
 };
 

@@ -10,8 +10,7 @@ const app = express();
 const db = require("./config/db");
 const port = process.env.PORT || 3000;
 const router = require("./routes");
-require("./config/passport")
-
+require("./config/passport");
 
 app.use(volleyball);
 // req.body
@@ -32,7 +31,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 //router
 app.use("/api", router);
 
@@ -40,12 +38,8 @@ app.get("/*", (req, res, next) => {
   res.sendFile(path.join(__dirname, "./public", "index.html"));
 });
 
-
-
-
-
 // conectando con la base de datos
-db.sync({ force:false })
+db.sync({ force: false })
   .then(() => {
     app.listen(port, () => {
       console.log(`Escuchando en el puerto ${port}`);

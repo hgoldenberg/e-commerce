@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 export default ({ product }) => {
-  console.log(product);
-
   const Section = styled.section`
     padding: 20px 100px;
   `;
@@ -63,7 +61,14 @@ export default ({ product }) => {
           <ImageProductImg src={product.imageUno} />
         </div>
         <ContentProduct>
-          <TitleProduct>{product.name}</TitleProduct>
+          {product.id ? (
+            <TitleProduct>
+              {product.name
+                .split(" ")
+                .map((x) => x[0].toUpperCase() + x.slice(1))
+                .join(" ")}
+            </TitleProduct>
+          ) : null}
           <p>"{product.description}"</p>
           <h3> $ {product.price}</h3>
           <CartProduct>Agregar al carrito</CartProduct>
