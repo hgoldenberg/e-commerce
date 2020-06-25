@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export default ({ product, categories }) => {
-  const CardGame = styled.div`
+const CardGame = styled.div`
     width: 200px;
     padding-bottom: 10px;
     box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);
@@ -69,6 +68,10 @@ export default ({ product, categories }) => {
     text-decoration: none;
   `;
 
+
+export default ({ product, categories }) => {
+  console.log(product);
+  
   return (
     <div>
       <Aside>
