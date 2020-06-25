@@ -6131,11 +6131,15 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".assets-scss-product__next--3NZfC {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 200px;\n  border: none;\n  left: 440px;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__back--1-5K4 {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 200px;\n  left: 10px;\n  border: none;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__next--3NZfC::before {\n  content: \">\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__back--1-5K4::before {\n  content: \"<\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n", ""]);
+exports.push([module.i, ".assets-scss-product__next--3NZfC {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 290px;\n  border: none;\n  left: 440px;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__back--1-5K4 {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 290px;\n  left: 10px;\n  border: none;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__next--3NZfC::before {\n  content: \">\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__back--1-5K4::before {\n  content: \"<\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__ImgProduct--2ZFDH {\n  padding: 100px;\n  height: 500px;\n  display: block;\n  width: 120%;\n  height: 120%; }\n\n.assets-scss-product__ImgDosProduct--3IQdd {\n  height: 100px;\n  width: 200%; }\n\n.assets-scss-product__ImgZoom--25zd- {\n  margin: 0px;\n  width: 120%; }\n\n.assets-scss-product__ImgDosZoom--1ezNe {\n  height: 60% !important;\n  margin-top: 125px; }\n", ""]);
 // Exports
 exports.locals = {
 	"next": "assets-scss-product__next--3NZfC",
-	"back": "assets-scss-product__back--1-5K4"
+	"back": "assets-scss-product__back--1-5K4",
+	"ImgProduct": "assets-scss-product__ImgProduct--2ZFDH",
+	"ImgDosProduct": "assets-scss-product__ImgDosProduct--3IQdd",
+	"ImgZoom": "assets-scss-product__ImgZoom--25zd-",
+	"ImgDosZoom": "assets-scss-product__ImgDosZoom--1ezNe"
 };
 module.exports = exports;
 
@@ -56301,7 +56305,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 20px 50px;\n    margin-top: 75px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    \n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56459,7 +56463,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n        display: block;\n        margin: 20px 0px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    display: block;\n    margin: 20px 0px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -56469,7 +56473,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        background-color: #1d232d;\n        border: none;\n        border: 1px solid #ccc;\n        border-radius: 5px;\n        padding: 8px 0px;\n        cursor: pointer;\n        color: #fff;\n        font-size: 22px;\n        font-weight: 700;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    background-color: #1d232d;\n    border: none;\n    border: 1px solid #ccc;\n    border-radius: 5px;\n    padding: 8px 0px;\n    cursor: pointer;\n    color: #fff;\n    font-size: 22px;\n    font-weight: 700;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -56479,7 +56483,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n        margin-bottom: 20px;\n        height: 25px;\n        font-size: 18px;\n        color: #474747;\n        padding: 15px 5px\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin-bottom: 20px;\n    height: 25px;\n    font-size: 18px;\n    color: #474747;\n    padding: 15px 5px\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -56489,7 +56493,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n        font-size: 18px;\n        color: #777;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 18px;\n    color: #777;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -56499,7 +56503,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n        display: flex;\n        flex-direction: column;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56509,7 +56513,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        padding-bottom: 20px;\n        font-weight: 100;\n        font-size: 26px;\n        text-align: center;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    padding-bottom: 20px;\n    font-weight: 100;\n    font-size: 26px;\n    text-align: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -56519,7 +56523,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        background-color: #fff;\n        padding-bottom: 30px;\n        padding: 30px 20px 30px;\n        border-radius: 10px;\n        border: 1px solid #ccc;\n        width: 500px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n    margin-top: 50px;\n    background-color: #fff;\n    padding-bottom: 30px;\n    padding: 30px 20px 30px;\n    border-radius: 10px;\n    border: 1px solid #ccc;\n    width: 500px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -57067,7 +57071,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        margin: 0 auto;\n        margin-top: 50px;\n        background-color: #fff;\n        padding-bottom: 30px;\n        padding: 30px 20px 30px;\n        border-radius: 10px;\n        border: 1px solid #ccc;\n        width: 500px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n    margin-top: 50px;\n    background-color: #fff;\n    padding-bottom: 30px;\n    padding: 30px 20px 30px;\n    border-radius: 10px;\n    border: 1px solid #ccc;\n    width: 500px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -57384,7 +57388,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nmargin: 0 auto;\npadding: 50px 0px;\nwidth: 1000px;\ndisplay: flex;\nflex-direction: row;\ndisplay: block;\nheight: 600px;\n"]);
+  var data = _taggedTemplateLiteral(["\nmargin: 0 auto;\npadding: 50px 0px;\nwidth: 1000px;\ndisplay: flex;\nflex-direction: row;\ndisplay: block;\noverflow: hidden;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -57433,13 +57437,16 @@ var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_temp
     naturalSlideHeight: 500,
     infinite: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Slider"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Slide"], {
-    index: 0
+    index: 0,
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.ImgProduct
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["ImageWithZoom"], {
-    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.Img,
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.ImgZoom,
     src: product.imageUno
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Slide"], {
-    index: 1
+    index: 1,
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.ImgDosProduct
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["ImageWithZoom"], {
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.ImgDosZoom,
     src: product.imageDos
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["ButtonBack"], {
     className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.back
