@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import {Button} from "react-bootstrap"
 
-export default ({ handlerChange, handlerSubmit, valor }) => {
-  console.log("este es el componente tonto ");
+export default ({ handlerChange, handlerSubmit, valor, isLogged,
+  doLogOut }) => {
+  console.log("logging ", isLogged);
   const Nav = styled.nav`
     background: #1d232d;
     height: 80px;
@@ -66,7 +68,7 @@ export default ({ handlerChange, handlerSubmit, valor }) => {
 
   return(
       <Nav>
-    <Link to="/">
+      <Link to="/">
         <Logo>
             <LogoImg src="./p5games.jpg"/>
         </Logo>
@@ -110,14 +112,28 @@ export default ({ handlerChange, handlerSubmit, valor }) => {
                     <CarritoName>Carrito</CarritoName>
               </CarritoNav>
       </Link>
-      <Link to="/register">
+      {/* <Link to="/register">
         <LinksNav>
             Acceder     
         </LinksNav>
-      </Link>
+      </Link> */}
+              {!isLogged.id?(
+                
+                <Link to="/register">
+                <LinksNav>
+                  Acceder     
+              </LinksNav>
+              </Link>
+              ):(
+              
+              <LinksNav onClick={doLogOut}>
+                  LogOut    
+              </LinksNav>
+            
+            )}
   </Nav>
 
   )
-  
+
 
 };

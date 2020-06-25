@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import {doLogOut} from "../../redux/actions/logUser"
 //import { withRouter} from "react-router-dom"
 
 import { searchProduct } from "../../redux/actions/products";
@@ -36,21 +37,25 @@ class NavbarContainer extends React.Component {
         handlerChange={this.handlerChange}
         handlerSubmit={this.handlerSubmit}
         valor={this.state.inputValue}
+        isLogged={this.props.isLogged}
+        doLogOut={this.props.doLogOut}
       />
     );
   }
 }
 
-/* const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     history: ownProps.history,
+    isLogged: state.logUserReducer.isLogged
   };
-}; */
+}; 
 
 const mapDispatchToProps = (dispatch) => {
   return {
     searchProduct: (busqueda) => dispatch(searchProduct(busqueda)),
+    doLogOut: () => dispatch(doLogOut()),
   };
 };
 
-export default connect(null, mapDispatchToProps)(NavbarContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarContainer);
