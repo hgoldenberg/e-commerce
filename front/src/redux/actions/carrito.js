@@ -22,3 +22,9 @@ export const buscarCarrito = (userid) =>{
             .then(res => dispatch(carritoDeUser(res.data)))
     } 
 };
+
+export const deleteProductCarrito = (carritoId , productId) =>{
+    return dispatch => {
+        return axios.delete(`/api/carrito/${carritoId}/${productId}`)
+    }
+};
