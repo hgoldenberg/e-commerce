@@ -91,8 +91,8 @@ const ButtonBuy = styled.button`
   border: 1px solid #1d232d;
 `;
 
-export default ({ cart, handleDelete, sumar}) => {
-  let total = 0
+export default ({ cart, handleDelete, sumar }) => {
+  let total = 0;
   return (
     <Section>
       <ArticleCart>
@@ -101,11 +101,16 @@ export default ({ cart, handleDelete, sumar}) => {
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
-             total += producto.cantidad * producto.price
+              total += producto.cantidad * producto.price;
               return (
                 <ContentCart key={producto.id}>
                   <Img src={producto.imageUno} alt="" />
-                  <A>{producto.name}</A>
+                  <A>
+                    {producto.name
+                      .split(" ")
+                      .map(x => x[0].toUpperCase() + x.slice(1))
+                      .join(" ")}
+                  </A>
                   <Form>
                     <label>
                       <Input type="number" />
