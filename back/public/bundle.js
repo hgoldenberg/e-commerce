@@ -56700,7 +56700,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
 /* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3__);
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0px 5px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 5px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -56710,7 +56710,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n      display: flex;\n      align-items: center;\n      text-decoration: none;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  text-decoration: none;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -56720,7 +56720,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    padding: 4px 8px;\n    border: none;\n    height: 30px;\n    border-radius: 0px 5px 5px 0px;\n    cursor: pointer;\n    color: #777777;\n    width: 10%\n  "]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  border-radius: 0px 5px 5px 0px;\n  cursor: pointer;\n  color: #777777;\n  width: 10%;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -56730,7 +56730,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n      background-color: #fff;\n      color: #000000;\n      padding: 4px 8px;\n      border: none;\n      height: 30px;\n      font-size: 14px;\n      width: 90%;\n      border-radius: 5px 0px 0px 5px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  color: #000000;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  font-size: 14px;\n  width: 90%;\n  border-radius: 5px 0px 0px 5px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -56740,7 +56740,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -56750,7 +56750,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0px 50px;\n    width: 55%\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 50px;\n  width: 55%;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -56760,7 +56760,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    width: 100px;\n    height: 50px;\n    border-radius: 10px;\n    opacity: 0.8;\n    margin-top: 4px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 100px;\n  height: 50px;\n  border-radius: 10px;\n  opacity: 0.8;\n  margin-top: 4px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56770,7 +56770,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0px 20px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 20px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -56780,7 +56780,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    background: #1d232d;\n    height: 80px;\n    display: flex;\n    align-items: center;\n    padding: 0px 60px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  background: #1d232d;\n  height: 80px;\n  display: flex;\n  align-items: center;\n  padding: 0px 60px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56847,7 +56847,7 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
     height: "32",
     viewBox: "0 0 226 226",
     style: {
-      'fill': '#000000'
+      fill: "#000000"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
@@ -56864,7 +56864,7 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
     "font-size": "none",
     "text-anchor": "none",
     style: {
-      'mix-blend-mode': ' normal'
+      "mix-blend-mode": " normal"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M0,226v-226h226v226z",
