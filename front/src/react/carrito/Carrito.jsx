@@ -91,7 +91,7 @@ const ButtonBuy = styled.button`
   border: 1px solid #1d232d;
 `;
 
-export default ({ cart , handleDelete}) => {
+export default ({ cart, handleDelete , sumar }) => {
   return (
     <Section>
       <ArticleCart>
@@ -102,25 +102,31 @@ export default ({ cart , handleDelete}) => {
           ? cart.products.map(producto => {
               return (
                 <ContentCart key={producto.id}>
-                  <Img
-                    src={producto.imageUno}
-                    alt=""
-                  />
+                  <Img src={producto.imageUno} alt="" />
                   <A>{producto.name}</A>
                   <Form>
                     <label>
                       <Input type="number" />
                     </label>
                   </Form>
-                  <PriceCart>$ {producto.price}  <button className='btn btn-primary' style={{marginLeft:'20px'}} onClick={()=>handleDelete(cart.id,producto.id)}>eliminar</button></PriceCart> 
+                  <PriceCart>
+                    $ {producto.price}{" "}
+                    <button
+                      className="btn btn-primary"
+                      style={{ marginLeft: "20px" }}
+                      onClick={() => handleDelete(cart.id, producto.id)}
+                    >
+                      eliminar
+                    </button>
+                  </PriceCart>
                 </ContentCart>
               );
             })
-          : null }
+          : null}
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ 3.400</Price> 
+            Total: <Price>$ 0</Price> 
           </TotalCart>
         </ContentCart>
         <BuyCart>
