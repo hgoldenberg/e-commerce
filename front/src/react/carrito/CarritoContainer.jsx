@@ -19,7 +19,7 @@ class CarritoContainer extends React.Component {
       const { buscarCarrito , user  } = this.props
       buscarCarrito(user.id).then(data => {
         return this.setState({
-          carrito:data.cart.products 
+          carrito:data.cart.products,
         })
       })
   }
@@ -32,8 +32,13 @@ class CarritoContainer extends React.Component {
 
   render() {
     const { cart } = this.props;
+    const { carrito } = this.state
     return (
-      <Carrito cart={cart} handleDelete={this.handleDelete} sumar={this.state.carrito}/>
+      <Carrito 
+        cart={cart} 
+        handleDelete={this.handleDelete} 
+        sumar={carrito}
+      />
     );
   }
 }

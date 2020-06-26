@@ -91,7 +91,8 @@ const ButtonBuy = styled.button`
   border: 1px solid #1d232d;
 `;
 
-export default ({ cart, handleDelete , sumar }) => {
+export default ({ cart, handleDelete, sumar}) => {
+  let total = 0
   return (
     <Section>
       <ArticleCart>
@@ -100,6 +101,7 @@ export default ({ cart, handleDelete , sumar }) => {
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
+             total += producto.cantidad * producto.price
               return (
                 <ContentCart key={producto.id}>
                   <Img src={producto.imageUno} alt="" />
@@ -126,7 +128,7 @@ export default ({ cart, handleDelete , sumar }) => {
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ 0</Price> 
+            Total: <Price>$ {total}</Price>
           </TotalCart>
         </ContentCart>
         <BuyCart>
