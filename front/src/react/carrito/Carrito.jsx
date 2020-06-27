@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import n from "../../assets/scss/navbar.scss";
 
 const Section = styled.section`
   padding: 20px 100px;
@@ -90,8 +91,8 @@ const ButtonBuy = styled.button`
   border: 1px solid #1d232d;
 `;
 
-export default ({ cart }) => {
-  console.log(cart)
+export default ({ cart, handleDelete, sumar }) => {
+  let total = 0;
   return (
     <Section>
       <ArticleCart>
@@ -100,27 +101,39 @@ export default ({ cart }) => {
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
+              total += producto.cantidad * producto.price;
               return (
-                <ContentCart>
-                  <Img
-                    src={producto.imageUno}
-                    alt=""
-                  />
-                  <A>{producto.name}</A>
+                <ContentCart key={producto.id}>
+                  <Img src={producto.imageUno} alt="" />
+                  <A>
+                    {producto.name
+                      .split(" ")
+                      .map(x => x[0].toUpperCase() + x.slice(1))
+                      .join(" ")}
+                  </A>
                   <Form>
                     <label>
                       <Input type="number" />
                     </label>
                   </Form>
-                  <PriceCart>$ {producto.price}</PriceCart>
+                  <PriceCart>
+                    $ {producto.price}{" "}
+                    <button
+                      className="btn btn-primary"
+                      style={{ marginLeft: "20px" }}
+                      onClick={() => handleDelete(cart.id, producto.id)}
+                    >
+                      eliminar
+                    </button>
+                  </PriceCart>
                 </ContentCart>
               );
             })
-          : null }
+          : null}
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ 3.400</Price>
+            Total: <Price>$ {total}</Price>
           </TotalCart>
         </ContentCart>
         <BuyCart>
