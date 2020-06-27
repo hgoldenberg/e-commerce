@@ -55927,9 +55927,201 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   !*** ./src/react/carrito/Carrito.jsx ***!
   \***************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/BebiGordyn/Desktop/e-commerce/front/src/react/carrito/Carrito.jsx: Unexpected token (94:1)\n\n\u001b[0m \u001b[90m 92 | \u001b[39m\u001b[32m`\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 93 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 95 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m ({ cart }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 96 | \u001b[39m  console\u001b[33m.\u001b[39mlog(cart)\u001b[0m\n\u001b[0m \u001b[90m 97 | \u001b[39m  \u001b[90m//const prix = producto.price[0]\u001b[39m\u001b[0m\n    at Object._raise (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:754:17)\n    at Object.raiseWithData (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:747:17)\n    at Object.raise (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:741:17)\n    at Object.unexpected (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:8844:16)\n    at Object.jsxParseIdentifier (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4432:12)\n    at Object.jsxParseNamespacedName (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4442:23)\n    at Object.jsxParseElementName (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4453:21)\n    at Object.jsxParseOpeningElementAt (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4539:22)\n    at Object.jsxParseElementAt (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4572:33)\n    at Object.jsxParseElement (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4646:17)\n    at Object.parseExprAtom (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:4653:19)\n    at Object.parseExprSubscripts (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:9693:23)\n    at Object.parseMaybeUnary (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:9673:21)\n    at Object.parseExprOps (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:9543:23)\n    at Object.parseMaybeConditional (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:9516:23)\n    at Object.parseMaybeAssign (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:9471:21)\n    at Object.parseExpression (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:9423:23)\n    at Object.parseStatementContent (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:11322:23)\n    at Object.parseStatement (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:11193:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:11768:25)\n    at Object.parseBlockBody (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:11754:10)\n    at Object.parseTopLevel (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:11124:10)\n    at Object.parse (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:12826:10)\n    at parse (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/parser/lib/index.js:12879:38)\n    at parser (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/BebiGordyn/Desktop/e-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_2__);
+function _templateObject14() {
+  var data = _taggedTemplateLiteral(["\n  background-color: #1d232d;\n  padding: 10px 20px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #ffffff;\n  font-size: 20px;\n  border: 1px solid #1d232d;\n"]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["\n  text-align: end;\n  width: 95%;\n  margin: 50px 0px;\n"]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: 700;\n"]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["\n  text-align: end;\n  width: 100%;\n  font-size: 25px;\n  margin-top: 70px;\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  font-size: 28px;\n  margin: 26px 0px 0px 150px;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  width: 70px;\n  font-size: 18px;\n  padding: 10px;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  margin: 22px;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  padding: 30px 50px;\n  text-decoration: none;\n  color: #000000;\n  font-size: 22px;\n  width: 500px;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  width: 80px;\n  height: 110px;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  width: 90%;\n  padding: 30px 0px;\n  height: 170px;\n  border-bottom: 1px solid #aaaaaa;\n  margin: 0px 50px;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  padding: 38px 170px 14px 100px;\n  font-size: 22px;\n  font-weight: 400;\n  width: 80px;\n  border-bottom: 3px solid #000000;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid #aaaaaa;\n  height: 80px;\n  width: 90%;\n  margin: 0px 50px;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  margin: 25px 0px;\n  background-color: #fcfcfc;\n  box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n  display: flex;\n  flex-direction: column;\n  padding-bottom: 30px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  padding: 20px 100px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
+var ArticleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
+var TitleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
+var H3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templateObject4());
+var ContentCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject5());
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject6());
+var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject7());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject8());
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject9());
+var PriceCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject10());
+var TotalCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject11());
+var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject12());
+var BuyCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13());
+var ButtonBuy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject14());
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var cart = _ref.cart,
+      handleDelete = _ref.handleDelete,
+      sumar = _ref.sumar;
+  var total = 0;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Carrito")), cart.id ? cart.products.map(function (producto) {
+    total += producto.cantidad * producto.price;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, {
+      key: producto.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+      src: producto.imageUno,
+      alt: ""
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, producto.name.split(" ").map(function (x) {
+      return x[0].toUpperCase() + x.slice(1);
+    }).join(" ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+      type: "number"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ ", producto.price, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn btn-primary",
+      style: {
+        marginLeft: "20px"
+      },
+      onClick: function onClick() {
+        return handleDelete(cart.id, producto.id);
+      }
+    }, "eliminar")));
+  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ ", total))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonBuy, null, "Comprar"))));
+});
 
 /***/ }),
 

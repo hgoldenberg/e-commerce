@@ -91,15 +91,8 @@ const ButtonBuy = styled.button`
   border: 1px solid #1d232d;
 `;
 
-<<<<<<< HEAD
-export default ({ cart }) => {
-  console.log(cart)
-  //const prix = producto.price[0]
-  
-=======
 export default ({ cart, handleDelete, sumar }) => {
   let total = 0;
->>>>>>> 68810452f2ace111851b09bde2940ce246ed6d8a
   return (
     <Section>
       <ArticleCart>
@@ -140,11 +133,7 @@ export default ({ cart, handleDelete, sumar }) => {
 
         <ContentCart>
           <TotalCart>
-<<<<<<< HEAD
-            Total: <Price>2000</Price>
-=======
             Total: <Price>$ {total}</Price>
->>>>>>> 68810452f2ace111851b09bde2940ce246ed6d8a
           </TotalCart>
         </ContentCart>
         <BuyCart>
