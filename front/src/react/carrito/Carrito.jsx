@@ -92,6 +92,8 @@ const ButtonBuy = styled.button`
 
 export default ({ cart }) => {
   console.log(cart)
+  //const prix = producto.price[0]
+  
   return (
     <Section>
       <ArticleCart>
@@ -120,7 +122,7 @@ export default ({ cart }) => {
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ 3.400</Price>
+            Total: <Price>2000</Price>
           </TotalCart>
         </ContentCart>
         <BuyCart>
