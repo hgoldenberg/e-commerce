@@ -6099,6 +6099,27 @@ module.exports = exports;
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/navbar.scss":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/navbar.scss ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".assets-scss-navbar__Links--5PjSj {\n  color: #ffffff;\n  width: 20%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n", ""]);
+// Exports
+exports.locals = {
+	"Links": "assets-scss-navbar__Links--5PjSj"
+};
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/product.scss":
 /*!*****************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/product.scss ***!
@@ -55397,6 +55418,35 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
+/***/ "./src/assets/scss/navbar.scss":
+/*!*************************************!*\
+  !*** ./src/assets/scss/navbar.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../node_modules/sass-loader/dist/cjs.js!./navbar.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/navbar.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
 /***/ "./src/assets/scss/product.scss":
 /*!**************************************!*\
   !*** ./src/assets/scss/product.scss ***!
@@ -56643,9 +56693,201 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   !*** ./src/react/navbar/Navbar.jsx ***!
   \*************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/ariel/Plataforma5la/e-commerce/front/src/react/navbar/Navbar.jsx: 'import' and 'export' may only appear at the top level (65:0)\n\n\u001b[0m \u001b[90m 63 | \u001b[39m\u001b[32m  `\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 64 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m ({ handlerChange\u001b[33m,\u001b[39m handlerSubmit\u001b[33m,\u001b[39m valor }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 66 | \u001b[39m  console\u001b[33m.\u001b[39mlog(\u001b[32m\"este es el componente tonto \"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 | \u001b[39m  \u001b[0m\n\u001b[0m \u001b[90m 68 | \u001b[39m\u001b[0m\n    at Object._raise (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:754:17)\n    at Object.raiseWithData (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:747:17)\n    at Object.raise (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:741:17)\n    at Object.parseStatementContent (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11284:18)\n    at Object.parseStatement (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11193:17)\n    at Object.parseBlockOrModuleBlockBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11768:25)\n    at Object.parseBlockBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11754:10)\n    at Object.parseBlock (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11738:10)\n    at Object.parseFunctionBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:10745:24)\n    at Object.parseArrowExpression (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:10714:10)\n    at Object.parseParenAndDistinguishExpression (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:10332:12)\n    at Object.parseExprAtom (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:10044:21)\n    at Object.parseExprAtom (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:4658:20)\n    at Object.parseExprSubscripts (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:9693:23)\n    at Object.parseMaybeUnary (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:9673:21)\n    at Object.parseExprOps (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:9543:23)\n    at Object.parseMaybeConditional (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:9516:23)\n    at Object.parseMaybeAssign (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:9471:21)\n    at Object.parseExportDefaultExpression (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12395:24)\n    at Object.parseExport (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12297:31)\n    at Object.parseStatementContent (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11297:27)\n    at Object.parseStatement (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11193:17)\n    at Object.parseBlockOrModuleBlockBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11768:25)\n    at Object.parseBlockBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11754:10)\n    at Object.parseTopLevel (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11124:10)\n    at Object.parse (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12826:10)\n    at parse (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12879:38)\n    at parser (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4__);
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n    margin: 0px 5px;\n  "]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n      display: flex;\n      align-items: center;\n      text-decoration: none;\n  "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    padding: 4px 8px;\n    border: none;\n    height: 30px;\n    border-radius: 0px 5px 5px 0px;\n    cursor: pointer;\n    color: #777777;\n    width: 10%\n  "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n      background-color: #fff;\n      color: #000000;\n      padding: 4px 8px;\n      border: none;\n      height: 30px;\n      font-size: 14px;\n      width: 90%;\n      border-radius: 5px 0px 0px 5px;\n  "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    margin: 0px 50px;\n    width: 55%\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    width: 100px;\n    height: 50px;\n    border-radius: 10px;\n    opacity: 0.8;\n    margin-top: 4px;\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    margin: 0px 20px;\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    background: #1d232d;\n    height: 80px;\n    display: flex;\n    align-items: center;\n    padding: 0px 60px;\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+var Nav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject());
+var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
+var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject3());
+var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject4());
+var DivSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5());
+var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
+var ButtonSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(_templateObject7());
+var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject8());
+var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var handlerChange = _ref.handlerChange,
+      handlerSubmit = _ref.handlerSubmit,
+      valor = _ref.valor,
+      isLogged = _ref.isLogged,
+      doLogOut = _ref.doLogOut;
+  console.log("este es el componente tonto ");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoImg, {
+    src: "./p5games.jpg"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormSearch, {
+    onSubmit: handlerSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSearch, {
+    type: "text",
+    placeholder: "Buscar productos",
+    onChange: handlerChange,
+    value: valor
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonSearch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    "class": "iconSearch",
+    viewBox: "0 0 24 24",
+    fill: "currentColor",
+    role: "presentation"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0V0z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/productos",
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default.a.Links
+  }, "Categor\xEDas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/carrito",
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default.a.Links
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    x: "0px",
+    y: "0px",
+    width: "32",
+    height: "32",
+    viewBox: "0 0 226 226",
+    style: {
+      'fill': '#000000'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    fill: "none",
+    "fill-rule": "nonzero",
+    stroke: "none",
+    "stroke-width": "1",
+    "stroke-linecap": "butt",
+    "stroke-linejoin": "miter",
+    "stroke-miterlimit": "10",
+    "stroke-dasharray": "",
+    "stroke-dashoffset": "0",
+    "font-family": "none",
+    "font-weight": "none",
+    "font-size": "none",
+    "text-anchor": "none",
+    style: {
+      'mix-blend-mode': ' normal'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M0,226v-226h226v226z",
+    fill: "none"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    fill: "#cccccc"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M35.3125,49.4375c-3.88989,0 -7.0625,3.17261 -7.0625,7.0625c0,3.88989 3.17261,7.0625 7.0625,7.0625h15.66992l18.53906,74.15625c1.57251,6.29004 7.20044,10.59375 13.68359,10.59375h80.99805c6.3728,0 11.78003,-4.22095 13.46289,-10.37305l18.31836,-67.31445h-118.29687l3.53125,14.125h96.44727l-13.46289,49.4375h-80.99805l-18.53906,-74.15625c-1.57251,-6.29004 -7.20044,-10.59375 -13.68359,-10.59375zM155.375,148.3125c-11.6145,0 -21.1875,9.573 -21.1875,21.1875c0,11.6145 9.573,21.1875 21.1875,21.1875c11.6145,0 21.1875,-9.573 21.1875,-21.1875c0,-11.6145 -9.573,-21.1875 -21.1875,-21.1875zM91.8125,148.3125c-11.6145,0 -21.1875,9.573 -21.1875,21.1875c0,11.6145 9.573,21.1875 21.1875,21.1875c11.6145,0 21.1875,-9.573 21.1875,-21.1875c0,-11.6145 -9.573,-21.1875 -21.1875,-21.1875zM91.8125,162.4375c3.97266,0 7.0625,3.08984 7.0625,7.0625c0,3.97266 -3.08984,7.0625 -7.0625,7.0625c-3.97266,0 -7.0625,-3.08984 -7.0625,-7.0625c0,-3.97266 3.08984,-7.0625 7.0625,-7.0625zM155.375,162.4375c3.97266,0 7.0625,3.08984 7.0625,7.0625c0,3.97266 -3.08984,7.0625 -7.0625,7.0625c-3.97266,0 -7.0625,-3.08984 -7.0625,-7.0625c0,-3.97266 3.08984,-7.0625 7.0625,-7.0625z"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoName, null, "Carrito")), !isLogged.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/register",
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default.a.Links
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Acceder")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: doLogOut
+  }, "LogOut"));
+});
 
 /***/ }),
 
@@ -57423,10 +57665,86 @@ var setAllCategories = function setAllCategories() {
 /*!**************************************!*\
   !*** ./src/redux/actions/logUser.js ***!
   \**************************************/
-/*! exports provided: logIn, persistS, persistSession, doLogIn, logOut, doLogOut */
-/***/ (function(module, exports) {
+/*! exports provided: logIn, persistSession, doLogIn, logOut, doLogOut */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/ariel/Plataforma5la/e-commerce/front/src/redux/actions/logUser.js: Identifier 'persistS' has already been declared (60:13)\n\n\u001b[0m \u001b[90m 58 | \u001b[39m\u001b[90m// persistencia\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 59 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 60 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m persistS \u001b[33m=\u001b[39m \u001b[36mfunction\u001b[39m(user) {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 61 | \u001b[39m  \u001b[36mreturn\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 62 | \u001b[39m    type\u001b[33m:\u001b[39m \u001b[33mPERSIST_SESSION\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 63 | \u001b[39m    isLogged\u001b[33m:\u001b[39m user\u001b[0m\n    at Object._raise (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:754:17)\n    at Object.raiseWithData (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:747:17)\n    at Object.raise (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:741:17)\n    at ScopeHandler.checkRedeclarationInScope (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:4813:12)\n    at ScopeHandler.declareName (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:4779:12)\n    at Object.checkLVal (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:9298:22)\n    at Object.parseVarId (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11874:10)\n    at Object.parseVar (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11849:12)\n    at Object.parseVarStatement (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11661:10)\n    at Object.parseStatementContent (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11260:21)\n    at Object.parseStatement (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11193:17)\n    at Object.parseExportDeclaration (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12402:17)\n    at Object.maybeParseExportDeclaration (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12358:31)\n    at Object.parseExport (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12288:29)\n    at Object.parseStatementContent (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11297:27)\n    at Object.parseStatement (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11193:17)\n    at Object.parseBlockOrModuleBlockBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11768:25)\n    at Object.parseBlockBody (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11754:10)\n    at Object.parseTopLevel (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:11124:10)\n    at Object.parse (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12826:10)\n    at parse (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/parser/lib/index.js:12879:38)\n    at parser (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/ariel/Plataforma5la/e-commerce/front/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/home/ariel/Plataforma5la/e-commerce/front/node_modules/gensync/index.js:254:32)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logIn", function() { return logIn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "persistSession", function() { return persistSession; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "doLogIn", function() { return doLogIn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "doLogOut", function() { return doLogOut; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+
+
+
+ // loggerte
+
+function logIn(user) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["LOG_IN"],
+    user: user
+  };
+}
+/*
+export const persistS = function(user) {
+  return {
+    type: PERSIST_SESSION,
+    isLogged: user
+  };
+};*/
+
+var persistSession = function persistSession() {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/persistencia").then(function (res) {
+      return res.data;
+    }).then(function (user) {
+      return dispatch(logIn(user));
+    });
+  };
+}; // loggerte
+
+var doLogIn = function doLogIn(email, password) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/users/login", {
+      email: email,
+      password: password
+    }).then(function (user) {
+      return dispatch(logIn(user.data));
+    });
+  };
+}; // para deslogearme
+
+function logOut() {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["LOG_OUT"]
+  };
+}
+var doLogOut = function doLogOut() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/logout").then(function (user) {
+      dispatch(logIn({}));
+    })["catch"](console.log);
+  };
+}; // persistencia
+
+/*export const persistS = function(user) {
+  return {
+    type: PERSIST_SESSION,
+    isLogged: user
+  };
+};
+
+export const persistSession = user => dispatch => {
+  axios
+    .get("/api/me", user)
+    .then(res => res.data)
+    .then(user => dispatch(persistS(user)));
+};
+*/
 
 /***/ }),
 

@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {Button} from "react-bootstrap"
+import n from '../../assets/scss/navbar.scss'
 
-export default ({ handlerChange, handlerSubmit, valor, isLogged,
-  doLogOut }) => {
-  console.log("logging ", isLogged);
   const Nav = styled.nav`
     background: #1d232d;
     height: 80px;
@@ -62,7 +60,8 @@ export default ({ handlerChange, handlerSubmit, valor, isLogged,
     margin: 0px 5px;
   `;
 
-export default ({ handlerChange, handlerSubmit, valor }) => {
+  export default ({ handlerChange, handlerSubmit, valor, isLogged,
+    doLogOut }) => {
   console.log("este es el componente tonto ");
   
 
@@ -111,15 +110,15 @@ export default ({ handlerChange, handlerSubmit, valor }) => {
               {!isLogged.id?(
                 
                 <Link to="/register" className={n.Links}>
-                <LinksNav>
+                <div>
                   Acceder     
-              </LinksNav>
+              </div>
               </Link>
               ):(
               
-              <LinksNav onClick={doLogOut}>
+              <div onClick={doLogOut}>
                   LogOut    
-              </LinksNav>
+              </div>
             
             )}
   </Nav>

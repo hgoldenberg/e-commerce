@@ -11,13 +11,13 @@ export function logIn(user) {
     user
   };
 }
-
+/*
 export const persistS = function(user) {
   return {
     type: PERSIST_SESSION,
     isLogged: user
   };
-};
+};*/
 
 export const persistSession = () => dispatch => {
   axios
@@ -57,7 +57,7 @@ export const doLogOut = () => dispatch => {
 
 // persistencia
 
-export const persistS = function(user) {
+/*export const persistS = function(user) {
   return {
     type: PERSIST_SESSION,
     isLogged: user
@@ -70,3 +70,4 @@ export const persistSession = user => dispatch => {
     .then(res => res.data)
     .then(user => dispatch(persistS(user)));
 };
+*/
