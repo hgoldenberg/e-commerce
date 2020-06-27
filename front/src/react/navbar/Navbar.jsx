@@ -59,9 +59,13 @@ const CarritoName = styled.div`
   margin: 0px 5px;
 `;
 
-export default ({ handlerChange, handlerSubmit, valor }) => {
-  console.log("este es el componente tonto ");
-
+export default ({
+  handlerChange,
+  handlerSubmit,
+  valor,
+  isLogged,
+  doLogOut,
+}) => {
   return (
     <Nav>
       <Link to="/">
@@ -130,9 +134,15 @@ export default ({ handlerChange, handlerSubmit, valor }) => {
         </svg>
         <CarritoName>Carrito</CarritoName>
       </Link>
-      <Link to="/register" className={n.Links}>
-        Acceder
-      </Link>
+      {!isLogged.id ? (
+        <Link to="/register" className={n.Links}>
+          <div>acceder</div>
+        </Link>
+      ) : (
+        <Link to="/" onClick={doLogOut} className={n.Links}>
+          <div>logOut</div>
+        </Link>
+      )}
     </Nav>
   );
 };
