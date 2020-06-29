@@ -10,6 +10,12 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0px 60px;
 `;
+const ContainerNav = styled.nav`
+  margin: 0 auto;
+  width: 1500px;
+  display: flex; 
+  flex-direction: row;
+`;
 const Logo = styled.div`
   margin: 0px 20px;
 `;
@@ -21,8 +27,8 @@ const LogoImg = styled.img`
   margin-top: 4px;
 `;
 const FormSearch = styled.form`
-  margin: 0px 50px;
-  width: 55%;
+  margin: 12px 50px;
+  width: 70%;
 `;
 const DivSearch = styled.div`
   display: flex;
@@ -35,7 +41,7 @@ const InputSearch = styled.input`
   border: none;
   height: 30px;
   font-size: 14px;
-  width: 90%;
+  width: 93%;
   border-radius: 5px 0px 0px 5px;
 `;
 const ButtonSearch = styled.button`
@@ -46,7 +52,7 @@ const ButtonSearch = styled.button`
   border-radius: 0px 5px 5px 0px;
   cursor: pointer;
   color: #777777;
-  width: 10%;
+  width: 7%;
 `;
 
 const CarritoNav = styled.div`
@@ -59,15 +65,11 @@ const CarritoName = styled.div`
   margin: 0px 5px;
 `;
 
-export default ({
-  handlerChange,
-  handlerSubmit,
-  valor,
-  isLogged,
-  doLogOut,
-}) => {
+export default ({ handlerChange, handleClick, handlerSubmit, valor, isLogged  ,doLogOut, user}) => {
+  console.log(isLogged)
   return (
     <Nav>
+      <ContainerNav>
       <Link to="/">
         <Logo>
           <LogoImg src="./p5games.jpg" />
@@ -139,10 +141,25 @@ export default ({
           <div>acceder</div>
         </Link>
       ) : (
-        <Link to="/" onClick={doLogOut} className={n.Links}>
-          <div>logOut</div>
-        </Link>
+        <div onClick={handleClick} className={n.LinkUser}>
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+              <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+            </svg>
+            <span className={n.userConfig}>{isLogged.name}</span>
+            <svg width="12" height="12" viewBox="4 4 14 14" fill="currentColor" role="presentation">
+                <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path>
+            </svg> 
+            {user ? <div>
+                <ul className={n.listConfig}>
+                    <li><Link to='/'>Mis datos</Link></li>
+                    <li><Link to='/' onClick={doLogOut}>Salir</Link></li>
+                </ul>
+            </div> : null}
+        </div>
       )}
+      </ContainerNav>
     </Nav>
   );
 };

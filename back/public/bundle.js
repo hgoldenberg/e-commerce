@@ -6110,10 +6110,13 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".assets-scss-navbar__Links--5PjSj {\n  color: #ffffff;\n  width: 20%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n", ""]);
+exports.push([module.i, ".assets-scss-navbar__Links--5PjSj {\n  display: block;\n  color: #ffffff;\n  width: 18%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer; }\n\n.assets-scss-navbar__Links--5PjSj:hover {\n  color: #0084cf;\n  text-decoration: none; }\n\n.assets-scss-navbar__LinkUser--2ZJqY {\n  display: block;\n  color: #ffffff;\n  width: 18%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  position: relative; }\n\n.assets-scss-navbar__userConfig--3Ni6N {\n  margin: 0px 10px; }\n\n.assets-scss-navbar__userConfig--3Ni6N:hover {\n  color: #0084cf;\n  text-decoration: none; }\n\n.assets-scss-navbar__listConfig--1OY7d {\n  position: absolute;\n  background-color: #242e41;\n  padding: 15px 0px;\n  top: 60px;\n  width: 125px;\n  right: 30px;\n  z-index: 1000;\n  border-radius: 2px; }\n  .assets-scss-navbar__listConfig--1OY7d li {\n    list-style: none;\n    width: 100%;\n    text-align: left; }\n  .assets-scss-navbar__listConfig--1OY7d a {\n    display: block;\n    width: 100%;\n    color: #ffffff;\n    padding: 5px 15px;\n    font-size: 14px; }\n  .assets-scss-navbar__listConfig--1OY7d a:hover {\n    color: #ffffff;\n    text-decoration: none;\n    background-color: #3b4b69; }\n", ""]);
 // Exports
 exports.locals = {
-	"Links": "assets-scss-navbar__Links--5PjSj"
+	"Links": "assets-scss-navbar__Links--5PjSj",
+	"LinkUser": "assets-scss-navbar__LinkUser--2ZJqY",
+	"userConfig": "assets-scss-navbar__userConfig--3Ni6N",
+	"listConfig": "assets-scss-navbar__listConfig--1OY7d"
 };
 module.exports = exports;
 
@@ -57174,8 +57177,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
 /* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3__);
-function _templateObject9() {
+function _templateObject10() {
   var data = _taggedTemplateLiteral(["\n  margin: 0px 5px;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  text-decoration: none;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -57185,7 +57198,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  text-decoration: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  border-radius: 0px 5px 5px 0px;\n  cursor: pointer;\n  color: #777777;\n  width: 7%;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -57195,7 +57208,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  border-radius: 0px 5px 5px 0px;\n  cursor: pointer;\n  color: #777777;\n  width: 10%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  color: #000000;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  font-size: 14px;\n  width: 93%;\n  border-radius: 5px 0px 0px 5px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -57205,7 +57218,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  color: #000000;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  font-size: 14px;\n  width: 90%;\n  border-radius: 5px 0px 0px 5px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -57215,7 +57228,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 12px 50px;\n  width: 70%;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -57225,7 +57238,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0px 50px;\n  width: 55%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100px;\n  height: 50px;\n  border-radius: 10px;\n  opacity: 0.8;\n  margin-top: 4px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -57235,7 +57248,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100px;\n  height: 50px;\n  border-radius: 10px;\n  opacity: 0.8;\n  margin-top: 4px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 20px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -57245,7 +57258,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0px 20px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  width: 1500px;\n  display: flex; \n  flex-direction: row;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -57271,21 +57284,25 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var Nav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject());
-var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
-var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject3());
-var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject4());
-var DivSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5());
-var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
-var ButtonSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(_templateObject7());
-var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject8());
-var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
+var ContainerNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject2());
+var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
+var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject4());
+var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject5());
+var DivSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject6());
+var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject7());
+var ButtonSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(_templateObject8());
+var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
+var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject10());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var handlerChange = _ref.handlerChange,
+      handleClick = _ref.handleClick,
       handlerSubmit = _ref.handlerSubmit,
       valor = _ref.valor,
       isLogged = _ref.isLogged,
-      doLogOut = _ref.doLogOut;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      doLogOut = _ref.doLogOut,
+      user = _ref.user;
+  console.log(isLogged);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContainerNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoImg, {
     src: "./p5games.jpg"
@@ -57352,11 +57369,45 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoName, null, "Carrito")), !isLogged.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/register",
     className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.Links
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "acceder")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "acceder")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: handleClick,
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.LinkUser
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "2em",
+    height: "2em",
+    viewBox: "0 0 16 16",
+    "class": "bi bi-person-circle",
+    fill: "currentColor",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    "fill-rule": "evenodd",
+    d: "M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    "fill-rule": "evenodd",
+    d: "M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.userConfig
+  }, isLogged.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "12",
+    height: "12",
+    viewBox: "4 4 14 14",
+    fill: "currentColor",
+    role: "presentation"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0V0z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+  })), user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.listConfig
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "Mis datos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
-    onClick: doLogOut,
-    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.Links
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "logOut")));
+    onClick: doLogOut
+  }, "Salir")))) : null)));
 });
 
 /***/ }),
@@ -57418,10 +57469,12 @@ var NavbarContainer = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      inputValue: ""
+      inputValue: "",
+      user: false
     };
     _this.handlerChange = _this.handlerChange.bind(_assertThisInitialized(_this));
     _this.handlerSubmit = _this.handlerSubmit.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -57443,14 +57496,29 @@ var NavbarContainer = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "handleClick",
+    value: function handleClick() {
+      if (this.state.user == false) {
+        this.setState({
+          user: true
+        });
+      } else if (this.state.user == true) {
+        this.setState({
+          user: false
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
         handlerChange: this.handlerChange,
         handlerSubmit: this.handlerSubmit,
+        handleClick: this.handleClick,
         valor: this.state.inputValue,
         isLogged: this.props.isLogged,
-        doLogOut: this.props.doLogOut
+        doLogOut: this.props.doLogOut,
+        user: this.state.user
       });
     }
   }]);

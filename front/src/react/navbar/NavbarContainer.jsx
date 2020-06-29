@@ -10,9 +10,11 @@ class NavbarContainer extends React.Component {
     super(props);
     this.state = {
       inputValue: "",
+      user: false
     };
     this.handlerChange = this.handlerChange.bind(this);
     this.handlerSubmit = this.handlerSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handlerChange(evt) {
@@ -26,14 +28,25 @@ class NavbarContainer extends React.Component {
     this.setState({ inputValue: "" });
   }
 
+  handleClick(){
+    if(this.state.user == false){
+        this.setState({user: true});
+    } 
+    else if(this.state.user == true){
+        this.setState({user: false});
+    }
+}
+
   render() {
     return (
       <Navbar
         handlerChange={this.handlerChange}
         handlerSubmit={this.handlerSubmit}
+        handleClick={this.handleClick}
         valor={this.state.inputValue}
         isLogged={this.props.isLogged}
         doLogOut={this.props.doLogOut}
+        user={this.state.user}
       />
     );
   }
