@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import n from "../../assets/scss/navbar.scss";
 
-
 const Nav = styled.nav`
   background: #1d232d;
   height: 80px;
@@ -60,8 +59,13 @@ const CarritoName = styled.div`
   margin: 0px 5px;
 `;
 
-export default ({ handlerChange, handlerSubmit, valor, isLogged  ,doLogOut}) => {
-  console.log(isLogged)
+export default ({
+  handlerChange,
+  handlerSubmit,
+  valor,
+  isLogged,
+  doLogOut,
+}) => {
   return (
     <Nav>
       <Link to="/">
@@ -135,7 +139,7 @@ export default ({ handlerChange, handlerSubmit, valor, isLogged  ,doLogOut}) => 
           <div>acceder</div>
         </Link>
       ) : (
-        <Link to='/' onClick={doLogOut} className={n.Links}>
+        <Link to="/" onClick={doLogOut} className={n.Links}>
           <div>logOut</div>
         </Link>
       )}
