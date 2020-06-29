@@ -1,12 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import {doLogOut} from "../../redux/actions/logUser"
-//import { withRouter} from "react-router-dom"
-
+import { withRouter} from "react-router"
 import { searchProduct } from "../../redux/actions/products";
-
-//import { fetchAllProducts } from "../../redux/actions/singleProduct";
-
 import Navbar from "./Navbar";
 
 class NavbarContainer extends React.Component {
@@ -21,7 +17,6 @@ class NavbarContainer extends React.Component {
 
   handlerChange(evt) {
     const value = evt.target.value;
-    console.log("buscando");
     this.setState({ inputValue: value });
   }
 
@@ -58,4 +53,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavbarContainer);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavbarContainer));
