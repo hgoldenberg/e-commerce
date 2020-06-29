@@ -89,9 +89,10 @@ const ButtonBuy = styled.button`
   color: #ffffff;
   font-size: 20px;
   border: 1px solid #1d232d;
+  margin: 5px 5px;
 `;
 
-export default ({ cart, handleDelete, sumar }) => {
+export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInputRestar}) => {
   let total = 0;
   return (
     <Section>
@@ -101,7 +102,7 @@ export default ({ cart, handleDelete, sumar }) => {
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
-              total += producto.cantidad * producto.price;
+            total += producto.producto_carrito.cantidad * producto.price
               return (
                 <ContentCart key={producto.id}>
                   <Img src={producto.imageUno} alt="" />
@@ -113,7 +114,11 @@ export default ({ cart, handleDelete, sumar }) => {
                   </A>
                   <Form>
                     <label>
-                      <Input type="number" />
+                      <Input type="tel" name={producto.id}
+                        value={producto.producto_carrito.cantidad}
+                      />
+                      <button onClick={(e) => handleInputSumar(e, producto.id)}>+</button>
+                      <button onClick={(e) => handleInputRestar(e, producto.id)}>-</button>
                     </label>
                   </Form>
                   <PriceCart>
@@ -137,6 +142,7 @@ export default ({ cart, handleDelete, sumar }) => {
           </TotalCart>
         </ContentCart>
         <BuyCart>
+          <ButtonBuy onClick={handleClick}>seguir comprando</ButtonBuy>
           <ButtonBuy>Comprar</ButtonBuy>
         </BuyCart>
       </ArticleCart>

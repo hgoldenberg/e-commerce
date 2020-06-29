@@ -1,14 +1,14 @@
 const obj = {};
 const { Users } = require("../models");
+const passport = require("../config/passport");
 
 obj.register = (req, res, next) => {
-  console.log(req.body);
   Users.create(req.body).then((user) => res.status(200).send(user));
 };
 
 obj.loggin = (req, res, next) => {
   console.log("me loggie");
-  console.log(req.user);
+  console.log("userr", req.user);
   res.status(200).json(req.user);
 };
 
@@ -18,7 +18,6 @@ obj.logout = (req, res, next) => {
 };
 
 obj.loggedUser = (req, res, next) => {
-  console.log(req.user);
   if (req.isAuthenticated()) {
     res.json(req.user);
   } else {
