@@ -5,27 +5,23 @@ const cookies = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-require("dotenv").config();
+// require("dotenv").config();
 const app = express();
 const db = require("./config/db");
-const port = process.env.PORT || 3000;
+const port = 3200;
 const router = require("./routes");
 require("./config/passport");
 
-app.use(volleyball);
-// req.body
+app.use(express.static(__dirname + "/public"));
+app.use(volleyball); 
+app.use(cookies());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// middlewere
-
-app.use(express.static(__dirname + "/public"));
-
-app.use(cookies());
 app.use(
   session({
     secret: "lospibesJs",
-    saveUninitialized: true,
-    resave: true,
+    resave:true,
+    saveUninitialized:true,
   })
 );
 app.use(passport.initialize());

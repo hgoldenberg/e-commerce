@@ -1,7 +1,7 @@
 const express = require("express");
 const Router = express.Router();
 const users = require("../controllers/users");
-const passport = require("passport");
+const passport = require("../config/passport");
 const { Users } = require("../models/index");
 
 // ruta = /api/users
