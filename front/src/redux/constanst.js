@@ -12,3 +12,4 @@ export const ALLCATEGORIES = "ALLCATEGORIES";
 
 
 export const USERCART = "USERCART";
+export const ONECATEGORIE = "ONECATEGORIE"

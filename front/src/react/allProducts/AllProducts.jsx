@@ -80,11 +80,13 @@ export default ({ product, categories }) => {
             {categories.length
               ? categories.map((categories) => {
                   return (
+                    <Link to={`/categoria/${categories.id}`}>
                     <Li key={categories.id}>
-                      <Link to={`/productoCategorias/${categories.id}`}>
+                      
                         <A >{categories.tipo}</A>
-                      </Link>
+                  
                     </Li>
+                    </Link>
                   );
                 })
               : null}

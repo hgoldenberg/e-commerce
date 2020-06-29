@@ -7,7 +7,12 @@ import { connect } from "react-redux";
 class HomeContainer extends React.Component {
   constructor(props) {
     super(props);
+
+    
   }
+
+  
+
 
   componentDidMount() {
     this.props.fetchAllProducts();
@@ -19,7 +24,7 @@ class HomeContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  console.log("ESTADO ES " +state);
   return {
     juegos: state.productsReducers.allProducts,
   };
@@ -28,6 +33,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
+    
+    
   };
 };
 
