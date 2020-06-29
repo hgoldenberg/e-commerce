@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import n from "../../assets/scss/navbar.scss";
 
-
 const Nav = styled.nav`
   background: #1d232d;
   height: 80px;

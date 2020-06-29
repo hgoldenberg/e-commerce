@@ -16,9 +16,9 @@ export const agregarCarrito = (carrito) =>{
 };
 
 
-export const buscarCarrito = (userid) =>{
+export const buscarCarrito = (id) =>{
     return dispatch =>{
-        return axios.get(`/api/carrito/${userid}`)
+        return axios.get(`/api/carrito/${id}`)
             .then(res => dispatch(carritoDeUser(res.data)))
     } 
 };
@@ -28,3 +28,14 @@ export const deleteProductCarrito = (carritoId , productId) =>{
         return axios.delete(`/api/carrito/${carritoId}/${productId}`)
     }
 };
+
+export const updateProductSumar = (carritoProducts) => {
+    return dispatch => {
+        return axios.put('/api/carrito/sumar', carritoProducts)
+    }
+}
+export const updateProductRestar = (carritoProducts) => {
+    return dispatch => {
+        return axios.put('/api/carrito/restar', carritoProducts)
+    }
+}
