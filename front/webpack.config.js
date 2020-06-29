@@ -20,7 +20,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: __dirname + "/../back/public"
+    path: __dirname + "/../back/public",
+    publicPath: '/',
   },
   resolve: {
     extensions: [".js", ".jsx"]

@@ -24,7 +24,7 @@ class HomeContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  console.log("ESTADO ES " +state);
   return {
     juegos: state.productsReducers.allProducts,
   };

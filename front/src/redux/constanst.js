@@ -6,3 +6,4 @@ export const PERSIST_SESSION = "PERSIST_SESSION";
 export const REGISTER = "REGISTER";
 export const ALLCATEGORIES = "ALLCATEGORIES";
 export const USERCART = "USERCART";
+export const ONECATEGORIE = "ONECATEGORIE"

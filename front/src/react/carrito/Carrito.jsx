@@ -100,7 +100,7 @@ export default ({ cart, handleDelete, sumar }) => {
           <H3>Carrito</H3>
         </TitleCart>
         {cart.id
-          ? cart.products.map(producto => {
+          ? sumar.map(producto => {
               total += producto.cantidad * producto.price;
               return (
                 <ContentCart key={producto.id}>
