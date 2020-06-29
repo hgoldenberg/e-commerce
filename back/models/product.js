@@ -23,10 +23,6 @@ Product.init(
       type: S.TEXT,
       allowNull: false,
     },
-    cantidad: {
-      type: S.INTEGER,
-      allowNull: false,
-    },
     stock: {
       type: S.INTEGER,
       allowNull: false,

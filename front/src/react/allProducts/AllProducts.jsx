@@ -70,7 +70,6 @@ const CardGame = styled.div`
 
 
 export default ({ product, categories }) => {
-  
   return (
     <div>
       <Aside>
@@ -82,7 +81,9 @@ export default ({ product, categories }) => {
               ? categories.map((categories) => {
                   return (
                     <Li key={categories.id}>
-                      <A href="">{categories.tipo}</A>
+                      <Link to={`/productoCategorias/${categories.id}`}>
+                        <A >{categories.tipo}</A>
+                      </Link>
                     </Li>
                   );
                 })
@@ -93,7 +94,7 @@ export default ({ product, categories }) => {
 
       <Section>
         <Article>
-          {product.length
+          {product.length > 2
             ? product.map((product) => {
                 return (
                   <CardGame key={product.id}>
