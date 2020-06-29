@@ -10,7 +10,7 @@ Product.init(
       allowNull: false,
     },
     price: {
-      type: S.FLOAT,
+      type: S.INTEGER,
       allowNull: false,
     },
     imageUno: {

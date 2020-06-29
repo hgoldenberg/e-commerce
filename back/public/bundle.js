@@ -6110,10 +6110,13 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".assets-scss-navbar__Links--5PjSj {\n  color: #ffffff;\n  width: 20%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n", ""]);
+exports.push([module.i, ".assets-scss-navbar__Links--5PjSj {\n  display: block;\n  color: #ffffff;\n  width: 18%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer; }\n\n.assets-scss-navbar__Links--5PjSj:hover {\n  color: #0084cf;\n  text-decoration: none; }\n\n.assets-scss-navbar__LinkUser--2ZJqY {\n  display: block;\n  color: #ffffff;\n  width: 18%;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  position: relative; }\n\n.assets-scss-navbar__userConfig--3Ni6N {\n  margin: 0px 10px; }\n\n.assets-scss-navbar__userConfig--3Ni6N:hover {\n  color: #0084cf;\n  text-decoration: none; }\n\n.assets-scss-navbar__listConfig--1OY7d {\n  position: absolute;\n  background-color: #242e41;\n  padding: 15px 0px;\n  top: 60px;\n  width: 125px;\n  right: 30px;\n  z-index: 1000;\n  border-radius: 2px; }\n  .assets-scss-navbar__listConfig--1OY7d li {\n    list-style: none;\n    width: 100%;\n    text-align: left; }\n  .assets-scss-navbar__listConfig--1OY7d a {\n    display: block;\n    width: 100%;\n    color: #ffffff;\n    padding: 5px 15px;\n    font-size: 14px; }\n  .assets-scss-navbar__listConfig--1OY7d a:hover {\n    color: #ffffff;\n    text-decoration: none;\n    background-color: #3b4b69; }\n", ""]);
 // Exports
 exports.locals = {
-	"Links": "assets-scss-navbar__Links--5PjSj"
+	"Links": "assets-scss-navbar__Links--5PjSj",
+	"LinkUser": "assets-scss-navbar__LinkUser--2ZJqY",
+	"userConfig": "assets-scss-navbar__userConfig--3Ni6N",
+	"listConfig": "assets-scss-navbar__listConfig--1OY7d"
 };
 module.exports = exports;
 
@@ -55803,13 +55806,16 @@ var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObj
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product,
       categories = _ref.categories;
-  console.log(product);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Aside, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AsideSearch, null, "Busqueda: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoriaAside, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoriaAsideH, null, "Categor\xEDas:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, categories.length ? categories.map(function (categories) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, {
+      key: categories.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
       href: ""
     }, categories.tipo));
   }) : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, product.length ? product.map(function (product) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, {
+      key: product.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/productos/".concat(product.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
       src: product.imageUno
@@ -55931,6 +55937,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_2__);
 function _templateObject14() {
   var data = _taggedTemplateLiteral(["\n  background-color: #1d232d;\n  padding: 10px 20px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #ffffff;\n  font-size: 20px;\n  border: 1px solid #1d232d;\n"]);
 
@@ -56075,6 +56083,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
 var ArticleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
 var TitleCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
@@ -56090,16 +56099,31 @@ var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_temp
 var BuyCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13());
 var ButtonBuy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject14());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var cart = _ref.cart;
-  console.log(cart);
+  var cart = _ref.cart,
+      handleDelete = _ref.handleDelete,
+      sumar = _ref.sumar;
+  var total = 0;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Carrito")), cart.id ? cart.products.map(function (producto) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
+    total += producto.cantidad * producto.price;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, {
+      key: producto.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
       src: producto.imageUno,
       alt: ""
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, producto.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, producto.name.split(" ").map(function (x) {
+      return x[0].toUpperCase() + x.slice(1);
+    }).join(" ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
       type: "number"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ ", producto.price));
-  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ 3.400"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonBuy, null, "Comprar"))));
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceCart, null, "$ ", producto.price, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn btn-primary",
+      style: {
+        marginLeft: "20px"
+      },
+      onClick: function onClick() {
+        return handleDelete(cart.id, producto.id);
+      }
+    }, "eliminar")));
+  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ ", total))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonBuy, null, "Comprar"))));
 });
 
 /***/ }),
@@ -56118,6 +56142,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Carrito__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carrito */ "./src/react/carrito/Carrito.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/carrito */ "./src/redux/actions/carrito.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -56145,6 +56171,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var CarritoContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CarritoContainer, _React$Component);
 
@@ -56156,24 +56183,42 @@ var CarritoContainer = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, CarritoContainer);
 
     _this = _super.call(this, props);
-    _this.state = {};
+    _this.state = {
+      carrito: []
+    };
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(CarritoContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       var _this$props = this.props,
           buscarCarrito = _this$props.buscarCarrito,
           user = _this$props.user;
-      buscarCarrito(user.id);
+      buscarCarrito(user.id).then(function (data) {
+        return _this2.setState({
+          carrito: data.cart.products
+        });
+      });
+    }
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(carritoId, productId) {
+      var deleteProductCarrito = this.props.deleteProductCarrito;
+      deleteProductCarrito(carritoId, productId);
     }
   }, {
     key: "render",
     value: function render() {
       var cart = this.props.cart;
+      var carrito = this.state.carrito;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Carrito__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        cart: cart
+        cart: cart,
+        handleDelete: this.handleDelete,
+        sumar: carrito
       });
     }
   }]);
@@ -56192,6 +56237,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     buscarCarrito: function buscarCarrito(userid) {
       return dispatch(Object(_redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__["buscarCarrito"])(userid));
+    },
+    deleteProductCarrito: function deleteProductCarrito(carritoId, productId) {
+      return dispatch(Object(_redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__["deleteProductCarrito"])(carritoId, productId));
     }
   };
 };
@@ -56215,7 +56263,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    font-weight: 700;\n    display: block;\n    text-align: center;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  font-weight: 700;\n  display: block;\n  text-align: center;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -56225,7 +56273,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    color: #000000;\n    text-decoration: none;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  color: #000000;\n  text-decoration: none;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -56235,7 +56283,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 10px;\n    text-align: center;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 10px;\n  text-align: center;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -56245,7 +56293,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    height: 280px;\n    width: 200px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  height: 280px;\n  width: 200px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -56255,7 +56303,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    width: 200px;\n    padding-bottom: 10px;\n    box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n    margin-top: 30px;\n    margin-right: 20px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  padding-bottom: 10px;\n  box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);\n  margin-top: 30px;\n  margin-right: 20px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -56265,7 +56313,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -56275,7 +56323,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 45px;\n    padding: 50px 0px;\n    text-align: center;\n    margin-top: 150px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 45px;\n  padding: 50px 0px;\n  text-align: center;\n  margin-top: 150px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -56285,7 +56333,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    padding: 5px 80px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 5px 80px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56295,7 +56343,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 600px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 890px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -56305,7 +56353,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    \n  "]);
+  var data = _taggedTemplateLiteral(["\n  margintop: 10px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56332,7 +56380,6 @@ var CardLink = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_temp
 var PriceGame = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject10());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var juegos = _ref.juegos;
-  console.log(juegos);
   var a = juegos.slice(0, 7);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Carousel"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SliderImg, {
     className: "d-block w-100",
@@ -56347,7 +56394,9 @@ var PriceGame = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_
     src: "https://i0.wp.com/culturageek.com.ar/wp-content/uploads/2018/04/Culturageek.com_.ar-Review-God-of-War-1.jpg?fit=1200%2C630&ssl=",
     alt: "Third slide"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleSection, null, "TOP VIDEOJUEGOS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Article, null, juegos.length ? a.map(function (juego) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGame, {
+      key: juego.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/productos/".concat(juego.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardGameImg, {
       src: juego.imageUno
@@ -56523,7 +56572,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n    margin-top: 50px;\n    background-color: #fff;\n    padding-bottom: 30px;\n    padding: 30px 20px 30px;\n    border-radius: 10px;\n    border: 1px solid #ccc;\n    width: 500px;\n"]);
+  var data = _taggedTemplateLiteral(["\n        margin: 0 auto;\n        margin-top: 50px;\n        background-color: #fff;\n        padding-bottom: 30px;\n        padding: 30px 20px 30px;\n        border-radius: 10px;\n        border: 1px solid #ccc;\n        width: 500px;\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56701,11 +56750,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
-/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/scss/navbar.scss */ "./src/assets/scss/navbar.scss");
+/* harmony import */ var _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3__);
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 5px;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0px 5px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  text-decoration: none;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -56715,7 +56773,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n      display: flex;\n      align-items: center;\n      text-decoration: none;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  border-radius: 0px 5px 5px 0px;\n  cursor: pointer;\n  color: #777777;\n  width: 7%;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -56725,7 +56783,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    padding: 4px 8px;\n    border: none;\n    height: 30px;\n    border-radius: 0px 5px 5px 0px;\n    cursor: pointer;\n    color: #777777;\n    width: 10%\n  "]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  color: #000000;\n  padding: 4px 8px;\n  border: none;\n  height: 30px;\n  font-size: 14px;\n  width: 93%;\n  border-radius: 5px 0px 0px 5px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -56735,7 +56793,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n      background-color: #fff;\n      color: #000000;\n      padding: 4px 8px;\n      border: none;\n      height: 30px;\n      font-size: 14px;\n      width: 90%;\n      border-radius: 5px 0px 0px 5px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -56745,7 +56803,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 12px 50px;\n  width: 70%;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -56755,7 +56813,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0px 50px;\n    width: 55%\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 100px;\n  height: 50px;\n  border-radius: 10px;\n  opacity: 0.8;\n  margin-top: 4px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -56765,7 +56823,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    width: 100px;\n    height: 50px;\n    border-radius: 10px;\n    opacity: 0.8;\n    margin-top: 4px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 20px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56775,7 +56833,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0px 20px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  width: 1500px;\n  display: flex; \n  flex-direction: row;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -56785,7 +56843,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    background: #1d232d;\n    height: 80px;\n    display: flex;\n    align-items: center;\n    padding: 0px 60px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  background: #1d232d;\n  height: 80px;\n  display: flex;\n  align-items: center;\n  padding: 0px 60px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -56800,24 +56858,26 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-
 var Nav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject());
-var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
-var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject3());
-var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject4());
-var DivSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5());
-var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
-var ButtonSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(_templateObject7());
-var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject8());
-var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
+var ContainerNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject2());
+var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
+var LogoImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject4());
+var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject5());
+var DivSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject6());
+var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject7());
+var ButtonSearch = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(_templateObject8());
+var CarritoNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
+var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject10());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var handlerChange = _ref.handlerChange,
+      handleClick = _ref.handleClick,
       handlerSubmit = _ref.handlerSubmit,
       valor = _ref.valor,
       isLogged = _ref.isLogged,
-      doLogOut = _ref.doLogOut;
-  console.log("este es el componente tonto ");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      doLogOut = _ref.doLogOut,
+      user = _ref.user;
+  console.log(isLogged);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContainerNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoImg, {
     src: "./p5games.jpg"
@@ -56843,10 +56903,10 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
     d: "M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/productos",
-    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default.a.Links
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.Links
   }, "Categor\xEDas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/carrito",
-    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default.a.Links
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.Links
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
@@ -56855,7 +56915,7 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
     height: "32",
     viewBox: "0 0 226 226",
     style: {
-      'fill': '#000000'
+      fill: "#000000"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     fill: "none",
@@ -56872,7 +56932,7 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
     "font-size": "none",
     "text-anchor": "none",
     style: {
-      'mix-blend-mode': ' normal'
+      "mix-blend-mode": " normal"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M0,226v-226h226v226z",
@@ -56883,10 +56943,46 @@ var CarritoName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
     d: "M35.3125,49.4375c-3.88989,0 -7.0625,3.17261 -7.0625,7.0625c0,3.88989 3.17261,7.0625 7.0625,7.0625h15.66992l18.53906,74.15625c1.57251,6.29004 7.20044,10.59375 13.68359,10.59375h80.99805c6.3728,0 11.78003,-4.22095 13.46289,-10.37305l18.31836,-67.31445h-118.29687l3.53125,14.125h96.44727l-13.46289,49.4375h-80.99805l-18.53906,-74.15625c-1.57251,-6.29004 -7.20044,-10.59375 -13.68359,-10.59375zM155.375,148.3125c-11.6145,0 -21.1875,9.573 -21.1875,21.1875c0,11.6145 9.573,21.1875 21.1875,21.1875c11.6145,0 21.1875,-9.573 21.1875,-21.1875c0,-11.6145 -9.573,-21.1875 -21.1875,-21.1875zM91.8125,148.3125c-11.6145,0 -21.1875,9.573 -21.1875,21.1875c0,11.6145 9.573,21.1875 21.1875,21.1875c11.6145,0 21.1875,-9.573 21.1875,-21.1875c0,-11.6145 -9.573,-21.1875 -21.1875,-21.1875zM91.8125,162.4375c3.97266,0 7.0625,3.08984 7.0625,7.0625c0,3.97266 -3.08984,7.0625 -7.0625,7.0625c-3.97266,0 -7.0625,-3.08984 -7.0625,-7.0625c0,-3.97266 3.08984,-7.0625 7.0625,-7.0625zM155.375,162.4375c3.97266,0 7.0625,3.08984 7.0625,7.0625c0,3.97266 -3.08984,7.0625 -7.0625,7.0625c-3.97266,0 -7.0625,-3.08984 -7.0625,-7.0625c0,-3.97266 3.08984,-7.0625 7.0625,-7.0625z"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CarritoName, null, "Carrito")), !isLogged.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/register",
-    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default.a.Links
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Acceder")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.Links
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "acceder")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: handleClick,
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.LinkUser
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "2em",
+    height: "2em",
+    viewBox: "0 0 16 16",
+    "class": "bi bi-person-circle",
+    fill: "currentColor",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    "fill-rule": "evenodd",
+    d: "M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    "fill-rule": "evenodd",
+    d: "M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.userConfig
+  }, isLogged.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "12",
+    height: "12",
+    viewBox: "4 4 14 14",
+    fill: "currentColor",
+    role: "presentation"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0V0z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+  })), user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: _assets_scss_navbar_scss__WEBPACK_IMPORTED_MODULE_3___default.a.listConfig
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "Mis datos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/",
     onClick: doLogOut
-  }, "LogOut"));
+  }, "Salir")))) : null)));
 });
 
 /***/ }),
@@ -56948,10 +57044,12 @@ var NavbarContainer = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      inputValue: ""
+      inputValue: "",
+      user: false
     };
     _this.handlerChange = _this.handlerChange.bind(_assertThisInitialized(_this));
     _this.handlerSubmit = _this.handlerSubmit.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -56974,14 +57072,29 @@ var NavbarContainer = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "handleClick",
+    value: function handleClick() {
+      if (this.state.user == false) {
+        this.setState({
+          user: true
+        });
+      } else if (this.state.user == true) {
+        this.setState({
+          user: false
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
         handlerChange: this.handlerChange,
         handlerSubmit: this.handlerSubmit,
+        handleClick: this.handleClick,
         valor: this.state.inputValue,
         isLogged: this.props.isLogged,
-        doLogOut: this.props.doLogOut
+        doLogOut: this.props.doLogOut,
+        user: this.state.user
       });
     }
   }]);
@@ -57302,7 +57415,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! pure-react-carousel/dist/react-carousel.es.css */ "./node_modules/pure-react-carousel/dist/react-carousel.es.css");
 /* harmony import */ var pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4__);
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\nposition: absolute;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -57312,7 +57425,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\nwidth: 500px;\nfloat: left;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 500px;\n  float: left;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -57322,7 +57435,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\nbackground-color: #ffffff;\npadding: 15px 25px;\nborder-radius: 5px;\nborder: none;\ncursor: pointer;\ncolor: #1d232d;\nfont-size: 15px;\nborder: 1px solid #1d232d;\nmargin-top: 40px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 15px 25px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #1d232d;\n  font-size: 15px;\n  border: 1px solid #1d232d;\n  margin-top: 40px;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -57332,7 +57445,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\nbackground-color: #1d232d;\npadding: 15px 25px;\nborder-radius: 5px;\nborder: none;\ncursor: pointer;\ncolor: #ffffff;\nfont-size: 15px;\nborder: 1px solid #1d232d;\nmargin-top: 40px;\nmargin-right: 40px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #1d232d;\n  padding: 15px 25px;\n  border-radius: 5px;\n  border: none;\n  cursor: pointer;\n  color: #ffffff;\n  font-size: 15px;\n  border: 1px solid #1d232d;\n  margin-top: 40px;\n  margin-right: 40px;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -57342,7 +57455,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\nwidth: 60px;\nfont-size: 18px;\npadding: 10px;\nmargin: 0px 10px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 60px;\n  font-size: 18px;\n  padding: 10px;\n  margin: 0px 10px;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -57352,7 +57465,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\nmargin-top: 50px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 50px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -57362,7 +57475,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\npadding: 20px 0px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 20px 0px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -57372,7 +57485,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\nmargin: 0px 50px;\nwidth: 400px;\nfloat: left;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0px 50px;\n  width: 400px;\n  float: left;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -57382,7 +57495,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\nwidth: 110px;\nheight: 300px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 110px;\n  height: 300px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -57412,7 +57525,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nmargin: 20px 100px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 20px 100px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -57441,8 +57554,8 @@ var CartProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].butt
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject11());
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject12());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var product = _ref.product;
-  console.log(product);
+  var product = _ref.product,
+      agregarProducto = _ref.agregarProducto;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["CarouselProvider"], {
     visibleSlides: 1,
     totalSlides: 2,
@@ -57593,13 +57706,14 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /*!**************************************!*\
   !*** ./src/redux/actions/carrito.js ***!
   \**************************************/
-/*! exports provided: agregarCarrito, buscarCarrito */
+/*! exports provided: agregarCarrito, buscarCarrito, deleteProductCarrito */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "agregarCarrito", function() { return agregarCarrito; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buscarCarrito", function() { return buscarCarrito; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteProductCarrito", function() { return deleteProductCarrito; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
@@ -57623,6 +57737,11 @@ var buscarCarrito = function buscarCarrito(userid) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/carrito/".concat(userid)).then(function (res) {
       return dispatch(carritoDeUser(res.data));
     });
+  };
+};
+var deleteProductCarrito = function deleteProductCarrito(carritoId, productId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/carrito/".concat(carritoId, "/").concat(productId));
   };
 };
 
@@ -57680,7 +57799,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
 
 
-
  // loggerte
 
 function logIn(user) {
@@ -57689,14 +57807,6 @@ function logIn(user) {
     user: user
   };
 }
-/*
-export const persistS = function(user) {
-  return {
-    type: PERSIST_SESSION,
-    isLogged: user
-  };
-};*/
-
 var persistSession = function persistSession() {
   return function (dispatch) {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/persistencia").then(function (res) {
@@ -57726,25 +57836,10 @@ function logOut() {
 var doLogOut = function doLogOut() {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/logout").then(function (user) {
-      dispatch(logIn({}));
+      return dispatch(logIn({}));
     })["catch"](console.log);
   };
-}; // persistencia
-
-/*export const persistS = function(user) {
-  return {
-    type: PERSIST_SESSION,
-    isLogged: user
-  };
 };
-
-export const persistSession = user => dispatch => {
-  axios
-    .get("/api/me", user)
-    .then(res => res.data)
-    .then(user => dispatch(persistS(user)));
-};
-*/
 
 /***/ }),
 
@@ -57991,16 +58086,6 @@ var initialState = {
     case _constanst__WEBPACK_IMPORTED_MODULE_0__["LOG_IN"]:
       return Object.assign({}, state, {
         isLogged: action.user
-      });
-
-    case _constanst__WEBPACK_IMPORTED_MODULE_0__["LOG_OUT"]:
-      return Object.assign({}, state, {
-        isLogged: false
-      });
-
-    case _constanst__WEBPACK_IMPORTED_MODULE_0__["PERSIST_SESSION"]:
-      return Object.assign({}, state, {
-        isLogged: action.isLogged
       });
 
     default:

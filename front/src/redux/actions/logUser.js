@@ -1,7 +1,6 @@
 import axios from "axios";
 import { LOG_IN } from "../constanst";
 import { LOG_OUT } from "../constanst";
-import { PERSIST_SESSION } from "../constanst";
 
 // loggerte
 
@@ -11,13 +10,6 @@ export function logIn(user) {
     user
   };
 }
-/*
-export const persistS = function(user) {
-  return {
-    type: PERSIST_SESSION,
-    isLogged: user
-  };
-};*/
 
 export const persistSession = () => dispatch => {
   axios
@@ -49,25 +41,7 @@ export const doLogOut = () => dispatch => {
   return axios
     .get("/api/users/logout")
     .then(user => {
-      dispatch(logIn({}));
+      return dispatch(logIn({}));
     })
     .catch(console.log);
 };
-
-
-// persistencia
-
-/*export const persistS = function(user) {
-  return {
-    type: PERSIST_SESSION,
-    isLogged: user
-  };
-};
-
-export const persistSession = user => dispatch => {
-  axios
-    .get("/api/me", user)
-    .then(res => res.data)
-    .then(user => dispatch(persistS(user)));
-};
-*/

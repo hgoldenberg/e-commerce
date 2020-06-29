@@ -1,9 +1,65 @@
 .Links{
+    display: block;
     color: #ffffff;
-    width: 20%;
+    width: 18%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
+.Links:hover{
+    color: #0084cf;
+    text-decoration: none;
+}
+
+.LinkUser{
+    display: block;
+    color: #ffffff;
+    width: 18%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.userConfig{
+    margin: 0px 10px;
+}
+
+.userConfig:hover{
+    color: #0084cf;
+    text-decoration: none;
+}
+
+.listConfig{
+    position: absolute;
+    background-color: #242e41;
+    padding: 15px 0px;
+    top: 60px;
+    width: 125px;
+    right: 30px;
+    z-index: 1000;
+    border-radius: 2px;
+
+    li{
+        list-style: none;
+        width: 100%;
+        text-align: left;
+    }
+    a{
+        display: block;
+        width: 100%;
+        color: #ffffff;
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #3b4b69;
+    }    
+}
