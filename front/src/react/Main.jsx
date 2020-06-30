@@ -17,17 +17,17 @@ import AdminOrdenesContainer from "./admin/ordenes/AdminOrdenesContainer"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import { persistSession } from "../redux/actions/logUser";
+import MisDatosContainer from "./misDatos/misDatosContainer";
 
 class Main extends React.Component {
-  
-  constructor (props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
 
   componentDidMount() {
-    this.props.persistSession()
+    this.props.persistSession();
   }
-  
+
   render() {
     return (
       <div>
@@ -57,9 +57,9 @@ class Main extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    persistSession : () => dispatch(persistSession())
+    persistSession: () => dispatch(persistSession()),
   };
 };
 
