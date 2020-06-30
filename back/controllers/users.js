@@ -1,9 +1,12 @@
+
+
+
+
 const obj = {};
 const { Users } = require('../models')
 
 
 obj.register = (req, res, next) =>{
-    console.log(req.body)
     Users.create(req.body).then (user=> res.status(200).send(user))
 };
 
@@ -18,10 +21,7 @@ obj.logout = (req, res, next) =>{
     res.json({});
 };
 
-obj.users = (req, res, next) =>{
-    Users.findAll()
-    .then (data=>(res.json(data)))
-};
+
 
 obj.loggedUser = (req, res, next) => {
     console.log(req.user)
@@ -32,4 +32,10 @@ obj.loggedUser = (req, res, next) => {
     }
 };
 
+
+
+obj.users = (req, res, next) =>{
+    Users.findAll()
+    .then (data=>(res.json(data)))
+};
 module.exports= obj

@@ -8,11 +8,15 @@ Users.init({
 
     name:{
         type:S.STRING,
-        allowNull:false
+        allowNull:false,
+        unique:true,
+        
     },
     lastname:{
         type:S.STRING,
-        allowNull:false
+        allowNull:false,
+        unique:true,
+        
     },
     avatar:{
        type:S.STRING,

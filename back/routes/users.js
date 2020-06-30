@@ -6,20 +6,27 @@ const { Users } = require("../models/index");
 
 // ruta = /api/users
 
-
-Router.post("/register", users.register);
-
 Router.get("/", (req, res, next) => {
   Users.findAll().then((data) => {
     res.json(data);
   });
 });
 
+// ruta de register
+
+Router.post("/register", users.register);
+
 // ruta de login
 Router.post("/login", passport.authenticate("local"), users.loggin);
 
 //ruta de logout
 Router.get("/logout", users.logout);
+
+
+
+
+
+// ruta de persistencia
 
 Router.get('/persistencia' , users.loggedUser)
 

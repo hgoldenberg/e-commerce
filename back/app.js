@@ -46,3 +46,15 @@ db.sync({ force: false})
     });
   })
   .catch(console.log);
+
+
+
+  
+
+
+
+
+
+
+
+
