@@ -3,14 +3,24 @@ import { connect } from "react-redux";
 import HomeAdmin from "../HomeAdmin";
 import AdminCategorias from './AdminCategorias';
 import { withRouter} from "react-router"
+import { setAllCategories } from "../../../redux/actions/categories";
 
 class NavbarContainer extends React.Component {
 
+    constructor(props){
+      super(props)
+    }
+
+    componentDidMount(){
+      this.props.setAllCategories()
+    };
+
   render() {
+    const { categories } = this.props
     return (
     <>  
       <HomeAdmin isLogged={this.props.isLogged}/>
-      <AdminCategorias/>
+      <AdminCategorias categories={categories}/>
     </>
     );
   }
@@ -18,13 +28,14 @@ class NavbarContainer extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    history: ownProps.history,
-    isLogged: state.logUserReducer.isLogged
+    isLogged: state.logUserReducer.isLogged,
+    categories: state.categoriesReducer.categorias,
   };
 }; 
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    setAllCategories: () => dispatch(setAllCategories()),
     searchProduct: (busqueda) => dispatch(searchProduct(busqueda)),
     doLogOut: () => dispatch(doLogOut()),
   };

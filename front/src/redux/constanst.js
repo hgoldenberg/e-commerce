@@ -11,3 +11,5 @@ export const USERCART = "USERCART";
 export const ONECATEGORIE = "ONECATEGORIE";
 
 export const ADMINCATEGORIE = "ADMINCATEGORIE";
+
+export const COMPRASUSER = 'COMPRASUSER';

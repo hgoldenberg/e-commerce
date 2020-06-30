@@ -200,7 +200,7 @@ export default ({
                 <div>
                   <ul className={n.listConfig}>
                     <li>
-                      <Link to="/">Mis datos</Link>
+                      <Link to="/misdatos">Mis datos</Link>
                     </li>
                     {isLogged.roll == "admin" ? (
                       <li>
