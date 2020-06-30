@@ -12,5 +12,9 @@ Router.put('/sumar', carrito.updateCantidadProductoSumar);
 
 Router.put('/restar', carrito.updateCantidadProductoRestar);
 
+Router.put('/:id', carrito.finalizarCarrito);
+
+
+
 
 module.exports = Router;

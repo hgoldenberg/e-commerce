@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
+const DivContainer = styled.div`
+    padding: 40px 0px
+`;
+
 const FormContainer = styled.div`
     margin: 0 auto;
-    margin-top: 50px;
     background-color: #fff;
     padding-bottom: 30px;
     padding: 30px 20px 30px;
@@ -58,23 +61,25 @@ margin: 20px 0px;
 export default ({ handleInputEmail, handleInputPass, handleSubmit, handleInputName,handleInputLastName,handleInputDirection }) => {
 
     return(
-        <FormContainer>
-            <FormTitle>Registrar</FormTitle>
-            <Form onSubmit={handleSubmit}>
-                <Label>Name:</Label>
-                <Input type="text" onChange={handleInputName}/>
-                <Label>Last Name:</Label>
-                <Input type="text" onChange={handleInputLastName}/>
-                <Label>Direction:</Label>
-                <Input type="text" onChange={handleInputDirection}/>
-                <Label>Email:</Label>
-                <Input type="email" onChange={handleInputEmail}/>
-                <Label>Password:</Label>
-                <Input type="password" onChange={handleInputPass}/>
-                
-                <InputSubmit type="submit" value="Registrar" />
-            </Form>
-            <Span>Si tienes una cuenta <Link to="/login">Acceder</Link></Span>
-        </FormContainer>
+        <DivContainer>
+            <FormContainer>
+                <FormTitle>Registrar</FormTitle>
+                <Form onSubmit={handleSubmit}>
+                    <Label>Name:</Label>
+                    <Input type="text" onChange={handleInputName}/>
+                    <Label>Last Name:</Label>
+                    <Input type="text" onChange={handleInputLastName}/>
+                    <Label>Direction:</Label>
+                    <Input type="text" onChange={handleInputDirection}/>
+                    <Label>Email:</Label>
+                    <Input type="email" onChange={handleInputEmail}/>
+                    <Label>Password:</Label>
+                    <Input type="password" onChange={handleInputPass}/>
+                    
+                    <InputSubmit type="submit" value="Registrar" />
+                </Form>
+                <Span>Si tienes una cuenta <Link to="/login">Acceder</Link></Span>
+            </FormContainer>
+        </DivContainer>
     )
 }
