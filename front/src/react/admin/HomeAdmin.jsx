@@ -6,7 +6,7 @@ export default function({isLogged}){
   
     return(
       <>
-      { isLogged.roll == "admin" ?
+      { isLogged.roll == "admin" || isLogged.roll == "superAdmin" ?
         <aside className={a.asideAdmin}>
         <div className={a.userAdmin}>
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import n from "../../assets/scss/navbar.scss";
+import { Link } from "react-router-dom";
 
 const Section = styled.section`
   padding: 20px 100px;
@@ -81,12 +82,12 @@ const BuyCart = styled.div`
 `;
 
 const ButtonBuy = styled.button`
-  background-color: #1d232d;
+  background-color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  color: #ffffff;
+  color: #1d232d;
   font-size: 20px;
   border: 1px solid #1d232d;
   margin: 5px 5px;
@@ -143,7 +144,7 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
         </ContentCart>
         <BuyCart>
           <ButtonBuy onClick={handleClick}>seguir comprando</ButtonBuy>
-          <ButtonBuy>Comprar</ButtonBuy>
+          <Link to="/checkout" className={n.buyCart}>Comprar</Link>
         </BuyCart>
       </ArticleCart>
     </Section>

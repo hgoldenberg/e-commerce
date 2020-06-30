@@ -169,7 +169,7 @@ export default ({ handlerChange, handleClick, handlerSubmit, valor, isLogged  ,d
             {user ? <div>
                 <ul className={n.listConfig}>
                     <li><Link to='/'>Mis datos</Link></li>
-                    {isLogged.roll == "admin" ? 
+                    {isLogged.roll == "admin" || isLogged.roll == "superAdmin" ? 
                       <li><Link to='/admin'>Administrar</Link></li>
                     : null}                    
                     <li><Link to='/' onClick={doLogOut}>Salir</Link></li>                    
