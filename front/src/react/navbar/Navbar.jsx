@@ -66,7 +66,7 @@ const CarritoName = styled.div`
 `;
 
 export default ({ handlerChange, handleClick, handlerSubmit, valor, isLogged  ,doLogOut, user}) => {
-  console.log(isLogged)
+  console.log(isLogged.name)
   return (
     <Nav>
       <ContainerNav>
