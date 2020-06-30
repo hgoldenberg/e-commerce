@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import n from "../../assets/scss/navbar.scss";
+import a from "../../assets/scss/admin.scss";
 
 const Nav = styled.nav`
   background: #1d232d;
@@ -67,8 +68,22 @@ const CarritoName = styled.div`
 
 export default ({ handlerChange, handleClick, handlerSubmit, valor, isLogged  ,doLogOut, user}) => {
   console.log(isLogged)
+  window.onscroll = function() {scrollFunction()};
+  var myNav = document.getElementById("myNav");
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      myNav.style.position = "fixed";
+      myNav.style.width = "100%"
+      myNav.style.zIndex = "1000"
+    } else {
+      myNav.style.position = "unset";
+    }
+  }
+
   return (
-    <Nav>
+    <>     
+    <Nav id='myNav'>
       <ContainerNav>
       <Link to="/">
         <Logo>
@@ -154,12 +169,17 @@ export default ({ handlerChange, handleClick, handlerSubmit, valor, isLogged  ,d
             {user ? <div>
                 <ul className={n.listConfig}>
                     <li><Link to='/'>Mis datos</Link></li>
-                    <li><Link to='/' onClick={doLogOut}>Salir</Link></li>
+                    {isLogged.roll == "admin" ? 
+                      <li><Link to='/admin'>Administrar</Link></li>
+                    : null}                    
+                    <li><Link to='/' onClick={doLogOut}>Salir</Link></li>                    
                 </ul>
             </div> : null}
         </div>
       )}
       </ContainerNav>
     </Nav>
+    
+    </>
   );
 };
