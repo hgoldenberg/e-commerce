@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 
-export default () => {
+export default ({isLogged}) => {
 
   return (
       <div className={ad.main}>
@@ -19,6 +19,7 @@ export default () => {
                     <th>Apellido</th>
                     <th>dirección</th>
                     <th>Email</th>
+                    <th>Cambiar</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -27,6 +28,16 @@ export default () => {
                     <td>Blas</td>
                     <td>Calle Falsa</td>
                     <td>ariel@ariel.com</td>
+                    {isLogged.roll == "superAdmin" ?
+                    <td>
+                        <button className={ad.buttonEdit}>User</button>
+                        <button className={ad.buttonDelete}>Admin</button>
+                    </td>
+                    : 
+                    <td>
+                        <button className={ad.buttonDelete}>Admin</button>
+                    </td>
+                    }
                 </tr> 
             </table>
         </article>
