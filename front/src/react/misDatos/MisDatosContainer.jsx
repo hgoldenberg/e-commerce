@@ -1,5 +1,5 @@
 import React from "react";
-import MisDatos from "./misDatos";
+import MisDatos from "./MisDatos";
 import { connect } from "react-redux";
 import { getHistoryUser } from '../../redux/actions/compras'
 import { withRouter } from 'react-router';
