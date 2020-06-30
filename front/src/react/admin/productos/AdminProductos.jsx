@@ -27,7 +27,7 @@ export default () => {
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td>              
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td> 
                     <td>Resident Evil 2</td> 
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
+                    <td className={ad.sizeDescription}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
                     <td>Terror</td>
                     <td>$5000</td>
                     <td>400</td>  
@@ -40,7 +40,7 @@ export default () => {
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td>              
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td> 
                     <td>Resident Evil 2</td> 
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
+                    <td className={ad.sizeDescription}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
                     <td>Terror</td>
                     <td>$5000</td>
                     <td>400</td>  
@@ -53,7 +53,7 @@ export default () => {
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td>              
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td> 
                     <td>Resident Evil 2</td> 
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
+                    <td className={ad.sizeDescription}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
                     <td>Terror</td>
                     <td>$5000</td>
                     <td>400</td>  
@@ -66,7 +66,7 @@ export default () => {
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td>              
                     <td><img src="./css/resident_evil_2.jpg" alt=""/></td> 
                     <td>Resident Evil 2</td> 
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
+                    <td className={ad.sizeDescription}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptate a modi doloribus asperiores, sequi blanditiis officia quidem pariatur adipisci dolorum, amet veritatis mollitia quam quod ratione ex. Quidem, iure.</td>
                     <td>Terror</td>
                     <td>$5000</td>
                     <td>400</td>  
@@ -74,8 +74,7 @@ export default () => {
                         <button className={ad.buttonEdit}>Editar</button>
                         <button className={ad.buttonDelete}>Eliminar</button>
                     </td>
-                </tr> 
-                
+                </tr>                
             </table>
         </article>
     </section>

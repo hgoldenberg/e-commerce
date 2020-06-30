@@ -63,3 +63,19 @@
         background-color: #3b4b69;
     }    
 }
+
+.buyCart{
+    background-color: #1d232d;
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 5px 5px;
+}
+
+.buyCart:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
