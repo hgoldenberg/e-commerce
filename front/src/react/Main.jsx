@@ -7,21 +7,21 @@ import HomeContainer from "./home/HomeContainer";
 import LoginContainer from "./login/LoginContainer";
 import RegisterContainer from "./register/RegisterContainer";
 import CarritoContainer from "./carrito/CarritoContainer";
-import CategoriesContainer from "./categories/CategoriesContainer"
+import CategoriesContainer from "./categories/CategoriesContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import { persistSession } from "../redux/actions/logUser";
+import MisDatosContainer from "./misDatos/misDatosContainer";
 
 class Main extends React.Component {
-  
-  constructor (props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
 
   componentDidMount() {
-    this.props.persistSession()
+    this.props.persistSession();
   }
-  
+
   render() {
     return (
       <div>
@@ -34,6 +34,7 @@ class Main extends React.Component {
           <Route exact path="/carrito" component={CarritoContainer} />
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/register" component={RegisterContainer} />
+          <Route exact path="/misdatos" component={MisDatosContainer} />
           <Route
             exact
             path="/productos/:id"
@@ -45,9 +46,9 @@ class Main extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    persistSession : () => dispatch(persistSession())
+    persistSession: () => dispatch(persistSession()),
   };
 };
 
