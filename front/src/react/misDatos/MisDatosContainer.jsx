@@ -1,5 +1,5 @@
 import React from "react";
-import MisDatos from "./misDatos";
+import MisDatos from "./MisDatos";
 import { connect } from "react-redux";
 
 class MisDatosContainer extends React.Component {

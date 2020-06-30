@@ -159,24 +159,64 @@ export default ({
                 </g>
               </g>
             </svg>
-            <span className={n.userConfig}>{isLogged.name}</span>
-            <svg width="12" height="12" viewBox="4 4 14 14" fill="currentColor" role="presentation">
-                <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path>
-            </svg> 
-            {user ? <div>
-                <ul className={n.listConfig}>
-                    <li><Link to='/'>Mis datos</Link></li>
+            <CarritoName>Carrito</CarritoName>
+          </Link>
+          {!isLogged.id ? (
+            <Link to="/register" className={n.Links}>
+              <div>acceder</div>
+            </Link>
+          ) : (
+            <div onClick={handleClick} className={n.LinkUser}>
+              <svg
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                class="bi bi-person-circle"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                />
+              </svg>
+              <span className={n.userConfig}>{isLogged.name}</span>
+              <svg
+                width="12"
+                height="12"
+                viewBox="4 4 14 14"
+                fill="currentColor"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path>
+              </svg>
+              {user ? (
+                <div>
+                  <ul className={n.listConfig}>
+                    <li>
+                      <Link to="/">Mis datos</Link>
+                    </li>
                     {isLogged.roll == "admin" || isLogged.roll == "superAdmin" ? 
                       <li><Link to='/admin'>Administrar</Link></li>
-                    : null}                    
-                    <li><Link to='/' onClick={doLogOut}>Salir</Link></li>                    
-                </ul>
-            </div> : null}
-        </div>
-      )}
-      </ContainerNav>
-    </Nav>
-    
+                    : null}   
+                    <li>
+                      <Link to="/" onClick={doLogOut}>
+                        Salir
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          )}
+        </ContainerNav>
+      </Nav>
     </>
   );
 };
