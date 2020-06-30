@@ -202,11 +202,9 @@ export default ({
                     <li>
                       <Link to="/misdatos">Mis datos</Link>
                     </li>
-                    {isLogged.roll == "admin" ? (
-                      <li>
-                        <Link to="/admin">Administrar</Link>
-                      </li>
-                    ) : null}
+                    {isLogged.roll == "admin" || isLogged.roll == "superAdmin" ? 
+                      <li><Link to='/admin'>Administrar</Link></li>
+                    : null}
                     <li>
                       <Link to="/" onClick={doLogOut}>
                         Salir

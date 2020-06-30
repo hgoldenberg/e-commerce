@@ -5,7 +5,7 @@ import AdminCategorias from './AdminCategorias';
 import { withRouter} from "react-router"
 import { setAllCategories } from "../../../redux/actions/categories";
 
-class NavbarContainer extends React.Component {
+class AdminCategoriasContainer extends React.Component {
 
     constructor(props){
       super(props)
