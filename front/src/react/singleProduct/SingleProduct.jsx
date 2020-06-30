@@ -13,7 +13,7 @@ import {
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const Section = styled.section`
-  margin: 20px 100px;
+  margin: 0px;
 `;
 const ArticleProduct = styled.article`
 margin: 0 auto;
