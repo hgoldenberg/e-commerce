@@ -11,15 +11,13 @@ class HomeContainer extends React.Component {
     
   }
 
-  
-
 
   componentDidMount() {
     this.props.fetchAllProducts();
   }
 
   render() {
-    return <Home juegos={this.props.juegos} />;
+    return <Home juegos={this.props.juegos} isLogged={this.props.isLogged}/>;
   }
 }
 
@@ -27,6 +25,7 @@ const mapStateToProps = (state) => {
   console.log("ESTADO ES " +state);
   return {
     juegos: state.productsReducers.allProducts,
+    isLogged: state.logUserReducer.isLogged
   };
 };
 

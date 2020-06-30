@@ -50,6 +50,8 @@ const PriceGame = styled.span`
   text-align: center;
 `;
 
+
+
 export default ({ juegos }) => {
   const a = juegos.slice(0, 7);
 
@@ -112,6 +114,7 @@ export default ({ juegos }) => {
             : null}
         </Article>
       </Section>
+  
     </div>
   );
 };
