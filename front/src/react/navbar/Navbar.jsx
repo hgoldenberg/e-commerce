@@ -66,6 +66,12 @@ const CarritoName = styled.div`
   margin: 0px 5px;
 `;
 
+const Img = styled.img`
+  width: 2em;
+  height: 2em;
+  border-radius: 5em;
+`;
+
 export default ({
   handlerChange,
   handleClick,
@@ -166,6 +172,9 @@ export default ({
             </Link>
           ) : (
             <div onClick={handleClick} className={n.LinkUser}>
+              { isLogged.avatar ? 
+                <Img src={isLogged.avatar}/>
+              :
               <svg
                 width="2em"
                 height="2em"
@@ -183,7 +192,7 @@ export default ({
                   fill-rule="evenodd"
                   d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
                 />
-              </svg>
+              </svg>}
               <span className={n.userConfig}>{isLogged.name}</span>
               <svg
                 width="12"
