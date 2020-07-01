@@ -1,9 +1,9 @@
 .next{
     background-color: #ffffff;
     position: absolute;
-    bottom: 290px;
+    bottom: 250px;
     border: none;
-    left: 440px;
+    left: 450px;
     width: 50px;
     height: 50px;
     opacity: 0.4;
@@ -13,8 +13,8 @@
 .back{
     background-color: #ffffff;
     position: absolute;
-    bottom: 290px;
-    left: 10px;
+    bottom: 250px;
+    left: -70px;
     border: none;
     width: 50px;
     height: 50px;
@@ -38,7 +38,6 @@
 
 .ImgProduct{
     padding: 100px;
-    height: 500px;
     display: block;
     width: 120%;
     height: 120%;
@@ -51,10 +50,26 @@
 
 .ImgZoom{
     margin: 0px;
-    width: 120%;
+    width: 98% !important;
+    background-size: 100%;
+
+    div{
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat;
+    }
 }
 
 .ImgDosZoom{
     height: 60% !important;
     margin-top: 125px;
+
+    div{
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat;
+    }
+}
+
+.sliderProduct{
+    background-size: 100% !important;
+    background-repeat: no-repeat;
 }
