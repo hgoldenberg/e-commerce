@@ -10,7 +10,7 @@ export default () => {
         <article className={ad.articleAdmin}>
             <div className={ad.titleAdmin}>
                 <h2>Lista de productos</h2>
-                <button className={ad.buttonCreate}>Crear producto</button>
+                <Link to="/admin/productos/crear"><button className={ad.buttonCreate}>Crear producto</button></Link>
             </div>
             <table className={ad.table}>
                 <tr>              
@@ -32,7 +32,7 @@ export default () => {
                     <td>$5000</td>
                     <td>400</td>  
                     <td>
-                        <button className={ad.buttonEdit}>Editar</button>
+                        <Link to="/admin/productos/editar"><button className={ad.buttonEdit}>Editar</button></Link>
                         <button className={ad.buttonDelete}>Eliminar</button>
                     </td>
                 </tr> 
