@@ -59,27 +59,27 @@ const Span = styled.span`
     margin: 20px 0px;
 `;
 
-export default () => {
+export default ({handleSubmit , hadleChange}) => {
 
   return (
     <DivContainer>
     <FormContainer>
         <FormTitle>Crear producto</FormTitle>
-        <Form>
+        <Form onSubmit={handleSubmit}>
         <Label>Imagen 1:</Label>
-        <Input type="text" />
+        <Input type="text" name='imagen1' onChange={hadleChange}/>
         <Label>Imagen 2:</Label>
-        <Input type="text" />
+        <Input type="text" name='image2' onChange={hadleChange}/>
         <Label>Nombre:</Label>
-        <Input type="text" />
+        <Input type="text" name='nombre' onChange={hadleChange}/>
         <Label>Descripción:</Label>
-        <textarea name="" id="" cols="20" rows="10"></textarea>
+        <textarea name="descripcion" id="" cols="20" rows="10" onChange={hadleChange}></textarea>
         <Label>Categoria:</Label>
-        <Input type="text" />
+        <Input type="text" name='categoria' onChange={hadleChange}/>
         <Label>Precio:</Label>
-        <Input type="number"/>
+        <Input type="number" name='precio' onChange={hadleChange}/>
         <Label>Stock:</Label>
-        <Input type="number" />
+        <Input type="number" name='stock' onChange={hadleChange}/>
         <InputSubmit type="submit" value="Crear"/>
         </Form>
     </FormContainer>

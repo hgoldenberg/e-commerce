@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 
-export default ({ productos }) => {
-  console.log(productos);
+export default ({ productos , handleClick }) => {
   return (
     <div className={ad.main}>
       <section className={ad.section}>
@@ -45,8 +44,8 @@ export default ({ productos }) => {
                       <td>${element.price}</td>
                       <td>{element.stock}</td>
                       <td>
-                      <Link to="/admin/productos/editar"><button className={ad.buttonEdit}>Editar</button></Link>
-                        <button className={ad.buttonDelete}>Eliminar</button>
+                      <Link to={`/admin/productos/editar/${element.id}`}><button className={ad.buttonEdit}>Editar</button></Link>
+                        <button className={ad.buttonDelete} onClick={()=> handleClick(element.id)}>Eliminar</button>
                       </td>
                     </tr>
                   );

@@ -103,6 +103,7 @@ export default ({ isLogged , handleClick }) => {
               </svg>
             }          
           <Button>Configurar datos</Button>
+          <Button onClick={() => handleClick(isLogged.id)}>historial</Button>
           </DivImg>
           <DivData>
               <H3>Nombre y apellido:</H3>

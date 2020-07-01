@@ -1,12 +1,5 @@
 import axios from "axios";
-import { ADMINCATEGORIE, ADMINUSERS } from "../constanst";
-
-const adminCategorias = (param) => {
-  return {
-    type: ADMINCATEGORIE,
-    param,
-  };
-};
+import { ADMINUSERS } from "../constanst";
 
 const adminUsers = (user) => {
   return {
@@ -17,12 +10,9 @@ const adminUsers = (user) => {
 
 export const agregarCategoria = (categoria) => {
   return (dispatch) => {
-    return axios.post("/api/categoria/crear", categoria).then((res) => {
-      dispatch(adminCategorias(res.data));
-    });
+    return axios.post("/api/categoria/crear", categoria)
   };
 };
-
 
 export const fetchAllUsers = () => {
   return (dispatch) => {
@@ -30,4 +20,29 @@ export const fetchAllUsers = () => {
       return dispatch(adminUsers(res.data));
     });
   };
+};
+
+
+export const deleteCategorias = (id) =>{
+  return dispatch => {
+    return axios.delete(`/api/categoria/${id}`)
+  }
+};  
+
+export const updateCategorias = (id , categoria) =>{
+  return dispatch => {
+    return axios.put(`/api/categoria/${id}` , categoria)
+  }
+};
+
+export const deleteProduct = (id) =>{
+  return dispatch => {
+    return axios.delete(`/api/productos/${id}`)
+  }
+};
+
+export const updateProduct = (id , producto) =>{
+  return dispatch => {
+    return axios.put(`/api/categoria/${id}`, producto)
+  }
 };
