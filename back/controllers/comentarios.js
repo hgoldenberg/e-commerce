@@ -6,8 +6,6 @@ const Op = sequelize.Op;
 //creo un comentario
 
 obj.createComentario = (req, res, next) => {
-  console.log("que es",req.body)
-  //if (req.user.id) {
     Product.findOne({
       where: {
         id: req.body.productId

@@ -25,6 +25,8 @@ Product.hasMany(Valoraciones);
 
 Valoraciones.belongsTo(Users);
 
+
+
 module.exports = {
   Users,
   Product,
