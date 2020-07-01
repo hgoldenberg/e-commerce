@@ -56115,7 +56115,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var isLogged = _ref.isLogged;
+  var isLogged = _ref.isLogged,
+      users = _ref.users;
+  console.log(users);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.main
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -56126,14 +56128,33 @@ __webpack_require__.r(__webpack_exports__);
     className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.titleAdmin
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Lista de clientes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
     className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.table
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Avatar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Rol"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "direcci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Cambiar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "user"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Ariel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Blas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Calle Falsa"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "ariel@ariel.com"), isLogged.roll == "superAdmin" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonEdit
-  }, "User"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete
-  }, "Admin")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete
-  }, "Admin")))))));
-});
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Avatar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Rol"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "direcci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Cambiar")), users.length ? users.map(function (element) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.roll), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.lastname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.direccion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.emai), isLogged.roll == "superAdmin" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonEdit
+    }, "User"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete
+    }, "Admin")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete
+    }, "Admin")));
+  }) : null))));
+}); //     <tr>
+//        <td></td>
+//        <td>user</td>
+//        <td>Ariel</td>
+//        <td>Blas</td>
+//        <td>Calle Falsa</td>
+//        <td>ariel@ariel.com</td>
+//        {isLogged.roll == "superAdmin" ?
+//        <td>
+//            <button className={ad.buttonEdit}>User</button>
+//            <button className={ad.buttonDelete}>Admin</button>
+//        </td>
+//        :
+//        <td>
+//            <button className={ad.buttonDelete}>Admin</button>
+//        </td>
+//        }
+//    </tr>
 
 /***/ }),
 
@@ -56152,6 +56173,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomeAdmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HomeAdmin */ "./src/react/admin/HomeAdmin.jsx");
 /* harmony import */ var _AdminClientes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AdminClientes */ "./src/react/admin/clientes/AdminClientes.jsx");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../redux/actions/admin */ "./src/redux/actions/admin.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -56180,24 +56202,51 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(AdminClientesContainer, _React$Component);
 
   var _super = _createSuper(AdminClientesContainer);
 
-  function AdminClientesContainer() {
+  function AdminClientesContainer(props) {
+    var _this;
+
     _classCallCheck(this, AdminClientesContainer);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      "boolean": false
+    };
+    return _this;
   }
 
   _createClass(AdminClientesContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.props.fetchAllUsers().then(function () {
+        return _this2.setState({
+          "boolean": !_this2.state["boolean"]
+        });
+      });
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState["boolean"] !== this.state["boolean"]) {
+        this.props.fetchAllUsers();
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
+      console.log(this.props.users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeAdmin__WEBPACK_IMPORTED_MODULE_2__["default"], {
         isLogged: this.props.isLogged
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminClientes__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        isLogged: this.props.isLogged
+        isLogged: this.props.isLogged,
+        users: this.props.users
       }));
     }
   }]);
@@ -56205,13 +56254,22 @@ var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
   return AdminClientesContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state, ownProps) {
+var mapStateToProps = function mapStateToProps(state) {
   return {
-    isLogged: state.logUserReducer.isLogged
+    isLogged: state.logUserReducer.isLogged,
+    users: state.adminReducer.users
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, null)(AdminClientesContainer)));
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchAllUsers: function fetchAllUsers() {
+      return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["fetchAllUsers"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(AdminClientesContainer)));
 
 /***/ }),
 
@@ -60401,6 +60459,54 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/redux/actions/admin.js":
+/*!************************************!*\
+  !*** ./src/redux/actions/admin.js ***!
+  \************************************/
+/*! exports provided: agregarCategoria, fetchAllUsers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "agregarCategoria", function() { return agregarCategoria; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+
+
+
+var adminCategorias = function adminCategorias(param) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["ADMINCATEGORIE"],
+    param: param
+  };
+};
+
+var adminUsers = function adminUsers(user) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["ADMINUSERS"],
+    user: user
+  };
+};
+
+var agregarCategoria = function agregarCategoria(categoria) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/categoria/crear", categoria).then(function (res) {
+      dispatch(adminCategorias(res.data));
+    });
+  };
+};
+var fetchAllUsers = function fetchAllUsers() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/admin/clientes").then(function (res) {
+      return dispatch(adminUsers(res.data));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./src/redux/actions/carrito.js":
 /*!**************************************!*\
   !*** ./src/redux/actions/carrito.js ***!
@@ -60650,7 +60756,7 @@ var doRegister = function doRegister(registerUser) {
 /*!********************************!*\
   !*** ./src/redux/constanst.js ***!
   \********************************/
-/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION, ALLCATEGORIES, USERCART, ONECATEGORIE, ADMINCATEGORIE */
+/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION, ALLCATEGORIES, USERCART, ONECATEGORIE, ADMINCATEGORIE, ADMINUSERS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60664,6 +60770,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USERCART", function() { return USERCART; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ONECATEGORIE", function() { return ONECATEGORIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADMINCATEGORIE", function() { return ADMINCATEGORIE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADMINUSERS", function() { return ADMINUSERS; });
 var SINGLEPRODUCT = "SINGLEPRODUCT";
 var ALLPRODUCTS = "ALLPRODUCTS";
 var LOG_IN = "LOG_IN";
@@ -60673,6 +60780,44 @@ var ALLCATEGORIES = "ALLCATEGORIES";
 var USERCART = "USERCART";
 var ONECATEGORIE = "ONECATEGORIE";
 var ADMINCATEGORIE = "ADMINCATEGORIE";
+var ADMINUSERS = "ADMINUSERS";
+
+/***/ }),
+
+/***/ "./src/redux/reducers/admin-reducers.js":
+/*!**********************************************!*\
+  !*** ./src/redux/reducers/admin-reducers.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  users: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _constanst__WEBPACK_IMPORTED_MODULE_0__["ADMINUSERS"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        users: action.user
+      });
+
+    default:
+      return state;
+  }
+});
 
 /***/ }),
 
@@ -60770,6 +60915,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logUserReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logUserReducer */ "./src/redux/reducers/logUserReducer.js");
 /* harmony import */ var _categoriesReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./categoriesReducer */ "./src/redux/reducers/categoriesReducer.js");
 /* harmony import */ var _carrito_reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./carrito-reducers */ "./src/redux/reducers/carrito-reducers.js");
+/* harmony import */ var _admin_reducers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin-reducers */ "./src/redux/reducers/admin-reducers.js");
+
 
 
 
@@ -60779,7 +60926,8 @@ __webpack_require__.r(__webpack_exports__);
   productsReducers: _products_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   logUserReducer: _logUserReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   categoriesReducer: _categoriesReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  carritoUser: _carrito_reducers__WEBPACK_IMPORTED_MODULE_4__["default"]
+  carritoUser: _carrito_reducers__WEBPACK_IMPORTED_MODULE_4__["default"],
+  adminReducer: _admin_reducers__WEBPACK_IMPORTED_MODULE_5__["default"]
 }));
 
 /***/ }),

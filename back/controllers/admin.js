@@ -5,8 +5,23 @@ const { Users } = require("../models");
 
 // trae todos
 obj.users = (req, res, next) => {
-  Users.findAll().then((data) => res.json(data));
+  if(req.user.roll === "admin"){
+    Users.findAll({
+      where:{
+        roll: "user",
+      }
+    }).then((data) => res.json(data));
+  }
+   if(req.user.roll == "superAdmin"){
+     Users.findAll({
+       where: {
+         roll: ["user", "admin"],
+       }
+     }).then((data) => res.json(data));
+   } 
 };
+
+//
 
 // estas son las funcionalidades de admin y super admin
 obj.isAdmin = (req, res, next) => {
@@ -23,6 +38,8 @@ obj.updateToAdmin = (req, res, next) => {
   });
 };
 // cierra aca
+
+
 
 // funcionalidad para los super admin
 obj.updateToUser = (req, res, next) => {
