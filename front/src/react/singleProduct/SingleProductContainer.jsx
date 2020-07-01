@@ -2,7 +2,7 @@ import React from "react";
 import SingleProduct from "./SingleProduct";
 import { fetchProduct } from "../../redux/actions/products";
 import { agregarCarrito } from "../../redux/actions/carrito";
-
+import { withRouter } from "react-router";
 import { connect } from "react-redux";
 
 class SingleProductContainer extends React.Component {
@@ -11,20 +11,29 @@ class SingleProductContainer extends React.Component {
     this.agregarProducto = this.agregarProducto.bind(this);
   }
 
-  agregarProducto (){
-    console.log('entro')
+  agregarProducto() {
     const cart = {
       userId: this.props.user.id,
       product: this.props.id
-    } 
-    this.props.agregarCarrito(cart)
+    };
+    if (this.props.user) {
+      this.props.agregarCarrito(cart);
+      setTimeout(() => {
+        return this.props.history.push("/carrito");
+      }, 1000);
+    }
   };
 
   componentDidMount() {
     this.props.fetchProduct(this.props.id);
   }
   render() {
-    return <SingleProduct product={this.props.product} agregarProducto={this.agregarProducto}/>;
+    return (
+      <SingleProduct
+        product={this.props.product}
+        agregarProducto={this.agregarProducto}
+      />
+    );
   }
 }
 
@@ -32,18 +41,17 @@ const mapStateToProps = (state, ownProps) => {
   return {
     product: state.productsReducers.one,
     id: ownProps.match.params.id,
-    user:state.logUserReducer.isLogged
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchProduct: (id) => dispatch(fetchProduct(id)),
-    agregarCarrito: (carrito) => dispatch(agregarCarrito(carrito))
+    user: state.logUserReducer.isLogged
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SingleProductContainer);
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchProduct: id => dispatch(fetchProduct(id)),
+    agregarCarrito: carrito => dispatch(agregarCarrito(carrito))
+  };
+};
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(SingleProductContainer)
+);

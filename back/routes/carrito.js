@@ -8,4 +8,13 @@ Router.get('/:id', carrito.buscarPoductos);
 
 Router.delete('/:carritoId/:productId', carrito.eliminarProducto);
 
+Router.put('/sumar', carrito.updateCantidadProductoSumar);
+
+Router.put('/restar', carrito.updateCantidadProductoRestar);
+
+Router.put('/:id', carrito.finalizarCarrito);
+
+
+
+
 module.exports = Router;

@@ -7,7 +7,7 @@ class SearchProductContainer extends React.Component {
     super(props);
   }
   render() {
-    return <AllProducts product={this.props.product} />;
+    return <AllProducts product={(this.props.product).toUpperCase()} />;
   }
 }
 

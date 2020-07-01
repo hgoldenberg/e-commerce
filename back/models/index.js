@@ -4,6 +4,7 @@ const Carrito = require("./carrito");
 const Categories = require("./categories");
 const Valoraciones = require("./valoraciones");
 const Comentarios = require("./comentarios");
+const Producto_carrito = require('./producto_carrito');
 
 // faltan relaciones
 
@@ -12,8 +13,8 @@ Categories.belongsToMany(Product , { through: "producto_categoria" });
 
 Carrito.belongsTo(Users);
 
-Carrito.belongsToMany(Product ,{ through: "producto_carrito"});
-Product.belongsToMany(Carrito ,{ through: "producto_carrito"});
+Carrito.belongsToMany(Product ,{ through: Producto_carrito});
+Product.belongsToMany(Carrito ,{ through: Producto_carrito});
 
 Comentarios.belongsTo(Product);
 
@@ -34,4 +35,5 @@ module.exports = {
   Categories,
   Valoraciones,
   Comentarios,
+  Producto_carrito
 };

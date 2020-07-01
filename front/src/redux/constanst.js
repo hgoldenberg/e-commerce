@@ -1,8 +1,16 @@
 export const SINGLEPRODUCT = "SINGLEPRODUCT";
 export const ALLPRODUCTS = "ALLPRODUCTS";
+
 export const LOG_IN = "LOG_IN";
 export const LOG_OUT = "LOG_OUT";
 export const PERSIST_SESSION = "PERSIST_SESSION";
-export const REGISTER = "REGISTER";
+
 export const ALLCATEGORIES = "ALLCATEGORIES";
+
 export const USERCART = "USERCART";
+export const ONECATEGORIE = "ONECATEGORIE";
+
+export const ADMINCATEGORIE = "ADMINCATEGORIE";
+
+export const COMPRASUSER = 'COMPRASUSER';
+export const ADMINUSERS = "ADMINUSERS";
