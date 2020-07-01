@@ -60525,6 +60525,71 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+<<<<<<< HEAD
+var FormContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var FormTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject2());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templateObject3());
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].label(_templateObject4());
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject5());
+var InputSubmit = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input(_templateObject6());
+var Span = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject7());
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var passwordChange = _ref.passwordChange,
+      emailChange = _ref.emailChange,
+      nameChange = _ref.nameChange,
+      lastNameChange = _ref.lastNameChange,
+      addressChange = _ref.addressChange,
+      handleSubmit = _ref.handleSubmit,
+      email = _ref.email,
+      password = _ref.password,
+      name = _ref.name,
+      lastName = _ref.lastName,
+      address = _ref.address,
+      errorName = _ref.errorName,
+      errorLast = _ref.errorLast,
+      errorEmail = _ref.errorEmail,
+      errorAddress = _ref.errorAddress,
+      errorPass = _ref.errorPass,
+      tipo = _ref.tipo;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormTitle, null, "Registrar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "text",
+    placeholder: "Ingrese su nombre",
+    onChange: nameChange,
+    name: "name",
+    value: name
+  }), errorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "EL nombre no puede contener n\xFAmeros ni car\xE1cteres especiales") : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Last Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "text",
+    placeholder: "Ingrese su apellido",
+    onChange: lastNameChange,
+    name: "text",
+    value: lastName
+  }), errorLast ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "EL apellido no puede contener n\xFAmeros ni car\xE1cteres especiales") : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Address:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "text",
+    placeholder: "Ingrese su direcci\xF3n",
+    onChange: addressChange,
+    name: "address",
+    value: address
+  }), errorAddress ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "La direcci\xF3n no puede contener car\xE1cteres especiales") : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "email",
+    placeholder: "Ingrese su email",
+    onChange: emailChange,
+    name: "email",
+    value: email
+  }), errorEmail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "El email debe contener una direcci\xF3n v\xE1lida") : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+    type: "password",
+    placeholder: "Ingrese su contrase\xF1a",
+    onChange: passwordChange,
+    name: "password",
+    value: password
+  }), errorPass ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "El password debe comenzar una may\xFAscula, una min\xFAscula y 8 digitos") : null, errorPass || errorName || errorLast || errorEmail || errorAddress ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
+    type: "submit",
+    value: "Registrar"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, null, "Si tienes una cuenta ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/login"
+  }, "Acceder")));
+=======
 var DivContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
 var DivReview = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
 var DivContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
@@ -60541,6 +60606,7 @@ var ButtonVolver = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].but
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Agregar Review")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivProducto, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Producto, null, "Resident Evil 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivButton, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/reviews/3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "Agregar Review")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonVolver, null, "Seguir comprando")))));
+>>>>>>> e23258890adccc92913a65ec49d0f50baf84f58f
 });
 
 /***/ }),
@@ -60556,9 +60622,16 @@ var ButtonVolver = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].but
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+<<<<<<< HEAD
+/* harmony import */ var _Register__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Register */ "./src/react/register/Register.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_register__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/register */ "./src/redux/actions/register.js");
+/* harmony import */ var _register_validaciones__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../register/validaciones */ "./src/react/register/validaciones.js");
+=======
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _ReviewList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReviewList */ "./src/react/reviewList/ReviewList.jsx");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+>>>>>>> e23258890adccc92913a65ec49d0f50baf84f58f
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60586,14 +60659,127 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+<<<<<<< HEAD
+
+var RegisterContainer = /*#__PURE__*/function (_React$Component) {
+  _inherits(RegisterContainer, _React$Component);
+=======
 var ReviewListContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(ReviewListContainer, _React$Component);
+>>>>>>> e23258890adccc92913a65ec49d0f50baf84f58f
 
   var _super = _createSuper(ReviewListContainer);
 
   function ReviewListContainer() {
     _classCallCheck(this, ReviewListContainer);
 
+<<<<<<< HEAD
+    _this = _super.call(this, props);
+    _this.state = {
+      lastName: "",
+      password: "",
+      name: "",
+      address: "",
+      email: "",
+      errorName: false,
+      errorLast: false,
+      errorEmail: false,
+      errorPass: false,
+      errorAddress: false
+    };
+    _this.nameChange = _this.nameChange.bind(_assertThisInitialized(_this));
+    _this.passwordChange = _this.passwordChange.bind(_assertThisInitialized(_this));
+    _this.emailChange = _this.emailChange.bind(_assertThisInitialized(_this));
+    _this.lastNameChange = _this.lastNameChange.bind(_assertThisInitialized(_this));
+    _this.addressChange = _this.addressChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(RegisterContainer, [{
+    key: "nameChange",
+    value: function nameChange(evt) {
+      var value = evt.target.value;
+      this.setState({
+        name: value,
+        errorName: Object(_register_validaciones__WEBPACK_IMPORTED_MODULE_4__["isValidName"])(value)
+      });
+    }
+  }, {
+    key: "emailChange",
+    value: function emailChange(evt) {
+      var value = evt.target.value;
+      this.setState({
+        email: value,
+        errorEmail: Object(_register_validaciones__WEBPACK_IMPORTED_MODULE_4__["isValidEmail"])(value)
+      });
+    }
+  }, {
+    key: "passwordChange",
+    value: function passwordChange(evt) {
+      var value = evt.target.value;
+      console.log("pass", Object(_register_validaciones__WEBPACK_IMPORTED_MODULE_4__["isValidPass"])(value));
+      this.setState({
+        password: value,
+        errorPass: Object(_register_validaciones__WEBPACK_IMPORTED_MODULE_4__["isValidPass"])(value)
+      });
+    }
+  }, {
+    key: "lastNameChange",
+    value: function lastNameChange(evt) {
+      var value = evt.target.value;
+      this.setState({
+        lastName: value,
+        errorLast: Object(_register_validaciones__WEBPACK_IMPORTED_MODULE_4__["isValidName"])(value)
+      });
+    }
+  }, {
+    key: "addressChange",
+    value: function addressChange(evt) {
+      var value = evt.target.value;
+      this.setState({
+        address: value,
+        errorAddress: Object(_register_validaciones__WEBPACK_IMPORTED_MODULE_4__["isValidAddress"])(value)
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault();
+      var obj = {
+        email: this.state.email,
+        name: this.state.name,
+        password: this.state.password,
+        lastname: this.state.lastName,
+        direccion: this.state.address
+      };
+      this.props.doRegister(obj); // .then (()=> {
+      //   this.props.history ("/login")
+      // })
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Register__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        errorPass: this.state.errorPass,
+        errorAddress: this.state.errorAddress,
+        errorName: this.state.errorName,
+        errorLast: this.state.errorLast,
+        errorEmail: this.state.errorEmail,
+        nameChange: this.nameChange,
+        passwordChange: this.passwordChange,
+        lastNameChange: this.lastNameChange,
+        addressChange: this.addressChange,
+        emailChange: this.emailChange,
+        handleSubmit: this.handleSubmit,
+        name: this.state.name,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password,
+        address: this.state.address,
+        tipo: "Registrarse"
+      });
+=======
     return _super.apply(this, arguments);
   }
 
@@ -60601,13 +60787,57 @@ var ReviewListContainer = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewList__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+>>>>>>> e23258890adccc92913a65ec49d0f50baf84f58f
     }
   }]);
 
   return ReviewListContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+<<<<<<< HEAD
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    doRegister: function doRegister(objeto) {
+      dispatch(Object(_redux_actions_register__WEBPACK_IMPORTED_MODULE_3__["doRegister"])(objeto)).then(function () {
+        ownProps.history.push("/login");
+      });
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(null, mapDispatchToProps)(RegisterContainer));
+=======
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, null)(ReviewListContainer)));
+>>>>>>> e23258890adccc92913a65ec49d0f50baf84f58f
+
+/***/ }),
+
+/***/ "./src/react/register/validaciones.js":
+/*!********************************************!*\
+  !*** ./src/react/register/validaciones.js ***!
+  \********************************************/
+/*! exports provided: isValidName, isValidEmail, isValidPass, isValidAddress */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidName", function() { return isValidName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidEmail", function() { return isValidEmail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidPass", function() { return isValidPass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidAddress", function() { return isValidAddress; });
+var isValidName = function isValidName(name) {
+  return !/^[A-Z\s?]+$/i.test(name);
+};
+var isValidEmail = function isValidEmail(email) {
+  return !/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/i.test(email);
+}; // 1 mayuscula 1 minuscula 1 numero al menos 8 carcateres 
+
+var isValidPass = function isValidPass(pass) {
+  return !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(pass);
+};
+var isValidAddress = function isValidAddress(address) {
+  return !/^[#.0-9a-zA-Z\s,-]+$/i.test(address);
+};
 
 /***/ }),
 
