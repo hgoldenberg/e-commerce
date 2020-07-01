@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { element } from "prop-types";
+import { Link } from "react-router-dom";
+import styled from 'styled-components';
 
 const DivContainer = styled.div`
   padding: 0px 100px;
@@ -131,7 +131,7 @@ export default ({ handleSubmit, handleChange, cart }) => {
               name="direccionEntrega"
               onChange={handleChange}
             />
-            <InputSubmit type="submit" value="FinalizarCompra" />
+            <Link to="/reviews"><InputSubmit type="submit" value="Finalizar Compra" /></Link>
           </Form>
         </DivForm>
         <Aside>
@@ -160,16 +160,3 @@ export default ({ handleSubmit, handleChange, cart }) => {
     </DivContainer>
   );
 };
-
-/*
-CP_entrega: null
-ciudad_entrega: null
-createdAt: "2020-06-29T20:22:42.212Z"
-dir_entrega: null
-estado: "pendiente"
-id: 1
-products: (2) [{…}, {…}]
-updatedAt: "2020-06-29T20:22:42.212Z"
-userId: 1
-valor_compra: null
-*/

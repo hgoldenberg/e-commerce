@@ -43,18 +43,20 @@ html, body {
 
 .listAdminConfig{
     padding:10px 20px;
-}
-
-.listAdminConfig li{
-    list-style: none;
-    padding: 14px 0px;
-}
-
-.listAdminConfig a{
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 0px 4px;
+    
+    li{
+        list-style: none;
+        padding: 14px 0px;
+        display: flex;
+        align-items: center;
+    }
+    
+    a{
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 22px;
+        padding: 0px 4px;
+    }
 }
 
 .section{

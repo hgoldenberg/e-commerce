@@ -58,28 +58,114 @@ display: block;
 margin: 20px 0px;
 `;
 
-export default ({ handleInputEmail, handleInputPass, handleSubmit, handleInputName,handleInputLastName,handleInputDirection }) => {
+    
 
-    return(
-        <DivContainer>
-            <FormContainer>
-                <FormTitle>Registrar</FormTitle>
-                <Form onSubmit={handleSubmit}>
-                    <Label>Name:</Label>
-                    <Input type="text" onChange={handleInputName}/>
-                    <Label>Last Name:</Label>
-                    <Input type="text" onChange={handleInputLastName}/>
-                    <Label>Direction:</Label>
-                    <Input type="text" onChange={handleInputDirection}/>
-                    <Label>Email:</Label>
-                    <Input type="email" onChange={handleInputEmail}/>
-                    <Label>Password:</Label>
-                    <Input type="password" onChange={handleInputPass}/>
-                    
-                    <InputSubmit type="submit" value="Registrar" />
-                </Form>
-                <Span>Si tienes una cuenta <Link to="/login">Acceder</Link></Span>
-            </FormContainer>
-        </DivContainer>
+    export default ({ passwordChange, 
+        emailChange, 
+        nameChange, 
+        lastNameChange, 
+        addressChange, 
+        handleSubmit, 
+        email, 
+        password, 
+        name, 
+        lastName,
+        address,
+        errorName,
+        errorLast,
+        errorEmail,
+        errorAddress,
+        errorPass,
+        tipo }) => {
+    
+
+      return(
+        <FormContainer>
+            <FormTitle>Registrar</FormTitle>
+            <Form onSubmit={handleSubmit} >
+
+                <Label>Name:</Label>
+                <Input 
+                type="text" 
+                placeholder="Ingrese su nombre"
+                onChange={nameChange}
+                name="name" 
+                value={name}
+                />
+                {errorName ? 
+                (<p>
+                    EL nombre no puede contener números ni carácteres especiales
+                </p>):null}
+
+                <Label>Last Name:</Label>
+                <Input 
+                type="text" 
+                placeholder="Ingrese su apellido"
+                onChange={lastNameChange}
+                name="text" 
+                value={lastName}
+                />
+                {errorLast ? 
+                (<p>
+                    EL apellido no puede contener números ni carácteres especiales
+                </p>):null}
+                
+
+                <Label>Address:</Label>
+                <Input 
+                type="text" 
+                placeholder="Ingrese su dirección"
+                onChange={addressChange}
+                name="address" 
+                value={address}
+                />
+                {errorAddress ? 
+                (<p>
+                    La dirección no puede contener carácteres especiales
+                </p>):null}
+                
+
+                <Label>Email:</Label>
+                <Input 
+                type="email" 
+                placeholder="Ingrese su email"
+                onChange={emailChange}
+                name="email" 
+                value={email}
+                />
+                {errorEmail ? 
+                (<p>
+                    El email debe contener una dirección válida
+                </p>):null}
+                
+                
+                <Label>Password:</Label>
+                <Input 
+                type="password" 
+                placeholder="Ingrese su contraseña"
+                onChange={passwordChange}
+                name="password" 
+                value={password}
+                />
+                {errorPass ? 
+                (<p>
+                    El password debe comenzar una mayúscula, una minúscula y 8 digitos
+                </p>):null}
+                
+                {errorPass || 
+                errorName ||
+                errorLast ||
+                errorEmail ||
+                errorAddress ? (null):(<InputSubmit type="submit" value="Registrar" />)}
+    
+            </Form>
+            <Span>Si tienes una cuenta <Link to="/login">Acceder</Link></Span>
+        </FormContainer>
     )
+
 }
+    
+
+    
+
+
