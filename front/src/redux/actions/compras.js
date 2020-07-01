@@ -15,3 +15,12 @@ export const getHistoryUser = (id) =>{
         });
     };
 };
+
+
+export const getHistory = () =>{
+    return dispatch =>{
+        return axios.get('/api/compra').then(res =>{
+            return dispatch(historyUser(res.data))
+        });
+    };
+};

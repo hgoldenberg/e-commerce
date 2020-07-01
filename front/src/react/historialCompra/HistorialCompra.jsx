@@ -58,7 +58,6 @@ const Price = styled.span`
 
 
 export default ({ historial }) => {
-  console.log(historial);
   let total = 0;
   return (
     <Section>
@@ -66,7 +65,7 @@ export default ({ historial }) => {
         {historial.length
           ? historial.map(product => {
               return (
-                <div>
+                <div key={product.id}>
                   <TitleCart>
                     <H3>Compra Nº{product.id}</H3>
                   </TitleCart>
@@ -99,51 +98,3 @@ export default ({ historial }) => {
     </Section>
   );
 };
-
-//  <Section>
-//       <ArticleCart>
-//         <TitleCart>
-//           <H3>Carrito</H3>
-//         </TitleCart>
-//         {cart.id
-//           ? cart.products.map(producto => {
-//               return (
-//                 <ContentCart key={producto.id}>
-//                   <Img src={producto.imageUno} alt="" />
-//                   <A>
-//                     {producto.name
-//                       .split(" ")
-//                       .map(x => x[0].toUpperCase() + x.slice(1))
-//                       .join(" ")}
-//                   </A>
-//                 </ContentCart>
-//               );
-//             })
-//           : null}
-
-//       </ArticleCart>
-//     </Section>
-
-//  <div>
-//             {historial.length ? historial.map(product => {
-//                return (
-//                    <div>
-//                        <h1>Compra numero {product.id}</h1>
-//                        {product.products.map(Element =>{
-//                            total += Element.price
-//                            return (
-//                                <div>
-//                                    <h2>Productos</h2>
-//                                    <ul>
-//                                        <li>Nombre del producto:{Element.name}</li>
-//                                        <li>Precio del producto:{Element.price}</li>
-//                                        <li>Cantidad del producto:{Element.producto_carrito.cantidad}</li>
-//                                    </ul>
-//                                </div>
-//                            )
-//                        })}
-//                        <h3>TOTAL:{total}</h3>
-//                    </div>
-//                )
-//             }) : <div>NO TENES COMPRAS REALIZADAS</div>}
-//         </div>

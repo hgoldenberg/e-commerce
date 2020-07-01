@@ -75,7 +75,6 @@ export default ({
   doLogOut,
   user,
 }) => {
-  console.log(isLogged);
   window.onscroll = function () {
     scrollFunction();
   };

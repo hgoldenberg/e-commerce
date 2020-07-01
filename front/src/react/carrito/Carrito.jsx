@@ -93,7 +93,13 @@ const ButtonBuy = styled.button`
   margin: 5px 5px;
 `;
 
-export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInputRestar}) => {
+export default ({
+  cart,
+  handleDelete,
+  handleClick,
+  handleInputSumar,
+  handleInputRestar
+}) => {
   let total = 0;
   return (
     <Section>
@@ -103,7 +109,8 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
-            total += producto.producto_carrito.cantidad * producto.price
+              total += producto.producto_carrito.cantidad * producto.price;
+              cart.valor_compra = total;
               return (
                 <ContentCart key={producto.id}>
                   <Img src={producto.imageUno} alt="" />
@@ -115,11 +122,28 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
                   </A>
                   <Form>
                     <label>
-                      <Input type="tel" name={producto.id}
+                      <Input
+                        type="tel"
+                        name={producto.id}
                         value={producto.producto_carrito.cantidad}
                       />
-                      <button onClick={(e) => handleInputSumar(e, producto.id)}>+</button>
-                      <button onClick={(e) => handleInputRestar(e, producto.id)}>-</button>
+                      <button onClick={e => handleInputSumar(e, producto.id)}>
+                        +
+                      </button>
+                      {producto.producto_carrito.cantidad === 0 ? (
+                        <button
+                          onClick={e => handleInputRestar(e, producto.id)}
+                          disabled
+                        >
+                          -
+                        </button>
+                      ) : (
+                        <button
+                          onClick={e => handleInputRestar(e, producto.id)}
+                        >
+                          -
+                        </button>
+                      )}
                     </label>
                   </Form>
                   <PriceCart>
@@ -139,12 +163,14 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ {total}</Price>
+            Total: <Price>$ {cart.id ? cart.valor_compra : 0}</Price>
           </TotalCart>
         </ContentCart>
         <BuyCart>
           <ButtonBuy onClick={handleClick}>seguir comprando</ButtonBuy>
-          <Link to="/checkout" className={n.buyCart}>Comprar</Link>
+          <Link to="/checkout" className={n.buyCart}>
+            Comprar
+          </Link>
         </BuyCart>
       </ArticleCart>
     </Section>

@@ -41,4 +41,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavbarContainer));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminCategoriasContainer));

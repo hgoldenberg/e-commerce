@@ -4,7 +4,6 @@ import ad from "../../../assets/scss/admin.scss";
 import { element } from "prop-types";
 
 export default ({ categories }) => {
-    console.log(categories)
   return (
     <div className={ad.main}>
       <section className={ad.section}>
@@ -21,7 +20,7 @@ export default ({ categories }) => {
               {categories.length
                 ? categories.map(element => {
                     return (
-                      <tr>
+                      <tr key={element.id}>
                         <td>{element.tipo}</td>
                         <td>
                           <button className={ad.buttonEdit}>Editar</button>
