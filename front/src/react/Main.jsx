@@ -54,9 +54,9 @@ class Main extends React.Component {
           <Route exact path="/admin/clientes" component={AdminClientesContainer}/>
           <Route exact path="/admin/ordenes" component={AdminOrdenesContainer}/>
           <Route exact path="/admin/productos/crear" component={CrearProductosContainer}/>
-          <Route exact path="/admin/productos/editar" component={EditarProductosContainer}/>
+          <Route exact path="/admin/productos/editar/:id" component={EditarProductosContainer}/>
           <Route exact path="/admin/categorias/crear" component={CrearCategoriaContainer}/>
-          <Route exact path="/admin/categorias/editar" component={EditarCategoriaContainer}/>
+          <Route exact path="/admin/categorias/editar/:id" component={EditarCategoriaContainer}/>
           <Route
             exact
             path="/productos/:id"

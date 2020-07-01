@@ -12,7 +12,7 @@ Router.get("/:id", productos.productoId);
 
 Router.put("/:id", productos.modificarProducto);
 
-Router.delete("/:id", productos.modificarProducto);
+Router.delete("/:id", productos.DeleteProducto);
 
 Router.get("/", productos.allProductos);
 

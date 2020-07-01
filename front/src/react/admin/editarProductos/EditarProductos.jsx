@@ -59,27 +59,27 @@ const Span = styled.span`
     margin: 20px 0px;
 `;
 
-export default () => {
+export default ({}) => {
 
   return (
     <DivContainer>
     <FormContainer>
         <FormTitle>Editar producto</FormTitle>
-        <Form>
+        <Form >
         <Label>Imagen 1:</Label>
-        <Input type="text" />
+        <Input type="text" name='imagen1' />
         <Label>Imagen 2:</Label>
-        <Input type="text" />
+        <Input type="text" name='imagen2' />
         <Label>Nombre:</Label>
-        <Input type="text" />
+        <Input type="text" name='nombre' />
         <Label>Descripción:</Label>
-        <textarea name="" id="" cols="20" rows="10"></textarea>
+        <textarea name="description" id="" cols="20" rows="10"></textarea>
         <Label>Categoria:</Label>
-        <Input type="text" />
+        <Input type="text" name='categoria' />
         <Label>Precio:</Label>
-        <Input type="number" />
+        <Input type="number" name='precio'/>
         <Label>Stock:</Label>
-        <Input type="number" />
+        <Input type="number" name='stock'/>
         <InputSubmit type="submit" value="Editar"/>
         </Form>
     </FormContainer>
