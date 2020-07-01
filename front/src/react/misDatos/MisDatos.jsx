@@ -72,8 +72,8 @@ const Button = styled.button`
   margin-left: 150px
 `;
 
-export default ({ isLogged }) => {
-  console.log(isLogged.name);
+
+export default ({ isLogged , handleClick }) => {
   return (
     <DivContainer>
       <DivMisDatos>

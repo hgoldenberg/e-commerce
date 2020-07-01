@@ -3,6 +3,7 @@ import productsReducers from "./products-reducer";
 import logUserReducer from "./logUserReducer";
 import categoriesReducer from "./categoriesReducer";
 import carritoUser from "./carrito-reducers";
+import comprasReducer from './compras-reducer'
 import adminReducer from "./admin-reducers";
 
 export default combineReducers({
@@ -10,5 +11,6 @@ export default combineReducers({
   logUserReducer,
   categoriesReducer,
   carritoUser,
+  comprasReducer,
   adminReducer,
 });

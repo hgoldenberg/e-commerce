@@ -1,5 +1,5 @@
 const obj = {};
-const { Product } = require("../models/index");
+const { Product , Categories } = require("../models/index");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
@@ -21,7 +21,9 @@ obj.search = (req, res, next) => {
 
 // busco todos los productos
 obj.allProductos = (req, res, next) => {
-  Product.findAll()
+  Product.findAll({
+    include:[{model:Categories}]
+  })
     .then((data) => {
       res.status(200).send(data);
     })
