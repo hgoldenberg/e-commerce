@@ -10,7 +10,7 @@ export default () => {
         <article className={ad.articleAdmin}>
             <div className={ad.titleAdmin}>
                 <h2>Lista de categorías</h2>
-                <button className={ad.buttonCreate}>Crear categoría</button>
+                <Link to="/admin/categorias/crear"><button className={ad.buttonCreate}>Crear categoría</button></Link>
             </div>
             <table className={ad.table}>
                 <tr>              
@@ -20,7 +20,7 @@ export default () => {
                 <tr>
                     <td>Terror</td>
                     <td>
-                        <button className={ad.buttonEdit}>Editar</button>
+                        <Link to="/admin/categorias/editar"><button className={ad.buttonEdit}>Editar</button></Link>
                         <button className={ad.buttonDelete}>Eliminar</button>
                     </td>
                 </tr> 
