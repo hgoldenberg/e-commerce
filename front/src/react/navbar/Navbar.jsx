@@ -81,7 +81,6 @@ export default ({
   doLogOut,
   user,
 }) => {
-  console.log(isLogged);
   window.onscroll = function () {
     scrollFunction();
   };
@@ -213,7 +212,7 @@ export default ({
                     </li>
                     {isLogged.roll == "admin" || isLogged.roll == "superAdmin" ? 
                       <li><Link to='/admin'>Administrar</Link></li>
-                    : null}   
+                    : null}
                     <li>
                       <Link to="/" onClick={doLogOut}>
                         Salir

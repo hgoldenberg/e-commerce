@@ -17,7 +17,8 @@ import AdminOrdenesContainer from "./admin/ordenes/AdminOrdenesContainer"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import { persistSession } from "../redux/actions/logUser";
-import MisDatosContainer from "./misDatos/MisDatosContainer";
+import MisDatosContainer from "./misDatos/misDatosContainer";
+import HistorialComprasContainer from './historialCompra/HistorialCompraContainer'
 import CrearProductosContainer from "./admin/crearProductos/CrearProductosContainer"
 import EditarProductosContainer from "./admin/editarProductos/EditarProductosContainer"
 import CrearCategoriaContainer from "./admin/crearCategoria/CrearCategoriaContainer"
@@ -46,6 +47,8 @@ class Main extends React.Component {
           <Route exact path="/carrito" component={CarritoContainer} />
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/register" component={RegisterContainer} />
+          <Route exact path="/misdatos" component={MisDatosContainer} />
+          <Route exact path="/historial" component={HistorialComprasContainer}/>
           <Route exact path="/checkout" component={CheckoutContainer}/>
           <Route exact path="/admin" component={HomeAdminContainer}/>
           <Route exact path="/admin/productos" component={AdminProductosContainer}/>

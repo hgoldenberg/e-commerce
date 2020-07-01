@@ -128,7 +128,8 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
-            total += producto.producto_carrito.cantidad * producto.price
+              total += producto.producto_carrito.cantidad * producto.price;
+              cart.valor_compra = total;
               return (
                 <ContentCart key={producto.id}>
                   <DivProducto>
@@ -169,7 +170,7 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
 
         <ContentCart>
           <TotalCart>
-            Total: <Price>$ {total}</Price>
+            Total: <Price>$ {cart.id ? cart.valor_compra : 0}</Price>
           </TotalCart>
         </ContentCart>
         <BuyCart>

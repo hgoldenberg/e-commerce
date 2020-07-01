@@ -130,6 +130,9 @@ obj.updateCantidadProductoRestar = (req, res, next) => {
 obj.finalizarCarrito = (req, res, next) => {
   Carrito.update(
     {
+      CP_entrega: req.body.CP_entrega,
+      ciudad_entrega:req.body.ciudad_entrega,
+      dir_entrega:req.body.dir_entrega,
       estado: "completado"
     },
     {
