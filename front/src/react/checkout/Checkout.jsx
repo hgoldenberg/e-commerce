@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const DivContainer = styled.div`
@@ -126,7 +127,7 @@ export default () => {
                     <Input type="text"/>
                     <Label>Dirección de entrega:</Label>
                     <Input type="text"/>
-                    <InputSubmit type="submit" value="Comprar"/>
+                    <Link to="/reviews"><InputSubmit type="submit" value="Comprar"/></Link>
                 </Form>
             </DivForm>
             <Aside>
@@ -153,17 +154,3 @@ export default () => {
         </DivContainer>
     )
 };
-
-
-/*
-CP_entrega: null
-ciudad_entrega: null
-createdAt: "2020-06-29T20:22:42.212Z"
-dir_entrega: null
-estado: "pendiente"
-id: 1
-products: (2) [{…}, {…}]
-updatedAt: "2020-06-29T20:22:42.212Z"
-userId: 1
-valor_compra: null
-*/

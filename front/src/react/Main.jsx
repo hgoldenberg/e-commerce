@@ -22,6 +22,8 @@ import CrearProductosContainer from "./admin/crearProductos/CrearProductosContai
 import EditarProductosContainer from "./admin/editarProductos/EditarProductosContainer"
 import CrearCategoriaContainer from "./admin/crearCategoria/CrearCategoriaContainer"
 import EditarCategoriaContainer from "./admin/editarCategoria/EditarCategoriaContainer"
+import ReviewListContainer from "./reviewList/ReviewListContainer";
+import ReviewContainer from "./review/ReviewContainer";
 
 class Main extends React.Component {
   constructor(props) {
@@ -51,6 +53,8 @@ class Main extends React.Component {
           <Route exact path="/admin/clientes" component={AdminClientesContainer}/>
           <Route exact path="/admin/ordenes" component={AdminOrdenesContainer}/>
           <Route exact path="/misdatos" component={MisDatosContainer}/>
+          <Route exact path="/reviews" component={ReviewListContainer}/>
+          <Route exact path="/reviews/:id" component={ReviewContainer}/>
           <Route exact path="/admin/productos/crear" component={CrearProductosContainer}/>
           <Route exact path="/admin/productos/editar" component={EditarProductosContainer}/>
           <Route exact path="/admin/categorias/crear" component={CrearCategoriaContainer}/>
