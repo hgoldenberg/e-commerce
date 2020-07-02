@@ -26,19 +26,25 @@ obj.createValoracion = (req, res, next) => {
     }).catch(next)
   };
 
-//   obj.rating = (req,res,next) => {
-//     Valoraciones.findAll({
-//         where: {
-//             productId: req.params.id 
-//         }
-//     }).then ((data)=>{
-//         let punto 
-//         data.map((val)=>{
-//             punto+=val.puntaje
-//         })
-//         punto = punto/data.lenght
-//     })
-//   }
+// Asigno el promedio de los ratings de un producto a la vista de todos los productos
+
+obj.rating = (req,res,next) => {
+  Valoraciones.findAll({
+      where: {
+          productId: req.params.productId 
+          }
+      }).then ((data)=>{
+          
+          let punto = 0
+          data.map((val)=>{
+            return punto+=val.puntaje
+          })
+          punto = punto/data.length
+        
+          res.status(200).json({rating:punto})
+      }) 
+      .catch(next)
+    }
 
 
 module.exports = obj;
