@@ -56116,7 +56116,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var isLogged = _ref.isLogged,
-      users = _ref.users;
+      users = _ref.users,
+      handleUser = _ref.handleUser,
+      handleAdmin = _ref.handleAdmin,
+      updateAdmin = _ref.updateAdmin,
+      updateUser = _ref.updateUser;
   console.log(users);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.main
@@ -56129,12 +56133,21 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Lista de clientes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
     className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.table
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Avatar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Rol"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "direcci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Cambiar")), users.length ? users.map(function (element) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.roll), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.lastname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.direccion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.emai), isLogged.roll == "superAdmin" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonEdit
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.avatar), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.roll), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.lastname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.direccion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, element.email), isLogged.roll == "superAdmin" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonEdit,
+      onClick: function onClick() {
+        return handleUser(element.id);
+      }
     }, "User"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete
+      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete,
+      onClick: function onClick() {
+        return handleAdmin(element.id);
+      }
     }, "Admin")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete
+      className: _assets_scss_admin_scss__WEBPACK_IMPORTED_MODULE_2___default.a.buttonDelete,
+      onClick: function onClick() {
+        return handleAdmin(element.id);
+      }
     }, "Admin")));
   }) : null))));
 }); //     <tr>
@@ -56155,6 +56168,9 @@ __webpack_require__.r(__webpack_exports__);
 //        </td>
 //        }
 //    </tr>
+//<button className={ad.buttonDelete} onClick={handleClick, ()=> updateAdmin(element.id)}>Admin</button>
+// onClick={()=> handleClick(element.id)}
+// <Link to={`/admin/toadmin/${element.id}`} > </Link>
 
 /***/ }),
 
@@ -56203,6 +56219,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
 var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(AdminClientesContainer, _React$Component);
 
@@ -56217,17 +56235,46 @@ var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       "boolean": false
     };
+    _this.handleUser = _this.handleUser.bind(_assertThisInitialized(_this));
+    _this.handleAdmin = _this.handleAdmin.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(AdminClientesContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
+    key: "handleUser",
+    value: function handleUser(id) {
       var _this2 = this;
 
-      this.props.fetchAllUsers().then(function () {
+      event.preventDefault();
+      var updateUser = this.props.updateUser;
+      updateUser(id).then(function () {
         return _this2.setState({
           "boolean": !_this2.state["boolean"]
+        });
+      });
+    }
+  }, {
+    key: "handleAdmin",
+    value: function handleAdmin(id) {
+      var _this3 = this;
+
+      event.preventDefault();
+      var updateAdmin = this.props.updateAdmin;
+      updateAdmin(id).then(function () {
+        return _this3.setState({
+          "boolean": !_this3.state["boolean"]
+        });
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this4 = this;
+
+      //console.log(this.props.userId)
+      this.props.fetchAllUsers().then(function () {
+        return _this4.setState({
+          "boolean": !_this4.state["boolean"]
         });
       });
     }
@@ -56241,12 +56288,15 @@ var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.users);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeAdmin__WEBPACK_IMPORTED_MODULE_2__["default"], {
         isLogged: this.props.isLogged
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminClientes__WEBPACK_IMPORTED_MODULE_3__["default"], {
         isLogged: this.props.isLogged,
-        users: this.props.users
+        users: this.props.users,
+        handleUser: this.handleUser,
+        handleAdmin: this.handleAdmin,
+        updateAdmin: this.props.updateAdmin,
+        updateUser: this.props.updateUser
       }));
     }
   }]);
@@ -56254,10 +56304,11 @@ var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
   return AdminClientesContainer;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state) {
+var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     isLogged: state.logUserReducer.isLogged,
-    users: state.adminReducer.users
+    users: state.adminReducer.users,
+    userId: ownProps.match.params.id
   };
 };
 
@@ -56265,6 +56316,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchAllUsers: function fetchAllUsers() {
       return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["fetchAllUsers"])());
+    },
+    updateAdmin: function updateAdmin(id) {
+      return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["updateAdmin"])(id));
+    },
+    updateUser: function updateUser(id) {
+      return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["updateUser"])(id));
     }
   };
 };
@@ -60463,13 +60520,15 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /*!************************************!*\
   !*** ./src/redux/actions/admin.js ***!
   \************************************/
-/*! exports provided: agregarCategoria, fetchAllUsers */
+/*! exports provided: agregarCategoria, fetchAllUsers, updateAdmin, updateUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "agregarCategoria", function() { return agregarCategoria; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateAdmin", function() { return updateAdmin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUser", function() { return updateUser; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
@@ -60502,6 +60561,18 @@ var fetchAllUsers = function fetchAllUsers() {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/admin/clientes").then(function (res) {
       return dispatch(adminUsers(res.data));
     });
+  };
+};
+var updateAdmin = function updateAdmin(id) {
+  console.log(id);
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/admin/toadmin/".concat(id));
+  };
+};
+var updateUser = function updateUser(id) {
+  console.log(id);
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/admin/touser/".concat(id));
   };
 };
 

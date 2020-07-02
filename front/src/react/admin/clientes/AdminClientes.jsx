@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 
-export default ({ isLogged, users }) => {
+export default ({ isLogged, users, handleUser, handleAdmin, updateAdmin, updateUser }) => {
   console.log(users);
   return (
     <div className={ad.main}>
@@ -26,20 +26,27 @@ export default ({ isLogged, users }) => {
               ? users.map((element) => {
                   return (
                     <tr>
-                      <td></td>
+                      <td>{element.avatar}</td>
                     <td>{element.roll}</td>
                      <td>{element.name}</td>
                         <td>{element.lastname}</td>
                         <td>{element.direccion}</td>
-                        <td>{element.emai}</td>
+                        <td>{element.email}</td>
+                        
                       {isLogged.roll == "superAdmin" ? (
                         <td>
-                          <button className={ad.buttonEdit}>User</button>
-                          <button className={ad.buttonDelete}>Admin</button>
+                           
+                          <button className={ad.buttonEdit} onClick={()=>handleUser(element.id)}>User</button>
+                          
+                          
+                          <button className={ad.buttonDelete} onClick={()=>handleAdmin(element.id)}>Admin</button>
+                          
                         </td>
                       ) : (
                         <td>
-                          <button className={ad.buttonDelete}>Admin</button>
+                            
+                          <button className={ad.buttonDelete} onClick={()=>handleAdmin(element.id)}>Admin</button>
+                          
                         </td>
                       )}
                     </tr>
@@ -72,3 +79,10 @@ export default ({ isLogged, users }) => {
 //        </td>
 //        }
 //    </tr>
+
+
+//<button className={ad.buttonDelete} onClick={handleClick, ()=> updateAdmin(element.id)}>Admin</button>
+
+
+// onClick={()=> handleClick(element.id)}
+// <Link to={`/admin/toadmin/${element.id}`} > </Link>

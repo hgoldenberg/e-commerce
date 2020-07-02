@@ -31,3 +31,17 @@ export const fetchAllUsers = () => {
     });
   };
 };
+
+export const updateAdmin = (id) => {
+  console.log(id)
+  return dispatch => {
+      return axios.put(`/api/admin/toadmin/${id}`)
+  }
+}
+
+export const updateUser = (id) => {
+  console.log(id)
+  return dispatch => {
+      return axios.put(`/api/admin/touser/${id}`)
+  }
+}
