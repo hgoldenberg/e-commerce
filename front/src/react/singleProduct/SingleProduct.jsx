@@ -11,6 +11,7 @@ import {
   Image
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import ReactStars from "react-rating-stars-component";
 
 const Section = styled.section`
   margin: 0px;
@@ -85,10 +86,12 @@ const Price = styled.h3`
 const Comentarios = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 `;
 
 const P = styled.p`
   color: #777;
+  font-size: 18px;
 `;
 
 const Svg = styled.svg`
@@ -96,16 +99,22 @@ const Svg = styled.svg`
   margin-right: 10px;
 `;
 
-const Stars = styled.p`
-  font-size: 22px;
-  margin: 5px 0px;
-  color: #ccc;
+const Stars = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 
 const DivContentData = styled.div`
   border-top: 1px solid #ccc;
   padding: 50px;
+  
+`;
+
+const Opiniones = styled.span`
+  font-size: 14px;
+  margin: 2.5px 0px 0px 10px;
 `;
 
 const DivComentarios = styled.div`
@@ -115,12 +124,52 @@ const DivDescripcion = styled.div`
   margin-bottom: 50px;
 `;
 
+const DivImg = styled.div`
+  width: 100px;
+  height:100px;
+  margin: 0px;
+  padding: 10px:
+`;
 
-export default ({ product, agregarProducto }) => {
+export default ({ product, agregarProducto, comentarios, rating, stars }) => {
+  console.log('stars',stars)
+  let opiniones;
+  if(stars.length == 1){
+    opiniones = <Opiniones>{stars.length} opinión</Opiniones>
+  }
+  else if(stars.length == 0){
+    opiniones = null
+  }
+  else{
+    opiniones = <Opiniones>{stars.length} opiniones</Opiniones>
+  }
   return (
     <Section>
       <ArticleProduct>
           <DivContainer>
+            <div className={p.carouseles}>
+            <div className={p.carouselImg}>
+          <CarouselProvider
+                  visibleSlides={2}
+                  totalSlides={2}
+                  step={1}
+                  naturalSlideWidth={100}
+                  naturalSlideHeight={100}
+                  infinite
+                  orientation={"vertical"}
+                  dragEnabled={false}
+                  
+                >
+                  <Slider className={p.sliderImg}>
+                    <Slide>
+                      <DivImg><Image src={product.imageUno}></Image></DivImg>
+                    </Slide>
+                    <Slide>
+                      <DivImg><Image src={product.imageDos}></Image></DivImg>
+                    </Slide>
+                  </Slider>
+                </CarouselProvider>
+                </div>
             <Div>
             <CarouselProvider
                 visibleSlides={1}
@@ -130,12 +179,11 @@ export default ({ product, agregarProducto }) => {
                 naturalSlideHeight={500}
                 infinite
               >
-              <Slider className={p.sliderProduct}>
 
+              <Slider className={p.sliderProduct}>
                 <Slide index={0} className={p.ImgProduct}>
                   <ImageWithZoom className={p.ImgZoom} src={product.imageUno} />
                 </Slide>
-
                 <Slide index={1} className={p.ImgDosProduct}>
                   <ImageWithZoom className={p.ImgDosZoom} src={product.imageDos} />
                 </Slide>
@@ -147,22 +195,25 @@ export default ({ product, agregarProducto }) => {
               </Button>
             </CarouselProvider>
             </Div>
+            </div>
             <DivContentData>
               <DivDescripcion>
                 <H2>Descripción</H2>
                 <P>"{product.description}"</P>
+                
               </DivDescripcion>
-              <DivComentarios>
-              <H2>Comentarios</H2>
-                <Comentarios>
-                <Svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                  <path fill-rule="evenodd" d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                </Svg>
-                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sed suscipit quaerat maxime? Ex, cupiditate tempora iure quasi, ab molestias neque nobis aliquid nam quo eius. Laboriosam facere facilis quis?</P>
-                </Comentarios>
-              </DivComentarios>
+              { comentarios.length !== 0 ?
+               <DivComentarios>
+                <H2>Opiniones sobre el producto</H2>
+                
+                  {comentarios.map(comment => 
+                    <Comentarios>
+                      <P>{comment.comentarios}</P>
+                    </Comentarios>
+                  )}
               
+                </DivComentarios>
+              : null}
             </DivContentData>
           </DivContainer>
         <ContentProduct>
@@ -174,8 +225,20 @@ export default ({ product, agregarProducto }) => {
                   .join(" ")}
               </TitleProduct>
             ) : null}
-
-            <Stars>★★★★★</Stars>
+            
+              {rating !== null ?
+              <Stars>
+                <ReactStars
+                  count={5}
+                  size={24}
+                  color2={"#ffd700"}
+                  value={rating}
+                  edit={false}
+                />
+                {opiniones}
+              </Stars> 
+              : null}
+                       
             <Price> $ {product.price}</Price>
             <CartProduct onClick={() => agregarProducto()}>
               Agregar al carrito
