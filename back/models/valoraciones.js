@@ -6,7 +6,7 @@ class Valoraciones extends S.Model {}
 Valoraciones.init(
   {
     puntaje: {
-      type: S.INTEGER,
+      type: S.FLOAT,
       allowNull: false,
     },
   },
