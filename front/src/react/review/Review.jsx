@@ -99,8 +99,7 @@ const Textarea = styled.textarea`
     color: #777;
 `;
 
-export default ({product, handleChange, handleClick, stars, comentario, user}) => {    
-
+export default ({product,handleChangeComment, handleChange, handleClick, stars, comentario, user}) => {    
     return(
         <DivContainer>
             <DivReview>
@@ -125,7 +124,7 @@ export default ({product, handleChange, handleClick, stars, comentario, user}) =
                                 <Data>
                                     <H3>Coméntanos sobre el producto</H3>
                                     <Form>
-                                        <Textarea name="comentario" onChange={handleChange} value={comentario}></Textarea>
+                                        <Textarea name="comentario" onChange={handleChangeComment} value={comentario}></Textarea>
                                     </Form>
                                 </Data>
                                 <ButtonVolver onClick={handleClick}>Agregar Review</ButtonVolver>

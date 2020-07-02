@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 const CardGame = styled.div`
     width: 200px;
@@ -67,7 +68,10 @@ const CardGame = styled.div`
     color: #777777;
     text-decoration: none;
   `;
-
+  const DivStars = styled.div`
+    display: flex;  
+    justify-content: center;
+  `;
 
 export default ({ product, categories }) => {
   return (
@@ -113,10 +117,19 @@ export default ({ product, categories }) => {
                               .join(" ")}
                           </CardLink>
                         </CardContentP>
+                        <DivStars>
+                          <ReactStars
+                            count={5}
+                            size={24}
+                            color2={"#ffd700"}
+                            value={3}
+                            edit={false}
+                          />
+                        </DivStars> 
                         <PriceGame>
                           $ {product.price}
                           <span>Ars</span>
-                        </PriceGame>
+                        </PriceGame>                       
                       </div>
                     </CardLink>
                   </CardGame>

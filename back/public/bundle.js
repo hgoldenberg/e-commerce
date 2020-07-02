@@ -6169,7 +6169,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".assets-scss-product__next--3NZfC {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 250px;\n  border: none;\n  left: 450px;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__back--1-5K4 {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 250px;\n  left: -70px;\n  border: none;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__next--3NZfC::before {\n  content: \">\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__back--1-5K4::before {\n  content: \"<\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__ImgProduct--2ZFDH {\n  padding: 100px;\n  display: block;\n  width: 120%;\n  height: 120%; }\n\n.assets-scss-product__ImgDosProduct--3IQdd {\n  height: 100px;\n  width: 200%; }\n\n.assets-scss-product__ImgZoom--25zd- {\n  margin: 0px;\n  width: 98% !important;\n  background-size: 100%; }\n  .assets-scss-product__ImgZoom--25zd- div {\n    background-size: 100% 100% !important;\n    background-repeat: no-repeat; }\n\n.assets-scss-product__ImgDosZoom--1ezNe {\n  height: 60% !important;\n  margin-top: 125px; }\n  .assets-scss-product__ImgDosZoom--1ezNe div {\n    background-size: 100% 100% !important;\n    background-repeat: no-repeat; }\n\n.assets-scss-product__sliderProduct--Mfmoz {\n  background-size: 100% !important;\n  background-repeat: no-repeat; }\n", ""]);
+exports.push([module.i, ".assets-scss-product__next--3NZfC {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 250px;\n  border: none;\n  left: 450px;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__back--1-5K4 {\n  background-color: #ffffff;\n  position: absolute;\n  bottom: 250px;\n  left: -70px;\n  border: none;\n  width: 50px;\n  height: 50px;\n  opacity: 0.4;\n  border-radius: 50px; }\n\n.assets-scss-product__next--3NZfC::before {\n  content: \">\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__back--1-5K4::before {\n  content: \"<\";\n  font-size: 30px;\n  font-weight: 900;\n  color: #777; }\n\n.assets-scss-product__ImgProduct--2ZFDH {\n  padding: 100px;\n  display: block;\n  width: 120%;\n  height: 120%; }\n\n.assets-scss-product__ImgDosProduct--3IQdd {\n  height: 100px;\n  width: 200%; }\n\n.assets-scss-product__ImgZoom--25zd- {\n  margin: 0px;\n  width: 98% !important;\n  background-size: 100%; }\n  .assets-scss-product__ImgZoom--25zd- div {\n    background-size: 100% 100% !important;\n    background-repeat: no-repeat; }\n\n.assets-scss-product__ImgDosZoom--1ezNe {\n  height: 60% !important;\n  margin-top: 125px; }\n  .assets-scss-product__ImgDosZoom--1ezNe div {\n    background-size: 100% 100% !important;\n    background-repeat: no-repeat; }\n\n.assets-scss-product__sliderProduct--Mfmoz {\n  background-size: 100% !important;\n  background-repeat: no-repeat; }\n\n.assets-scss-product__carouselImg--Ap0fy {\n  width: 100px; }\n  .assets-scss-product__carouselImg--Ap0fy img {\n    padding: 5px 10px;\n    border-bottom: 1px solid #ccc;\n    border-right: 1px solid #ccc; }\n\n.assets-scss-product__carouseles--2GXAW {\n  display: flex;\n  flex-direction: row; }\n", ""]);
 // Exports
 exports.locals = {
 	"next": "assets-scss-product__next--3NZfC",
@@ -6178,7 +6178,9 @@ exports.locals = {
 	"ImgDosProduct": "assets-scss-product__ImgDosProduct--3IQdd",
 	"ImgZoom": "assets-scss-product__ImgZoom--25zd-",
 	"ImgDosZoom": "assets-scss-product__ImgDosZoom--1ezNe",
-	"sliderProduct": "assets-scss-product__sliderProduct--Mfmoz"
+	"sliderProduct": "assets-scss-product__sliderProduct--Mfmoz",
+	"carouselImg": "assets-scss-product__carouselImg--Ap0fy",
+	"carouseles": "assets-scss-product__carouseles--2GXAW"
 };
 module.exports = exports;
 
@@ -58201,6 +58203,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_rating_stars_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-rating-stars-component */ "./node_modules/react-rating-stars-component/dist/react-stars.js");
+/* harmony import */ var react_rating_stars_component__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_rating_stars_component__WEBPACK_IMPORTED_MODULE_3__);
+function _templateObject15() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;  \n    justify-content: center;\n  "]);
+
+  _templateObject15 = function _templateObject15() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject14() {
   var data = _taggedTemplateLiteral(["\n    color: #777777;\n    text-decoration: none;\n  "]);
 
@@ -58346,6 +58360,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var CardGame = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
 var CardGameImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject2());
 var CardContentP = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject3());
@@ -58360,6 +58375,7 @@ var CategoriaAsideH = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].
 var Ul = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(_templateObject12());
 var Li = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject13());
 var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject14());
+var DivStars = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject15());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product,
       categories = _ref.categories;
@@ -58380,7 +58396,13 @@ var A = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObj
       className: "cardContent"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardContentP, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardLink, null, product.name.split(" ").map(function (x) {
       return x[0].toUpperCase() + x.slice(1);
-    }).join(" "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, "$ ", product.price, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars")))));
+    }).join(" "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivStars, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_rating_stars_component__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      count: 5,
+      size: 24,
+      color2: "#ffd700",
+      value: 3,
+      edit: false
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PriceGame, null, "$ ", product.price, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ars")))));
   }) : null)));
 });
 
@@ -61008,7 +61030,7 @@ var Span = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templ
     onChange: passwordChange,
     name: "password",
     value: password
-  }), errorPass ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "El password debe comenzar una may\xFAscula, una min\xFAscula y 8 digitos") : null, errorPass || errorName || errorLast || errorEmail || errorAddress ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
+  }), errorPass ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "El password debe comenzar con una may\xFAscula, tener una min\xFAscula y al menos 8 digitos") : null, errorPass || errorName || errorLast || errorEmail || errorAddress ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
     type: "submit",
     value: "Registrar"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, null, "Si tienes una cuenta ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -61424,6 +61446,7 @@ var Form = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].form(_templ
 var Textarea = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].textarea(_templateObject16());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product,
+      handleChangeComment = _ref.handleChangeComment,
       handleChange = _ref.handleChange,
       handleClick = _ref.handleClick,
       stars = _ref.stars,
@@ -61439,7 +61462,7 @@ var Textarea = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].textare
     value: stars
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Data, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Com\xE9ntanos sobre el producto"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Textarea, {
     name: "comentario",
-    onChange: handleChange,
+    onChange: handleChangeComment,
     value: comentario
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonVolver, {
     onClick: handleClick
@@ -61512,6 +61535,7 @@ var ReviewContainer = /*#__PURE__*/function (_React$Component) {
     };
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleChangeComment = _this.handleChangeComment.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -61524,24 +61548,18 @@ var ReviewContainer = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleChange",
     value: function handleChange(event) {
-      console.log(event);
-
-      switch (event.target.name) {
-        case 'comentario':
-          this.setState({
-            comentario: event.target.value
-          });
-      }
-
-      console.log(event);
-
-      if (!event.target.name) {
+      this.setState({
+        stars: event
+      });
+    }
+  }, {
+    key: "handleChangeComment",
+    value: function handleChangeComment(event) {
+      if (event.target.name == 'comentario') {
         this.setState({
-          stars: event
+          comentario: event.target.value
         });
       }
-
-      console.log(event);
     }
   }, {
     key: "handleClick",
@@ -61576,6 +61594,7 @@ var ReviewContainer = /*#__PURE__*/function (_React$Component) {
         user: user,
         product: product,
         handleChange: this.handleChange,
+        handleChangeComment: this.handleChangeComment,
         handleClick: this.handleClick,
         stars: stars,
         comentario: comentario
@@ -61867,8 +61886,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pure-react-carousel */ "./node_modules/pure-react-carousel/dist/index.es.js");
 /* harmony import */ var pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! pure-react-carousel/dist/react-carousel.es.css */ "./node_modules/pure-react-carousel/dist/react-carousel.es.css");
 /* harmony import */ var pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(pure_react_carousel_dist_react_carousel_es_css__WEBPACK_IMPORTED_MODULE_4__);
-function _templateObject17() {
+/* harmony import */ var react_rating_stars_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-rating-stars-component */ "./node_modules/react-rating-stars-component/dist/react-stars.js");
+/* harmony import */ var react_rating_stars_component__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_rating_stars_component__WEBPACK_IMPORTED_MODULE_5__);
+function _templateObject19() {
+  var data = _taggedTemplateLiteral(["\n  width: 100px;\n  height:100px;\n  margin: 0px;\n  padding: 10px:\n"]);
+
+  _templateObject19 = function _templateObject19() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject18() {
   var data = _taggedTemplateLiteral(["\n  margin-bottom: 50px;\n"]);
+
+  _templateObject18 = function _templateObject18() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject17() {
+  var data = _taggedTemplateLiteral(["\n  \n"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -61878,7 +61919,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 14px;\n  margin: 2.5px 0px 0px 10px;\n"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -61888,7 +61929,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n  border-top: 1px solid #ccc;\n  padding: 50px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-top: 1px solid #ccc;\n  padding: 50px;\n  \n"]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -61898,7 +61939,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 22px;\n  margin: 5px 0px;\n  color: #ccc;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n"]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -61918,7 +61959,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n  color: #777;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: #777;\n  font-size: 18px;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -61928,7 +61969,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  margin-bottom: 10px;\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -62044,6 +62085,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
 var ArticleProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].article(_templateObject2());
 var ContentProduct = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
@@ -62057,16 +62099,49 @@ var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templa
 var Comentarios = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject11());
 var P = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject12());
 var Svg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].svg(_templateObject13());
-var Stars = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject14());
+var Stars = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject14());
 var DivContentData = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject15());
-var DivComentarios = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject16());
-var DivDescripcion = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject17());
+var Opiniones = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject16());
+var DivComentarios = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject17());
+var DivDescripcion = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject18());
+var DivImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject19());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var product = _ref.product,
       agregarProducto = _ref.agregarProducto,
-      comentarios = _ref.comentarios;
-  console.log(comentarios);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["CarouselProvider"], {
+      comentarios = _ref.comentarios,
+      rating = _ref.rating,
+      stars = _ref.stars;
+  console.log('stars', stars);
+  var opiniones;
+
+  if (stars.length == 1) {
+    opiniones = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Opiniones, null, stars.length, " opini\xF3n");
+  } else if (stars.length == 0) {
+    opiniones = null;
+  } else {
+    opiniones = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Opiniones, null, stars.length, " opiniones");
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleProduct, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.carouseles
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.carouselImg
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["CarouselProvider"], {
+    visibleSlides: 2,
+    totalSlides: 2,
+    step: 1,
+    naturalSlideWidth: 100,
+    naturalSlideHeight: 100,
+    infinite: true,
+    orientation: "vertical",
+    dragEnabled: false
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Slider"], {
+    className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.sliderImg
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Slide"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivImg, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+    src: product.imageUno
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Slide"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivImg, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["Image"], {
+    src: product.imageDos
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["CarouselProvider"], {
     visibleSlides: 1,
     totalSlides: 2,
     step: 1,
@@ -62091,11 +62166,17 @@ var DivDescripcion = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].d
     className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.back
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pure_react_carousel__WEBPACK_IMPORTED_MODULE_3__["ButtonNext"], {
     className: _assets_scss_product_scss__WEBPACK_IMPORTED_MODULE_2___default.a.next
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivContentData, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivDescripcion, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, "Descripci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, null, "\"", product.description, "\"")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivComentarios, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, "Comentarios"), comentarios.map(function (comment) {
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivContentData, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivDescripcion, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, "Descripci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, null, "\"", product.description, "\"")), comentarios.length !== 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivComentarios, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, "Opiniones sobre el producto"), comentarios.map(function (comment) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Comentarios, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(P, null, comment.comentarios));
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentProduct, null, product.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleProduct, null, product.name.split(" ").map(function (x) {
+  })) : null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentProduct, null, product.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleProduct, null, product.name.split(" ").map(function (x) {
     return x[0].toUpperCase() + x.slice(1);
-  }).join(" ")) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Stars, null, "\u2605\u2605\u2605\u2605\u2605"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, " $ ", product.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartProduct, {
+  }).join(" ")) : null, rating !== null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Stars, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_rating_stars_component__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    count: 5,
+    size: 24,
+    color2: "#ffd700",
+    value: rating,
+    edit: false
+  }), opiniones) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, " $ ", product.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartProduct, {
     onClick: function onClick() {
       return agregarProducto();
     }
@@ -62119,8 +62200,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_actions_products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/products */ "./src/redux/actions/products.js");
 /* harmony import */ var _redux_actions_carrito__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/actions/carrito */ "./src/redux/actions/carrito.js");
 /* harmony import */ var _redux_actions_comentarios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../redux/actions/comentarios */ "./src/redux/actions/comentarios.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_actions_puntaje__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/actions/puntaje */ "./src/redux/actions/puntaje.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62142,6 +62224,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -62188,6 +62271,8 @@ var SingleProductContainer = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       this.props.fetchProduct(this.props.id);
       this.props.setAllComentariosProduct(this.props.id);
+      this.props.setRatingProduct(this.props.id);
+      this.props.setAllPuntajesProduct(this.props.id);
     }
   }, {
     key: "render",
@@ -62195,7 +62280,9 @@ var SingleProductContainer = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SingleProduct__WEBPACK_IMPORTED_MODULE_1__["default"], {
         product: this.props.product,
         agregarProducto: this.agregarProducto,
-        comentarios: this.props.comentarios
+        comentarios: this.props.comentarios,
+        rating: this.props.rating,
+        stars: this.props.stars
       });
     }
   }]);
@@ -62208,7 +62295,9 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     product: state.productsReducers.one,
     id: ownProps.match.params.id,
     user: state.logUserReducer.isLogged,
-    comentarios: state.comentarioReducer.data
+    comentarios: state.comentarioReducer.data,
+    rating: state.puntajeReducer.star,
+    stars: state.puntajeReducer.stars
   };
 };
 
@@ -62222,11 +62311,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     setAllComentariosProduct: function setAllComentariosProduct(productId) {
       return dispatch(Object(_redux_actions_comentarios__WEBPACK_IMPORTED_MODULE_4__["setAllComentariosProduct"])(productId));
+    },
+    setRatingProduct: function setRatingProduct(productId) {
+      return dispatch(Object(_redux_actions_puntaje__WEBPACK_IMPORTED_MODULE_5__["setRatingProduct"])(productId));
+    },
+    setAllPuntajesProduct: function setAllPuntajesProduct(productId) {
+      return dispatch(Object(_redux_actions_puntaje__WEBPACK_IMPORTED_MODULE_5__["setAllPuntajesProduct"])(productId));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["connect"])(mapStateToProps, mapDispatchToProps)(SingleProductContainer)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_6__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStateToProps, mapDispatchToProps)(SingleProductContainer)));
 
 /***/ }),
 
@@ -62617,14 +62712,33 @@ var newProduct = function newProduct(objectProduct) {
 /*!**************************************!*\
   !*** ./src/redux/actions/puntaje.js ***!
   \**************************************/
-/*! exports provided: fetchCreateStarts */
+/*! exports provided: fetchCreateStarts, setRatingProduct, setAllPuntajesProduct */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCreateStarts", function() { return fetchCreateStarts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setRatingProduct", function() { return setRatingProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAllPuntajesProduct", function() { return setAllPuntajesProduct; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+
+
+
+var ratingProduct = function ratingProduct(star) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["SETRATINGPRODUCT"],
+    star: star
+  };
+};
+
+var allPuntajesProduct = function allPuntajesProduct(stars) {
+  return {
+    type: _constanst__WEBPACK_IMPORTED_MODULE_1__["SETALLPUNTAJESPRODUCT"],
+    stars: stars
+  };
+};
 
 var fetchCreateStarts = function fetchCreateStarts(productId, userId, puntaje) {
   return function (dispatch) {
@@ -62632,6 +62746,20 @@ var fetchCreateStarts = function fetchCreateStarts(productId, userId, puntaje) {
       productId: productId,
       userId: userId,
       puntaje: puntaje
+    });
+  };
+};
+var setRatingProduct = function setRatingProduct(productId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/valoraciones/".concat(productId)).then(function (res) {
+      return dispatch(ratingProduct(res.data.rating));
+    });
+  };
+};
+var setAllPuntajesProduct = function setAllPuntajesProduct(productId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/valoraciones/producto/".concat(productId)).then(function (res) {
+      return dispatch(allPuntajesProduct(res.data));
     });
   };
 };
@@ -62663,7 +62791,7 @@ var doRegister = function doRegister(registerUser) {
 /*!********************************!*\
   !*** ./src/redux/constanst.js ***!
   \********************************/
-/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION, ALLCATEGORIES, USERCART, ONECATEGORIE, COMPRASUSER, ADMINUSERS, ALLCOMENTARIOSPRODUCT */
+/*! exports provided: SINGLEPRODUCT, ALLPRODUCTS, LOG_IN, LOG_OUT, PERSIST_SESSION, ALLCATEGORIES, USERCART, ONECATEGORIE, COMPRASUSER, ADMINUSERS, ALLCOMENTARIOSPRODUCT, SETRATINGPRODUCT, SETALLPUNTAJESPRODUCT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62679,6 +62807,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPRASUSER", function() { return COMPRASUSER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADMINUSERS", function() { return ADMINUSERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALLCOMENTARIOSPRODUCT", function() { return ALLCOMENTARIOSPRODUCT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SETRATINGPRODUCT", function() { return SETRATINGPRODUCT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SETALLPUNTAJESPRODUCT", function() { return SETALLPUNTAJESPRODUCT; });
 var SINGLEPRODUCT = "SINGLEPRODUCT";
 var ALLPRODUCTS = "ALLPRODUCTS";
 var LOG_IN = "LOG_IN";
@@ -62690,6 +62820,8 @@ var ONECATEGORIE = "ONECATEGORIE";
 var COMPRASUSER = 'COMPRASUSER';
 var ADMINUSERS = "ADMINUSERS";
 var ALLCOMENTARIOSPRODUCT = 'ALLCOMENTARIOSPRODUCT';
+var SETRATINGPRODUCT = 'SETRATINGPRODUCT';
+var SETALLPUNTAJESPRODUCT = 'SETALLPUNTAJESPRODUCT';
 
 /***/ }),
 
@@ -62905,6 +63037,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _compras_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./compras-reducer */ "./src/redux/reducers/compras-reducer.js");
 /* harmony import */ var _admin_reducers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./admin-reducers */ "./src/redux/reducers/admin-reducers.js");
 /* harmony import */ var _comentarios_reducer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./comentarios-reducer */ "./src/redux/reducers/comentarios-reducer.js");
+/* harmony import */ var _puntaje_reducer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./puntaje-reducer */ "./src/redux/reducers/puntaje-reducer.js");
+
 
 
 
@@ -62920,7 +63054,8 @@ __webpack_require__.r(__webpack_exports__);
   carritoUser: _carrito_reducers__WEBPACK_IMPORTED_MODULE_4__["default"],
   comprasReducer: _compras_reducer__WEBPACK_IMPORTED_MODULE_5__["default"],
   adminReducer: _admin_reducers__WEBPACK_IMPORTED_MODULE_6__["default"],
-  comentarioReducer: _comentarios_reducer__WEBPACK_IMPORTED_MODULE_7__["default"]
+  comentarioReducer: _comentarios_reducer__WEBPACK_IMPORTED_MODULE_7__["default"],
+  puntajeReducer: _puntaje_reducer__WEBPACK_IMPORTED_MODULE_8__["default"]
 }));
 
 /***/ }),
@@ -62995,6 +63130,51 @@ var initialState = {
     default:
       return state;
   }
+});
+
+/***/ }),
+
+/***/ "./src/redux/reducers/puntaje-reducer.js":
+/*!***********************************************!*\
+  !*** ./src/redux/reducers/puntaje-reducer.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constanst__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constanst */ "./src/redux/constanst.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var inicialState = {
+  star: 0,
+  stars: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : inicialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _constanst__WEBPACK_IMPORTED_MODULE_0__["SETRATINGPRODUCT"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        star: action.star
+      });
+
+    case _constanst__WEBPACK_IMPORTED_MODULE_0__["SETALLPUNTAJESPRODUCT"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        stars: action.stars
+      });
+
+    default:
+      return state;
+  }
+
+  ;
 });
 
 /***/ }),

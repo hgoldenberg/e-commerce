@@ -6,6 +6,7 @@ import carritoUser from "./carrito-reducers";
 import comprasReducer from './compras-reducer'
 import adminReducer from "./admin-reducers";
 import comentarioReducer from "./comentarios-reducer";
+import puntajeReducer from "./puntaje-reducer";
 
 export default combineReducers({
   productsReducers,
@@ -15,4 +16,5 @@ export default combineReducers({
   comprasReducer,
   adminReducer,
   comentarioReducer,
+  puntajeReducer,
 });

@@ -17,6 +17,7 @@ class ReviewContainer extends React.Component {
     
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangeComment = this.handleChangeComment.bind(this);
   };
 
   componentDidMount() {
@@ -25,17 +26,14 @@ class ReviewContainer extends React.Component {
   }
 
   handleChange(event){
-    console.log(event)
-    switch(event.target.name){
-      case 'comentario' :  this.setState({comentario: event.target.value});
-    }
-    console.log(event)
-    if(!event.target.name){
-      this.setState({stars: event})
-    }
-    
-    console.log(event)
+    this.setState({stars: event})    
   };
+
+  handleChangeComment(event){
+    if(event.target.name == 'comentario'){
+      this.setState({comentario: event.target.value});
+    }
+  }
 
   handleClick(){
     const { fetchCreateStarts, fetchCreateComentario, product , user , history} = this.props;
@@ -57,6 +55,7 @@ class ReviewContainer extends React.Component {
         user={user}
         product={product}
         handleChange={this.handleChange}
+        handleChangeComment={this.handleChangeComment}
         handleClick={this.handleClick}
         stars={stars}
         comentario = {comentario}
