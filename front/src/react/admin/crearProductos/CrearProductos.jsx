@@ -59,8 +59,8 @@ const Span = styled.span`
     margin: 20px 0px;
 `;
 
-export default ({handleSubmit , hadleChange}) => {
-
+export default ({handleSubmit , hadleChange , categorias , handleClick , x}) => {
+    console.log(x)
   return (
     <DivContainer>
     <FormContainer>
@@ -75,7 +75,13 @@ export default ({handleSubmit , hadleChange}) => {
         <Label>Descripción:</Label>
         <textarea name="descripcion" id="" cols="20" rows="10" onChange={hadleChange}></textarea>
         <Label>Categoria:</Label>
-        <Input type="text" name='categoria' onChange={hadleChange}/>
+        {categorias.length ? categorias.map(Element => {
+            return (
+                <div key={Element.id}>
+                    <Label><Input type="checkbox" onClick={()=> handleClick(Element.id)} /> {Element.tipo} </Label>
+                </div>
+            )
+        }) : null}
         <Label>Precio:</Label>
         <Input type="number" name='precio' onChange={hadleChange}/>
         <Label>Stock:</Label>

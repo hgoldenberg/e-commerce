@@ -56337,17 +56337,45 @@ var AdminClientesContainer = /*#__PURE__*/function (_React$Component) {
       var _this4 = this;
 
       //console.log(this.props.userId)
-      this.props.fetchAllUsers().then(function () {
-        return _this4.setState({
-          "boolean": !_this4.state["boolean"]
+      var _this$props = this.props,
+          isLogged = _this$props.isLogged,
+          fetchAllUsersAdmin = _this$props.fetchAllUsersAdmin,
+          fetchAllUsersSuperAdmin = _this$props.fetchAllUsersSuperAdmin;
+
+      if (isLogged.roll === 'admin') {
+        fetchAllUsersAdmin().then(function () {
+          return _this4.setState({
+            "boolean": !_this4.state["boolean"]
+          });
         });
-      });
+      }
+
+      if (isLogged.roll === 'superAdmin') {
+        fetchAllUsersSuperAdmin().then(function () {
+          return _this4.setState({
+            "boolean": !_this4.state["boolean"]
+          });
+        });
+      }
+
+      ;
     }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
+      var _this$props2 = this.props,
+          fetchAllUsersSuperAdmin = _this$props2.fetchAllUsersSuperAdmin,
+          fetchAllUsersAdmin = _this$props2.fetchAllUsersAdmin,
+          isLogged = _this$props2.isLogged;
+
       if (prevState["boolean"] !== this.state["boolean"]) {
-        this.props.fetchAllUsers();
+        if (isLogged.roll === 'admin') {
+          fetchAllUsersAdmin();
+        }
+
+        if (isLogged.roll === 'superAdmin') {
+          fetchAllUsersSuperAdmin();
+        }
       }
     }
   }, {
@@ -56377,8 +56405,11 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    fetchAllUsers: function fetchAllUsers() {
-      return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["fetchAllUsers"])());
+    fetchAllUsersAdmin: function fetchAllUsersAdmin() {
+      return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["fetchAllUsersAdmin"])());
+    },
+    fetchAllUsersSuperAdmin: function fetchAllUsersSuperAdmin() {
+      return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["fetchAllUsersSuperAdmin"])());
     },
     updateAdmin: function updateAdmin(id) {
       return dispatch(Object(_redux_actions_admin__WEBPACK_IMPORTED_MODULE_5__["updateAdmin"])(id));
@@ -56731,7 +56762,11 @@ var InputSubmit = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].inpu
 var Span = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span(_templateObject8());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var handleSubmit = _ref.handleSubmit,
-      hadleChange = _ref.hadleChange;
+      hadleChange = _ref.hadleChange,
+      categorias = _ref.categorias,
+      handleClick = _ref.handleClick,
+      x = _ref.x;
+  console.log(x);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormTitle, null, "Crear producto"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
     onSubmit: handleSubmit
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Imagen 1:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
@@ -56752,11 +56787,16 @@ var Span = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span(_templ
     cols: "20",
     rows: "10",
     onChange: hadleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Categoria:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
-    type: "text",
-    name: "categoria",
-    onChange: hadleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Precio:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Categoria:"), categorias.length ? categorias.map(function (Element) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: Element.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
+      type: "checkbox",
+      onClick: function onClick() {
+        return handleClick(Element.id);
+      }
+    }), " ", Element.tipo, " "));
+  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Label, null, "Precio:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Input, {
     type: "number",
     name: "precio",
     onChange: hadleChange
@@ -56787,7 +56827,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CrearProductos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CrearProductos */ "./src/react/admin/crearProductos/CrearProductos.jsx");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _redux_actions_products__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../redux/actions/products */ "./src/redux/actions/products.js");
+/* harmony import */ var _redux_actions_categories__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../redux/actions/categories */ "./src/redux/actions/categories.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -56815,6 +56870,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
 var CrearProductosContainer = /*#__PURE__*/function (_React$Component) {
   _inherits(CrearProductosContainer, _React$Component);
 
@@ -56827,20 +56884,26 @@ var CrearProductosContainer = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      tipo: '',
-      name: '',
+      tipo: [],
+      name: "",
       price: 0,
-      imageUno: '',
-      imageDos: '',
-      description: '',
+      imageUno: "",
+      imageDos: "",
+      description: "",
       stock: 0
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.hadleChange = _this.hadleChange.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(CrearProductosContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.setAllCategories();
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       var _this$props = this.props,
@@ -56848,57 +56911,75 @@ var CrearProductosContainer = /*#__PURE__*/function (_React$Component) {
           history = _this$props.history;
       event.preventDefault();
       newProduct(this.state).then(function () {
-        return history.push('/admin/productos');
+        return history.push("/admin/productos");
       });
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(id) {
+      console.log(this.state.tipo);
+
+      if (this.state.tipo.includes(id)) {
+        var array = [];
+        array = this.state.tipo.filter(function (element) {
+          if (element !== id) {
+            return element;
+          }
+        });
+        console.log(array);
+        return this.setState({
+          tipo: array
+        });
+      } else {
+        return this.setState({
+          tipo: [].concat(_toConsumableArray(this.state.tipo), [id])
+        });
+      }
     }
   }, {
     key: "hadleChange",
     value: function hadleChange(event) {
       switch (event.target.name) {
-        case 'imagen1':
+        case "imagen1":
           this.setState({
             imageUno: event.target.value
           });
 
-        case 'imagen2':
+        case "imagen2":
           this.setState({
             imageDos: event.target.value
           });
 
-        case 'nombre':
+        case "nombre":
           this.setState({
             name: event.target.value
           });
 
-        case 'descripcion':
+        case "descripcion":
           this.setState({
             description: event.target.value
           });
 
-        case 'categoria':
-          this.setState({
-            tipo: event.target.value
-          });
-
-        case 'precio':
+        case "precio":
           this.setState({
             price: event.target.value
           });
 
-        case 'stock':
+        case "stock":
           this.setState({
             stock: event.target.value
           });
       }
-
-      ;
     }
   }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProductos__WEBPACK_IMPORTED_MODULE_2__["default"], {
         handleSubmit: this.handleSubmit,
-        hadleChange: this.hadleChange
+        hadleChange: this.hadleChange,
+        categorias: this.props.categorias,
+        handleClick: this.handleClick,
+        x: this.state.tipo
       });
     }
   }]);
@@ -56908,7 +56989,8 @@ var CrearProductosContainer = /*#__PURE__*/function (_React$Component) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    isLogged: state.logUserReducer.isLogged
+    isLogged: state.logUserReducer.isLogged,
+    categorias: state.categoriesReducer.categorias
   };
 };
 
@@ -56916,6 +56998,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     newProduct: function newProduct(product) {
       return dispatch(Object(_redux_actions_products__WEBPACK_IMPORTED_MODULE_4__["newProduct"])(product));
+    },
+    setAllCategories: function setAllCategories() {
+      return dispatch(Object(_redux_actions_categories__WEBPACK_IMPORTED_MODULE_5__["setAllCategories"])());
+    },
+    setOneCategorie: function setOneCategorie(id) {
+      return dispatch(Object(_redux_actions_categories__WEBPACK_IMPORTED_MODULE_5__["setOneCategorie"])(id));
     }
   };
 };
@@ -61747,13 +61835,14 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /*!************************************!*\
   !*** ./src/redux/actions/admin.js ***!
   \************************************/
-/*! exports provided: agregarCategoria, fetchAllUsers, updateAdmin, updateUser, deleteCategorias, updateCategorias, deleteProduct, updateProduct */
+/*! exports provided: agregarCategoria, fetchAllUsersAdmin, fetchAllUsersSuperAdmin, updateAdmin, updateUser, deleteCategorias, updateCategorias, deleteProduct, updateProduct */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "agregarCategoria", function() { return agregarCategoria; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsers", function() { return fetchAllUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsersAdmin", function() { return fetchAllUsersAdmin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllUsersSuperAdmin", function() { return fetchAllUsersSuperAdmin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateAdmin", function() { return updateAdmin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUser", function() { return updateUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteCategorias", function() { return deleteCategorias; });
@@ -61778,9 +61867,16 @@ var agregarCategoria = function agregarCategoria(categoria) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/categoria/crear", categoria);
   };
 };
-var fetchAllUsers = function fetchAllUsers() {
+var fetchAllUsersAdmin = function fetchAllUsersAdmin() {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/admin/clientes").then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/admin/clientes/admin").then(function (res) {
+      return dispatch(adminUsers(res.data));
+    });
+  };
+};
+var fetchAllUsersSuperAdmin = function fetchAllUsersSuperAdmin() {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/admin/clientes/superAdmin").then(function (res) {
       return dispatch(adminUsers(res.data));
     });
   };
