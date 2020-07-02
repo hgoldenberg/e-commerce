@@ -6,6 +6,8 @@ const {
   Users,
 } = require("../models/index");
 
+// configuracion de mail
+
 const nodemailer = require("nodemailer");
 
 const sendMail = function (name, email) {
@@ -161,14 +163,7 @@ obj.updateCantidadProductoRestar = (req, res, next) => {
 obj.finalizarCarrito = (req, res, next) => {
   Carrito.update(
     {
-<<<<<<< HEAD
       estado: "completado",
-=======
-      CP_entrega: req.body.CP_entrega,
-      ciudad_entrega:req.body.ciudad_entrega,
-      dir_entrega:req.body.dir_entrega,
-      estado: "completado"
->>>>>>> ea7572773827ded5fc91f3a5c513cf6a0d7afe7e
     },
     {
       where: {
