@@ -74,6 +74,7 @@ export default ({handleSubmit , hadleChange , categorias , handleClick , x}) => 
         <Input type="text" name='nombre' onChange={hadleChange}/>
         <Label>Descripción:</Label>
         <textarea name="descripcion" id="" cols="20" rows="10" onChange={hadleChange}></textarea>
+        <br/>
         <Label>Categoria:</Label>
         {categorias.length ? categorias.map(Element => {
             return (
