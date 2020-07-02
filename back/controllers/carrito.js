@@ -1,15 +1,46 @@
 const obj = {};
-const { Carrito, Product, Producto_carrito } = require("../models/index");
+const {
+  Carrito,
+  Product,
+  Producto_carrito,
+  Users,
+} = require("../models/index");
+
+const nodemailer = require("nodemailer");
+
+const sendMail = function (name, email) {
+  const nodemailer = require("nodemailer");
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "ecomercelospibesjs@gmail.com",
+      pass: "lospibes1234",
+    },
+  });
+  const mailOptions = {
+    from: "ecomercelospibesjs@gmail.com",
+    to: `${email}`,
+    subject: `Confirmación de tu compra ${name}`,
+    text: "Esta ha sido tu compra con nosotros.",
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Se ha enviando el mail");
+    }
+  });
+};
 
 obj.agregarProductoLogeado = (req, res, next) => {
   if (req.body.userId) {
     Carrito.findOrCreate({
       where: {
         userId: req.body.userId,
-        estado: "pendiente"
-      }
+        estado: "pendiente",
+      },
     })
-      .then(data => {
+      .then((data) => {
         data[0].addProduct([req.body.product]);
         res.sendStatus(200);
       })
@@ -23,11 +54,11 @@ obj.buscarPoductos = (req, res, next) => {
     include: [{ model: Product }],
     where: {
       userId: req.params.id,
-      estado: "pendiente"
+      estado: "pendiente",
     },
-    order: [["id", "DESC"]]
+    order: [["id", "DESC"]],
   })
-    .then(productoscarrito => {
+    .then((productoscarrito) => {
       res.status(200).json(productoscarrito);
     })
     .catch(next);
@@ -38,10 +69,10 @@ obj.eliminarProducto = (req, res, next) => {
   Carrito.findOne({
     where: {
       id: req.params.carritoId,
-      estado: "pendiente"
-    }
+      estado: "pendiente",
+    },
   })
-    .then(productdelete => {
+    .then((productdelete) => {
       productdelete.removeProduct([req.params.productId]);
       res.sendStatus(200);
     })
@@ -53,31 +84,31 @@ obj.updateCantidadProductoSumar = (req, res, next) => {
   Producto_carrito.findOne({
     where: {
       carritoId: req.body.carritoId,
-      productId: req.body.productId
-    }
-  }).then(data => {
+      productId: req.body.productId,
+    },
+  }).then((data) => {
     data
       .update(
         {
-          cantidad: data.cantidad + 1
+          cantidad: data.cantidad + 1,
         },
         {
-          returning: true
+          returning: true,
         }
       )
       .then(() => {
         Product.findOne({
           where: {
-            id: req.body.productId
-          }
-        }).then(product => {
+            id: req.body.productId,
+          },
+        }).then((product) => {
           product
             .update(
               {
-                stock: product.stock - 1
+                stock: product.stock - 1,
               },
               {
-                returning: true
+                returning: true,
               }
             )
             .then(() => res.sendStatus(200));
@@ -92,31 +123,31 @@ obj.updateCantidadProductoRestar = (req, res, next) => {
   Producto_carrito.findOne({
     where: {
       carritoId: req.body.carritoId,
-      productId: req.body.productId
-    }
-  }).then(data => {
+      productId: req.body.productId,
+    },
+  }).then((data) => {
     data
       .update(
         {
-          cantidad: data.cantidad - 1
+          cantidad: data.cantidad - 1,
         },
         {
-          returning: true
+          returning: true,
         }
       )
       .then(() => {
         Product.findOne({
           where: {
-            id: req.body.productId
-          }
-        }).then(product => {
+            id: req.body.productId,
+          },
+        }).then((product) => {
           product
             .update(
               {
-                stock: product.stock + 1
+                stock: product.stock + 1,
               },
               {
-                returning: true
+                returning: true,
               }
             )
             .then(() => res.sendStatus(200));
@@ -130,16 +161,17 @@ obj.updateCantidadProductoRestar = (req, res, next) => {
 obj.finalizarCarrito = (req, res, next) => {
   Carrito.update(
     {
-      estado: "completado"
+      estado: "completado",
     },
     {
       where: {
-        userId: req.params.id
+        userId: req.params.id,
       },
-      returning: true
+      returning: true,
     }
   )
-    .then(carrito => {
+    .then((carrito) => {
+      sendMail(req.body.name, req.body.email);
       res.status(200).send(carrito);
     })
     .catch(next);
