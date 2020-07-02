@@ -22,6 +22,19 @@ export const fetchAllUsers = () => {
   };
 };
 
+export const updateAdmin = (id) => {
+  console.log(id)
+  return dispatch => {
+      return axios.put(`/api/admin/toadmin/${id}`)
+  }
+}
+
+export const updateUser = (id) => {
+  console.log(id)
+  return dispatch => {
+      return axios.put(`/api/admin/touser/${id}`)
+  }
+}
 
 export const deleteCategorias = (id) =>{
   return dispatch => {
@@ -43,6 +56,6 @@ export const deleteProduct = (id) =>{
 
 export const updateProduct = (id , producto) =>{
   return dispatch => {
-    return axios.put(`/api/categoria/${id}`, producto)
+    return axios.put(`/api/productos/${id}`, producto)
   }
 };

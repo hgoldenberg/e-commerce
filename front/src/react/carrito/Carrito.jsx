@@ -128,8 +128,7 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
         </TitleCart>
         {cart.id
           ? cart.products.map(producto => {
-              total += producto.producto_carrito.cantidad * producto.price;
-              cart.valor_compra = total;
+              cart.valor_compra += producto.producto_carrito.cantidad * producto.price;
               return (
                 <ContentCart key={producto.id}>
                   <DivProducto>
@@ -145,7 +144,7 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
                   </DivProducto>
                   <Form>
                     <DivCantidad>
-                    <Button onClick={(e) => handleInputRestar(e, producto.id)}>-</Button>
+                    {producto.producto_carrito.cantidad === 1 ? null : <Button onClick={(e) => handleInputRestar(e, producto.id)}>-</Button>}
                       <Input type="tel" name={producto.id}
                         value={producto.producto_carrito.cantidad}
                       />
