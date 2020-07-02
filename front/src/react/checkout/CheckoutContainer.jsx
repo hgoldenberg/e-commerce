@@ -33,8 +33,9 @@ class CheckoutContainer extends React.Component {
   handleSubmit(event){
     event.preventDefault();
     const { finalCarrito , user , history} = this.props
-    finalCarrito(user.id, this.state)
-    history.push('/')
+    finalCarrito(user.id, this.state).then(()=>{
+      return history.push('/reviews')
+    });
   };
 
   render() {

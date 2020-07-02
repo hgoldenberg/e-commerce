@@ -59,27 +59,24 @@ const Span = styled.span`
     margin: 20px 0px;
 `;
 
-export default ({}) => {
-
-  return (
+export default ({handleSubmit , handleChange , name ,  price , imageUno , imageDos , description , stock}) => {
+    return (
     <DivContainer>
     <FormContainer>
         <FormTitle>Editar producto</FormTitle>
-        <Form >
+        <Form onSubmit={handleSubmit}>
         <Label>Imagen 1:</Label>
-        <Input type="text" name='imagen1' />
+        <Input type="text" name='imagen1' value={imageUno} onChange={handleChange}/>
         <Label>Imagen 2:</Label>
-        <Input type="text" name='imagen2' />
+        <Input type="text" name='imagen2' value={imageDos} onChange={handleChange}/>
         <Label>Nombre:</Label>
-        <Input type="text" name='nombre' />
+        <Input type="text" name='nombre' value={name} onChange={handleChange}/>
         <Label>Descripción:</Label>
-        <textarea name="description" id="" cols="20" rows="10"></textarea>
-        <Label>Categoria:</Label>
-        <Input type="text" name='categoria' />
+        <textarea name="description" id="" cols="20" rows="10" value={description} onChange={handleChange}></textarea>
         <Label>Precio:</Label>
-        <Input type="number" name='precio'/>
+        <Input type="number" name='precio' value={price} onChange={handleChange}/>
         <Label>Stock:</Label>
-        <Input type="number" name='stock'/>
+        <Input type="number" name='stock' value={stock} onChange={handleChange}/>
         <InputSubmit type="submit" value="Editar"/>
         </Form>
     </FormContainer>

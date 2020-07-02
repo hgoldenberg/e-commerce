@@ -131,7 +131,7 @@ export default ({ handleSubmit, handleChange, cart }) => {
               name="direccionEntrega"
               onChange={handleChange}
             />
-            <Link to="/reviews"><InputSubmit type="submit" value="Finalizar Compra" /></Link>
+            <InputSubmit type="submit" value="Finalizar Compra" />
           </Form>
         </DivForm>
         <Aside>

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 
 export default ({ isLogged, users }) => {
-  console.log(users);
   return (
     <div className={ad.main}>
       <section className={ad.section}>

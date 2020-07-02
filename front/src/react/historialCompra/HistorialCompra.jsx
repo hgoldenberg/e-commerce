@@ -19,7 +19,7 @@ const TitleCart = styled.div`
   margin: 0px 50px;
 `;
 const H3 = styled.h3`
-  padding-top:40px;
+  padding-top: 40px;
   font-size: 22px;
   font-weight: 400;
 `;
@@ -56,7 +56,6 @@ const Price = styled.span`
   font-weight: 700;
 `;
 
-
 export default ({ historial }) => {
   let total = 0;
   return (
@@ -70,7 +69,7 @@ export default ({ historial }) => {
                     <H3>Compra Nº{product.id}</H3>
                   </TitleCart>
                   {product.products.map(Element => {
-                    total += Element.price;
+                    total += Element.producto_carrito.cantidad * Element.price;
                     return (
                       <ContentCart key={Element.id}>
                         <Img src={Element.imageUno} alt="" />

@@ -32,9 +32,9 @@ obj.allProductos = (req, res, next) => {
 //busco los productos por id
 obj.productoId = (req, res, next) => {
   Product.findOne({
-    include:[{model:Categories}],
-    where:{
-      id:req.params.id
+    include: [{ model: Categories }],
+    where: {
+      id: req.params.id
     }
   })
     .then(producto => res.send(producto))
@@ -59,31 +59,15 @@ obj.createProducto = (req, res, next) => {
 
 //modifico un producto
 obj.modificarProducto = (req, res, next) => {
-  Categories.update(
-    {
-      tipo: req.body.tipo
+  Product.update(req.body, {
+    where: {
+      id: Number(req.params.id)
     },
-    {
-      where: {
-        id: req.body.categoriaId,
-        producto_categoria: {
-          where: {
-            productId: req.params.id
-          }
-        }
-      }
-    }
-  )
-    .then(() => {
-      return Product.update(req.body, {
-        where: {
-          id: Number(req.params.id)
-        },
-        returning: true,
-        plain: true
-      }).then(productoActualizado => {
-        res.status(200).send(productoActualizado);
-      });
+    returning: true,
+    plain: true
+  })
+    .then(productoActualizado => {
+      res.status(200).send(productoActualizado);
     })
     .catch(next);
 };
