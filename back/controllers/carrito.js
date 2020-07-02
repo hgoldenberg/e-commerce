@@ -11,7 +11,6 @@ const {
 const nodemailer = require("nodemailer");
 
 const sendMail = function (name, email) {
-  const nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -22,8 +21,8 @@ const sendMail = function (name, email) {
   const mailOptions = {
     from: "ecomercelospibesjs@gmail.com",
     to: `${email}`,
-    subject: `Confirmación de tu compra ${name}`,
-    text: "Esta ha sido tu compra con nosotros.",
+    subject: `Confirmación de la compra de ${name}`,
+    text: `Gracias por confiar en nosotros ${name}`,
   };
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
@@ -173,6 +172,7 @@ obj.finalizarCarrito = (req, res, next) => {
     }
   )
     .then((carrito) => {
+      console.log(req.body.name, req.body.email);
       sendMail(req.body.name, req.body.email);
       res.status(200).send(carrito);
     })
