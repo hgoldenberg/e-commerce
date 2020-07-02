@@ -11,13 +11,11 @@ obj.createValoracion = (req, res, next) => {
           id: req.body.productId
         }
       }).then((product) => {
-          console.log("producto", product)
         const producto = product
         Valoraciones.create( {
          puntaje: req.body.puntaje
         })
         .then((data)=>{
-            console.log("estoy",data)
           data.setUser(req.body.userId)
           producto.addValoraciones(data.id) 
           res.sendStatus(200)
@@ -45,6 +43,19 @@ obj.rating = (req,res,next) => {
       }) 
       .catch(next)
     }
+    
+// busco todos las valoraciones de un producto
 
+obj.valoracionesProduct = (req, res, next) => {
+  Valoraciones.findAll({
+      where:{
+          productId:req.params.productId
+      }
+  })
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch(next);
+};
 
 module.exports = obj;

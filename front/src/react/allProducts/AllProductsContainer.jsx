@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
-    setAllCategories: () => dispatch(setAllCategories()),
+    setAllCategories: () => dispatch(setAllCategories())
   };
 };
 

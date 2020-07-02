@@ -75,25 +75,22 @@ const ButtonVolver = styled.button`
     width: 30%;
 `;
 
-export default () => {    
+export default ({user, cart}) => {  
+
     return(
         <DivContainer>
             <DivReview>
                 <DivContent>
                     <H2>Reviews</H2>
                     <Content>
-                        <DivProducto>
-                            <Producto>GTA V</Producto>
-                            <DivButton>
-                                <Link to="/reviews/2"><Button>Agregar Review</Button></Link>
-                            </DivButton>                            
-                        </DivProducto>
-                        <DivProducto>
-                            <Producto>Resident Evil 2</Producto>
-                            <DivButton>
-                                <Link to="/reviews/3"><Button>Agregar Review</Button></Link>
-                            </DivButton>                            
-                        </DivProducto>
+                        {cart.products.map(product => 
+                            <DivProducto>                            
+                                <Producto>{product.name}</Producto>
+                                <DivButton>
+                                <Link to={`/reviews/${product.id}`}><Button>Agregar Review</Button></Link>
+                                </DivButton>                            
+                            </DivProducto>
+                        )}                            
                         <ButtonVolver>Seguir comprando</ButtonVolver>
                     </Content>
                 </DivContent>
@@ -101,3 +98,5 @@ export default () => {
         </DivContainer>
     )
 };
+
+// <Link to={`/reviews/${product.id}`}><Button>Agregar Review</Button></Link>

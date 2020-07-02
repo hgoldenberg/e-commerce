@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import ReactStars from "react-rating-stars-component";
 
 const DivContainer = styled.div`
     padding: 0px 100px;
@@ -98,29 +99,35 @@ const Textarea = styled.textarea`
     color: #777;
 `;
 
-export default () => {    
+export default ({product,handleChangeComment, handleChange, handleClick, stars, comentario, user}) => {    
     return(
         <DivContainer>
             <DivReview>
                 <DivContent>
                     <Content>
-                        <H2>GTA V</H2>
+                        <H2>{product.name}</H2>
                         <DivProducto>
                             <DivImg>
-                                <Img src="https://d26lpennugtm8s.cloudfront.net/stores/082/436/products/gta-v-premium-edition-ps4-fisico-d_nq_np_630465-mla31582264508_072019-f1-523c4ea142d9a2bc2815774828545066-1024-1024.jpg" />     
+                                <Img src={product.imageUno} />     
                             </DivImg>
                             <DivReviewData>
                                 <Data>
                                     <H3>¿Cuántas estrellas le darías?</H3>
-                                    <Stars>★★★★★</Stars>
+                                    <ReactStars
+                                        count={5}
+                                        onChange={handleChange}
+                                        size={24}
+                                        color2={"#ffd700"}
+                                        value={stars}
+                                    />
                                 </Data>
                                 <Data>
                                     <H3>Coméntanos sobre el producto</H3>
                                     <Form>
-                                        <Textarea></Textarea>
+                                        <Textarea name="comentario" onChange={handleChangeComment} value={comentario}></Textarea>
                                     </Form>
                                 </Data>
-                                <ButtonVolver>Agregar Review</ButtonVolver>
+                                <ButtonVolver onClick={handleClick}>Agregar Review</ButtonVolver>
                             </DivReviewData> 
                                                                             
                         </DivProducto>                       
