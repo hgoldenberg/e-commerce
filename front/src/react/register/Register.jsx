@@ -149,7 +149,7 @@ margin: 20px 0px;
                 />
                 {errorPass ? 
                 (<p>
-                    El password debe comenzar una mayúscula, una minúscula y 8 digitos
+                    El password debe comenzar con una mayúscula, tener una minúscula y al menos 8 digitos
                 </p>):null}
                 
                 {errorPass || 

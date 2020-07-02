@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 
-export default ({ isLogged, users }) => {
+export default ({ isLogged, users, handleUser, handleAdmin}) => {
+  console.log(users);
   return (
     <div className={ad.main}>
       <section className={ad.section}>
@@ -25,20 +26,27 @@ export default ({ isLogged, users }) => {
               ? users.map((element) => {
                   return (
                     <tr>
-                      <td></td>
+                      <td>{element.avatar}</td>
                     <td>{element.roll}</td>
                      <td>{element.name}</td>
                         <td>{element.lastname}</td>
                         <td>{element.direccion}</td>
-                        <td>{element.emai}</td>
+                        <td>{element.email}</td>
+                        
                       {isLogged.roll == "superAdmin" ? (
                         <td>
-                          <button className={ad.buttonEdit}>User</button>
-                          <button className={ad.buttonDelete}>Admin</button>
+                           
+                          <button className={ad.buttonEdit} onClick={()=>handleUser(element.id)}>User</button>
+                          
+                          
+                          <button className={ad.buttonDelete} onClick={()=>handleAdmin(element.id)}>Admin</button>
+                          
                         </td>
                       ) : (
                         <td>
-                          <button className={ad.buttonDelete}>Admin</button>
+                            
+                          <button className={ad.buttonDelete} onClick={()=>handleAdmin(element.id)}>Admin</button>
+                          
                         </td>
                       )}
                     </tr>
@@ -52,22 +60,3 @@ export default ({ isLogged, users }) => {
   );
 };
 
-//     <tr>
-
-//        <td></td>
-//        <td>user</td>
-//        <td>Ariel</td>
-//        <td>Blas</td>
-//        <td>Calle Falsa</td>
-//        <td>ariel@ariel.com</td>
-//        {isLogged.roll == "superAdmin" ?
-//        <td>
-//            <button className={ad.buttonEdit}>User</button>
-//            <button className={ad.buttonDelete}>Admin</button>
-//        </td>
-//        :
-//        <td>
-//            <button className={ad.buttonDelete}>Admin</button>
-//        </td>
-//        }
-//    </tr>
