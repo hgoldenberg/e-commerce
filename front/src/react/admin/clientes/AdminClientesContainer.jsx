@@ -69,8 +69,6 @@ class AdminClientesContainer extends React.Component {
       users={this.props.users}
       handleUser={this.handleUser}
       handleAdmin={this.handleAdmin}
-      updateAdmin={this.props.updateAdmin}
-      updateUser={this.props.updateUser} 
       />
     </>
     );

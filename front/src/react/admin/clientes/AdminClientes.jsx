@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 
-export default ({ isLogged, users, handleUser, handleAdmin, updateAdmin, updateUser }) => {
+export default ({ isLogged, users, handleUser, handleAdmin}) => {
   console.log(users);
   return (
     <div className={ad.main}>
@@ -60,29 +60,3 @@ export default ({ isLogged, users, handleUser, handleAdmin, updateAdmin, updateU
   );
 };
 
-//     <tr>
-
-//        <td></td>
-//        <td>user</td>
-//        <td>Ariel</td>
-//        <td>Blas</td>
-//        <td>Calle Falsa</td>
-//        <td>ariel@ariel.com</td>
-//        {isLogged.roll == "superAdmin" ?
-//        <td>
-//            <button className={ad.buttonEdit}>User</button>
-//            <button className={ad.buttonDelete}>Admin</button>
-//        </td>
-//        :
-//        <td>
-//            <button className={ad.buttonDelete}>Admin</button>
-//        </td>
-//        }
-//    </tr>
-
-
-//<button className={ad.buttonDelete} onClick={handleClick, ()=> updateAdmin(element.id)}>Admin</button>
-
-
-// onClick={()=> handleClick(element.id)}
-// <Link to={`/admin/toadmin/${element.id}`} > </Link>

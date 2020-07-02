@@ -56,6 +56,6 @@ export const deleteProduct = (id) =>{
 
 export const updateProduct = (id , producto) =>{
   return dispatch => {
-    return axios.put(`/api/categoria/${id}`, producto)
+    return axios.put(`/api/productos/${id}`, producto)
   }
 };
