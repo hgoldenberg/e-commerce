@@ -1,3 +1,7 @@
+
+
+
+
 const obj = {};
 const { Users } = require("../models");
 const passport = require("../config/passport");
@@ -53,4 +57,10 @@ obj.loggedUser = (req, res, next) => {
   }
 };
 
-module.exports = obj;
+
+
+obj.users = (req, res, next) =>{
+    Users.findAll()
+    .then (data=>(res.json(data)))
+};
+module.exports= obj

@@ -1,19 +1,18 @@
 const obj = {};
-const { Product } = require("../models/index");
+const { Product, Categories } = require("../models/index");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
 // filtra por un nombre
 obj.search = (req, res, next) => {
-  console.log(req.params.name);
   Product.findAll({
     where: {
       name: {
-        [Op.like]: `%${req.params.name}%`,
-      },
-    },
+        [Op.like]: `%${req.params.name}%`
+      }
+    }
   })
-    .then((producto) => {
+    .then(producto => {
       res.send(producto);
     })
     .catch(next);
@@ -21,8 +20,10 @@ obj.search = (req, res, next) => {
 
 // busco todos los productos
 obj.allProductos = (req, res, next) => {
-  Product.findAll()
-    .then((data) => {
+  Product.findAll({
+    include: [{ model: Categories }]
+  })
+    .then(data => {
       res.status(200).send(data);
     })
     .catch(next);
@@ -30,15 +31,29 @@ obj.allProductos = (req, res, next) => {
 
 //busco los productos por id
 obj.productoId = (req, res, next) => {
-  Product.findByPk(req.params.id)
-    .then((producto) => res.send(producto))
+  Product.findOne({
+    include: [{ model: Categories }],
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(producto => res.send(producto))
     .catch(next);
 };
 
 //creo un nuevo producto
 obj.createProducto = (req, res, next) => {
-  Product.create(req.body)
-    .then((productoCreado) => res.status(200).json(productoCreado))
+  Categories.findOne({
+    where: {
+      tipo: req.body.tipo
+    }
+  })
+    .then(categoria => {
+      Product.create(req.body).then(productoCreado => {
+        productoCreado.addCategories(categoria);
+        res.status(200).send(productoCreado);
+      });
+    })
     .catch(next);
 };
 
@@ -46,12 +61,12 @@ obj.createProducto = (req, res, next) => {
 obj.modificarProducto = (req, res, next) => {
   Product.update(req.body, {
     where: {
-      id: Number(req.params.id),
+      id: Number(req.params.id)
     },
     returning: true,
-    plain: true,
+    plain: true
   })
-    .then((productoActualizado) => {
+    .then(productoActualizado => {
       res.status(200).send(productoActualizado);
     })
     .catch(next);
@@ -61,8 +76,8 @@ obj.modificarProducto = (req, res, next) => {
 obj.DeleteProducto = (req, res, next) => {
   Product.destroy({
     where: {
-      id: Number(req.params.id),
-    },
+      id: Number(req.params.id)
+    }
   })
     .then(() => res.sendStatus(200))
     .catch(next);

@@ -4,15 +4,19 @@ const Crypto = require("crypto");
 
 class Users extends S.Model {}
 
-Users.init(
-  {
-    name: {
-      type: S.STRING,
-      allowNull: false,
+Users.init({
+
+    name:{
+        type:S.STRING,
+        allowNull:false,
+        unique:true,
+        
     },
-    lastname: {
-      type: S.STRING,
-      allowNull: false,
+    lastname:{
+        type:S.STRING,
+        allowNull:false,
+        unique:true,
+        
     },
     avatar: {
       type: S.STRING,

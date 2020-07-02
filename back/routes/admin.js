@@ -3,7 +3,10 @@ const Router = express.Router();
 const admin = require("../controllers/admin");
 
 // ruta que trae todos los usuarios
-Router.get("/", admin.users);
+Router.get("/clientes", admin.users);
+
+//ruta para traer usuarios admin
+
 
 // ruta para updatear un usuario a admin
 Router.put("/toadmin/:id", admin.isAdmin, admin.updateToAdmin);
