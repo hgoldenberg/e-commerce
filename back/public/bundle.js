@@ -59169,9 +59169,11 @@ var CheckoutContainer = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      dir_entrega: '',
-      ciudad_entrega: '',
-      CP_entrega: ''
+      dir_entrega: "",
+      ciudad_entrega: "",
+      CP_entrega: "",
+      name: _this.props.user.name,
+      email: _this.props.user.email
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
@@ -59189,17 +59191,17 @@ var CheckoutContainer = /*#__PURE__*/function (_React$Component) {
     key: "handleChange",
     value: function handleChange(event) {
       switch (event.target.name) {
-        case 'codigoPostal':
+        case "codigoPostal":
           this.setState({
             CP_entrega: event.target.value
           });
 
-        case 'ciudadEntraga':
+        case "ciudadEntraga":
           this.setState({
             ciudad_entrega: event.target.value
           });
 
-        case 'direccionEntrega':
+        case "direccionEntrega":
           this.setState({
             dir_entrega: event.target.value
           });
@@ -59214,7 +59216,7 @@ var CheckoutContainer = /*#__PURE__*/function (_React$Component) {
           user = _this$props.user,
           history = _this$props.history;
       finalCarrito(user.id, this.state).then(function () {
-        return history.push('/reviews');
+        return history.push("/reviews");
       });
     }
   }, {
