@@ -5,6 +5,7 @@ import categoriesReducer from "./categoriesReducer";
 import carritoUser from "./carrito-reducers";
 import comprasReducer from './compras-reducer'
 import adminReducer from "./admin-reducers";
+import comentarioReducer from "./comentarios-reducer";
 
 export default combineReducers({
   productsReducers,
@@ -13,4 +14,5 @@ export default combineReducers({
   carritoUser,
   comprasReducer,
   adminReducer,
+  comentarioReducer,
 });

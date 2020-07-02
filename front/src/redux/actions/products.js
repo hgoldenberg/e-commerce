@@ -38,3 +38,10 @@ export const searchProduct = (busqueda) => {
     });
   };
 };
+
+export const newProduct = (objectProduct) =>{
+  return dispatch =>{
+    return axios.post('/api/productos',objectProduct)
+  };
+};
+

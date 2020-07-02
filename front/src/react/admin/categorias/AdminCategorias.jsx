@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ad from "../../../assets/scss/admin.scss";
 import { element } from "prop-types";
 
-export default ({ categories }) => {
+export default ({ categories , handleClick}) => {
   return (
     <div className={ad.main}>
       <section className={ad.section}>
@@ -23,8 +23,8 @@ export default ({ categories }) => {
                       <tr key={element.id}>
                         <td>{element.tipo}</td>
                         <td>
-                        <Link to="/admin/categorias/editar"><button className={ad.buttonEdit}>Editar</button></Link>
-                          <button className={ad.buttonDelete}>Eliminar</button>
+                        <Link to={`/admin/categorias/editar/${element.id}`}><button className={ad.buttonEdit}>Editar</button></Link>
+                          <button className={ad.buttonDelete} onClick={()=> handleClick(element.id)}>Eliminar</button>
                         </td>
                       </tr>
                     );
