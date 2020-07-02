@@ -19,23 +19,29 @@ export const agregarCarrito = (carrito) =>{
 export const buscarCarrito = (id) =>{
     return dispatch =>{
         return axios.get(`/api/carrito/${id}`)
-            .then(res => dispatch(carritoDeUser(res.data)))
-    } 
+            .then(res => dispatch(carritoDeUser(res.data)));
+    };
 };
 
 export const deleteProductCarrito = (carritoId , productId) =>{
     return dispatch => {
-        return axios.delete(`/api/carrito/${carritoId}/${productId}`)
-    }
+        return axios.delete(`/api/carrito/${carritoId}/${productId}`);
+    };
 };
 
 export const updateProductSumar = (carritoProducts) => {
     return dispatch => {
-        return axios.put('/api/carrito/sumar', carritoProducts)
-    }
-}
+        return axios.put('/api/carrito/sumar', carritoProducts);
+    };
+};
 export const updateProductRestar = (carritoProducts) => {
     return dispatch => {
-        return axios.put('/api/carrito/restar', carritoProducts)
+        return axios.put('/api/carrito/restar', carritoProducts);
+    };
+};
+
+export const finalCarrito = (id , carritoFinalizado) =>{
+    return dispatch =>{
+        return axios.put(`/api/carrito/${id}`, carritoFinalizado);
     }
-}
+};

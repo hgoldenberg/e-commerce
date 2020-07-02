@@ -17,11 +17,14 @@ import AdminOrdenesContainer from "./admin/ordenes/AdminOrdenesContainer"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import { persistSession } from "../redux/actions/logUser";
-import MisDatosContainer from "./misDatos/MisDatosContainer";
+import MisDatosContainer from "./misDatos/misDatosContainer";
+import HistorialComprasContainer from './historialCompra/HistorialCompraContainer'
 import CrearProductosContainer from "./admin/crearProductos/CrearProductosContainer"
 import EditarProductosContainer from "./admin/editarProductos/EditarProductosContainer"
 import CrearCategoriaContainer from "./admin/crearCategoria/CrearCategoriaContainer"
 import EditarCategoriaContainer from "./admin/editarCategoria/EditarCategoriaContainer"
+import ReviewListContainer from "./reviewList/ReviewListContainer";
+import ReviewContainer from "./review/ReviewContainer";
 
 class Main extends React.Component {
   constructor(props) {
@@ -44,6 +47,8 @@ class Main extends React.Component {
           <Route exact path="/carrito" component={CarritoContainer} />
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/register" component={RegisterContainer} />
+          <Route exact path="/misdatos" component={MisDatosContainer} />
+          <Route exact path="/historial" component={HistorialComprasContainer}/>
           <Route exact path="/checkout" component={CheckoutContainer}/>
           <Route exact path="/admin" component={HomeAdminContainer}/>
           <Route exact path="/admin/productos" component={AdminProductosContainer}/>
@@ -52,11 +57,12 @@ class Main extends React.Component {
           {/* <Route exact path="/admin/toadmin/:id" component={AdminClientesContainer}/> */}
           <Route exact path="/admin/ordenes" component={AdminOrdenesContainer}/>
           <Route exact path="/misdatos" component={MisDatosContainer}/>
+          <Route exact path="/reviews" component={ReviewListContainer}/>
+          <Route exact path="/reviews/:id" component={ReviewContainer}/>
           <Route exact path="/admin/productos/crear" component={CrearProductosContainer}/>
-          <Route exact path="/admin/productos/editar" component={EditarProductosContainer}/>
+          <Route exact path="/admin/productos/editar/:id" component={EditarProductosContainer}/>
           <Route exact path="/admin/categorias/crear" component={CrearCategoriaContainer}/>
-          <Route exact path="/admin/categorias/editar" component={EditarCategoriaContainer}/>
-          
+          <Route exact path="/admin/categorias/editar/:id" component={EditarCategoriaContainer}/>
           <Route
             exact
             path="/productos/:id"

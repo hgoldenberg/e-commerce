@@ -72,8 +72,8 @@ const Button = styled.button`
   margin-left: 150px
 `;
 
-export default ({ isLogged }) => {
-  console.log(isLogged.name);
+
+export default ({ isLogged , handleClick }) => {
   return (
     <DivContainer>
       <DivMisDatos>
@@ -103,6 +103,7 @@ export default ({ isLogged }) => {
               </svg>
             }          
           <Button>Configurar datos</Button>
+          <Button onClick={() => handleClick(isLogged.id)}>historial</Button>
           </DivImg>
           <DivData>
               <H3>Nombre y apellido:</H3>
