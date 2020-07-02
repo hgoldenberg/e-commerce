@@ -54,15 +54,15 @@ const InputSubmit = styled.input`
     font-weight: 700;
 `;
 
-export default () => {
+export default ({handleSubmit , handleOnchange}) => {
 
   return (
     <DivContainer>
-    <FormContainer>
+    <FormContainer onSubmit={handleSubmit}>
         <FormTitle>Editar categoría</FormTitle>
         <Form>
         <Label>Tipo:</Label>
-        <Input type="text" />
+        <Input type="text" onChange={handleOnchange}/>
         <InputSubmit type="submit" value="Editar"/>
         </Form>
     </FormContainer>
