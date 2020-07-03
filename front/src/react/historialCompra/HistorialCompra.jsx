@@ -57,7 +57,6 @@ const Price = styled.span`
 `;
 
 export default ({ historial }) => {
-  let total = 0;
   return (
     <Section>
       <ArticleCart>
@@ -69,8 +68,9 @@ export default ({ historial }) => {
                     <H3>Compra Nº{product.id}</H3>
                   </TitleCart>
                   {product.products.map(Element => {
-                    total += Element.producto_carrito.cantidad * Element.price;
+                    
                     return (
+                      <React.Fragment>
                       <ContentCart key={Element.id}>
                         <Img src={Element.imageUno} alt="" />
                         <A>
@@ -82,13 +82,15 @@ export default ({ historial }) => {
                         <A>Precio:{Element.price}</A>
                         <A>Cantidad:{Element.producto_carrito.cantidad}</A>
                       </ContentCart>
+                        <ContentCart>
+                          <TotalCart>
+                            Total Compra: <Price>$ {product.valor_compra}</Price>
+                          </TotalCart>
+                      </ContentCart>
+                     </React.Fragment>
                     );
                   })}
-                  <ContentCart>
-                    <TotalCart>
-                      Total Compra: <Price>$ {total}</Price>
-                    </TotalCart>
-                  </ContentCart>
+    
                 </div>
               );
             })

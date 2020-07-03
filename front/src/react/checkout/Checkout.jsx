@@ -129,7 +129,7 @@ const DivImg =  styled.div`
   width: 70%;
 `;
 
-export default ({ handleSubmit, handleChange, cart, user }) => {
+export default ({ handleSubmit, handleChange, cart, user, acumulador, estado }) => {
   let total = 0;
   return (
     <DivContainer>
@@ -148,7 +148,12 @@ export default ({ handleSubmit, handleChange, cart, user }) => {
               name="direccionEntrega"
               onChange={handleChange}
             />
-            <InputSubmit type="submit" value="Finalizar Compra" />
+            {
+              estado == true ? 
+              <InputSubmit type="submit" value="Finalizar Compra" />
+              : null
+            }
+            
           </Form>
           <BuyCart>
             <Link to='/carrito'>Volver hacia atras</Link>
@@ -174,6 +179,7 @@ export default ({ handleSubmit, handleChange, cart, user }) => {
             <Div>
               <DivName>Total</DivName>
                 <DivPrice>$ {cart.id ? total : 0 }</DivPrice>
+                <button onClick={(e) => acumulador(e,total)}>Confirmar total</button>
             </Div>
           </DivAsideContent>
         </Aside>

@@ -58078,7 +58078,7 @@ __webpack_require__.r(__webpack_exports__);
       return Element.producto_carrito.cantidad;
     }).reduce(function (x, y) {
       return x + y;
-    }, 0)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$5000"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Element.estado));
+    }, 0)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Element.valor_compra), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Element.estado));
   }) : null))));
 });
 
@@ -59665,7 +59665,9 @@ var DivImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_temp
   var handleSubmit = _ref.handleSubmit,
       handleChange = _ref.handleChange,
       cart = _ref.cart,
-      user = _ref.user;
+      user = _ref.user,
+      acumulador = _ref.acumulador,
+      estado = _ref.estado;
   var total = 0;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivContainer, null, user.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivCheckout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H2, null, "Agregar domicilio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
     onSubmit: handleSubmit
@@ -59681,17 +59683,21 @@ var DivImg = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_temp
     type: "text",
     name: "direccionEntrega",
     onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
+  }), estado == true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InputSubmit, {
     type: "submit",
     value: "Finalizar Compra"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BuyCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/carrito"
   }, "Volver hacia atras"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Aside, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivAsideContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Resumen de compra"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivColumn, null, cart.id ? cart.products.map(function (element) {
     total += element.producto_carrito.cantidad * element.price;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivProducto, {
       key: element.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivName, null, element.name, " (", element.producto_carrito.cantidad, ")"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivPrice, null, "$ ", element.price));
-  }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivName, null, "Total"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivPrice, null, "$ ", cart.id ? total : 0))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+  }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivName, null, "Total"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivPrice, null, "$ ", cart.id ? total : 0), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick(e) {
+      return acumulador(e, total);
+    }
+  }, "Confirmar total"))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
     to: "/login"
   }));
 });
@@ -59757,10 +59763,13 @@ var CheckoutContainer = /*#__PURE__*/function (_React$Component) {
       ciudad_entrega: "",
       CP_entrega: "",
       name: _this.props.user.name,
-      email: _this.props.user.email
+      email: _this.props.user.email,
+      valor_compra: 0,
+      estado: false
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.acumulador = _this.acumulador.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -59792,6 +59801,15 @@ var CheckoutContainer = /*#__PURE__*/function (_React$Component) {
       }
     }
   }, {
+    key: "acumulador",
+    value: function acumulador(event, total) {
+      event.preventDefault();
+      return this.setState({
+        valor_compra: total,
+        estado: true
+      });
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
@@ -59813,7 +59831,9 @@ var CheckoutContainer = /*#__PURE__*/function (_React$Component) {
         handleSubmit: this.handleSubmit,
         handleChange: this.handleChange,
         cart: cart,
-        user: user
+        user: user,
+        acumulador: this.acumulador,
+        estado: this.state.estado
       });
     }
   }]);
@@ -60182,21 +60202,19 @@ var TotalCart = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_tem
 var Price = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(_templateObject9());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var historial = _ref.historial;
-  var total = 0;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArticleCart, null, historial.length ? historial.map(function (product) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: product.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H3, null, "Compra N\xBA", product.id)), product.products.map(function (Element) {
-      total += Element.producto_carrito.cantidad * Element.price;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, {
         key: Element.id
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Img, {
         src: Element.imageUno,
         alt: ""
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, Element.name.split(" ").map(function (x) {
         return x[0].toUpperCase() + x.slice(1);
-      }).join(" ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, "Precio:", Element.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, "Cantidad:", Element.producto_carrito.cantidad));
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total Compra: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ ", total))));
+      }).join(" ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, "Precio:", Element.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, null, "Cantidad:", Element.producto_carrito.cantidad)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentCart, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TotalCart, null, "Total Compra: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Price, null, "$ ", product.valor_compra))));
+    }));
   }) : null));
 });
 
