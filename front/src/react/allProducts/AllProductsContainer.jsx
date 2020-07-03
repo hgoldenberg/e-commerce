@@ -2,7 +2,6 @@ import React from "react";
 import AllProducts from "./AllProducts";
 import { fetchAllProducts } from "../../redux/actions/products";
 import { setAllCategories } from "../../redux/actions/categories";
-import { setRatingProduct } from "../../redux/actions/puntaje";
 import { connect } from "react-redux";
 
 class AllProductsContainer extends React.Component {
@@ -15,22 +14,16 @@ class AllProductsContainer extends React.Component {
 
   componentDidUpdate(prevProps, prevState){
     if(prevState.boolean !== this.state.boolean){
-      this.props.fetchAllProducts().then(data => {
-        return data.product.map(element => {
-          return setRatingProduct(element.id)
-        });
-      });
-      this.props.setAllCategories();
+      this.props.fetchAllProducts().then(() => {
+        this.props.setAllCategories();
+      })
     };
   };
 
   componentDidMount() {
-    this.props.fetchAllProducts().then(data => {
-      return data.product.map(element => {
-        return setRatingProduct(element.id)
-      })
+    this.props.fetchAllProducts().then(() => {
+      this.props.setAllCategories();
     })
-    this.props.setAllCategories();
   }
   render() {
     return (
@@ -38,7 +31,6 @@ class AllProductsContainer extends React.Component {
         <AllProducts
           product={this.props.product}
           categories={this.props.categories}
-          rating={this.props.rating}
         />
       </div>
     );
@@ -49,14 +41,12 @@ const mapStateToProps = (state) => {
   return {
     product: state.productsReducers.allProducts,
     categories: state.categoriesReducer.categorias,
-    rating: state.puntajeReducer.star,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
     setAllCategories: () => dispatch(setAllCategories()),
-    setRatingProduct: productId => dispatch(setRatingProduct(productId)),
   };
 };
 

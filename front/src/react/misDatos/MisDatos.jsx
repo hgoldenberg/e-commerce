@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const DivContainer = styled.div`
     padding: 50px 100px;
@@ -102,7 +103,7 @@ export default ({ isLogged , handleClick }) => {
                 />
               </svg>
             }          
-          <Button>Configurar datos</Button>
+          <Link to="/misdatos/editar"><Button>Agregar Avatar</Button></Link>
           <Button onClick={() => handleClick(isLogged.id)}>historial</Button>
           </DivImg>
           <DivData>

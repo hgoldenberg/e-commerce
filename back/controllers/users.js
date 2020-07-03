@@ -14,6 +14,18 @@ obj.register = (req, res, next) => {
   });
 };
 
+obj.editar = (req, res, next) => {
+  Users.update({avatar: req.body.avatar},{
+    where: {
+      id: req.user.id
+    },
+    returning: true
+  })
+  .then((data) => {
+    res.status(200).send(data)
+  })
+}
+
 obj.loggin = (req, res, next) => {
   console.log("me loggie");
   console.log("userr", req.user);

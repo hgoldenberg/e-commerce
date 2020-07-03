@@ -15,4 +15,6 @@ Router.get("/logout", users.logout);
 
 Router.get("/persistencia", users.loggedUser);
 
+Router.put("/editar", users.editar)
+
 module.exports = Router;

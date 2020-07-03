@@ -15,7 +15,7 @@ const ImgError = styled.img`
 const DivImg =  styled.div`
   margin: 0 auto;
   padding: 50px 0px;
-  width: 50%;
+  width: 70%;
 `;
 
 export default function({isLogged}){

@@ -38,13 +38,20 @@ obj.rating = (req,res,next) => {
             return punto+=val.puntaje
           })
           punto = punto/data.length
-        
-          res.status(200).json({rating:punto})
+
+          Product.update({rating: punto},{
+            where: {
+              id: req.params.productId
+            }
+          })
+          .then(()=>{
+            res.status(200).json({rating:punto})
+          })       
       }) 
       .catch(next)
     }
     
-// busco todos las valoraciones de un producto
+// Busco todas las valoraciones de un producto
 
 obj.valoracionesProduct = (req, res, next) => {
   Valoraciones.findAll({

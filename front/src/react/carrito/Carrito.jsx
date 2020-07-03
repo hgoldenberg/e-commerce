@@ -126,7 +126,11 @@ export default ({user, cart, handleDelete, handleClick , handleInputSumar , hand
         <TitleCart>
           <H3>Carrito</H3>
         </TitleCart>
-        {cart.id && user.id
+        {cart || user.id || storageCart ? (<div>
+
+          
+       
+        {cart.id && user.id 
           ? cart.products.map(producto => {
               total += producto.producto_carrito.cantidad * producto.price;
               return (
@@ -205,7 +209,10 @@ export default ({user, cart, handleDelete, handleClick , handleInputSumar , hand
           </ContentCart>
           <BuyCart>
           <ButtonBuy onClick={handleClick}>Seguir comprando</ButtonBuy>
-          <Link to="/checkout" className={n.buyCart}>Comprar</Link>
+          {cart.products.length >= 1 ? 
+            <Link to="/checkout" className={n.buyCart}>Comprar</Link>
+          : null }
+          
         </BuyCart>
         </React.Fragment>
         : <BuyCart>
@@ -213,7 +220,7 @@ export default ({user, cart, handleDelete, handleClick , handleInputSumar , hand
         <Link to="/login" className={n.buyCart}>Comprar</Link>
       </BuyCart>
       }
-        
+         </div>) : (null)}
       </ArticleCart>
     </Section>
   );

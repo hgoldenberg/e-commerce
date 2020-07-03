@@ -132,6 +132,7 @@ const DivImg = styled.div`
 `;
 
 export default ({ product, agregarProducto, comentarios, rating, stars, carrito, user }) => {
+ 
   let opiniones;
   if(stars.length == 1){
     opiniones = <Opiniones>{stars.length} opinión</Opiniones>
@@ -225,13 +226,13 @@ export default ({ product, agregarProducto, comentarios, rating, stars, carrito,
               </TitleProduct>
             ) : null}
             
-              {rating !== null ?
+              {product.rating !== 0 ?
               <Stars>
                 <ReactStars
                   count={5}
                   size={24}
                   color2={"#ffd700"}
-                  value={rating}
+                  value={product.rating}
                   edit={false}
                 />
                 {opiniones}
