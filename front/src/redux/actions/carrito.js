@@ -16,9 +16,9 @@ export const agregarCarrito = (carrito) =>{
 };
 
 
-export const buscarCarrito = (id) =>{
+export const buscarCarrito = () =>{
     return dispatch =>{
-        return axios.get(`/api/carrito/${id}`)
+        return axios.get(`/api/carrito`)
             .then(res => dispatch(carritoDeUser(res.data)));
     };
 };
@@ -45,3 +45,9 @@ export const finalCarrito = (id , carritoFinalizado) =>{
         return axios.put(`/api/carrito/${id}`, carritoFinalizado);
     }
 };
+
+export const storageCart = (obj) =>{
+    return dispatch => {
+        return axios.post(`/api/carrito/agregarStorage`, obj)
+    }
+}

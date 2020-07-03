@@ -8,6 +8,15 @@ const Img = styled.img`
   height: 2em;
   border-radius: 5em;
 `;
+const ImgError = styled.img`
+  width: 100%;
+`;
+
+const DivImg =  styled.div`
+  margin: 0 auto;
+  padding: 50px 0px;
+  width: 50%;
+`;
 
 export default function({isLogged}){
   
@@ -66,7 +75,9 @@ export default function({isLogged}){
             </ul>
         </div>
     </aside>
-    : null}
+    : <DivImg>
+        <ImgError src="https://lh3.googleusercontent.com/proxy/WSDUKb-d6OUlRyNL8GAyAACnEsvdXewZ2jDwbo3ciw1IrXXzhgDVORGtuIbEKz3W87IBIedjKkruedxS"/>
+      </DivImg>}
     </>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
-import { fetchProduct } from "../../redux/actions/products";
+import { fetchProduct, setAgregar, setStorage } from "../../redux/actions/products";
 import { agregarCarrito } from "../../redux/actions/carrito";
 import { setAllComentariosProduct } from "../../redux/actions/comentarios";
 import { setRatingProduct, setAllPuntajesProduct } from "../../redux/actions/puntaje";
@@ -8,22 +8,40 @@ import { withRouter } from "react-router";
 import { connect } from "react-redux";
 
 class SingleProductContainer extends React.Component {
+    
+      
   constructor(props) {
     super(props);
+  
+    this.state = {
+      dataCart: []
+    }
     this.agregarProducto = this.agregarProducto.bind(this);
+    this.noLogeadoCarrito = this.noLogeadoCarrito.bind(this);
   }
 
-  agregarProducto() {
+  agregarProducto(product) {
     const cart = {
       userId: this.props.user.id,
-      product: this.props.id
+      product: product
     };
+
+		this.state.dataCart.push(cart);
+
     if (this.props.user) {
       this.props.agregarCarrito(cart);
       setTimeout(() => {
         return this.props.history.push("/carrito");
       }, 1000);
     }
+  };
+
+  noLogeadoCarrito(producto){
+    console.log(this.props.cartStorage)
+    if(!this.props.cartStorage.includes(producto)){
+      this.props.setAgregar(producto)
+      this.props.setStorage()
+    }   
   };
 
   componentDidMount() {
@@ -33,6 +51,7 @@ class SingleProductContainer extends React.Component {
     this.props.setAllPuntajesProduct(this.props.id)
   }
   render() {
+   
     return (
       <SingleProduct
         product={this.props.product}
@@ -40,6 +59,8 @@ class SingleProductContainer extends React.Component {
         comentarios={this.props.comentarios}
         rating={this.props.rating}
         stars={this.props.stars}
+        carrito={this.noLogeadoCarrito}
+        user={this.props.user}
       />
     );
   }
@@ -53,6 +74,7 @@ const mapStateToProps = (state, ownProps) => {
     comentarios: state.comentarioReducer.data,
     rating: state.puntajeReducer.star,
     stars: state.puntajeReducer.stars,
+    cartStorage: state.productsReducers.carrito
   };
 };
 
@@ -62,7 +84,9 @@ const mapDispatchToProps = dispatch => {
     agregarCarrito: carrito => dispatch(agregarCarrito(carrito)),
     setAllComentariosProduct: productId => dispatch(setAllComentariosProduct(productId)),
     setRatingProduct: productId => dispatch(setRatingProduct(productId)),
-    setAllPuntajesProduct: productId => dispatch(setAllPuntajesProduct(productId))
+    setAllPuntajesProduct: productId => dispatch(setAllPuntajesProduct(productId)),
+    setAgregar: id => dispatch(setAgregar(id)) ,
+    setStorage: () => dispatch(setStorage())
   };
 };
 

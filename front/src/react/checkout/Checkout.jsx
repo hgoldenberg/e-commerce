@@ -115,6 +115,7 @@ const DivProducto = styled.div`
 `;
 
 export default ({ handleSubmit, handleChange, cart }) => {
+  let total = 0;
   return (
     <DivContainer>
       <DivCheckout>
@@ -140,6 +141,7 @@ export default ({ handleSubmit, handleChange, cart }) => {
             <DivColumn>
               {cart.id
                 ? cart.products.map(element => {
+                    total += element.producto_carrito.cantidad * element.price
                     return (
                       <DivProducto key={element.id}>
                         <DivName>{element.name} ({element.producto_carrito.cantidad})</DivName>
@@ -152,7 +154,7 @@ export default ({ handleSubmit, handleChange, cart }) => {
 
             <Div>
               <DivName>Total</DivName>
-                <DivPrice>$ {cart.id ? cart.valor_compra : 0 }</DivPrice>
+                <DivPrice>$ {cart.id ? total : 0 }</DivPrice>
             </Div>
           </DivAsideContent>
         </Aside>
