@@ -22,7 +22,9 @@ export default ({ history }) => {
             </tr>
             {history.length
               ? history.map(Element => {
+                
                   return (
+                    Element.estado === "completado"?
                     <tr key={Element.id}>
                       <td>{Element.id}</td>
                       <td>{Element.userId}</td>
@@ -32,6 +34,7 @@ export default ({ history }) => {
                       <td>{Element.valor_compra}</td>
                       <td>{Element.estado}</td>
                     </tr>
+                    :null
                   );
                 })
               : null}

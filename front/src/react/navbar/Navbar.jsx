@@ -25,7 +25,7 @@ const LogoImg = styled.img`
   height: 55px;
   border-radius: 10px;
   opacity: 0.8;
-  margin-top: 0px;
+  margin-top: 5px;
 `;
 const FormSearch = styled.form`
   margin: 15px 50px;
