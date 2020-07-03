@@ -74,8 +74,7 @@ const DivStars = styled.div`
   justify-content: center;
 `;
 
-export default ({ product, categories, rating }) => {
-  console.log(rating);
+export default ({ product, categories }) => {
   return (
     <div>
       <Aside>
@@ -117,27 +116,17 @@ export default ({ product, categories, rating }) => {
                               .join(" ")}
                           </CardLink>
                         </CardContentP>
-                        {rating !== null ? (
+                       
                           <DivStars>
                             <ReactStars
                               count={5}
                               size={24}
                               color2={"#ffd700"}
-                              value={rating}
+                              value={product.rating}
                               edit={false}
                             />
                           </DivStars>
-                        ) : (
-                          <DivStars>
-                            <ReactStars
-                              count={5}
-                              size={24}
-                              color2={"#ffd700"}
-                              value={0}
-                              edit={false}
-                            />
-                          </DivStars>
-                        )}
+                        
                         <PriceGame>
                           $ {product.price}
                           <span>Ars</span>

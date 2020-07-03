@@ -77,8 +77,9 @@ const ButtonVolver = styled.button`
 
 export default ({user, cart}) => {  
 
-    return(
+    return(  
         <DivContainer>
+             {user.id ?
             <DivReview>
                 <DivContent>
                     <H2>Reviews</H2>
@@ -95,7 +96,9 @@ export default ({user, cart}) => {
                     </Content>
                 </DivContent>
             </DivReview>
+            :null}
         </DivContainer>
+        
     )
 };
 

@@ -49,6 +49,7 @@ class SingleProductContainer extends React.Component {
     this.props.setAllComentariosProduct(this.props.id)
     this.props.setRatingProduct(this.props.id)
     this.props.setAllPuntajesProduct(this.props.id)
+    
   }
   render() {
    

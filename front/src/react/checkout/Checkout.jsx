@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import styled from 'styled-components';
 
 const DivContainer = styled.div`
@@ -119,10 +119,21 @@ const BuyCart = styled.div`
   margin: 50px 0px;
 `;
 
-export default ({ handleSubmit, handleChange, cart }) => {
+const ImgError = styled.img`
+  width: 100%;
+`;
+
+const DivImg =  styled.div`
+  margin: 0 auto;
+  padding: 50px 0px;
+  width: 70%;
+`;
+
+export default ({ handleSubmit, handleChange, cart, user, acumulador, estado }) => {
   let total = 0;
   return (
     <DivContainer>
+      {user.id ?
       <DivCheckout>
         <DivForm>
           <H2>Agregar domicilio</H2>
@@ -137,7 +148,12 @@ export default ({ handleSubmit, handleChange, cart }) => {
               name="direccionEntrega"
               onChange={handleChange}
             />
-            <InputSubmit type="submit" value="Finalizar Compra" />
+            {
+              estado == true ? 
+              <InputSubmit type="submit" value="Finalizar Compra" />
+              : null
+            }
+            
           </Form>
           <BuyCart>
             <Link to='/carrito'>Volver hacia atras</Link>
@@ -163,10 +179,14 @@ export default ({ handleSubmit, handleChange, cart }) => {
             <Div>
               <DivName>Total</DivName>
                 <DivPrice>$ {cart.id ? total : 0 }</DivPrice>
+                <button onClick={(e) => acumulador(e,total)}>Confirmar total</button>
             </Div>
           </DivAsideContent>
         </Aside>
       </DivCheckout>
+      :
+      <Redirect to="/login"/>
+      }
     </DivContainer>
   );
 };

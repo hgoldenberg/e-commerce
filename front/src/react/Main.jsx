@@ -25,6 +25,7 @@ import CrearCategoriaContainer from "./admin/crearCategoria/CrearCategoriaContai
 import EditarCategoriaContainer from "./admin/editarCategoria/EditarCategoriaContainer"
 import ReviewListContainer from "./reviewList/ReviewListContainer";
 import ReviewContainer from "./review/ReviewContainer";
+import FormUserContainer from "./formUser/FormUserContainer"
 
 class Main extends React.Component {
   constructor(props) {
@@ -53,7 +54,6 @@ class Main extends React.Component {
           <Route exact path="/admin/productos" component={AdminProductosContainer}/>
           <Route exact path="/admin/categorias" component={AdminCategoriasContainer}/>
           <Route exact path="/admin/clientes" component={AdminClientesContainer}/>
-          {/* <Route exact path="/admin/toadmin/:id" component={AdminClientesContainer}/> */}
           <Route exact path="/admin/ordenes" component={AdminOrdenesContainer}/>
           <Route exact path="/misdatos" component={MisDatosContainer}/>
           <Route exact path="/reviews" component={ReviewListContainer}/>
@@ -62,6 +62,7 @@ class Main extends React.Component {
           <Route exact path="/admin/productos/editar/:id" component={EditarProductosContainer}/>
           <Route exact path="/admin/categorias/crear" component={CrearCategoriaContainer}/>
           <Route exact path="/admin/categorias/editar/:id" component={EditarCategoriaContainer}/>
+          <Route exact path="/misdatos/editar" component={FormUserContainer}/>
           <Route
             exact
             path="/productos/:id"

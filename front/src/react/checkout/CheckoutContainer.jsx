@@ -13,9 +13,12 @@ class CheckoutContainer extends React.Component {
       CP_entrega: "",
       name: this.props.user.name,
       email: this.props.user.email,
+      valor_compra:0,
+      estado: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.acumulador = this.acumulador.bind(this);
   }
 
   componentDidMount() {
@@ -34,8 +37,17 @@ class CheckoutContainer extends React.Component {
     }
   }
 
+  acumulador(event, total){
+    event.preventDefault()
+    return this.setState({
+      valor_compra: total,
+      estado: true
+    })
+  }
+
   handleSubmit(event) {
     event.preventDefault();
+    
     const { finalCarrito, user, history } = this.props;
     finalCarrito(user.id, this.state).then(() => {
       return history.push("/reviews");
@@ -50,6 +62,8 @@ class CheckoutContainer extends React.Component {
         handleChange={this.handleChange}
         cart={cart}
         user={user}
+        acumulador={this.acumulador}
+        estado={this.state.estado}
       />
     );
   }

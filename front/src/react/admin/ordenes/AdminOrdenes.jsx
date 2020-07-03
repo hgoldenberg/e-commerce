@@ -22,16 +22,19 @@ export default ({ history }) => {
             </tr>
             {history.length
               ? history.map(Element => {
+                
                   return (
+                    Element.estado === "completado"?
                     <tr key={Element.id}>
                       <td>{Element.id}</td>
                       <td>{Element.userId}</td>
                       <td>{Element.products.map(Element => <img src={Element.imageUno} alt="" /> )}</td>
                       <td>{Element.products.map(Element => Element.name ).join(', ')}</td>
                       <td>{Element.products.map(Element => Element.producto_carrito.cantidad).reduce((x,y)=> x + y,0) }</td>
-                      <td>$5000</td>
+                      <td>{Element.valor_compra}</td>
                       <td>{Element.estado}</td>
                     </tr>
+                    :null
                   );
                 })
               : null}

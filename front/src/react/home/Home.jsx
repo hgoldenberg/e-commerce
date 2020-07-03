@@ -52,7 +52,7 @@ const PriceGame = styled.span`
 `;
 
 export default ({ juegos }) => {
-  const a = juegos.slice(0, 7);
+  const a = juegos.slice(0, 6);
   // const b;
   return (
     <div>

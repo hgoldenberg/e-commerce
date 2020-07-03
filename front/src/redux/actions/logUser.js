@@ -45,3 +45,8 @@ export const doLogOut = () => dispatch => {
     })
     .catch(console.log);
 };
+
+export const setEditar = (obj) => dispatch => {
+  return axios
+    .put("/api/users/editar", obj)
+}

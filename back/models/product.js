@@ -27,6 +27,10 @@ Product.init(
     stock: {
       type: S.INTEGER,
       allowNull: false,
+    },
+    rating: {
+      type: S.FLOAT,
+      defaultValue: 0
     }
   },
   {

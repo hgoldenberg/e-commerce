@@ -72,6 +72,7 @@ export default ({ oneCat }) => {
                 });
               })
             : null}
+            <Link to="/productos">Volver a productos</Link>
         </Article>
       </Section>
     </div>

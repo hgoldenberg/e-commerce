@@ -56,6 +56,7 @@ obj.agregarProductoLogeado = (req, res, next) => {
 
 // cuando estas loggeado
 obj.buscarPoductos = (req, res, next) => {
+  if(req.user.id){
   Carrito.findOne({
     include: [{ model: Product }],
     where: {
@@ -65,9 +66,14 @@ obj.buscarPoductos = (req, res, next) => {
     order: [["id", "DESC"]],
   })
     .then((productoscarrito) => {
-      res.status(200).json(productoscarrito);
+      if(productoscarrito == null){
+        res.json({})
+      }else{
+        res.status(200).json(productoscarrito);
+      }      
     })
     .catch(next);
+  }
 };
 
 //cuando estas loggeado
@@ -165,13 +171,19 @@ obj.updateCantidadProductoRestar = (req, res, next) => {
 
 // finalizar la compra del carrito
 obj.finalizarCarrito = (req, res, next) => {
+  console.log('body',req.body)
   Carrito.update(
     {
       estado: "completado",
+      valor_compra: req.body.valor_compra,
+      dir_entrega: req.body.dir_entrega,
+      ciudad_entrega: req.body.ciudad_entrega,
+      CP_entrega: req.body.CP_entrega      
     },
     {
       where: {
         userId: req.params.id,
+        estado: "pendiente"
       },
       returning: true,
     }
