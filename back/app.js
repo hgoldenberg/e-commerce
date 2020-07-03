@@ -20,9 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   session({
-    secret: "lospibesJs",
-    resave: true,
-    saveUninitialized: true,
+    secret: "lospibesJs"
   })
 );
 app.use(passport.initialize());
@@ -43,15 +41,3 @@ db.sync({ force: false })
     });
   })
   .catch(console.log);
-
-
-
-  
-
-
-
-
-
-
-
-

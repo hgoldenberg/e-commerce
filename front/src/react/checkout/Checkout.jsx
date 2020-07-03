@@ -114,6 +114,11 @@ const DivProducto = styled.div`
   padding-top: 5px;
 `;
 
+const BuyCart = styled.div`
+  text-align: end;
+  margin: 50px 0px;
+`;
+
 export default ({ handleSubmit, handleChange, cart }) => {
   return (
     <DivContainer>
@@ -133,6 +138,9 @@ export default ({ handleSubmit, handleChange, cart }) => {
             />
             <InputSubmit type="submit" value="Finalizar Compra" />
           </Form>
+          <BuyCart>
+            <Link to='/carrito'>Volver hacia atras</Link>
+          </BuyCart>
         </DivForm>
         <Aside>
           <DivAsideContent>

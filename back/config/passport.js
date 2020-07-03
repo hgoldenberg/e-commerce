@@ -4,7 +4,7 @@ const LocalStrategy = require("passport-local").Strategy;
 
 passport.use(
   new LocalStrategy(
-    { usernameField: "email", passwordField: "password" },
+    { usernameField: "email" },
     function(inputEmail, inputPassword, done) {
       Users.findOne({ where: { email: inputEmail } })
         .then(user => {
@@ -21,11 +21,11 @@ passport.use(
   )
 );
 
-passport.serializeUser(function(user, done) {
+passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 
-passport.deserializeUser(function(id, done) {
+passport.deserializeUser((id, done) => {
   Users.findByPk(id).then(function(user) {
     done(null, user);
   });
