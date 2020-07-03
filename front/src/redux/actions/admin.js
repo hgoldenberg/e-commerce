@@ -14,9 +14,17 @@ export const agregarCategoria = (categoria) => {
   };
 };
 
-export const fetchAllUsers = () => {
+export const fetchAllUsersAdmin = () => {
   return (dispatch) => {
-    return axios.get(`/api/admin/clientes`).then((res) => {
+    return axios.get(`/api/admin/clientes/admin`).then((res) => {
+      return dispatch(adminUsers(res.data));
+    });
+  };
+};
+
+export const fetchAllUsersSuperAdmin = () => {
+  return (dispatch) => {
+    return axios.get(`/api/admin/clientes/superAdmin`).then((res) => {
       return dispatch(adminUsers(res.data));
     });
   };

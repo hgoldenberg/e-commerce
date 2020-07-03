@@ -21,14 +21,14 @@ const Logo = styled.div`
   margin: 0px 20px;
 `;
 const LogoImg = styled.img`
-  width: 100px;
-  height: 50px;
+  width: 125px;
+  height: 55px;
   border-radius: 10px;
   opacity: 0.8;
-  margin-top: 4px;
+  margin-top: 0px;
 `;
 const FormSearch = styled.form`
-  margin: 12px 50px;
+  margin: 15px 50px;
   width: 70%;
 `;
 const DivSearch = styled.div`
@@ -130,7 +130,7 @@ export default ({
             </DivSearch>
           </FormSearch>
           <Link to="/productos" className={n.Links}>
-            Categorías
+            Productos
           </Link>
           <Link to="/carrito" className={n.Links}>
             <svg
@@ -168,7 +168,7 @@ export default ({
           </Link>
           {!isLogged.id ? (
             <Link to="/register" className={n.Links}>
-              <div>acceder</div>
+              <div>Acceder</div>
             </Link>
           ) : (
             <div onClick={handleClick} className={n.LinkUser}>

@@ -4,76 +4,78 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 
 const CardGame = styled.div`
-    width: 200px;
-    padding-bottom: 10px;
-    box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);
-    margin-top: 30px;
-    margin-right: 20px;
-  `;
+  width: 200px;
+  padding-bottom: 10px;
+  box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);
+  margin-top: 30px;
+  margin-right: 20px;
+`;
 
-  const CardGameImg = styled.img`
-    height: 280px;
-    width: 200px;
-  `;
-  const CardContentP = styled.p`
-    padding: 10px;
-    text-align: center;
-  `;
-  const CardLink = styled.a`
-    color: #000000;
-    text-decoration: none;
-  `;
-  const PriceGame = styled.span`
-    font-weight: 700;
-    display: block;
-    text-align: center;
-  `;
-  const Section = styled.section`
-    padding: 20px 100px;
-  `;
-  const Article = styled.article`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  `;
-  const Aside = styled.aside`
-    height: 300px;
-    width: 300px;
-    margin-top: 50px;
-    margin-left: 20px;
-    float: left;
-  `;
-  const AsideSearch = styled.h2`
-    font-size: 25px;
-    padding: 30px;
-    text-align: center;
-  `;
-  const CategoriaAside = styled.div`
-    padding: 0px 30px;
-  `;
-  const CategoriaAsideH = styled.h3`
-    color: #212832;
-    font-size: 20px;
-    margin-bottom: 10px;
-  `;
-  const Ul = styled.ul`
-    margin: 0px;
-    padding: 0px;
-  `;
-  const Li = styled.li`
-    list-style: none;
-    margin: 5px 0px;
-  `;
-  const A = styled.a`
-    color: #777777;
-    text-decoration: none;
-  `;
-  const DivStars = styled.div`
-    display: flex;  
-    justify-content: center;
-  `;
+const CardGameImg = styled.img`
+  height: 280px;
+  width: 200px;
+`;
+const CardContentP = styled.p`
+  padding: 10px;
+  text-align: center;
+`;
+const CardLink = styled.a`
+  color: #000000;
+  text-decoration: none;
+`;
 
-export default ({ product, categories }) => {
+const PriceGame = styled.span`
+  font-weight: 700;
+  display: block;
+  text-align: center;
+`;
+const Section = styled.section`
+  padding: 20px 100px;
+`;
+const Article = styled.article`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+const Aside = styled.aside`
+  height: 300px;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 20px;
+  float: left;
+`;
+const AsideSearch = styled.h2`
+  font-size: 25px;
+  padding: 30px;
+  text-align: center;
+`;
+const CategoriaAside = styled.div`
+  padding: 0px 30px;
+`;
+const CategoriaAsideH = styled.h3`
+  color: #212832;
+  font-size: 20px;
+  margin-bottom: 10px;
+`;
+const Ul = styled.ul`
+  margin: 0px;
+  padding: 0px;
+`;
+const Li = styled.li`
+  list-style: none;
+  margin: 5px 0px;
+`;
+const A = styled.a`
+  color: #777777;
+  text-decoration: none;
+`;
+const DivStars = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export default ({ product, categories, rating }) => {
+  console.log(rating);
   return (
     <div>
       <Aside>
@@ -82,14 +84,12 @@ export default ({ product, categories }) => {
           <CategoriaAsideH>Categorías:</CategoriaAsideH>
           <Ul>
             {categories.length
-              ? categories.map((categories) => {
+              ? categories.map(categories => {
                   return (
                     <Link to={`/categoria/${categories.id}`}>
-                    <Li key={categories.id}>
-                      
-                        <A >{categories.tipo}</A>
-                  
-                    </Li>
+                      <Li key={categories.id}>
+                        <A>{categories.tipo}</A>
+                      </Li>
                     </Link>
                   );
                 })
@@ -101,7 +101,7 @@ export default ({ product, categories }) => {
       <Section>
         <Article>
           {product.length > 2
-            ? product.map((product) => {
+            ? product.map(product => {
                 return (
                   <CardGame key={product.id}>
                     <CardLink>
@@ -113,23 +113,35 @@ export default ({ product, categories }) => {
                           <CardLink>
                             {product.name
                               .split(" ")
-                              .map((x) => x[0].toUpperCase() + x.slice(1))
+                              .map(x => x[0].toUpperCase() + x.slice(1))
                               .join(" ")}
                           </CardLink>
                         </CardContentP>
-                        <DivStars>
-                          <ReactStars
-                            count={5}
-                            size={24}
-                            color2={"#ffd700"}
-                            value={3}
-                            edit={false}
-                          />
-                        </DivStars> 
+                        {rating !== null ? (
+                          <DivStars>
+                            <ReactStars
+                              count={5}
+                              size={24}
+                              color2={"#ffd700"}
+                              value={rating}
+                              edit={false}
+                            />
+                          </DivStars>
+                        ) : (
+                          <DivStars>
+                            <ReactStars
+                              count={5}
+                              size={24}
+                              color2={"#ffd700"}
+                              value={0}
+                              edit={false}
+                            />
+                          </DivStars>
+                        )}
                         <PriceGame>
                           $ {product.price}
                           <span>Ars</span>
-                        </PriceGame>                       
+                        </PriceGame>
                       </div>
                     </CardLink>
                   </CardGame>

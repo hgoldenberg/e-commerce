@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import HomeAdmin from "../HomeAdmin";
 import AdminClientes from './AdminClientes';
 import { withRouter} from "react-router";
-import { fetchAllUsers } from "../../../redux/actions/admin";
+import { fetchAllUsersAdmin , fetchAllUsersSuperAdmin } from "../../../redux/actions/admin";
 import { updateAdmin } from "../../../redux/actions/admin";
 import { updateUser } from "../../../redux/actions/admin";
 
@@ -45,18 +45,35 @@ class AdminClientesContainer extends React.Component {
 
   componentDidMount() {
     //console.log(this.props.userId)
-    this.props.fetchAllUsers().then(()=>{
-      return this.setState({
-        boolean: !this.state.boolean
+    const { isLogged , fetchAllUsersAdmin , fetchAllUsersSuperAdmin} = this.props;
+
+    if(isLogged.roll === 'admin'){
+      fetchAllUsersAdmin().then(()=>{
+        return this.setState({
+          boolean: !this.state.boolean
+        })
       })
-    })
+    }
+    if(isLogged.roll === 'superAdmin'){
+      fetchAllUsersSuperAdmin().then(() =>{
+        return this.setState({
+          boolean: !this.state.boolean
+        })
+      })
+    };
+
   }
 
   componentDidUpdate(prevProps, prevState){
-    if(prevState.boolean !== this.state.boolean  ){
-      this.props.fetchAllUsers()
+    const { fetchAllUsersSuperAdmin , fetchAllUsersAdmin , isLogged } = this.props
+    if(prevState.boolean !== this.state.boolean){
+      if(isLogged.roll === 'admin'){
+        fetchAllUsersAdmin()
+      }
+      if(isLogged.roll === 'superAdmin'){
+        fetchAllUsersSuperAdmin()
+      }
     }
-
   }
 
   render() {
@@ -85,7 +102,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAllUsers: () => dispatch(fetchAllUsers()),
+    fetchAllUsersAdmin: () => dispatch(fetchAllUsersAdmin()),
+    fetchAllUsersSuperAdmin: () => dispatch(fetchAllUsersSuperAdmin()),
     updateAdmin: (id) => dispatch(updateAdmin(id)),
     updateUser: (id) => dispatch(updateUser(id)),
   };

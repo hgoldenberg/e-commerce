@@ -46,6 +46,11 @@ obj.agregarProductoLogeado = (req, res, next) => {
         res.sendStatus(200);
       })
       .catch(next);
+  }else{
+    Carrito.create(req.body).then(() =>{
+      res.sendStatus(200)
+    })
+    .catch(next)
   }
 };
 

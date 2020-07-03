@@ -132,7 +132,6 @@ const DivImg = styled.div`
 `;
 
 export default ({ product, agregarProducto, comentarios, rating, stars, carrito, user }) => {
-  console.log('stars',stars)
   let opiniones;
   if(stars.length == 1){
     opiniones = <Opiniones>{stars.length} opinión</Opiniones>

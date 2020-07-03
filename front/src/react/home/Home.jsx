@@ -17,18 +17,19 @@ const TitleSection = styled.h2`
   font-size: 45px;
   padding: 50px 0px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 80px;
 `;
 const Article = styled.article`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content:center;
 `;
 const CardGame = styled.div`
   width: 200px;
   padding-bottom: 10px;
   box-shadow: 0px 4px 5px 2px rgba(189, 189, 189, 1);
-  margin-top: 30px;
+  margin-bottom: 40px;
   margin-right: 20px;
 `;
 
@@ -50,11 +51,9 @@ const PriceGame = styled.span`
   text-align: center;
 `;
 
-
-
 export default ({ juegos }) => {
   const a = juegos.slice(0, 7);
-
+  // const b;
   return (
     <div>
       <Slider>
@@ -80,10 +79,53 @@ export default ({ juegos }) => {
               alt="Third slide"
             />
           </Carousel.Item>
+          <Carousel.Item>
+            <SliderImg
+              className="d-block w-100"
+              src="https://www.gameprotv.com/archivos/202007/nba-2k21-nextgen-principal.jpg"
+              alt="Third slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <SliderImg
+              className="d-block w-100"
+              src="https://cdn.discordapp.com/attachments/710507432627142749/728351487243321484/the-last-of-us-2-release-date.png"
+              alt="Third slide"
+            />
+          </Carousel.Item>
         </Carousel>
       </Slider>
 
       <Section>
+        <TitleSection>NUEVOS VIDEOJUEGOS</TitleSection>
+        <Article>
+          {juegos.length
+            ? a.map(juego => {
+                return (
+                  <CardGame key={juego.id}>
+                    <CardLink>
+                      <Link to={`/productos/${juego.id}`}>
+                        <CardGameImg src={juego.imageUno} />
+                      </Link>
+                      <div className="cardContent">
+                        <CardContentP>
+                          <CardLink>
+                            {juego.name
+                              .split(" ")
+                              .map(x => x[0].toUpperCase() + x.slice(1))
+                              .join(" ")}
+                          </CardLink>
+                        </CardContentP>
+                        <PriceGame>
+                          {juego.price} <span>Ars</span>
+                        </PriceGame>
+                      </div>
+                    </CardLink>
+                  </CardGame>
+                );
+              })
+            : null}
+        </Article>
         <TitleSection>TOP VIDEOJUEGOS</TitleSection>
         <Article>
           {juegos.length

@@ -66,15 +66,15 @@ export default ({handleSubmit , handleChange , name ,  price , imageUno , imageD
         <FormTitle>Editar producto</FormTitle>
         <Form onSubmit={handleSubmit}>
         <Label>Imagen 1:</Label>
-        <Input type="text" name='imagen1' value={imageUno} onChange={handleChange}/>
+        <Input type="text" name='imageUno' value={imageUno} onChange={handleChange}/>
         <Label>Imagen 2:</Label>
-        <Input type="text" name='imagen2' value={imageDos} onChange={handleChange}/>
+        <Input type="text" name='imageDos' value={imageDos} onChange={handleChange}/>
         <Label>Nombre:</Label>
-        <Input type="text" name='nombre' value={name} onChange={handleChange}/>
+        <Input type="text" name='name' value={name} onChange={handleChange}/>
         <Label>Descripción:</Label>
         <textarea name="description" id="" cols="20" rows="10" value={description} onChange={handleChange}></textarea>
         <Label>Precio:</Label>
-        <Input type="number" name='precio' value={price} onChange={handleChange}/>
+        <Input type="number" name='price' value={price} onChange={handleChange}/>
         <Label>Stock:</Label>
         <Input type="number" name='stock' value={stock} onChange={handleChange}/>
         <InputSubmit type="submit" value="Editar"/>
