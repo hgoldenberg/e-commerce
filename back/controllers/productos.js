@@ -43,16 +43,14 @@ obj.productoId = (req, res, next) => {
 
 //creo un nuevo producto
 obj.createProducto = (req, res, next) => {
-  Categories.findOne({
-    where: {
-      tipo: req.body.tipo
-    }
-  })
-    .then(categoria => {
-      Product.create(req.body).then(productoCreado => {
-        productoCreado.addCategories(categoria);
-        res.status(200).send(productoCreado);
-      });
+  Product.create(req.body)
+    .then(productoCreado => {
+      if(req.body.tipo.length >= 1){
+        req.body.tipo.map(Element => {
+          return productoCreado.addCategories(Element)
+        })
+      };
+      res.status(200).send(productoCreado);
     })
     .catch(next);
 };

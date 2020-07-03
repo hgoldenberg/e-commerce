@@ -4,21 +4,20 @@ const { Users } = require("../models");
 // admin: subir un usuario a admin. Crear, updatear y eliminar un producto. Puede crear una categoria.
 
 // trae todos
-obj.users = (req, res, next) => {
-  if(req.user.roll === "admin"){
-    Users.findAll({
-      where:{
-        roll: "user",
-      }
-    }).then((data) => res.json(data));
-  }
-   if(req.user.roll == "superAdmin"){
-     Users.findAll({
-       where: {
-         roll: ["user", "admin"],
-       }
-     }).then((data) => res.json(data));
-   } 
+obj.usersAdmin = (req, res, next) => {
+  Users.findAll({
+    where: {
+      roll: "user"
+    }
+  }).then(data => res.json(data));
+};
+
+obj.usersSuperAdmin = (req, res, next) => {
+  Users.findAll({
+    where: {
+      roll: ["user", "admin"]
+    }
+  }).then(data => res.json(data));
 };
 
 //
@@ -38,8 +37,6 @@ obj.updateToAdmin = (req, res, next) => {
   });
 };
 // cierra aca
-
-
 
 // funcionalidad para los super admin
 obj.updateToUser = (req, res, next) => {

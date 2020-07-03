@@ -91,7 +91,7 @@ export default ({user, cart}) => {
                                 </DivButton>                            
                             </DivProducto>
                         )}                            
-                        <ButtonVolver>Seguir comprando</ButtonVolver>
+                        <Link to='/productos'><ButtonVolver>Seguir comprando</ButtonVolver></Link>
                     </Content>
                 </DivContent>
             </DivReview>

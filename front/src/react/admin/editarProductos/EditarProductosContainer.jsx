@@ -35,20 +35,10 @@ class EditarProductosContainer extends React.Component {
   }
 
   handleChange(event) {
-    switch (event.target.name) {
-      case "imagen1":
-        this.setState({ imageUno: event.target.value });
-      case "imagen2":
-        this.setState({ imageDos: event.target.value });
-      case "nombre":
-        this.setState({ name: event.target.value });
-      case "description":
-        this.setState({ description: event.target.value });
-      case "precio":
-        this.setState({ price: event.target.value });
-      case "stock":
-        this.setState({ stock: event.target.value });
-    }
+    console.log(event.target.name)
+    this.setState({
+      [event.target.name]:event.target.value
+    })
   }
 
   handleSubmit(event) {

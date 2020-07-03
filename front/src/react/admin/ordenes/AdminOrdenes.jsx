@@ -25,7 +25,7 @@ export default ({ history }) => {
                   return (
                     <tr key={Element.id}>
                       <td>{Element.id}</td>
-                      <td>{Element.user.id}</td>
+                      <td>{Element.userId}</td>
                       <td>{Element.products.map(Element => <img src={Element.imageUno} alt="" /> )}</td>
                       <td>{Element.products.map(Element => Element.name ).join(', ')}</td>
                       <td>{Element.products.map(Element => Element.producto_carrito.cantidad).reduce((x,y)=> x + y,0) }</td>
