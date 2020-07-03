@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import f from '../../assets/scss/forms.scss';
 
 const DivContainer = styled.div`
     padding: 40px 0px
@@ -31,10 +32,11 @@ flex-direction: column;
 const Label = styled.label`
 font-size: 18px;
 color: #777;
+margin: 10px 0px;
 `;
 
 const Input = styled.input`
-margin-bottom: 20px;
+
 height: 25px;
 font-size: 18px;
 color: #474747;
@@ -51,6 +53,7 @@ cursor: pointer;
 color: #fff;
 font-size: 22px;
 font-weight: 700;
+margin-top: 30px;
 `;
 
 const Span = styled.span`
@@ -58,7 +61,10 @@ display: block;
 margin: 20px 0px;
 `;
 
-    
+const Error = styled.p`
+    color: #e04439;
+    margin: 0px;
+`;    
 
     export default ({ passwordChange, 
         emailChange, 
@@ -80,12 +86,14 @@ margin: 20px 0px;
     
 
       return(
+        <DivContainer>
         <FormContainer>
             <FormTitle>Registrar</FormTitle>
             <Form onSubmit={handleSubmit} >
 
                 <Label>Name:</Label>
                 <Input 
+                className={errorName ? f.errorInput : null}
                 type="text" 
                 placeholder="Ingrese su nombre"
                 onChange={nameChange}
@@ -93,64 +101,68 @@ margin: 20px 0px;
                 value={name}
                 />
                 {errorName ? 
-                (<p>
-                    EL nombre no puede contener números ni carácteres especiales
-                </p>):null}
+                (<Error>
+                    El nombre no puede contener números ni carácteres especiales
+                </Error>):null}
 
                 <Label>Last Name:</Label>
                 <Input 
                 type="text" 
+                className={errorLast ? f.errorInput : null}
                 placeholder="Ingrese su apellido"
                 onChange={lastNameChange}
                 name="text" 
                 value={lastName}
                 />
                 {errorLast ? 
-                (<p>
-                    EL apellido no puede contener números ni carácteres especiales
-                </p>):null}
+                (<Error>
+                    El apellido no puede contener números ni carácteres especiales
+                </Error>):null}
                 
 
                 <Label>Address:</Label>
                 <Input 
                 type="text" 
+                className={errorAddress ? f.errorInput : null}
                 placeholder="Ingrese su dirección"
                 onChange={addressChange}
                 name="address" 
                 value={address}
                 />
                 {errorAddress ? 
-                (<p>
+                (<Error>
                     La dirección no puede contener carácteres especiales
-                </p>):null}
+                </Error>):null}
                 
 
                 <Label>Email:</Label>
                 <Input 
                 type="email" 
+                className={errorEmail ? f.errorInput : null}
                 placeholder="Ingrese su email"
                 onChange={emailChange}
                 name="email" 
                 value={email}
                 />
                 {errorEmail ? 
-                (<p>
+                (<Error>
                     El email debe contener una dirección válida
-                </p>):null}
+                </Error>):null}
                 
                 
                 <Label>Password:</Label>
                 <Input 
                 type="password" 
+                className={errorPass ? f.errorInput : null}
                 placeholder="Ingrese su contraseña"
                 onChange={passwordChange}
                 name="password" 
                 value={password}
                 />
                 {errorPass ? 
-                (<p>
+                (<Error>
                     El password debe comenzar con una mayúscula, tener una minúscula y al menos 8 digitos
-                </p>):null}
+                </Error>):null}
                 
                 {errorPass || 
                 errorName ||
@@ -161,6 +173,7 @@ margin: 20px 0px;
             </Form>
             <Span>Si tienes una cuenta <Link to="/login">Acceder</Link></Span>
         </FormContainer>
+        </DivContainer>
     )
 
 }

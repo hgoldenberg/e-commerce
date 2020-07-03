@@ -4,7 +4,7 @@ const carrito = require('../controllers/carrito');
 
 Router.post('/agregarProducto' , carrito.agregarProductoLogeado);
 
-Router.get('/:id', carrito.buscarPoductos);
+Router.get('/', carrito.buscarPoductos);
 
 Router.delete('/:carritoId/:productId', carrito.eliminarProducto);
 
@@ -13,6 +13,8 @@ Router.put('/sumar', carrito.updateCantidadProductoSumar);
 Router.put('/restar', carrito.updateCantidadProductoRestar);
 
 Router.put('/:id', carrito.finalizarCarrito);
+
+Router.post('/agregarStorage', carrito.agregarProductoStorage)
 
 
 

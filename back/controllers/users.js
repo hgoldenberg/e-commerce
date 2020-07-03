@@ -31,6 +31,7 @@ obj.loggin = (req, res, next) => {
 obj.logout = (req, res, next) => {
   req.logout();
   res.json({});
+  
 };
 
 obj.loggedUser = (req, res, next) => {

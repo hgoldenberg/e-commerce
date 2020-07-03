@@ -15,6 +15,44 @@ const allProduct = (product) => {
   };
 };
 
+const agregar = (agregado) => {
+  return {
+    type: 'AGREGAR',
+    agregado
+  }
+}
+
+const storage = () => {
+  return {
+    type: 'SETSTORAGE'
+  }
+}
+
+const deletestorage = (borrar) => {
+  return {
+    type: 'DELETESTORAGE',
+    borrar
+  }
+}
+
+export const serDeleteStorage = (borrar) => {
+  return (dispatch) => {
+    return dispatch(deletestorage(borrar))
+  }
+}
+
+export const setAgregar = (id) => {
+  return (dispatch) => {
+    return dispatch(agregar(id))
+  }
+}
+
+export const setStorage = () => {
+  return (dispatch) => {
+    return dispatch(storage())
+  }
+}
+
 export const fetchProduct = (id) => {
   return (dispatch) => {
     return axios.get(`/api/productos/${id}`).then((res) => {

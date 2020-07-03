@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { doLogIn } from "../../redux/actions/logUser";
 import Login from "./Login";
+import { storageCart } from '../../redux/actions/carrito';
+import { serDeleteStorage } from '../../redux/actions/products'
 
 class LoginContainer extends React.Component {
   constructor(props) {
@@ -25,12 +27,16 @@ class LoginContainer extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const { email , password } = this.state
-    this.props.doLogIn(email , password);
-    this.setState({
-      email:'',
-      password:''
-    })
-    this.props.history.push("/");
+    this.props.doLogIn(email , password)
+    .then(() => {
+      this.props.storageCart({storage: this.props.carrito})
+      .then(() => {
+        this.props.serDeleteStorage([])
+        this.props.history.push("/");
+      })
+    });
+    
+    
   }
   render() {
     return (
@@ -45,13 +51,21 @@ class LoginContainer extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    carrito: state.productsReducers.carrito
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
-    doLogIn: (email , password ) => dispatch(doLogIn(email ,password))
+    doLogIn: (email , password ) => dispatch(doLogIn(email ,password)),
+    storageCart: (obj) => dispatch(storageCart(obj)),
+    serDeleteStorage: (id) => dispatch(serDeleteStorage(id))
   };
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(LoginContainer);

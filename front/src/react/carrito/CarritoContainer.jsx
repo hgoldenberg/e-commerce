@@ -3,6 +3,7 @@ import Carrito from "./Carrito";
 import {withRouter} from 'react-router'
 import { connect } from "react-redux";
 import { buscarCarrito , deleteProductCarrito , updateProductSumar , updateProductRestar} from '../../redux/actions/carrito'
+import { serDeleteStorage } from '../../redux/actions/products'
 
 
 class CarritoContainer extends React.Component {
@@ -16,11 +17,12 @@ class CarritoContainer extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleInputSumar = this.handleInputSumar.bind(this);
     this.handleInputRestar = this.handleInputRestar.bind(this);
+    this.handleDeleteStorage = this.handleDeleteStorage.bind(this);
   }
 
   componentDidMount(){
       const { buscarCarrito , user  } = this.props
-      buscarCarrito(user.id)
+      buscarCarrito()
   }
 
   componentDidUpdate(prevProps, prevState){
@@ -73,6 +75,19 @@ class CarritoContainer extends React.Component {
     history.push('/productos')
   }
 
+  handleDeleteStorage(id){
+    const arreglo = this.props.storageCart.filter((elemento) => {
+      if(elemento.id !== id){
+        return elemento
+      }
+    })
+    this.props.serDeleteStorage(arreglo)
+    return this.setState({
+      booleano:!this.state.booleano
+    })
+    
+  }
+
   render() {
     const { cart } = this.props;
     return (
@@ -82,6 +97,9 @@ class CarritoContainer extends React.Component {
         handleClick={this.handleClick}
         handleInputSumar={this.handleInputSumar}
         handleInputRestar={this.handleInputRestar}
+        storageCart={this.props.storageCart}
+        handleDeleteStorage={this.handleDeleteStorage}
+        user={this.props.user}
       />
     );
   }
@@ -90,16 +108,18 @@ class CarritoContainer extends React.Component {
 const mapStateToProps = (state) =>{
   return {
     user:state.logUserReducer.isLogged,
-    cart:state.carritoUser.cart
+    cart:state.carritoUser.cart,
+    storageCart: state.productsReducers.carrito
   }
 };
 
 const mapDispatchToProps = (dispatch) =>{
   return {
-    buscarCarrito: (id) => dispatch(buscarCarrito(id)),
+    buscarCarrito: () => dispatch(buscarCarrito()),
     deleteProductCarrito: (carritoId , productId) => dispatch(deleteProductCarrito(carritoId, productId)),
     updateProductSumar: (ProductCarrito) => dispatch(updateProductSumar(ProductCarrito)),
-    updateProductRestar: (ProductCarrito) => dispatch(updateProductRestar(ProductCarrito))
+    updateProductRestar: (ProductCarrito) => dispatch(updateProductRestar(ProductCarrito)),
+    serDeleteStorage: (borrar) => dispatch(serDeleteStorage(borrar))
   };
 };
 

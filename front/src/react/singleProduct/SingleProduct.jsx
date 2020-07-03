@@ -131,7 +131,7 @@ const DivImg = styled.div`
   padding: 10px:
 `;
 
-export default ({ product, agregarProducto, comentarios, rating, stars }) => {
+export default ({ product, agregarProducto, comentarios, rating, stars, carrito, user }) => {
   let opiniones;
   if(stars.length == 1){
     opiniones = <Opiniones>{stars.length} opinión</Opiniones>
@@ -239,9 +239,17 @@ export default ({ product, agregarProducto, comentarios, rating, stars }) => {
               : null}
                        
             <Price> $ {product.price}</Price>
-            <CartProduct onClick={() => agregarProducto()}>
+            {
+              user.id ? 
+              <CartProduct onClick={() => agregarProducto(product.id)}>
+                Agregar al carrito
+              </CartProduct>
+              :
+              <CartProduct onClick={() => carrito(product)}>
               Agregar al carrito
             </CartProduct>
+            }
+            
         </ContentProduct>
       </ArticleProduct>
     </Section>

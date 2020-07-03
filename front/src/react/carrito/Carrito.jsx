@@ -118,7 +118,7 @@ const Button = styled.button`
   background-color: transparent;
 `;
 
-export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInputRestar}) => {
+export default ({user, cart, handleDelete, handleClick , handleInputSumar , handleInputRestar, storageCart, handleDeleteStorage}) => {
   let total = 0;
   return (
     <Section>
@@ -126,9 +126,9 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
         <TitleCart>
           <H3>Carrito</H3>
         </TitleCart>
-        {cart.id
+        {cart.id && user.id
           ? cart.products.map(producto => {
-              cart.valor_compra += producto.producto_carrito.cantidad * producto.price;
+              total += producto.producto_carrito.cantidad * producto.price;
               return (
                 <ContentCart key={producto.id}>
                   <DivProducto>
@@ -165,17 +165,55 @@ export default ({ cart, handleDelete, handleClick , handleInputSumar , handleInp
                 </ContentCart>
               );
             })
-          : null}
-
-        <ContentCart>
-          <TotalCart>
-            Total: <Price>$ {cart.id ? cart.valor_compra : 0}</Price>
-          </TotalCart>
-        </ContentCart>
-        <BuyCart>
+          : 
+          storageCart.map(producto => {
+            
+            return (
+              <ContentCart key={producto.id}>
+                <DivProducto>
+                  <Img src={producto.imageUno} alt=""/>
+                  <Link to={`/productos/${producto.id}`}>
+                    <ProductName>
+                    {producto.name
+                      .split(" ")
+                      .map(x => x[0].toUpperCase() + x.slice(1))
+                      .join(" ")}
+                    </ProductName>
+                  </Link>
+                </DivProducto>
+          
+                <PriceCart>
+                  $ {producto.price}{" "}
+                  <button
+                    className="btn btn-primary"
+                    style={{ marginLeft: "20px" }}
+                    onClick={() => handleDeleteStorage(producto.id)}
+                  >
+                    Eliminar
+                  </button>
+                </PriceCart>
+              </ContentCart>
+            );
+          })
+          }
+        {cart.id ?
+        <React.Fragment>
+          <ContentCart>
+            <TotalCart>
+              Total: <Price>$ {cart.id ? total : 0}</Price>
+            </TotalCart>
+          </ContentCart>
+          <BuyCart>
           <ButtonBuy onClick={handleClick}>Seguir comprando</ButtonBuy>
           <Link to="/checkout" className={n.buyCart}>Comprar</Link>
         </BuyCart>
+        </React.Fragment>
+        : <BuyCart>
+        <ButtonBuy onClick={handleClick}>Seguir comprando</ButtonBuy>
+        <Link to="/login" className={n.buyCart}>Comprar</Link>
+      </BuyCart>
+      }
+        
       </ArticleCart>
     </Section>
   );

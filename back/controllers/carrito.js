@@ -59,7 +59,7 @@ obj.buscarPoductos = (req, res, next) => {
   Carrito.findOne({
     include: [{ model: Product }],
     where: {
-      userId: req.params.id,
+      userId: req.user.id,
       estado: "pendiente",
     },
     order: [["id", "DESC"]],
@@ -183,5 +183,24 @@ obj.finalizarCarrito = (req, res, next) => {
     })
     .catch(next);
 };
+
+// Agregar storage a carrito
+
+obj.agregarProductoStorage = (req, res, next) =>{
+  Carrito.findOrCreate(
+    {
+      where:{
+        userId: req.user.id,
+        estado: 'pendiente'
+      }
+    }
+  )
+  .then((data) => {
+    req.body.storage.map(elemento => {
+      data[0].addProduct(elemento.id)
+    })
+    res.status(200).send(data)
+  })
+}
 
 module.exports = obj;
